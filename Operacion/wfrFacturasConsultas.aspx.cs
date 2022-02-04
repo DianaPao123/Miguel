@@ -304,14 +304,13 @@ namespace GAFWEB
                         //---------------
                         string resultado = "";
                         bool sal = fac.GetConsultaEstatusCFDI(fact.Uid, emp.RFC, c.RFC, fact.Total.ToString(), ref resultado);
-
-                        if (sal)
+                         if (sal)
                         {
                             string[] status = resultado.Split('|');
                             var pdf = GAFFactura.GetAcuseCancelacion("/" + "AcuseCancelacion", id, status[0], status[1], status[2]);
                             if (pdf == null || pdf.Length == 0)
                             {
-                                this.lblError.Text = "Archivo no encontrado";
+                                this.lblError.Text = "Archivo no encontrado"; 
                                 return;
                             }
                             Response.AddHeader("Content-Disposition", "attachment; filename=" + fact.idVenta + ".pdf");
