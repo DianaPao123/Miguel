@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FCF2A140-B45A-4F6A-9258-92355687704B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Contract</RootNamespace>
+    <AssemblyName>Contract</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\GAFBusiness\bin\Debug\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DatosBusqueda.cs" />
+    <Compile Include="DatosClientesEspecial.cs" />
+    <Compile Include="Datosdetalle.cs" />
+    <Compile Include="DatosdetalleParte.cs" />
+    <Compile Include="DatosdetalleRetencion.cs" />
+    <Compile Include="DatosdetalleTraslado.cs" />
+    <Compile Include="DatosDevoluciones.cs" />
+    <Compile Include="DatosPagoComplemento.cs" />
+    <Compile Include="DatosPagos.cs" />
+    <Compile Include="DatosParcialidad.cs" />
+    <Compile Include="DatosPrefactura.cs" />
+    <Compile Include="DatosdetalleRT.cs" />
+    <Compile Include="datosrequest.cs" />
+    <Compile Include="Entities\ConceptosCargados.cs" />
+    <Compile Include="Entities\vfacturasContabilidad.cs" />
+    <Compile Include="Entities\vfacturasPromotores.cs" />
+    <Compile Include="Entities\vfacturas.cs" />
+    <Compile Include="Entities\MovimientosBancos.cs" />
+    <Compile Include="Entities\vfacturasEmitidos.cs" />
+    <Compile Include="Factura.cs" />
+    <Compile Include="facturaComplementos.cs" />
+    <Compile Include="GAFTransferenciasExcel.cs" />
+    <Compile Include="Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="param0.cs" />
+    <Compile Include="vfacturas.cs" />
+    <Compile Include="GAFClientes.cs" />
+    <Compile Include="GAFContract.cs" />
+    <Compile Include="implocal.cs" />
+    <Compile Include="ImpLocales.cs" />
+    <Compile Include="INE.cs" />
+    <Compile Include="INE11.cs" />
+    <Compile Include="Pago.cs" />
+    <Compile Include="PagoDoctoRelacionado.cs" />
+    <Compile Include="Pagos10.cs" />
+    <Compile Include="Prefactura.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <EntityDeploy Include="Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Properties\DataSources\GAFEntities.datasource" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

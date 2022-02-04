@@ -1,0 +1,117 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="GAFWEB.SiteMaster" %>
+
+<%@ Register TagPrefix="asp" Namespace="AjaxControlToolkit" Assembly="AjaxControlToolkit" %>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" href="Content/css/font-awesome/font-awesome.css" />
+
+    
+    <!-- Plugins Stylesheets -->
+    <link rel="stylesheet" href="Content/css/loader/loaders.css" />
+
+       <!-- Template Stylesheet -->
+    <link rel="stylesheet" href="Content/css/style.css"/>
+    <!-- Responsive Stylesheet -->
+    <link rel="stylesheet" href="Content/css/responsive.css"/>
+
+          <!--jQuery-->
+    <script src="Content/js/jquery-3.3.1.js"></script>
+    
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+ <!-- Loader Start -->
+    <div class="css-loader">
+        <div class="loader-inner line-scale d-flex align-items-center justify-content-center">
+           
+        </div>
+    </div>
+    <!-- Loader End -->
+
+    <form runat="server">
+      <asp:ToolkitScriptManager AsyncPostBackTimeout="120" runat="server" ID="smGlobal"
+        EnablePartialRendering="True" />
+     <div class="page">
+         <div class="header" style="background-color: #4285F4">
+            <div class="title" style="font-size:24px;">
+                <h2 style="color:white;">
+                   &nbsp;&nbsp;
+                   Portal Contabilidad
+                
+                </h2>
+            </div>
+             <div class="loginDisplay" style="background-color:#4285F4;">
+                <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                    <AnonymousTemplate>
+                        [ <a  href="Login.aspx" ID="HeadLoginStatus" runat="server">Iniciar sesión</a> ]
+                    </AnonymousTemplate>
+                    <LoggedInTemplate>
+                         <i class="fa fa-user" aria-hidden="true"></i> 
+                          Usuario: <span class="bold"><asp:LoginName ID="HeadLoginName" runat="server" /></span>
+                        &nbsp;&nbsp;
+                          <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Salir" LogoutPageUrl="Login.aspx" /> 
+                    </LoggedInTemplate>
+                </asp:LoginView>
+            </div>
+            <div class="clear hideSkiplink" >
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" 
+                    EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal" 
+                    >
+                    <Items>  
+                     <asp:MenuItem Text="Usuarios" NavigateUrl="~/wfrUsuarios.aspx" />
+                     <asp:MenuItem NavigateUrl="~/wfrClientesConsulta.aspx" Text="Clientes" />
+                        
+                     <asp:MenuItem Text="Empresas" NavigateUrl="~/wfrEmpresasConsulta.aspx" />
+              <%--         <asp:MenuItem NavigateUrl="~/wfrClientesConsulta.aspx" Text="Clientes" />
+              --%><%--          <asp:MenuItem NavigateUrl="~/wfrPreFacturaConsulta.aspx" Text="Revisión Prefactura"/>
+                            <asp:MenuItem NavigateUrl="~/wfrPagoConsulta.aspx" Text="Revisión Pago"/>
+                  --%>           
+                       <%--      <asp:MenuItem NavigateUrl="~/wfrPreFactura.aspx" Text="Generar Pre-CFDI"/>
+                             <asp:MenuItem NavigateUrl="~/wfrPreFacturaPago.aspx" Text="Complemento Pago" />
+                   --%>   
+                   <%--      <asp:MenuItem NavigateUrl="~/wfrFacturasConsulta.aspx" Text="Reportes CFDI" />
+                         <asp:MenuItem NavigateUrl="~/wfrPreFacturaConsulta.aspx" Text="Reportes Pre-CFDI" />
+                  --%>   <asp:MenuItem NavigateUrl="~/wfrConsultaTransferencias.aspx" Text="Facturar" />
+         
+                          <asp:MenuItem NavigateUrl="~/Carga.aspx" Text="Carga Masiva" />
+                         <asp:MenuItem NavigateUrl="~/wfrFactura.aspx" Text="Generar CFDI"/>
+            
+                         <asp:MenuItem NavigateUrl="~/wfrFacturasConsulta.aspx" Text="Reportes CFDI" />
+                      <asp:MenuItem NavigateUrl="~/wfrConsultaEmitidos.aspx" Text="Reportes EMITIDOS" />
+                      <asp:MenuItem NavigateUrl="~/wfrPagos.aspx?id=61674" Text="Pago" />
+                    <%--  <asp:MenuItem NavigateUrl="~/EstadoCuenta.aspx" Text="Estado de cuenta" />--%>
+                  
+                                            
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+        
+    </div>
+
+    
+         <!--Plugins-->
+    <script src="Content/js/bootstrap.bundle.js"></script>
+    <script src="Content/js/loaders.css.js"></script>
+    <script src="Content/js/aos.js"></script>
+    <script src="Content/js/swiper.min.js"></script>
+    <script src="Content/js/lightgallery-all.min.js"></script>
+    <!--Template Script-->
+    <script src="Content/js/main.js"></script>
+
+    </form>
+</body>
+</html>
