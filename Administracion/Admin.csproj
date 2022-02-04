@@ -1,0 +1,686 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FD4DAA10-CE95-4610-98F8-E9EFC1A6B21E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GAFWEB</RootNamespace>
+    <AssemblyName>GAFWEB</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Account\ChangePassword.aspx" />
+    <Content Include="Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="Carga.aspx" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\aos\aos.css" />
+    <Content Include="Content\css\bootstrap.css" />
+    <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\bootstrap1.css" />
+    <Content Include="Content\css\bootstrap3.css" />
+    <Content Include="Content\css\bootstrap\bootstrap-grid.css" />
+    <Content Include="Content\css\bootstrap\bootstrap-reboot.css" />
+    <Content Include="Content\css\bootstrap\bootstrap.css" />
+    <Content Include="Content\css\build.css" />
+    <Content Include="Content\css\buttons.css" />
+    <Content Include="Content\css\dataTables.bootstrap4.min.css" />
+    <Content Include="Content\css\font-awesome\font-awesome.css" />
+    <Content Include="Content\css\lightgallery.min.css" />
+    <Content Include="Content\css\loader\loaders.css" />
+    <Content Include="Content\css\maxcdn.bootstrap.min.css" />
+    <Content Include="Content\css\maxcdn.bootstrapcdn.bootstrap.min.css" />
+    <Content Include="Content\css\netdna.bootstrap.min.css" />
+    <Content Include="Content\css\responsive.css" />
+    <Content Include="Content\css\style.css" />
+    <Content Include="Content\css\swiper\swiper.css" />
+    <Content Include="Content\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\fonts\lg.svg" />
+    <Content Include="Content\images\arroba.jpg" />
+    <Content Include="Content\images\blue-cybernetic-background-2964.jpg" />
+    <Content Include="Content\images\cfdi-sat.jpg" />
+    <Content Include="Content\images\featured-img1.jpg" />
+    <Content Include="Content\images\featured-img2.jpg" />
+    <Content Include="Content\images\fondo.jpg" />
+    <Content Include="Content\images\fondo2.jpg" />
+    <Content Include="Content\images\fondo4.jpg" />
+    <Content Include="Content\images\footer-bg.png" />
+    <Content Include="Content\images\free-business-plan.jpg" />
+    <Content Include="Content\images\gallery1.jpg" />
+    <Content Include="Content\images\gallery2.jpg" />
+    <Content Include="Content\images\gallery3.PNG" />
+    <Content Include="Content\images\loading.gif" />
+    <Content Include="Content\images\pricing.svg" />
+    <Content Include="Content\images\rcnt-post4.png" />
+    <Content Include="Content\images\service1.png" />
+    <Content Include="Content\images\service2.png" />
+    <Content Include="Content\images\service3.png" />
+    <Content Include="Content\images\service4.png" />
+    <Content Include="Content\images\service5.png" />
+    <Content Include="Content\images\spreadsheet.ico" />
+    <Content Include="Content\images\test-clients-bg.png" />
+    <Content Include="Content\images\video-play.png" />
+    <Content Include="Content\images\vimeo-play.png" />
+    <Content Include="Content\images\youtube-play.png" />
+    <Content Include="Content\js\aos.js" />
+    <Content Include="Content\js\bootstrap.bundle.js" />
+    <Content Include="Content\js\bootstrap.bundle.min.js" />
+    <Content Include="Content\js\bootstrap.js" />
+    <Content Include="Content\js\bootstrap.min.js" />
+    <Content Include="Content\js\bootstrapmaxcdn.min.js" />
+    <Content Include="Content\js\imagesloaded.pkgd.min.js" />
+    <Content Include="Content\js\isotope.pkgd.min.js" />
+    <Content Include="Content\js\jquery-3.3.1.js" />
+    <Content Include="Content\js\jquery.filterizr.min.js" />
+    <Content Include="Content\js\jquery.min.js" />
+    <Content Include="Content\js\lightgallery-all.min.js" />
+    <Content Include="Content\js\loaders.css.js" />
+    <Content Include="Content\js\main.js" />
+    <Content Include="Content\js\swiper.min.js" />
+    <Content Include="Content\Site.css" />
+    <Content Include="wfrClientesConsulta.aspx" />
+    <Content Include="wfrUsuariosConsulta.aspx" />
+    <Content Include="wfrFacturasConsultas.aspx" />
+    <Content Include="wfrFacturasConsultass.aspx" />
+    <Content Include="wfrClientes.aspx" />
+    <Content Include="wfrFacturaLineaB.aspx" />
+    <Content Include="wfrPagos.aspx" />
+    <Content Include="wfrPagosConsulta.aspx" />
+    <Content Include="wfrPreImpuestosLocales.aspx" />
+    <Content Include="wfrPagoConsulta.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="wfrDevoluciones.aspx" />
+    <Content Include="wfrPrefacturaConsultaDevolucion.aspx" />
+    <Content Include="wfrPrefacturaConsultaCP.aspx" />
+    <Content Include="wfrPreFacturaPago.aspx" />
+    <Content Include="Scripts\Styles\Site.css" />
+    <Content Include="Styles\bootstrap-responsive.min.css" />
+    <Content Include="Styles\bootstrap.min.css" />
+    <Content Include="Styles\bootstrap4.css" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="wfrPreFacturaConsulta.aspx" />
+    <Content Include="wfrPreFactura.aspx" />
+    <Content Include="images\ajax-loader1.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Logs\log.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\aerolineas.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\arrendamientoenfideicomiso.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cadenaoriginal_3_0.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cadenaoriginal_3_2.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cadenaoriginal_3_3.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cadenaoriginal_TFD_1_0.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cadenaoriginal_TFD_1_1.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\certificadodedestruccion.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cfdiregistrofiscal.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ComercioExterior11.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\consumodecombustibles.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\detallista.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\dividendos.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\divisas.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\donat.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\donat11.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ecb.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ecc.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ecc11.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\enajenaciondeacciones.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\fideicomisonoempresarial.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\iedu.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\implocal.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ine11.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\intereses.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\intereseshipotecarios.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\leyendasFisc.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\leyendasFiscales.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\nomina12.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\notariospublicos.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\obrasarteantiguedades.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\operacionesconderivados.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\pagoenespecie.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Pagos10.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\pagosaextranjeros.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\pfic.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\planesderetiro.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\premios.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\psgecfd.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\renovacionysustitucionvehiculos.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\retenciones.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\sectorfinanciero.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\servicioparcialconstruccion.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\spei.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\terceros.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\terceros11.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TextoEmail.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TextoEmailCambio.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TuristaPasajeroExtranjero.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\utilerias.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\valesdedespensa.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\vehiculousado.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ventavehiculos.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ventavehiculos11.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="wfrClientesNuevos.aspx" />
+    <Content Include="wfrClientesConsulta2.aspx" />
+    <Content Include="wfrConceptos.aspx" />
+    <Content Include="wfrEmpresa.aspx" />
+    <Content Include="wfrEmpresasConsulta.aspx" />
+    <Content Include="wfrFactura.aspx" />
+    <Content Include="wfrFacturasConsulta.aspx" />
+    <Content Include="wfrSucursales.aspx" />
+    <Content Include="wfrSucursalesConsulta.aspx" />
+    <Content Include="wfrUsuarios.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.designer.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Carga.aspx.cs">
+      <DependentUpon>Carga.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Carga.aspx.designer.cs">
+      <DependentUpon>Carga.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wfrClientesConsulta.aspx.cs">
+      <DependentUpon>wfrClientesConsulta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfrClientesConsulta.aspx.designer.cs">
+      <DependentUpon>wfrClientesConsulta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wfrUsuariosConsulta.aspx.cs">
+      <DependentUpon>wfrUsuariosConsulta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfrUsuariosConsulta.aspx.designer.cs">
+      <DependentUpon>wfrUsuariosConsulta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wfrFacturasConsultas.aspx.cs">
+      <DependentUpon>wfrFacturasConsultas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfrFacturasConsultas.aspx.designer.cs">
+      <DependentUpon>wfrFacturasConsultas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wfrFacturasConsultass.aspx.cs">
+      <DependentUpon>wfrFacturasConsultass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfrFacturasConsultass.aspx.designer.cs">
+      <DependentUpon>wfrFacturasConsultass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wfrClientes.aspx.cs">
+      <DependentUpon>wfrClientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfrClientes.aspx.designer.cs">
+      <DependentUpon>wfrClientes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wfrFacturaLineaB.aspx.cs">
+      <DependentUpon>wfrFacturaLineaB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfrFacturaLineaB.aspx.designer.cs">
+      <DependentUpon>wfrFacturaLineaB.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wfrPagos.aspx.cs">
+      <DependentUpon>wfrPagos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfrPagos.aspx.designer.cs">
+      <DependentUpon>wfrPagos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wfrPagosConsulta.aspx.cs">
+      <DependentUpon>wfrPagosConsulta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfrPagosConsulta.aspx.designer.cs">
+      <DependentUpon>wfrPagosConsulta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wfrPreImpuestosLocales.aspx.cs">
+      <DependentUpon>wfrPreImpuestosLocales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfrPreImpuestosLocales.aspx.designer.cs">
+      <DependentUpon>wfrPreImpuestosLocales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wfrPagoConsulta.aspx.cs">
+      <DependentUpon>wfrPagoConsulta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfrPagoConsulta.aspx.designer.cs">
+      <DependentUpon>wfrPagoConsulta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wfrDevoluciones.aspx.cs">
+      <DependentUpon>wfrDevoluciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfrDevoluciones.aspx.designer.cs">
+      <DependentUpon>wfrDevoluciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wfrPrefacturaConsultaDevolucion.aspx.cs">
+      <DependentUpon>wfrPrefacturaConsultaDevolucion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfrPrefacturaConsultaDevolucion.aspx.designer.cs">
+      <DependentUpon>wfrPrefacturaConsultaDevolucion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wfrPrefacturaConsultaCP.aspx.cs">
+      <DependentUpon>wfrPrefacturaConsultaCP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfrPrefacturaConsultaCP.aspx.designer.cs">
+      <DependentUpon>wfrPrefacturaConsultaCP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wfrPreFacturaPago.aspx.cs">
+      <DependentUpon>wfrPreFacturaPago.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfrPreFacturaPago.aspx.designer.cs">
+      <DependentUpon>wfrPreFacturaPago.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wfrPreFacturaConsulta.aspx.cs">
+      <DependentUpon>wfrPreFacturaConsulta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfrPreFacturaConsulta.aspx.designer.cs">
+      <DependentUpon>wfrPreFacturaConsulta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wfrPreFactura.aspx.cs">
+      <DependentUpon>wfrPreFactura.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfrPreFactura.aspx.designer.cs">
+      <DependentUpon>wfrPreFactura.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="wfrClientesNuevos.aspx.cs">
+      <DependentUpon>wfrClientesNuevos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfrClientesNuevos.aspx.designer.cs">
+      <DependentUpon>wfrClientesNuevos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wfrClientesConsulta2.aspx.cs">
+      <DependentUpon>wfrClientesConsulta2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfrClientesConsulta2.aspx.designer.cs">
+      <DependentUpon>wfrClientesConsulta2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wfrConceptos.aspx.cs">
+      <DependentUpon>wfrConceptos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfrConceptos.aspx.designer.cs">
+      <DependentUpon>wfrConceptos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wfrEmpresa.aspx.cs">
+      <DependentUpon>wfrEmpresa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfrEmpresa.aspx.designer.cs">
+      <DependentUpon>wfrEmpresa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wfrEmpresasConsulta.aspx.cs">
+      <DependentUpon>wfrEmpresasConsulta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfrEmpresasConsulta.aspx.designer.cs">
+      <DependentUpon>wfrEmpresasConsulta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wfrFactura.aspx.cs">
+      <DependentUpon>wfrFactura.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfrFactura.aspx.designer.cs">
+      <DependentUpon>wfrFactura.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wfrFacturasConsulta.aspx.cs">
+      <DependentUpon>wfrFacturasConsulta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfrFacturasConsulta.aspx.designer.cs">
+      <DependentUpon>wfrFacturasConsulta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wfrSucursales.aspx.cs">
+      <DependentUpon>wfrSucursales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfrSucursales.aspx.designer.cs">
+      <DependentUpon>wfrSucursales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wfrSucursalesConsulta.aspx.cs">
+      <DependentUpon>wfrSucursalesConsulta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfrSucursalesConsulta.aspx.designer.cs">
+      <DependentUpon>wfrSucursalesConsulta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wfrUsuarios.aspx.cs">
+      <DependentUpon>wfrUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfrUsuarios.aspx.designer.cs">
+      <DependentUpon>wfrUsuarios.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Web.config" />
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CatalogosSAT\CatalogosSAT.csproj">
+      <Project>{383B6985-0E07-4C91-8B07-E4B928962FE0}</Project>
+      <Name>CatalogosSAT</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClienteTimbrado\ClienteTimbrado.csproj">
+      <Project>{3E83B260-1E10-45E1-91C5-E0254D2A89FB}</Project>
+      <Name>ClienteTimbrado</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DropDownChosen\DropDownChosen.csproj">
+      <Project>{61034352-74E2-409D-8F9B-FDC5B4030524}</Project>
+      <Name>DropDownChosen</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Business\Business.csproj">
+      <Project>{71D8878D-0428-4678-9223-A9EBBD3C44FB}</Project>
+      <Name>Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Contract\Contract.csproj">
+      <Project>{FCF2A140-B45A-4F6A-9258-92355687704B}</Project>
+      <Name>Contract</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\css\bootstrap.css.map" />
+    <Content Include="Content\css\bootstrap.min.css.map" />
+    <Content Include="Content\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\fonts\lg.eot" />
+    <Content Include="Content\fonts\lg.ttf" />
+    <Content Include="Content\fonts\lg.woff" />
+    <Content Include="Content\js\bootstrap.bundle.js.map" />
+    <Content Include="Content\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Content\js\bootstrap.js.map" />
+    <Content Include="Content\js\bootstrap.min.js.map" />
+    <None Include="Resources\cfdv3.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>23592</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

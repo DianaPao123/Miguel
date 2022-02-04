@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="https://ntlink.com.mx/ICertificador" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="https://ntlink.com.mx/ICertificador" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="https://ntlink.com.mx/ICertificador/Imports">
+      <xsd:import schemaLocation="http://pruebas.ntlink.com.mx/CertificadorWs33Cancelar/CertificadorService.svc?xsd=xsd0" namespace="https://ntlink.com.mx/ICertificador" />
+      <xsd:import schemaLocation="http://pruebas.ntlink.com.mx/CertificadorWs33Cancelar/CertificadorService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICertificador_TimbraCfdi_InputMessage">
+    <wsdl:part name="parameters" element="tns:TimbraCfdi" />
+  </wsdl:message>
+  <wsdl:message name="ICertificador_TimbraCfdi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TimbraCfdiResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICertificador_CancelaCfdi_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancelaCfdi" />
+  </wsdl:message>
+  <wsdl:message name="ICertificador_CancelaCfdi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelaCfdiResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICertificador_CancelaRetencion_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancelaRetencion" />
+  </wsdl:message>
+  <wsdl:message name="ICertificador_CancelaRetencion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelaRetencionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICertificador_ValidaTimbraCfdi_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidaTimbraCfdi" />
+  </wsdl:message>
+  <wsdl:message name="ICertificador_ValidaTimbraCfdi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidaTimbraCfdiResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICertificador_ValidaRFC_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidaRFC" />
+  </wsdl:message>
+  <wsdl:message name="ICertificador_ValidaRFC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidaRFCResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICertificador_ConsultaEstatusCFDI_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultaEstatusCFDI" />
+  </wsdl:message>
+  <wsdl:message name="ICertificador_ConsultaEstatusCFDI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultaEstatusCFDIResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICertificador">
+    <wsdl:operation name="TimbraCfdi">
+      <wsdl:input wsaw:Action="https://ntlink.com.mx/ICertificador/ICertificador/TimbraCfdi" message="tns:ICertificador_TimbraCfdi_InputMessage" />
+      <wsdl:output wsaw:Action="https://ntlink.com.mx/ICertificador/ICertificador/TimbraCfdiResponse" message="tns:ICertificador_TimbraCfdi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelaCfdi">
+      <wsdl:input wsaw:Action="https://ntlink.com.mx/ICertificador/ICertificador/CancelaCfdi" message="tns:ICertificador_CancelaCfdi_InputMessage" />
+      <wsdl:output wsaw:Action="https://ntlink.com.mx/ICertificador/ICertificador/CancelaCfdiResponse" message="tns:ICertificador_CancelaCfdi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelaRetencion">
+      <wsdl:input wsaw:Action="https://ntlink.com.mx/ICertificador/ICertificador/CancelaRetencion" message="tns:ICertificador_CancelaRetencion_InputMessage" />
+      <wsdl:output wsaw:Action="https://ntlink.com.mx/ICertificador/ICertificador/CancelaRetencionResponse" message="tns:ICertificador_CancelaRetencion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidaTimbraCfdi">
+      <wsdl:input wsaw:Action="https://ntlink.com.mx/ICertificador/ICertificador/ValidaTimbraCfdi" message="tns:ICertificador_ValidaTimbraCfdi_InputMessage" />
+      <wsdl:output wsaw:Action="https://ntlink.com.mx/ICertificador/ICertificador/ValidaTimbraCfdiResponse" message="tns:ICertificador_ValidaTimbraCfdi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidaRFC">
+      <wsdl:input wsaw:Action="https://ntlink.com.mx/ICertificador/ICertificador/ValidaRFC" message="tns:ICertificador_ValidaRFC_InputMessage" />
+      <wsdl:output wsaw:Action="https://ntlink.com.mx/ICertificador/ICertificador/ValidaRFCResponse" message="tns:ICertificador_ValidaRFC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaEstatusCFDI">
+      <wsdl:input wsaw:Action="https://ntlink.com.mx/ICertificador/ICertificador/ConsultaEstatusCFDI" message="tns:ICertificador_ConsultaEstatusCFDI_InputMessage" />
+      <wsdl:output wsaw:Action="https://ntlink.com.mx/ICertificador/ICertificador/ConsultaEstatusCFDIResponse" message="tns:ICertificador_ConsultaEstatusCFDI_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

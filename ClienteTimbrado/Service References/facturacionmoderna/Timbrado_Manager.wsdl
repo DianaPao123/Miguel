@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="https://t1demo.facturacionmoderna.com/timbrado/soap" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns="http://schemas.xmlsoap.org/wsdl/" name="Timbrado_Manager" targetNamespace="https://t1demo.facturacionmoderna.com/timbrado/soap" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="https://t1demo.facturacionmoderna.com/timbrado/soap" />
+  </wsdl:types>
+  <wsdl:message name="consultarEstatusCFDIIn">
+    <wsdl:part name="request" type="xsd:anyType" />
+  </wsdl:message>
+  <wsdl:message name="consultarEstatusCFDIOut">
+    <wsdl:part name="return" type="xsd:anyType" />
+  </wsdl:message>
+  <wsdl:message name="receptorPeticionesPendientesIn">
+    <wsdl:part name="request" type="xsd:anyType" />
+  </wsdl:message>
+  <wsdl:message name="receptorPeticionesPendientesOut">
+    <wsdl:part name="return" type="xsd:anyType" />
+  </wsdl:message>
+  <wsdl:message name="receptorAceptacionRechazoIn">
+    <wsdl:part name="request" type="xsd:anyType" />
+  </wsdl:message>
+  <wsdl:message name="receptorAceptacionRechazoOut">
+    <wsdl:part name="return" type="xsd:anyType" />
+  </wsdl:message>
+  <wsdl:message name="consultarRelacionadosIn">
+    <wsdl:part name="request" type="xsd:anyType" />
+  </wsdl:message>
+  <wsdl:message name="consultarRelacionadosOut">
+    <wsdl:part name="return" type="xsd:anyType" />
+  </wsdl:message>
+  <wsdl:message name="consultarSaldoIn">
+    <wsdl:part name="request" type="xsd:anyType" />
+  </wsdl:message>
+  <wsdl:message name="consultarSaldoOut">
+    <wsdl:part name="return" type="xsd:anyType" />
+  </wsdl:message>
+  <wsdl:message name="AuthIn">
+    <wsdl:part name="param1" type="xsd:anyType" />
+    <wsdl:part name="param2" type="xsd:anyType" />
+  </wsdl:message>
+  <wsdl:message name="AuthOut">
+    <wsdl:part name="return" type="xsd:boolean" />
+  </wsdl:message>
+  <wsdl:message name="validarCFDIIn">
+    <wsdl:part name="xml" type="xsd:anyType" />
+  </wsdl:message>
+  <wsdl:message name="validarCFDIOut">
+    <wsdl:part name="return" type="xsd:anyType" />
+  </wsdl:message>
+  <wsdl:message name="verificarCFDIIn">
+    <wsdl:part name="request" type="xsd:anyType" />
+    <wsdl:part name="internal" type="xsd:anyType" />
+  </wsdl:message>
+  <wsdl:message name="verificarCFDIOut">
+    <wsdl:part name="return" type="xsd:anyType" />
+  </wsdl:message>
+  <wsdl:message name="requestTimbrarCFDIIn">
+    <wsdl:part name="request" type="xsd:anyType" />
+  </wsdl:message>
+  <wsdl:message name="requestTimbrarCFDIOut">
+    <wsdl:part name="return" type="xsd:anyType" />
+  </wsdl:message>
+  <wsdl:message name="requestCancelarCFDIIn">
+    <wsdl:part name="request" type="xsd:anyType" />
+  </wsdl:message>
+  <wsdl:message name="requestCancelarCFDIOut">
+    <wsdl:part name="return" type="xsd:anyType" />
+  </wsdl:message>
+  <wsdl:message name="activarCancelacionIn">
+    <wsdl:part name="request" type="xsd:anyType" />
+  </wsdl:message>
+  <wsdl:message name="activarCancelacionOut">
+    <wsdl:part name="return" type="xsd:anyType" />
+  </wsdl:message>
+  <wsdl:message name="recuperarAcuseIn">
+    <wsdl:part name="request" type="xsd:anyType" />
+  </wsdl:message>
+  <wsdl:message name="recuperarAcuseOut">
+    <wsdl:part name="return" type="xsd:anyType" />
+  </wsdl:message>
+  <wsdl:portType name="Timbrado_ManagerPort">
+    <wsdl:operation name="consultarEstatusCFDI">
+      <documentation>Consulta Estatus de CFDI en SAT 
+retorna estatus o error</documentation>
+      <wsdl:input message="tns:consultarEstatusCFDIIn" />
+      <wsdl:output message="tns:consultarEstatusCFDIOut" />
+    </wsdl:operation>
+    <wsdl:operation name="receptorPeticionesPendientes">
+      <documentation>Consulta Peticiones Pendientes de Aceptacion/Rechazo 
+retorna lista de peticiones o error</documentation>
+      <wsdl:input message="tns:receptorPeticionesPendientesIn" />
+      <wsdl:output message="tns:receptorPeticionesPendientesOut" />
+    </wsdl:operation>
+    <wsdl:operation name="receptorAceptacionRechazo">
+      <documentation>Aceptar/Rechazar Solicitudes de Cancelacion
+retorna estatus o error</documentation>
+      <wsdl:input message="tns:receptorAceptacionRechazoIn" />
+      <wsdl:output message="tns:receptorAceptacionRechazoOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarRelacionados">
+      <documentation>Consulta Cfdis Relacionados a Uuid
+retorna lista de relaciones o error</documentation>
+      <wsdl:input message="tns:consultarRelacionadosIn" />
+      <wsdl:output message="tns:consultarRelacionadosOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarSaldo">
+      <documentation>Recibe la solicitud de un partner para consultar el saldo disponible según los timbres contratados.</documentation>
+      <wsdl:input message="tns:consultarSaldoIn" />
+      <wsdl:output message="tns:consultarSaldoOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Auth">
+      <documentation>Método de autenticacion para el servicio de validacion de CFDI.</documentation>
+      <wsdl:input message="tns:AuthIn" />
+      <wsdl:output message="tns:AuthOut" />
+    </wsdl:operation>
+    <wsdl:operation name="validarCFDI">
+      <documentation>Recibe un XML de un CFDI en formato Base64 y realiza las validaciones requeridas por el SAT.</documentation>
+      <wsdl:input message="tns:validarCFDIIn" />
+      <wsdl:output message="tns:validarCFDIOut" />
+    </wsdl:operation>
+    <wsdl:operation name="verificarCFDI">
+      <documentation>Verifica el estatus de un comprobante en los servicios del SAT. Web Service del Portal https://verificacfdi.facturaelectronica.sat.gob.mx</documentation>
+      <wsdl:input message="tns:verificarCFDIIn" />
+      <wsdl:output message="tns:verificarCFDIOut" />
+    </wsdl:operation>
+    <wsdl:operation name="requestTimbrarCFDI">
+      <documentation>Recibe un CFDI en formato Base64 y
+retorna el complemento Timbre Fiscal Digital</documentation>
+      <wsdl:input message="tns:requestTimbrarCFDIIn" />
+      <wsdl:output message="tns:requestTimbrarCFDIOut" />
+    </wsdl:operation>
+    <wsdl:operation name="requestCancelarCFDI">
+      <documentation>Recibe un UUID para cancelar 
+retorna el estatus del UUID</documentation>
+      <wsdl:input message="tns:requestCancelarCFDIIn" />
+      <wsdl:output message="tns:requestCancelarCFDIOut" />
+    </wsdl:operation>
+    <wsdl:operation name="activarCancelacion">
+      <documentation>Activar Cancelacion, recibe un archivo .cer, .key y contrasenia del CSD 
+retorna exito o error</documentation>
+      <wsdl:input message="tns:activarCancelacionIn" />
+      <wsdl:output message="tns:activarCancelacionOut" />
+    </wsdl:operation>
+    <wsdl:operation name="recuperarAcuse">
+      <documentation>Acuses de Envio/Cancelacion</documentation>
+      <wsdl:input message="tns:recuperarAcuseIn" />
+      <wsdl:output message="tns:recuperarAcuseOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Timbrado_ManagerBinding" type="tns:Timbrado_ManagerPort">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="consultarEstatusCFDI">
+      <soap:operation soapAction="https://t1demo.facturacionmoderna.com/timbrado/soap#consultarEstatusCFDI" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="https://t1demo.facturacionmoderna.com/timbrado/soap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="https://t1demo.facturacionmoderna.com/timbrado/soap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="receptorPeticionesPendientes">
+      <soap:operation soapAction="https://t1demo.facturacionmoderna.com/timbrado/soap#receptorPeticionesPendientes" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="https://t1demo.facturacionmoderna.com/timbrado/soap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="https://t1demo.facturacionmoderna.com/timbrado/soap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="receptorAceptacionRechazo">
+      <soap:operation soapAction="https://t1demo.facturacionmoderna.com/timbrado/soap#receptorAceptacionRechazo" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="https://t1demo.facturacionmoderna.com/timbrado/soap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="https://t1demo.facturacionmoderna.com/timbrado/soap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarRelacionados">
+      <soap:operation soapAction="https://t1demo.facturacionmoderna.com/timbrado/soap#consultarRelacionados" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="https://t1demo.facturacionmoderna.com/timbrado/soap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="https://t1demo.facturacionmoderna.com/timbrado/soap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarSaldo">
+      <soap:operation soapAction="https://t1demo.facturacionmoderna.com/timbrado/soap#consultarSaldo" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="https://t1demo.facturacionmoderna.com/timbrado/soap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="https://t1demo.facturacionmoderna.com/timbrado/soap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Auth">
+      <soap:operation soapAction="https://t1demo.facturacionmoderna.com/timbrado/soap#Auth" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="https://t1demo.facturacionmoderna.com/timbrado/soap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="https://t1demo.facturacionmoderna.com/timbrado/soap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validarCFDI">
+      <soap:operation soapAction="https://t1demo.facturacionmoderna.com/timbrado/soap#validarCFDI" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="https://t1demo.facturacionmoderna.com/timbrado/soap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="https://t1demo.facturacionmoderna.com/timbrado/soap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="verificarCFDI">
+      <soap:operation soapAction="https://t1demo.facturacionmoderna.com/timbrado/soap#verificarCFDI" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="https://t1demo.facturacionmoderna.com/timbrado/soap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="https://t1demo.facturacionmoderna.com/timbrado/soap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="requestTimbrarCFDI">
+      <soap:operation soapAction="https://t1demo.facturacionmoderna.com/timbrado/soap#requestTimbrarCFDI" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="https://t1demo.facturacionmoderna.com/timbrado/soap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="https://t1demo.facturacionmoderna.com/timbrado/soap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="requestCancelarCFDI">
+      <soap:operation soapAction="https://t1demo.facturacionmoderna.com/timbrado/soap#requestCancelarCFDI" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="https://t1demo.facturacionmoderna.com/timbrado/soap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="https://t1demo.facturacionmoderna.com/timbrado/soap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="activarCancelacion">
+      <soap:operation soapAction="https://t1demo.facturacionmoderna.com/timbrado/soap#activarCancelacion" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="https://t1demo.facturacionmoderna.com/timbrado/soap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="https://t1demo.facturacionmoderna.com/timbrado/soap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="recuperarAcuse">
+      <soap:operation soapAction="https://t1demo.facturacionmoderna.com/timbrado/soap#recuperarAcuse" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="https://t1demo.facturacionmoderna.com/timbrado/soap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="https://t1demo.facturacionmoderna.com/timbrado/soap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Timbrado_ManagerService">
+    <wsdl:port name="Timbrado_ManagerPort" binding="tns:Timbrado_ManagerBinding">
+      <soap:address location="https://t1demo.facturacionmoderna.com/timbrado/soap" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

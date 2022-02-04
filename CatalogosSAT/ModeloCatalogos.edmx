@@ -1,0 +1,786 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="CatalogosModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="CatalogosModelStoreContainer">
+          <EntitySet Name="Bancos" EntityType="CatalogosModel.Store.Bancos" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="c_ClaveProdServ" EntityType="CatalogosModel.Store.c_ClaveProdServ" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="c_ClaveUnidad" EntityType="CatalogosModel.Store.c_ClaveUnidad" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="c_Colonia" EntityType="CatalogosModel.Store.c_Colonia" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="c_CP" EntityType="CatalogosModel.Store.c_CP" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="c_Estado" EntityType="CatalogosModel.Store.c_Estado" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="c_FormaPago" EntityType="CatalogosModel.Store.c_FormaPago" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="c_FraccionArancelaria" EntityType="CatalogosModel.Store.c_FraccionArancelaria" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="c_INCOTERM" EntityType="CatalogosModel.Store.c_INCOTERM" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="c_Localidad" EntityType="CatalogosModel.Store.c_Localidad" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="c_Moneda" EntityType="CatalogosModel.Store.c_Moneda" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="c_Municipio" EntityType="CatalogosModel.Store.c_Municipio" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="c_NumPedimentoAduana" EntityType="CatalogosModel.Store.c_NumPedimentoAduana" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="c_Pais" EntityType="CatalogosModel.Store.c_Pais" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="c_RegimenFiscal" EntityType="CatalogosModel.Store.c_RegimenFiscal" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="c_TasaOCuota" EntityType="CatalogosModel.Store.c_TasaOCuota" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="c_TipoDeComprobante" EntityType="CatalogosModel.Store.c_TipoDeComprobante" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="c_UsoCFDI" EntityType="CatalogosModel.Store.c_UsoCFDI" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="Divisas" EntityType="CatalogosModel.Store.Divisas" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="UnidadMedida" EntityType="CatalogosModel.Store.UnidadMedida" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+        </EntityContainer>
+        <EntityType Name="Bancos">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="c_Banco" Type="float" />
+          <Property Name="Descripcion" Type="nvarchar" MaxLength="255" />
+          <Property Name="Nombre" Type="nvarchar" MaxLength="255" />
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="c_ClaveProdServ">
+          <Key>
+            <PropertyRef Name="c_ClaveProdServ" />
+          </Key>
+          <Property Name="c_ClaveProdServ" Type="int" Nullable="false" />
+          <Property Name="Descripcion" Type="nvarchar" MaxLength="200" />
+          <Property Name="IncluirIVAtrasladado" Type="nvarchar" MaxLength="10" />
+          <Property Name="IncluirIEPStrasladado" Type="nvarchar" MaxLength="10" />
+          <Property Name="Complemento" Type="nvarchar" MaxLength="55" />
+          <Property Name="FechaInicioVigencia" Type="datetime" />
+          <Property Name="FechaFinVigencia" Type="datetime" />
+        </EntityType>
+        <EntityType Name="c_ClaveUnidad">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="c_ClaveUnidad" Type="nvarchar" MaxLength="5" />
+          <Property Name="Nombre" Type="nvarchar" MaxLength="255" />
+          <Property Name="Descripcion" Type="nvarchar" MaxLength="255" />
+          <Property Name="Nota" Type="nvarchar" MaxLength="255" />
+          <Property Name="Fecha de inicio de vigencia" Type="datetime" />
+          <Property Name="Fecha de fin de vigencia" Type="datetime" />
+          <Property Name="Símbolo" Type="nvarchar" MaxLength="25" />
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="c_Colonia">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="c_Colonia" Type="nvarchar" MaxLength="255" />
+          <Property Name="c_CodigoPostal" Type="nvarchar" MaxLength="255" />
+          <Property Name="Nombredelasentamiento" Type="nvarchar" MaxLength="255" />
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="c_CP">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="c_CP" Type="nvarchar" MaxLength="255" />
+          <Property Name="c_Estado" Type="nvarchar" MaxLength="255" />
+          <Property Name="c_Municipio" Type="nvarchar" MaxLength="255" />
+          <Property Name="c_Localidad" Type="nvarchar" MaxLength="255" />
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="c_Estado">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="c_Estado" Type="nvarchar" MaxLength="255" />
+          <Property Name="c_Pais" Type="nvarchar" MaxLength="255" />
+          <Property Name="NombredelEstado" Type="nvarchar" MaxLength="255" />
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="c_FormaPago">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="c_FormaPago" Type="varchar" MaxLength="5" />
+          <Property Name="Descripcion" Type="nvarchar" MaxLength="55" />
+          <Property Name="Bancarizado" Type="nvarchar" MaxLength="10" />
+          <Property Name="NumeroOperación" Type="nvarchar" MaxLength="10" />
+          <Property Name="RFCcuentaOrdenante" Type="nvarchar" MaxLength="10" />
+          <Property Name="CuentaOrdenante" Type="nvarchar" MaxLength="255" />
+          <Property Name="Patroncuentaordenante" Type="nvarchar" MaxLength="255" />
+          <Property Name="RFCCuentaBeneficiario" Type="nvarchar" MaxLength="255" />
+          <Property Name="CuentaBenenficiario" Type="nvarchar" MaxLength="255" />
+          <Property Name="PatroncuentaBeneficiaria" Type="nvarchar" MaxLength="255" />
+          <Property Name="TipoCadenaPago" Type="nvarchar" MaxLength="255" />
+          <Property Name="NombreBancoEncasoextranjero" Type="nvarchar" MaxLength="255" />
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="c_FraccionArancelaria">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="c_FraccionArancelaria" Type="nvarchar" MaxLength="255" />
+          <Property Name="Descripción" Type="nvarchar" MaxLength="255" />
+          <Property Name="Fecha de inicio de vigencia" Type="datetime" />
+          <Property Name="Fecha de fin de vigencia" Type="datetime" />
+          <Property Name="Criterio" Type="nvarchar" MaxLength="255" />
+          <Property Name="Unidad de Medida" Type="int" />
+          <Property Name="IMP" Type="float" />
+          <Property Name="EXP" Type="nvarchar" MaxLength="255" />
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="c_INCOTERM">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="c_INCOTERM" Type="nvarchar" MaxLength="255" />
+          <Property Name="Descripción" Type="nvarchar" MaxLength="255" />
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="c_Localidad">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="c_Localidad" Type="nvarchar" MaxLength="255" />
+          <Property Name="c_Estado" Type="nvarchar" MaxLength="255" />
+          <Property Name="Descripción" Type="nvarchar" MaxLength="255" />
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="c_Moneda">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="c_Moneda" Type="nvarchar" MaxLength="5" />
+          <Property Name="Descripción" Type="nvarchar" MaxLength="200" />
+          <Property Name="Decimales" Type="int" />
+          <Property Name="Variacion" Type="varchar" MaxLength="50" />
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="c_Municipio">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="c_Municipio" Type="nvarchar" MaxLength="255" />
+          <Property Name="c_Estado" Type="nvarchar" MaxLength="255" />
+          <Property Name="Descripción" Type="nvarchar" MaxLength="255" />
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="c_NumPedimentoAduana">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="c_Aduana" Type="int" />
+          <Property Name="Patente" Type="int" />
+          <Property Name="Ejercicio" Type="int" />
+          <Property Name="Cantidad" Type="nvarchar" MaxLength="25" />
+          <Property Name="Fecha inicio de vigencia" Type="datetime" />
+          <Property Name="Fecha fin de vigencia" Type="datetime" />
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="c_Pais">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="c_Pais" Type="nvarchar" MaxLength="255" />
+          <Property Name="Descripción" Type="nvarchar" MaxLength="255" />
+          <Property Name="FormatodeCP" Type="nvarchar" MaxLength="255" />
+          <Property Name="FormatodeRIT" Type="nvarchar" MaxLength="255" />
+          <Property Name="ValidaciondelRIT" Type="nvarchar" MaxLength="255" />
+          <Property Name="Agrupaciones" Type="nvarchar" MaxLength="255" />
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="c_RegimenFiscal">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="c_RegimenFiscal" Type="nchar" MaxLength="3" />
+          <Property Name="Descripcion" Type="nvarchar" MaxLength="255" />
+          <Property Name="Física" Type="nvarchar" MaxLength="25" />
+          <Property Name="Moral" Type="nvarchar" MaxLength="25" />
+          <Property Name="Fecha de inicio de vigencia" Type="datetime" />
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="c_TasaOCuota">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="RangoOFijo" Type="nvarchar" MaxLength="255" />
+          <Property Name="Minimo" Type="varchar" MaxLength="50" />
+          <Property Name="Maximo" Type="varchar" MaxLength="50" />
+          <Property Name="Impuesto" Type="nvarchar" MaxLength="255" />
+          <Property Name="Factor" Type="nvarchar" MaxLength="255" />
+          <Property Name="Traslado" Type="nvarchar" MaxLength="255" />
+          <Property Name="Retencion" Type="nvarchar" MaxLength="255" />
+          <Property Name="FechaInicio" Type="datetime" />
+          <Property Name="FechaVigencia" Type="datetime" />
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="c_TipoDeComprobante">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="c_TipoDeComprobante" Type="nvarchar" MaxLength="5" />
+          <Property Name="Descripción" Type="nvarchar" MaxLength="20" />
+          <Property Name="Valor máximo" Type="bigint" />
+          <Property Name="Fecha inicio de vigencia" Type="datetime" />
+          <Property Name="Fecha fin de vigencia" Type="datetime" />
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="c_UsoCFDI">
+          <Key>
+            <PropertyRef Name="c_UsoCFDI" />
+          </Key>
+          <Property Name="c_UsoCFDI" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="Descripción" Type="nvarchar" MaxLength="255" />
+          <Property Name="Física" Type="nvarchar" MaxLength="2" />
+          <Property Name="Moral" Type="nvarchar" MaxLength="2" />
+          <Property Name="Fecha inicio de vigencia" Type="datetime" />
+          <Property Name="Fecha fin de vigencia" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Divisas">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Pais" Type="nvarchar" MaxLength="255" />
+          <Property Name="Clave" Type="nvarchar" MaxLength="255" />
+          <Property Name="Divisa" Type="nvarchar" MaxLength="255" />
+          <Property Name="PesosDivisa" Type="float" />
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="UnidadMedida">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="C_UnidadMedida" Type="nvarchar" MaxLength="5" />
+          <Property Name="Descripción" Type="nvarchar" MaxLength="155" />
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CatalogosModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntityContainer Name="CatalogosEntities1" annotation:LazyLoadingEnabled="true" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+          <EntitySet Name="c_Colonia" EntityType="CatalogosModel.c_Colonia" />
+          <EntitySet Name="c_CP" EntityType="CatalogosModel.c_CP" />
+          <EntitySet Name="c_Estado" EntityType="CatalogosModel.c_Estado" />
+          <EntitySet Name="c_FraccionArancelaria" EntityType="CatalogosModel.c_FraccionArancelaria" />
+          <EntitySet Name="c_INCOTERM" EntityType="CatalogosModel.c_INCOTERM" />
+          <EntitySet Name="c_Localidad" EntityType="CatalogosModel.c_Localidad" />
+          <EntitySet Name="c_Municipio" EntityType="CatalogosModel.c_Municipio" />
+          <EntitySet Name="c_Pais" EntityType="CatalogosModel.c_Pais" />
+          <EntitySet Name="c_RegimenFiscal" EntityType="CatalogosModel.c_RegimenFiscal" />
+          <EntitySet Name="UnidadMedida" EntityType="CatalogosModel.UnidadMedida" />
+          <EntitySet Name="c_UsoCFDI" EntityType="CatalogosModel.c_UsoCFDI" />
+          <EntitySet Name="c_Moneda" EntityType="CatalogosModel.c_Moneda" />
+          <EntitySet Name="c_NumPedimentoAduana" EntityType="CatalogosModel.c_NumPedimentoAduana" />
+          <EntitySet Name="c_ClaveProdServ" EntityType="CatalogosModel.c_ClaveProdServ" />
+          <EntitySet Name="c_TipoDeComprobante" EntityType="CatalogosModel.c_TipoDeComprobante" />
+          <EntitySet Name="c_TasaOCuota" EntityType="CatalogosModel.c_TasaOCuota" />
+          <EntitySet Name="Divisas" EntityType="CatalogosModel.Divisas" />
+          <EntitySet Name="c_FormaPago" EntityType="CatalogosModel.c_FormaPago" />
+          <EntitySet Name="c_ClaveUnidad" EntityType="CatalogosModel.c_ClaveUnidad" />
+          <EntitySet Name="Bancos" EntityType="CatalogosModel.Bancos" />
+        </EntityContainer>
+        <EntityType Name="c_Colonia">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="c_Colonia1" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="c_CodigoPostal" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Nombredelasentamiento" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        </EntityType>
+        <EntityType Name="c_CP">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="c_CP1" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="c_Estado" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="c_Municipio" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="c_Localidad" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        </EntityType>
+        <EntityType Name="c_Estado">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="c_Estado1" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="c_Pais" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="NombredelEstado" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        </EntityType>
+        <EntityType Name="c_FraccionArancelaria">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="c_FraccionArancelaria1" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Descripción" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Fecha_de_inicio_de_vigencia" Type="DateTime" />
+          <Property Name="Fecha_de_fin_de_vigencia" Type="DateTime" />
+          <Property Name="Criterio" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Unidad_de_Medida" Type="Int32" />
+          <Property Name="IMP" Type="Double" />
+          <Property Name="EXP" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        </EntityType>
+        <EntityType Name="c_INCOTERM">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="c_INCOTERM1" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Descripción" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        </EntityType>
+        <EntityType Name="c_Localidad">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="c_Localidad1" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="c_Estado" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Descripción" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        </EntityType>
+        <EntityType Name="c_Municipio">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="c_Municipio1" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="c_Estado" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Descripción" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        </EntityType>
+        <EntityType Name="c_Pais">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="c_Pais1" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Descripción" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="FormatodeCP" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="FormatodeRIT" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="ValidaciondelRIT" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Agrupaciones" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        </EntityType>
+        <EntityType Name="c_RegimenFiscal">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="c_RegimenFiscal1" Type="String" MaxLength="3" Unicode="true" FixedLength="true" />
+          <Property Name="Descripcion" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Física" Type="String" MaxLength="25" Unicode="true" FixedLength="false" />
+          <Property Name="Moral" Type="String" MaxLength="25" Unicode="true" FixedLength="false" />
+          <Property Name="Fecha_de_inicio_de_vigencia" Type="DateTime" />
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        </EntityType>
+        <EntityType Name="UnidadMedida">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="C_UnidadMedida" Type="String" MaxLength="5" Unicode="true" FixedLength="false" />
+          <Property Name="Descripción" Type="String" MaxLength="155" Unicode="true" FixedLength="false" />
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        </EntityType>
+        <EntityType Name="c_UsoCFDI">
+          <Key>
+            <PropertyRef Name="c_UsoCFDI1" />
+          </Key>
+          <Property Type="String" Name="c_UsoCFDI1" Nullable="false" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Descripción" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Física" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Moral" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="Fecha_inicio_de_vigencia" />
+          <Property Type="DateTime" Name="Fecha_fin_de_vigencia" />
+        </EntityType>
+        <EntityType Name="c_Moneda">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="String" Name="c_Moneda1" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Descripción" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Decimales" />
+          <Property Type="String" Name="Variacion" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        </EntityType>
+        <EntityType Name="c_NumPedimentoAduana">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="c_Aduana" />
+          <Property Type="Int32" Name="Patente" />
+          <Property Type="Int32" Name="Ejercicio" />
+          <Property Type="String" Name="Cantidad" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="Fecha_inicio_de_vigencia" />
+          <Property Type="DateTime" Name="Fecha_fin_de_vigencia" />
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        </EntityType>
+        <EntityType Name="c_ClaveProdServ">
+          <Key>
+            <PropertyRef Name="c_ClaveProdServ1" />
+          </Key>
+          <Property Type="Int32" Name="c_ClaveProdServ1" Nullable="false" />
+          <Property Type="String" Name="Descripcion" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="FechaInicioVigencia" />
+          <Property Type="DateTime" Name="FechaFinVigencia" />
+          <Property Type="String" Name="IncluirIVAtrasladado" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="IncluirIEPStrasladado" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Complemento" MaxLength="55" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="c_TipoDeComprobante">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="String" Name="c_TipoDeComprobante1" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Descripción" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="Int64" Name="Valor_máximo" />
+          <Property Type="DateTime" Name="Fecha_inicio_de_vigencia" />
+          <Property Type="DateTime" Name="Fecha_fin_de_vigencia" />
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        </EntityType>
+        <EntityType Name="c_TasaOCuota">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="String" Name="RangoOFijo" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Minimo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Maximo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Impuesto" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Factor" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Traslado" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Retencion" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="FechaInicio" />
+          <Property Type="DateTime" Name="FechaVigencia" />
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        </EntityType>
+        <EntityType Name="Divisas">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="String" Name="Pais" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Clave" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Divisa" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="Double" Name="PesosDivisa" />
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        </EntityType>
+        <EntityType Name="c_FormaPago">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="String" Name="c_FormaPago1" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Descripcion" MaxLength="55" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Bancarizado" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="NumeroOperación" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="RFCcuentaOrdenante" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CuentaOrdenante" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Patroncuentaordenante" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="RFCCuentaBeneficiario" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CuentaBenenficiario" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PatroncuentaBeneficiaria" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TipoCadenaPago" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="NombreBancoEncasoextranjero" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        </EntityType>
+        <EntityType Name="c_ClaveUnidad">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="String" Name="c_ClaveUnidad1" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Nombre" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Descripcion" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Nota" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="Fecha_de_inicio_de_vigencia" />
+          <Property Type="DateTime" Name="Fecha_de_fin_de_vigencia" />
+          <Property Type="String" Name="Símbolo" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        </EntityType>
+        <EntityType Name="Bancos">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Double" Name="c_Banco" />
+          <Property Type="String" Name="Descripcion" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Nombre" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CatalogosModelStoreContainer" CdmEntityContainer="CatalogosEntities1">
+          <EntitySetMapping Name="c_Colonia">
+            <EntityTypeMapping TypeName="CatalogosModel.c_Colonia">
+              <MappingFragment StoreEntitySet="c_Colonia">
+                <ScalarProperty Name="c_Colonia1" ColumnName="c_Colonia" />
+                <ScalarProperty Name="c_CodigoPostal" ColumnName="c_CodigoPostal" />
+                <ScalarProperty Name="Nombredelasentamiento" ColumnName="Nombredelasentamiento" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="c_CP">
+            <EntityTypeMapping TypeName="CatalogosModel.c_CP">
+              <MappingFragment StoreEntitySet="c_CP">
+                <ScalarProperty Name="c_CP1" ColumnName="c_CP" />
+                <ScalarProperty Name="c_Estado" ColumnName="c_Estado" />
+                <ScalarProperty Name="c_Municipio" ColumnName="c_Municipio" />
+                <ScalarProperty Name="c_Localidad" ColumnName="c_Localidad" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="c_Estado">
+            <EntityTypeMapping TypeName="CatalogosModel.c_Estado">
+              <MappingFragment StoreEntitySet="c_Estado">
+                <ScalarProperty Name="c_Estado1" ColumnName="c_Estado" />
+                <ScalarProperty Name="c_Pais" ColumnName="c_Pais" />
+                <ScalarProperty Name="NombredelEstado" ColumnName="NombredelEstado" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="c_FraccionArancelaria">
+            <EntityTypeMapping TypeName="CatalogosModel.c_FraccionArancelaria">
+              <MappingFragment StoreEntitySet="c_FraccionArancelaria">
+                <ScalarProperty Name="c_FraccionArancelaria1" ColumnName="c_FraccionArancelaria" />
+                <ScalarProperty Name="Descripción" ColumnName="Descripción" />
+                <ScalarProperty Name="Fecha_de_inicio_de_vigencia" ColumnName="Fecha de inicio de vigencia" />
+                <ScalarProperty Name="Fecha_de_fin_de_vigencia" ColumnName="Fecha de fin de vigencia" />
+                <ScalarProperty Name="Criterio" ColumnName="Criterio" />
+                <ScalarProperty Name="Unidad_de_Medida" ColumnName="Unidad de Medida" />
+                <ScalarProperty Name="IMP" ColumnName="IMP" />
+                <ScalarProperty Name="EXP" ColumnName="EXP" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="c_INCOTERM">
+            <EntityTypeMapping TypeName="CatalogosModel.c_INCOTERM">
+              <MappingFragment StoreEntitySet="c_INCOTERM">
+                <ScalarProperty Name="c_INCOTERM1" ColumnName="c_INCOTERM" />
+                <ScalarProperty Name="Descripción" ColumnName="Descripción" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="c_Localidad">
+            <EntityTypeMapping TypeName="CatalogosModel.c_Localidad">
+              <MappingFragment StoreEntitySet="c_Localidad">
+                <ScalarProperty Name="c_Localidad1" ColumnName="c_Localidad" />
+                <ScalarProperty Name="c_Estado" ColumnName="c_Estado" />
+                <ScalarProperty Name="Descripción" ColumnName="Descripción" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="c_Municipio">
+            <EntityTypeMapping TypeName="CatalogosModel.c_Municipio">
+              <MappingFragment StoreEntitySet="c_Municipio">
+                <ScalarProperty Name="c_Municipio1" ColumnName="c_Municipio" />
+                <ScalarProperty Name="c_Estado" ColumnName="c_Estado" />
+                <ScalarProperty Name="Descripción" ColumnName="Descripción" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="c_Pais">
+            <EntityTypeMapping TypeName="CatalogosModel.c_Pais">
+              <MappingFragment StoreEntitySet="c_Pais">
+                <ScalarProperty Name="c_Pais1" ColumnName="c_Pais" />
+                <ScalarProperty Name="Descripción" ColumnName="Descripción" />
+                <ScalarProperty Name="FormatodeCP" ColumnName="FormatodeCP" />
+                <ScalarProperty Name="FormatodeRIT" ColumnName="FormatodeRIT" />
+                <ScalarProperty Name="ValidaciondelRIT" ColumnName="ValidaciondelRIT" />
+                <ScalarProperty Name="Agrupaciones" ColumnName="Agrupaciones" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="c_RegimenFiscal">
+            <EntityTypeMapping TypeName="CatalogosModel.c_RegimenFiscal">
+              <MappingFragment StoreEntitySet="c_RegimenFiscal">
+                <ScalarProperty Name="c_RegimenFiscal1" ColumnName="c_RegimenFiscal" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Física" ColumnName="Física" />
+                <ScalarProperty Name="Moral" ColumnName="Moral" />
+                <ScalarProperty Name="Fecha_de_inicio_de_vigencia" ColumnName="Fecha de inicio de vigencia" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UnidadMedida">
+            <EntityTypeMapping TypeName="CatalogosModel.UnidadMedida">
+              <MappingFragment StoreEntitySet="UnidadMedida">
+                <ScalarProperty Name="C_UnidadMedida" ColumnName="C_UnidadMedida" />
+                <ScalarProperty Name="Descripción" ColumnName="Descripción" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="c_UsoCFDI">
+            <EntityTypeMapping TypeName="CatalogosModel.c_UsoCFDI">
+              <MappingFragment StoreEntitySet="c_UsoCFDI">
+                <ScalarProperty Name="Fecha_fin_de_vigencia" ColumnName="Fecha fin de vigencia" />
+                <ScalarProperty Name="Fecha_inicio_de_vigencia" ColumnName="Fecha inicio de vigencia" />
+                <ScalarProperty Name="Moral" ColumnName="Moral" />
+                <ScalarProperty Name="Física" ColumnName="Física" />
+                <ScalarProperty Name="Descripción" ColumnName="Descripción" />
+                <ScalarProperty Name="c_UsoCFDI1" ColumnName="c_UsoCFDI" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="c_Moneda">
+            <EntityTypeMapping TypeName="CatalogosModel.c_Moneda">
+              <MappingFragment StoreEntitySet="c_Moneda">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Variacion" ColumnName="Variacion" />
+                <ScalarProperty Name="Decimales" ColumnName="Decimales" />
+                <ScalarProperty Name="Descripción" ColumnName="Descripción" />
+                <ScalarProperty Name="c_Moneda1" ColumnName="c_Moneda" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="c_NumPedimentoAduana">
+            <EntityTypeMapping TypeName="CatalogosModel.c_NumPedimentoAduana">
+              <MappingFragment StoreEntitySet="c_NumPedimentoAduana">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Fecha_fin_de_vigencia" ColumnName="Fecha fin de vigencia" />
+                <ScalarProperty Name="Fecha_inicio_de_vigencia" ColumnName="Fecha inicio de vigencia" />
+                <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+                <ScalarProperty Name="Ejercicio" ColumnName="Ejercicio" />
+                <ScalarProperty Name="Patente" ColumnName="Patente" />
+                <ScalarProperty Name="c_Aduana" ColumnName="c_Aduana" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="c_ClaveProdServ">
+            <EntityTypeMapping TypeName="CatalogosModel.c_ClaveProdServ">
+              <MappingFragment StoreEntitySet="c_ClaveProdServ">
+                <ScalarProperty Name="Complemento" ColumnName="Complemento" />
+                <ScalarProperty Name="IncluirIEPStrasladado" ColumnName="IncluirIEPStrasladado" />
+                <ScalarProperty Name="IncluirIVAtrasladado" ColumnName="IncluirIVAtrasladado" />
+                <ScalarProperty Name="FechaFinVigencia" ColumnName="FechaFinVigencia" />
+                <ScalarProperty Name="FechaInicioVigencia" ColumnName="FechaInicioVigencia" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="c_ClaveProdServ1" ColumnName="c_ClaveProdServ" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="c_TipoDeComprobante">
+            <EntityTypeMapping TypeName="CatalogosModel.c_TipoDeComprobante">
+              <MappingFragment StoreEntitySet="c_TipoDeComprobante">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Fecha_fin_de_vigencia" ColumnName="Fecha fin de vigencia" />
+                <ScalarProperty Name="Fecha_inicio_de_vigencia" ColumnName="Fecha inicio de vigencia" />
+                <ScalarProperty Name="Valor_máximo" ColumnName="Valor máximo" />
+                <ScalarProperty Name="Descripción" ColumnName="Descripción" />
+                <ScalarProperty Name="c_TipoDeComprobante1" ColumnName="c_TipoDeComprobante" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="c_TasaOCuota">
+            <EntityTypeMapping TypeName="CatalogosModel.c_TasaOCuota">
+              <MappingFragment StoreEntitySet="c_TasaOCuota">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FechaVigencia" ColumnName="FechaVigencia" />
+                <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+                <ScalarProperty Name="Retencion" ColumnName="Retencion" />
+                <ScalarProperty Name="Traslado" ColumnName="Traslado" />
+                <ScalarProperty Name="Factor" ColumnName="Factor" />
+                <ScalarProperty Name="Impuesto" ColumnName="Impuesto" />
+                <ScalarProperty Name="Maximo" ColumnName="Maximo" />
+                <ScalarProperty Name="Minimo" ColumnName="Minimo" />
+                <ScalarProperty Name="RangoOFijo" ColumnName="RangoOFijo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Divisas">
+            <EntityTypeMapping TypeName="CatalogosModel.Divisas">
+              <MappingFragment StoreEntitySet="Divisas">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="PesosDivisa" ColumnName="PesosDivisa" />
+                <ScalarProperty Name="Divisa" ColumnName="Divisa" />
+                <ScalarProperty Name="Clave" ColumnName="Clave" />
+                <ScalarProperty Name="Pais" ColumnName="Pais" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="c_FormaPago">
+            <EntityTypeMapping TypeName="CatalogosModel.c_FormaPago">
+              <MappingFragment StoreEntitySet="c_FormaPago">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NombreBancoEncasoextranjero" ColumnName="NombreBancoEncasoextranjero" />
+                <ScalarProperty Name="TipoCadenaPago" ColumnName="TipoCadenaPago" />
+                <ScalarProperty Name="PatroncuentaBeneficiaria" ColumnName="PatroncuentaBeneficiaria" />
+                <ScalarProperty Name="CuentaBenenficiario" ColumnName="CuentaBenenficiario" />
+                <ScalarProperty Name="RFCCuentaBeneficiario" ColumnName="RFCCuentaBeneficiario" />
+                <ScalarProperty Name="Patroncuentaordenante" ColumnName="Patroncuentaordenante" />
+                <ScalarProperty Name="CuentaOrdenante" ColumnName="CuentaOrdenante" />
+                <ScalarProperty Name="RFCcuentaOrdenante" ColumnName="RFCcuentaOrdenante" />
+                <ScalarProperty Name="NumeroOperación" ColumnName="NumeroOperación" />
+                <ScalarProperty Name="Bancarizado" ColumnName="Bancarizado" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="c_FormaPago1" ColumnName="c_FormaPago" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="c_ClaveUnidad">
+            <EntityTypeMapping TypeName="CatalogosModel.c_ClaveUnidad">
+              <MappingFragment StoreEntitySet="c_ClaveUnidad">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Símbolo" ColumnName="Símbolo" />
+                <ScalarProperty Name="Fecha_de_fin_de_vigencia" ColumnName="Fecha de fin de vigencia" />
+                <ScalarProperty Name="Fecha_de_inicio_de_vigencia" ColumnName="Fecha de inicio de vigencia" />
+                <ScalarProperty Name="Nota" ColumnName="Nota" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="c_ClaveUnidad1" ColumnName="c_ClaveUnidad" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Bancos">
+            <EntityTypeMapping TypeName="CatalogosModel.Bancos">
+              <MappingFragment StoreEntitySet="Bancos">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="c_Banco" ColumnName="c_Banco" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="ModeloCatalogos">
+        <EntityTypeShape EntityType="CatalogosModel.c_Colonia" Width="1.5" PointX="0.75" PointY="0.75" Height="1.5923063151041665" IsExpanded="true" />
+        <EntityTypeShape EntityType="CatalogosModel.c_CP" Width="1.5" PointX="2.75" PointY="0.75" Height="1.7566536458333335" IsExpanded="true" />
+        <EntityTypeShape EntityType="CatalogosModel.c_Estado" Width="1.5" PointX="0.75" PointY="3.75" Height="1.592306315104167" IsExpanded="true" />
+        <EntityTypeShape EntityType="CatalogosModel.c_FraccionArancelaria" Width="1.5" PointX="2.75" PointY="3.75" Height="2.4140429687499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="CatalogosModel.c_INCOTERM" Width="1.5" PointX="4.75" PointY="0.75" Height="1.4279589843749996" IsExpanded="true" />
+        <EntityTypeShape EntityType="CatalogosModel.c_Localidad" Width="1.5" PointX="4.75" PointY="3.75" Height="1.592306315104167" IsExpanded="true" />
+        <EntityTypeShape EntityType="CatalogosModel.c_Municipio" Width="1.5" PointX="6.75" PointY="3.75" Height="1.5923063151041674" IsExpanded="true" />
+        <EntityTypeShape EntityType="CatalogosModel.c_Pais" Width="1.5" PointX="4.75" PointY="6.75" Height="2.0853483072916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="CatalogosModel.c_RegimenFiscal" Width="1.5" PointX="6.75" PointY="6.75" Height="1.9210009765624996" IsExpanded="true" />
+        <EntityTypeShape EntityType="CatalogosModel.UnidadMedida" Width="1.5" PointX="0.75" PointY="7.75" Height="1.4279589843750031" IsExpanded="true" />
+        <EntityTypeShape EntityType="CatalogosModel.c_UsoCFDI" Width="1.5" PointX="9.375" PointY="0.75" Height="1.9210009765625031" />
+        <EntityTypeShape EntityType="CatalogosModel.c_Moneda" Width="1.5" PointX="9.375" PointY="3.75" Height="1.7566536458333388" />
+        <EntityTypeShape EntityType="CatalogosModel.c_NumPedimentoAduana" Width="1.5" PointX="3.375" PointY="9.75" Height="2.0853483072916674" />
+        <EntityTypeShape EntityType="CatalogosModel.c_ClaveProdServ" Width="1.5" PointX="5.375" PointY="9.75" Height="2.0853483072916674" />
+        <EntityTypeShape EntityType="CatalogosModel.c_TipoDeComprobante" Width="1.5" PointX="9.375" PointY="6.75" Height="1.9210009765625031" />
+        <EntityTypeShape EntityType="CatalogosModel.c_TasaOCuota" Width="1.5" PointX="7.375" PointY="9.75" Height="2.5783902994791674" />
+        <EntityTypeShape EntityType="CatalogosModel.Divisas" Width="1.5" PointX="9.375" PointY="9.75" Height="1.7566536458333388" />
+        <EntityTypeShape EntityType="CatalogosModel.c_FormaPago" Width="1.5" PointX="0.75" PointY="10.75" Height="3.0714322916666674" />
+        <EntityTypeShape EntityType="CatalogosModel.c_ClaveUnidad" Width="1.5" PointX="11.375" PointY="0.75" Height="2.2496956380208317" />
+        <EntityTypeShape EntityType="CatalogosModel.Bancos" Width="1.5" PointX="11.375" PointY="4.75" Height="1.7879850260416674" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
