@@ -66,6 +66,8 @@
     <Compile Include="DatosdetalleRT.cs" />
     <Compile Include="datosrequest.cs" />
     <Compile Include="Entities\ConceptosCargados.cs" />
+    <Compile Include="Entities\DatosRelacionados.cs" />
+    <Compile Include="Entities\facturasdetalleRT.cs" />
     <Compile Include="Entities\vfacturasContabilidad.cs" />
     <Compile Include="Entities\vfacturasPromotores.cs" />
     <Compile Include="Entities\vfacturas.cs" />
@@ -79,6 +81,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Pagos20.cs" />
     <Compile Include="param0.cs" />
     <Compile Include="vfacturas.cs" />
     <Compile Include="GAFClientes.cs" />

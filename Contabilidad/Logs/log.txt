@@ -4445,3 +4445,554 @@ Error Number:8152,State:14,Class:16
    en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
    en Business.ReportExecution.ReportExecutionService.LoadReport(String Report, String HistoryID) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\Web References\ReportExecution\Reference.cs:línea 287
    en Business.GAFFactura.GetAcuseCancelacion(String report, Int64 idVenta, String estatus, String estatusCancela, String EstatusCancelacion) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\GAFFactura.cs:línea 1238
+2022-03-04 23:52:47,864-7-DEBUG-Business.Mailer.Send.45: Enviando a 2 emails
+2022-03-04 23:52:47,943-7-INFO-Business.Mailer.Send.65: Creando MailMessage
+2022-03-04 23:52:47,943-7-INFO-Business.Mailer.Send.76: Cargando Bcc: 
+2022-03-04 23:52:47,944-7-INFO-Business.Mailer.Send.84: Agregando attach
+2022-03-04 23:52:47,961-7-ERROR-Business.Mailer.Send.107: System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en Business.Mailer.Send(List`1 recipients, List`1 attachments, String message, String subject, String fromEmail, String fromDescription) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\Mailer.cs:línea 90
+2022-03-04 23:53:36,750-7-DEBUG-Business.Mailer.Send.45: Enviando a 2 emails
+2022-03-04 23:53:36,751-7-INFO-Business.Mailer.Send.65: Creando MailMessage
+2022-03-04 23:53:36,751-7-INFO-Business.Mailer.Send.76: Cargando Bcc: 
+2022-03-04 23:53:36,751-7-INFO-Business.Mailer.Send.84: Agregando attach
+2022-03-04 23:53:36,763-7-ERROR-Business.Mailer.Send.107: System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en Business.Mailer.Send(List`1 recipients, List`1 attachments, String message, String subject, String fromEmail, String fromDescription) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\Mailer.cs:línea 90
+2022-03-04 23:56:12,089-6-DEBUG-Business.GAFFactura.GetAcuseCancelacion.1209: /AcuseCancelacion->9487
+2022-03-04 23:56:12,508-6-ERROR-Business.GAFFactura.GetAcuseCancelacion.1253: System.Net.WebException: Error de la solicitud con el código de estado HTTP 401: Unauthorized.
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en Business.ReportExecution.ReportExecutionService.LoadReport(String Report, String HistoryID) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\Web References\ReportExecution\Reference.cs:línea 287
+   en Business.GAFFactura.GetAcuseCancelacion(String report, Int64 idVenta, String estatus, String estatusCancela, String EstatusCancelacion) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\GAFFactura.cs:línea 1238
+2022-03-04 23:57:05,223-8-DEBUG-Business.GAFFactura.GetAcuseCancelacion.1209: /AcuseCancelacion->9487
+2022-03-04 23:57:05,241-8-ERROR-Business.GAFFactura.GetAcuseCancelacion.1253: System.Net.WebException: Error de la solicitud con el código de estado HTTP 401: Unauthorized.
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en Business.ReportExecution.ReportExecutionService.LoadReport(String Report, String HistoryID) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\Web References\ReportExecution\Reference.cs:línea 287
+   en Business.GAFFactura.GetAcuseCancelacion(String report, Int64 idVenta, String estatus, String estatusCancela, String EstatusCancelacion) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\GAFFactura.cs:línea 1238
+2022-03-04 23:57:39,395-6-DEBUG-Business.GAFFactura.GetAcuseCancelacion.1209: /AcuseCancelacion->9487
+2022-03-04 23:57:39,413-6-ERROR-Business.GAFFactura.GetAcuseCancelacion.1253: System.Net.WebException: Error de la solicitud con el código de estado HTTP 401: Unauthorized.
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en Business.ReportExecution.ReportExecutionService.LoadReport(String Report, String HistoryID) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\Web References\ReportExecution\Reference.cs:línea 287
+   en Business.GAFFactura.GetAcuseCancelacion(String report, Int64 idVenta, String estatus, String estatusCancela, String EstatusCancelacion) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\GAFFactura.cs:línea 1238
+2022-03-05 00:00:28,240-7-DEBUG-Business.GAFFactura.GetAcuseCancelacion.1209: /AcuseCancelacion->9487
+2022-03-05 00:00:28,642-7-ERROR-Business.GAFFactura.GetAcuseCancelacion.1253: System.Net.WebException: Error de la solicitud con el código de estado HTTP 401: Unauthorized.
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en Business.ReportExecution.ReportExecutionService.LoadReport(String Report, String HistoryID) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\Web References\ReportExecution\Reference.cs:línea 287
+   en Business.GAFFactura.GetAcuseCancelacion(String report, Int64 idVenta, String estatus, String estatusCancela, String EstatusCancelacion) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\GAFFactura.cs:línea 1238
+2022-03-05 15:44:05,343-19-DEBUG-Business.GAFEmpresa.GuardarEmpresa.746: True
+2022-03-11 15:59:15,712-5-DEBUG-Business.GAFFactura.GuardarFactura33.283: 000005
+2022-03-11 15:59:22,783-5-DEBUG-Business.GAFFactura.GeneraCfd.351: XAMA620210DQ5
+2022-03-11 15:59:22,785-5-DEBUG-Business.GAFFactura.GeneraCfd.374: Ruta Llave C:\GAF\Resources\XAMA620210DQ5\Certs\csd.key
+2022-03-11 15:59:22,826-5-DEBUG-Business.GAFFactura.GetComprobante.662: 000005
+2022-03-11 15:59:22,897-5-DEBUG-Business.GeneradorCfdi.GenerarCfd.1119: Generando xml
+2022-03-11 15:59:26,593-5-DEBUG-Business.GeneradorCfdi.TimbrarComprobanteNtLink.845: Timbrando comprobante
+2022-03-11 16:08:37,543-6-DEBUG-Business.GAFFactura.GuardarFactura33.283: 000006
+2022-03-11 16:08:37,878-6-DEBUG-Business.GAFFactura.GeneraCfd.351: XAMA620210DQ5
+2022-03-11 16:08:37,880-6-DEBUG-Business.GAFFactura.GeneraCfd.374: Ruta Llave C:\GAF\Resources\XAMA620210DQ5\Certs\csd.key
+2022-03-11 16:08:37,908-6-DEBUG-Business.GAFFactura.GetComprobante.662: 000006
+2022-03-11 16:08:37,938-6-DEBUG-Business.GeneradorCfdi.GenerarCfd.1119: Generando xml
+2022-03-11 16:08:38,340-6-DEBUG-Business.GeneradorCfdi.TimbrarComprobanteNtLink.845: Timbrando comprobante
+2022-03-11 16:11:27,752-5-DEBUG-Business.GAFFactura.GuardarFactura33.283: 000007
+2022-03-11 16:11:28,073-5-DEBUG-Business.GAFFactura.GeneraCfd.351: XAMA620210DQ5
+2022-03-11 16:11:28,076-5-DEBUG-Business.GAFFactura.GeneraCfd.374: Ruta Llave C:\GAF\Resources\XAMA620210DQ5\Certs\csd.key
+2022-03-11 16:11:28,088-5-DEBUG-Business.GAFFactura.GetComprobante.662: 000007
+2022-03-11 16:11:28,200-5-DEBUG-Business.GeneradorCfdi.GenerarCfd.1119: Generando xml
+2022-03-11 16:11:28,688-5-DEBUG-Business.GeneradorCfdi.TimbrarComprobanteNtLink.845: Timbrando comprobante
+2022-03-11 16:19:21,058-6-DEBUG-Business.GAFFactura.GuardarFactura33.283: 000008
+2022-03-11 16:19:21,307-6-DEBUG-Business.GAFFactura.GeneraCfd.351: XAMA620210DQ5
+2022-03-11 16:19:21,309-6-DEBUG-Business.GAFFactura.GeneraCfd.374: Ruta Llave C:\GAF\Resources\XAMA620210DQ5\Certs\csd.key
+2022-03-11 16:19:21,367-6-DEBUG-Business.GAFFactura.GetComprobante.662: 000008
+2022-03-11 16:19:21,392-6-DEBUG-Business.GeneradorCfdi.GenerarCfd.1124: Generando xml
+2022-03-11 16:19:22,435-6-DEBUG-Business.GeneradorCfdi.TimbrarComprobanteNtLink.845: Timbrando comprobante
+2022-03-11 16:20:10,027-6-DEBUG-Business.GeneradorCfdi.TimbrarComprobanteNtLink.870: <?xml version="1.0"?>
+<tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/TimbreFiscalDigital/TimbreFiscalDigitalv11.xsd" Version="1.1" UUID="51b63cd6-3122-48d7-bceb-73da76e58d29" FechaTimbrado="2022-03-11T16:19:37" RfcProvCertif="SPR190613I52" SelloCFD="UmuufSVj4Q4gE7N3ilpEIDFnsI0ORbzFf4f0a3Mzz+0sjD7yI+v+RGm3vro1Gw4IkbwPseyV9KW6OoUVQ4hE8B14lHz4MYPw7kb+PVIWbLrxmlAFq+ISKEnv4PsDz8ctfL8TViw9yPW/a620Qx2B45t7EFz1xqmMIO4qqT/gS4uQ5vIDLl8NuuMgBPzlyezRKFPctXi0hW0mICxxmRaKQycSUIegLqdLjMyWKBt3mQ99Q6KTX3qBaKIVn0MEHFtKf6XWvkfBSOzgrOu1szREPJSQWHxS7yqtW/DEl6t593d11dY+Zp0Y3mUNK0rXDhlPXwuo/vIsDj8VH21TIqrKog==" NoCertificadoSAT="30001000000400002495" SelloSAT="TsJ+LIhyWfl0JghGVCAda+CeNYMHzctUG6ohTpmuf56CrZbJCewa0r7UmIIgz+k1LqawCCidvggKc2YEJXcnPwnKvo9kJfGjtpzVECGU4NhFWDUdWluEVSS2LFfg+pM4y9DrQ2ocRQBVkLN/pfxrhuCE2NrKiH/Ny44sPwTV78AcQh5GNXD35+Fg24SsHqF54oUnQIHGhEyrVCw6AdiFTZuQ0UYGs3yMxcl8+/jFUs/r6jd6q30qryE0h7ijKnoUv+vlivMufrReSNM66IRUcSyzsySufFUIJFlNicp8D6dPlQM02sPQlXMP+413nDBQDpRRQXbAuIuvWiQLVubuKw=="/>
+
+2022-03-11 16:21:30,690-6-DEBUG-Business.GAFFactura.GeneraCfd.386: <?xml version="1.0" encoding="utf-8"?><cfdi:Comprobante xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv33.xsd" Version="3.3" Folio="000008" Fecha="2022-03-11T16:19:21" FormaPago="99" NoCertificado="30001000000400002326" Certificado="MIIFijCCA3KgAwIBAgIUMzAwMDEwMDAwMDA0MDAwMDIzMjYwDQYJKoZIhvcNAQELBQAwggErMQ8wDQYDVQQDDAZBQyBVQVQxLjAsBgNVBAoMJVNFUlZJQ0lPIERFIEFETUlOSVNUUkFDSU9OIFRSSUJVVEFSSUExGjAYBgNVBAsMEVNBVC1JRVMgQXV0aG9yaXR5MSgwJgYJKoZIhvcNAQkBFhlvc2Nhci5tYXJ0aW5lekBzYXQuZ29iLm14MR0wGwYDVQQJDBQzcmEgY2VycmFkYSBkZSBjYWRpejEOMAwGA1UEEQwFMDYzNzAxCzAJBgNVBAYTAk1YMRkwFwYDVQQIDBBDSVVEQUQgREUgTUVYSUNPMREwDwYDVQQHDAhDT1lPQUNBTjERMA8GA1UELRMIMi41LjQuNDUxJTAjBgkqhkiG9w0BCQITFnJlc3BvbnNhYmxlOiBBQ0RNQS1TQVQwHhcNMTkwNTI5MTgxMTQ4WhcNMjMwNTI5MTgxMTQ4WjCBsTEdMBsGA1UEAxMUQUxCQSBYS0FSQUpBTSBNRU5ERVoxHTAbBgNVBCkTFEFMQkEgWEtBUkFKQU0gTUVOREVaMR0wGwYDVQQKExRBTEJBIFhLQVJBSkFNIE1FTkRFWjEWMBQGA1UELRMNWEFNQTYyMDIxMERRNTEbMBkGA1UEBRMSWEFNQTYyMDIxME1TTEtOTDA0MR0wGwYDVQQLExRBTEJBIFhLQVJBSkFNIE1FTkRFWjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAK2HkPEtxQ+eUC6J428PU1OHXmr7cHtTlE5+Zk0eYykm1tVNivygT+kz7FTgw1b0yoFh96Xp3tXBSeAmsO+DShFFyYMB6x3lllIEmMZD5JbMaCpzyPMRzAq6850Am3/ShjigUPRorUhdLO1Yes2CyySzYlhA08fq3FmOCQ4eQmSPN7422T+Srhm6pFYaVjwS0MlskslCIi+ANqL5RWg75tNjpJzLQXPJyG0KU1AaqXgUT1e+aTn38AyNVQc30QAjiI50CTUq5MJFixoCB9vol421L7peEIAox3DRVw9H/wns9973XLedyuj5r8ZZfs4BinkVh+mykTyZE63rEv14uncCAwEAAaMdMBswDAYDVR0TAQH/BAIwADALBgNVHQ8EBAMCBsAwDQYJKoZIhvcNAQELBQADggIBAAR/KOWy29oitYdYzuGe1o+JOx/AowEJuu9S4/thFE9ugvHiceFK3cUD8v4M4/AS9D+NVrcMpJocNwpUsW/GiGFqOHNcFVnoSsaeEUMSIW949/0lCeMusR10VnpUaXmYFVYZkFV0PsDYUHna+lqmHDLwzSpfyU20UapgpkPe7Ib6/5CmsPQ7GcF7HBrshO8MyLyYSi193MTDKO86thq5iBnTrt4qyCgI7+Hpk770C4wMskpitf0Z9BUUrBxAk+ZoH1fw1ysZtK+v4vS/wquib2SK+MpvlYEfam/613EE/PEAlBTXPDaWTxporKJJxnv/iOsm97FmvRuwAnB13r5cxc/UJFjD2bFm38/2wOUG1H3srG8xhVSTKUYQjvJU+V10dQe0O/QkWx9sPHlY67CdB5SlsCBl0mkB7mA2fsPyuP28EQtEenjm48wpBXgb4exOYq4flMPZ7LpO79SmnQPSeTIt8CIlc0HomkMCl30HQzGSMoItxGSO9Rrx3ogpNNcdhpD6p59TkYd2zM7argPP/lfbl7/3EbbN5miC1JgNgRfAq02CREdMEAK9Z6ErVWUUl8gd0Tva/C3ykCJdTdNgfEI8gONS2ky/axDNDHL8d4+I6tGItfM4drtukL9Trh8/5RPuPvKHg1tKonDp50mxu4ubXBDF2LAnsOshAB44fn+r" SubTotal="1.00" Moneda="MXN" Total="1.16" TipoDeComprobante="I" MetodoPago="PPD" LugarExpedicion="86690" xmlns:cfdi="http://www.sat.gob.mx/cfd/3" Sello="UmuufSVj4Q4gE7N3ilpEIDFnsI0ORbzFf4f0a3Mzz+0sjD7yI+v+RGm3vro1Gw4IkbwPseyV9KW6OoUVQ4hE8B14lHz4MYPw7kb+PVIWbLrxmlAFq+ISKEnv4PsDz8ctfL8TViw9yPW/a620Qx2B45t7EFz1xqmMIO4qqT/gS4uQ5vIDLl8NuuMgBPzlyezRKFPctXi0hW0mICxxmRaKQycSUIegLqdLjMyWKBt3mQ99Q6KTX3qBaKIVn0MEHFtKf6XWvkfBSOzgrOu1szREPJSQWHxS7yqtW/DEl6t593d11dY+Zp0Y3mUNK0rXDhlPXwuo/vIsDj8VH21TIqrKog=="><cfdi:Emisor Rfc="XAMA620210DQ5" Nombre="XAMA620210DQ5" RegimenFiscal="605" /><cfdi:Receptor Rfc="NDA170619JC9" Nombre="NIEMAN DISEÑOS ARQUITECTONICOS S.A. DE C.V." UsoCFDI="G01" /><cfdi:Conceptos><cfdi:Concepto ClaveProdServ="78101802" Cantidad="1" ClaveUnidad="E48" Unidad="Unidad de servicio" Descripcion="222" ValorUnitario="1.00" Importe="1.00"><cfdi:Impuestos><cfdi:Traslados><cfdi:Traslado Base="1" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="0.16" /></cfdi:Traslados></cfdi:Impuestos></cfdi:Concepto></cfdi:Conceptos><cfdi:Impuestos TotalImpuestosTrasladados="0.16"><cfdi:Traslados><cfdi:Traslado Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="0.16" /></cfdi:Traslados></cfdi:Impuestos><cfdi:Complemento><tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/TimbreFiscalDigital/TimbreFiscalDigitalv11.xsd" Version="1.1" UUID="51b63cd6-3122-48d7-bceb-73da76e58d29" FechaTimbrado="2022-03-11T16:19:37" RfcProvCertif="SPR190613I52" SelloCFD="UmuufSVj4Q4gE7N3ilpEIDFnsI0ORbzFf4f0a3Mzz+0sjD7yI+v+RGm3vro1Gw4IkbwPseyV9KW6OoUVQ4hE8B14lHz4MYPw7kb+PVIWbLrxmlAFq+ISKEnv4PsDz8ctfL8TViw9yPW/a620Qx2B45t7EFz1xqmMIO4qqT/gS4uQ5vIDLl8NuuMgBPzlyezRKFPctXi0hW0mICxxmRaKQycSUIegLqdLjMyWKBt3mQ99Q6KTX3qBaKIVn0MEHFtKf6XWvkfBSOzgrOu1szREPJSQWHxS7yqtW/DEl6t593d11dY+Zp0Y3mUNK0rXDhlPXwuo/vIsDj8VH21TIqrKog==" NoCertificadoSAT="30001000000400002495" SelloSAT="TsJ+LIhyWfl0JghGVCAda+CeNYMHzctUG6ohTpmuf56CrZbJCewa0r7UmIIgz+k1LqawCCidvggKc2YEJXcnPwnKvo9kJfGjtpzVECGU4NhFWDUdWluEVSS2LFfg+pM4y9DrQ2ocRQBVkLN/pfxrhuCE2NrKiH/Ny44sPwTV78AcQh5GNXD35+Fg24SsHqF54oUnQIHGhEyrVCw6AdiFTZuQ0UYGs3yMxcl8+/jFUs/r6jd6q30qryE0h7ijKnoUv+vlivMufrReSNM66IRUcSyzsySufFUIJFlNicp8D6dPlQM02sPQlXMP+413nDBQDpRRQXbAuIuvWiQLVubuKw==" /></cfdi:Complemento></cfdi:Comprobante>
+2022-03-11 16:23:22,380-6-ERROR-Business.GeneradorCfdi.GetPdfFromComprobante.218: System.Net.WebException: Error de la solicitud con el código de estado HTTP 401: Unauthorized.
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en Business.ReportService.ReportingService2005.ListChildren(String Item, Boolean Recursive) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\Web References\ReportService\Reference.cs:línea 871
+   en Business.GeneradorCfdi.GetPdfFromComprobante(Comprobante comprobante, Int32 orientacion, TipoDocumento tipo, Int64& id, String metodoPago) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\GeneradorCfdi.cs:línea 189
+2022-03-11 16:23:22,452-6-ERROR-Business.GAFFactura.GeneraCfd.407: System.Net.WebException: Error de la solicitud con el código de estado HTTP 401: Unauthorized.
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en Business.ReportService.ReportingService2005.ListChildren(String Item, Boolean Recursive) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\Web References\ReportService\Reference.cs:línea 871
+   en Business.GeneradorCfdi.GetPdfFromComprobante(Comprobante comprobante, Int32 orientacion, TipoDocumento tipo, Int64& id, String metodoPago) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\GeneradorCfdi.cs:línea 221
+   en Business.GAFFactura.GeneraCfd(GAFFactura factura, Boolean enviar, facturaComplementos complementos) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\GAFFactura.cs:línea 399
+2022-03-11 16:23:22,453-6-DEBUG-Business.GAFFactura.GeneraCfd.416: Enviar Correo
+2022-03-11 16:23:22,494-6-DEBUG-Business.Mailer.Send.45: Enviando a 1 emails
+2022-03-11 16:23:22,551-6-INFO-Business.Mailer.Send.65: Creando MailMessage
+2022-03-11 16:23:22,553-6-INFO-Business.Mailer.Send.76: Cargando Bcc: nieman2020dlb@gmail.com
+2022-03-11 16:23:22,553-6-INFO-Business.Mailer.Send.84: Agregando attach
+2022-03-11 16:23:22,555-6-INFO-Business.Mailer.Send.96: Enviando a la direccion: nieman2020dlb@gmail.com
+2022-03-11 16:23:23,300-6-ERROR-Business.Mailer.Send.107: System.Net.Mail.SmtpException: Error al enviar correo. ---> System.Net.WebException: No se puede resolver el nombre remoto: 'mail.ovjme.com'
+   en System.Net.ServicePoint.GetConnection(PooledStream PooledStream, Object owner, Boolean async, IPAddress& address, Socket& abortSocket, Socket& abortSocket6)
+   en System.Net.PooledStream.Activate(Object owningObject, Boolean async, GeneralAsyncDelegate asyncCallback)
+   en System.Net.PooledStream.Activate(Object owningObject, GeneralAsyncDelegate asyncCallback)
+   en System.Net.ConnectionPool.GetConnection(Object owningObject, GeneralAsyncDelegate asyncCallback, Int32 creationTimeout)
+   en System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpClient.GetConnection()
+   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   en Business.Mailer.Send(List`1 recipients, List`1 attachments, String message, String subject, String fromEmail, String fromDescription) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\Mailer.cs:línea 100
+2022-03-11 16:23:23,348-6-ERROR-Business.GAFFactura.GeneraCfd.443: Ocurrio un error al enviar el correo
+2022-03-11 16:26:41,820-6-DEBUG-Business.GAFFactura.GuardarFactura33.283: 000009
+2022-03-11 16:26:42,013-6-DEBUG-Business.GAFFactura.GeneraCfd.351: XAMA620210DQ5
+2022-03-11 16:26:42,016-6-DEBUG-Business.GAFFactura.GeneraCfd.374: Ruta Llave C:\GAF\Resources\XAMA620210DQ5\Certs\csd.key
+2022-03-11 16:26:42,033-6-DEBUG-Business.GAFFactura.GetComprobante.662: 000009
+2022-03-11 16:26:42,056-6-DEBUG-Business.GeneradorCfdi.GenerarCfd.1124: Generando xml
+2022-03-11 16:26:42,533-6-DEBUG-Business.GeneradorCfdi.TimbrarComprobanteNtLink.845: Timbrando comprobante
+2022-03-11 16:27:11,590-6-ERROR-Business.GeneradorCfdi.TimbrarComprobanteNtLink.865: API KEY inválido o inexistente.
+2022-03-11 16:27:14,834-6-INFO-Business.GeneradorCfdi.TimbrarComprobanteNtLink.972: System.ServiceModel.FaultException: API KEY inválido o inexistente.
+   en Business.GeneradorCfdi.TimbrarComprobanteNtLink(Comprobante comp) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\GeneradorCfdi.cs:línea 866
+2022-03-11 16:27:14,854-6-ERROR-Business.GeneradorCfdi.GenerarCfd.1178: System.ServiceModel.FaultException: API KEY inválido o inexistente.
+   en Business.GeneradorCfdi.TimbrarComprobanteNtLink(Comprobante comp) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\GeneradorCfdi.cs:línea 973
+   en Business.GeneradorCfdi.GenerarCfd(Comprobante comprobante, X509Certificate2 cert, String rutaLlave, String passLlave) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\GeneradorCfdi.cs:línea 1172
+2022-03-26 22:55:50,093-6-DEBUG-Business.GAFFactura.GuardarFactura33.284: 000010
+2022-03-26 22:55:52,972-6-DEBUG-Business.GAFFactura.GeneraCfd.352: XAMA620210DQ5
+2022-03-26 22:55:52,975-6-DEBUG-Business.GAFFactura.GeneraCfd.375: Ruta Llave C:\GAF\Resources\XAMA620210DQ5\Certs\csd.key
+2022-03-26 22:55:52,992-6-DEBUG-Business.GAFFactura.GetComprobante.663: 000010
+2022-03-26 22:55:53,135-6-DEBUG-Business.GeneradorCfdi.GenerarCfd.1124: Generando xml
+2022-03-26 22:55:58,646-6-DEBUG-Business.GeneradorCfdi.TimbrarComprobanteNtLink.845: Timbrando comprobante
+2022-03-26 22:56:05,419-6-DEBUG-Business.GeneradorCfdi.TimbrarComprobanteNtLink.870: <?xml version="1.0"?>
+<tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/TimbreFiscalDigital/TimbreFiscalDigitalv11.xsd" Version="1.1" UUID="975d9372-1c94-4e3e-9496-7951fc09ed20" FechaTimbrado="2022-03-26T22:56:05" RfcProvCertif="SPR190613I52" SelloCFD="V9tzwI6LWalCRgjiWgqD5J/ji6xeL9XHvmh/xhfoRalHkb+IteIbvdIjN5rpaTuAdIm5TfamFF73zgUvevKV8JAKdGSjWBu8Fk+nrIzYJ3APLCKhwD2cnvT4mf7s58z35X6xuNtzNtc8X1EV7y3EaNAt1wZ7gpu7/kJbOuYwiOUuJxz/BEE4V/Oyhp+/Bdaj4W/cBl3mjddGJwHxsXjeejHYO7MEspU5UBNDEpU+vCDF/APAM+LuJr60q4xabAYt8Kvj0zHR4iZUGtBRsG70AP1J3gsg0yDK9G7wMloD7mBhUpYriAZJg892Huc2vLAbbW6Uv+c60SOtlWxHP7MvPQ==" NoCertificadoSAT="30001000000400002495" SelloSAT="H/RubQ3VgnKNy21sMOSRccyA7OiYzdmpQLX/RIehKzw/rSNV2lOzDUTJEwZInJfFgtAA0FSNWwiGOZo8LaCTiEEPi06IzADhXCHEqve9/j4gaeUhNxdW87lLyr9kiVRuyqTuti2Duzma3czR+aPXOYNcy/qtX7j3iBo+vxWuItE8OJn21+ysAK+EB5EFun1qKJTFkOghKJt4bDhi+/kp/PlAZKzb13613UULSnG1WbsUgMhBzaChrLKvNpxApLFCX25gIWxe5tisLJ3QHimuoHGVTpQLuxu2cPGyi2iFEzakW37NYeBt2WBvx+V5N6LfcfsstrsAht59KjNlSplGGg=="/>
+
+2022-03-26 22:56:05,500-6-DEBUG-Business.GAFFactura.GeneraCfd.387: <?xml version="1.0" encoding="utf-8"?><cfdi:Comprobante xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv33.xsd" Version="3.3" Folio="000010" Fecha="2022-03-26T22:55:50" FormaPago="99" NoCertificado="30001000000400002326" Certificado="MIIFijCCA3KgAwIBAgIUMzAwMDEwMDAwMDA0MDAwMDIzMjYwDQYJKoZIhvcNAQELBQAwggErMQ8wDQYDVQQDDAZBQyBVQVQxLjAsBgNVBAoMJVNFUlZJQ0lPIERFIEFETUlOSVNUUkFDSU9OIFRSSUJVVEFSSUExGjAYBgNVBAsMEVNBVC1JRVMgQXV0aG9yaXR5MSgwJgYJKoZIhvcNAQkBFhlvc2Nhci5tYXJ0aW5lekBzYXQuZ29iLm14MR0wGwYDVQQJDBQzcmEgY2VycmFkYSBkZSBjYWRpejEOMAwGA1UEEQwFMDYzNzAxCzAJBgNVBAYTAk1YMRkwFwYDVQQIDBBDSVVEQUQgREUgTUVYSUNPMREwDwYDVQQHDAhDT1lPQUNBTjERMA8GA1UELRMIMi41LjQuNDUxJTAjBgkqhkiG9w0BCQITFnJlc3BvbnNhYmxlOiBBQ0RNQS1TQVQwHhcNMTkwNTI5MTgxMTQ4WhcNMjMwNTI5MTgxMTQ4WjCBsTEdMBsGA1UEAxMUQUxCQSBYS0FSQUpBTSBNRU5ERVoxHTAbBgNVBCkTFEFMQkEgWEtBUkFKQU0gTUVOREVaMR0wGwYDVQQKExRBTEJBIFhLQVJBSkFNIE1FTkRFWjEWMBQGA1UELRMNWEFNQTYyMDIxMERRNTEbMBkGA1UEBRMSWEFNQTYyMDIxME1TTEtOTDA0MR0wGwYDVQQLExRBTEJBIFhLQVJBSkFNIE1FTkRFWjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAK2HkPEtxQ+eUC6J428PU1OHXmr7cHtTlE5+Zk0eYykm1tVNivygT+kz7FTgw1b0yoFh96Xp3tXBSeAmsO+DShFFyYMB6x3lllIEmMZD5JbMaCpzyPMRzAq6850Am3/ShjigUPRorUhdLO1Yes2CyySzYlhA08fq3FmOCQ4eQmSPN7422T+Srhm6pFYaVjwS0MlskslCIi+ANqL5RWg75tNjpJzLQXPJyG0KU1AaqXgUT1e+aTn38AyNVQc30QAjiI50CTUq5MJFixoCB9vol421L7peEIAox3DRVw9H/wns9973XLedyuj5r8ZZfs4BinkVh+mykTyZE63rEv14uncCAwEAAaMdMBswDAYDVR0TAQH/BAIwADALBgNVHQ8EBAMCBsAwDQYJKoZIhvcNAQELBQADggIBAAR/KOWy29oitYdYzuGe1o+JOx/AowEJuu9S4/thFE9ugvHiceFK3cUD8v4M4/AS9D+NVrcMpJocNwpUsW/GiGFqOHNcFVnoSsaeEUMSIW949/0lCeMusR10VnpUaXmYFVYZkFV0PsDYUHna+lqmHDLwzSpfyU20UapgpkPe7Ib6/5CmsPQ7GcF7HBrshO8MyLyYSi193MTDKO86thq5iBnTrt4qyCgI7+Hpk770C4wMskpitf0Z9BUUrBxAk+ZoH1fw1ysZtK+v4vS/wquib2SK+MpvlYEfam/613EE/PEAlBTXPDaWTxporKJJxnv/iOsm97FmvRuwAnB13r5cxc/UJFjD2bFm38/2wOUG1H3srG8xhVSTKUYQjvJU+V10dQe0O/QkWx9sPHlY67CdB5SlsCBl0mkB7mA2fsPyuP28EQtEenjm48wpBXgb4exOYq4flMPZ7LpO79SmnQPSeTIt8CIlc0HomkMCl30HQzGSMoItxGSO9Rrx3ogpNNcdhpD6p59TkYd2zM7argPP/lfbl7/3EbbN5miC1JgNgRfAq02CREdMEAK9Z6ErVWUUl8gd0Tva/C3ykCJdTdNgfEI8gONS2ky/axDNDHL8d4+I6tGItfM4drtukL9Trh8/5RPuPvKHg1tKonDp50mxu4ubXBDF2LAnsOshAB44fn+r" SubTotal="1.00" Moneda="MXN" Total="1.16" TipoDeComprobante="I" MetodoPago="PPD" LugarExpedicion="86690" xmlns:cfdi="http://www.sat.gob.mx/cfd/3" Sello="V9tzwI6LWalCRgjiWgqD5J/ji6xeL9XHvmh/xhfoRalHkb+IteIbvdIjN5rpaTuAdIm5TfamFF73zgUvevKV8JAKdGSjWBu8Fk+nrIzYJ3APLCKhwD2cnvT4mf7s58z35X6xuNtzNtc8X1EV7y3EaNAt1wZ7gpu7/kJbOuYwiOUuJxz/BEE4V/Oyhp+/Bdaj4W/cBl3mjddGJwHxsXjeejHYO7MEspU5UBNDEpU+vCDF/APAM+LuJr60q4xabAYt8Kvj0zHR4iZUGtBRsG70AP1J3gsg0yDK9G7wMloD7mBhUpYriAZJg892Huc2vLAbbW6Uv+c60SOtlWxHP7MvPQ=="><cfdi:Emisor Rfc="XAMA620210DQ5" Nombre="XAMA620210DQ5" RegimenFiscal="605" /><cfdi:Receptor Rfc="GEN2010234F9" Nombre="GRAYSON ENGINEERING SA DE CV" UsoCFDI="G01" /><cfdi:Conceptos><cfdi:Concepto ClaveProdServ="78101802" Cantidad="1" ClaveUnidad="E48" Unidad="Unidad de servicio" Descripcion="pruebas" ValorUnitario="1.00" Importe="1.00"><cfdi:Impuestos><cfdi:Traslados><cfdi:Traslado Base="1" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="0.16" /></cfdi:Traslados></cfdi:Impuestos></cfdi:Concepto></cfdi:Conceptos><cfdi:Impuestos TotalImpuestosTrasladados="0.16"><cfdi:Traslados><cfdi:Traslado Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="0.16" /></cfdi:Traslados></cfdi:Impuestos><cfdi:Complemento><tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/TimbreFiscalDigital/TimbreFiscalDigitalv11.xsd" Version="1.1" UUID="975d9372-1c94-4e3e-9496-7951fc09ed20" FechaTimbrado="2022-03-26T22:56:05" RfcProvCertif="SPR190613I52" SelloCFD="V9tzwI6LWalCRgjiWgqD5J/ji6xeL9XHvmh/xhfoRalHkb+IteIbvdIjN5rpaTuAdIm5TfamFF73zgUvevKV8JAKdGSjWBu8Fk+nrIzYJ3APLCKhwD2cnvT4mf7s58z35X6xuNtzNtc8X1EV7y3EaNAt1wZ7gpu7/kJbOuYwiOUuJxz/BEE4V/Oyhp+/Bdaj4W/cBl3mjddGJwHxsXjeejHYO7MEspU5UBNDEpU+vCDF/APAM+LuJr60q4xabAYt8Kvj0zHR4iZUGtBRsG70AP1J3gsg0yDK9G7wMloD7mBhUpYriAZJg892Huc2vLAbbW6Uv+c60SOtlWxHP7MvPQ==" NoCertificadoSAT="30001000000400002495" SelloSAT="H/RubQ3VgnKNy21sMOSRccyA7OiYzdmpQLX/RIehKzw/rSNV2lOzDUTJEwZInJfFgtAA0FSNWwiGOZo8LaCTiEEPi06IzADhXCHEqve9/j4gaeUhNxdW87lLyr9kiVRuyqTuti2Duzma3czR+aPXOYNcy/qtX7j3iBo+vxWuItE8OJn21+ysAK+EB5EFun1qKJTFkOghKJt4bDhi+/kp/PlAZKzb13613UULSnG1WbsUgMhBzaChrLKvNpxApLFCX25gIWxe5tisLJ3QHimuoHGVTpQLuxu2cPGyi2iFEzakW37NYeBt2WBvx+V5N6LfcfsstrsAht59KjNlSplGGg==" /></cfdi:Complemento></cfdi:Comprobante>
+2022-03-26 22:56:08,536-6-ERROR-Business.GeneradorCfdi.GetPdfFromComprobante.218: System.Net.WebException: Error de la solicitud con el código de estado HTTP 401: Unauthorized.
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en Business.ReportService.ReportingService2005.ListChildren(String Item, Boolean Recursive) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\Web References\ReportService\Reference.cs:línea 871
+   en Business.GeneradorCfdi.GetPdfFromComprobante(Comprobante comprobante, Int32 orientacion, TipoDocumento tipo, Int64& id, String metodoPago) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\GeneradorCfdi.cs:línea 189
+2022-03-26 22:56:08,664-6-ERROR-Business.GAFFactura.GeneraCfd.408: System.Net.WebException: Error de la solicitud con el código de estado HTTP 401: Unauthorized.
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en Business.ReportService.ReportingService2005.ListChildren(String Item, Boolean Recursive) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\Web References\ReportService\Reference.cs:línea 871
+   en Business.GeneradorCfdi.GetPdfFromComprobante(Comprobante comprobante, Int32 orientacion, TipoDocumento tipo, Int64& id, String metodoPago) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\GeneradorCfdi.cs:línea 221
+   en Business.GAFFactura.GeneraCfd(GAFFactura factura, Boolean enviar, facturaComplementos complementos) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\GAFFactura.cs:línea 400
+2022-03-26 22:56:08,665-6-DEBUG-Business.GAFFactura.GeneraCfd.417: Enviar Correo
+2022-03-26 22:56:08,738-6-DEBUG-Business.Mailer.Send.45: Enviando a 1 emails
+2022-03-26 22:56:08,948-6-INFO-Business.Mailer.Send.65: Creando MailMessage
+2022-03-26 22:56:09,020-6-INFO-Business.Mailer.Send.76: Cargando Bcc: cconsultc3@gmail.com
+2022-03-26 22:56:09,021-6-INFO-Business.Mailer.Send.84: Agregando attach
+2022-03-26 22:56:09,047-6-INFO-Business.Mailer.Send.96: Enviando a la direccion: engineeringgrayson@GMAIL.COM
+2022-03-26 22:56:10,279-6-ERROR-Business.Mailer.Send.107: System.Net.Mail.SmtpException: Error al enviar correo. ---> System.Net.WebException: No se puede resolver el nombre remoto: 'mail.ovjme.com'
+   en System.Net.ServicePoint.GetConnection(PooledStream PooledStream, Object owner, Boolean async, IPAddress& address, Socket& abortSocket, Socket& abortSocket6)
+   en System.Net.PooledStream.Activate(Object owningObject, Boolean async, GeneralAsyncDelegate asyncCallback)
+   en System.Net.PooledStream.Activate(Object owningObject, GeneralAsyncDelegate asyncCallback)
+   en System.Net.ConnectionPool.GetConnection(Object owningObject, GeneralAsyncDelegate asyncCallback, Int32 creationTimeout)
+   en System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpClient.GetConnection()
+   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   en Business.Mailer.Send(List`1 recipients, List`1 attachments, String message, String subject, String fromEmail, String fromDescription) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\Mailer.cs:línea 100
+2022-03-26 22:56:10,372-6-ERROR-Business.GAFFactura.GeneraCfd.444: Ocurrio un error al enviar el correo
+2022-04-18 16:21:38,702-12-ERROR-Business.GAFFactura.GetData.538: No se pudo encontrar el archivo 'C:\GAF\Salida\XAMA620210DQ5\0AB12204-AF12-11EC-A578-5196E1A829A4.pdf'.
+2022-05-05 01:55:41,616-7-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteCancelarXPRESS.34: Cancelando comprobante
+2022-05-05 01:55:47,993-7-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteCancelarXPRESS.39: Codigo:CA205 Mensaje:Folio Fiscal No Existente. - Error al cancelar el UUID de la factura.
+2022-05-05 01:56:31,429-6-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteCancelarXPRESS.34: Cancelando comprobante
+2022-05-05 01:56:48,694-6-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteCancelarXPRESS.39: Codigo:CA205 Mensaje:Folio Fiscal No Existente. - Error al cancelar el UUID de la factura.
+2022-05-05 02:15:46,727-6-DEBUG-Business.GAFFactura.GetAcuseCancelacion.1224: /AcuseCancelacion->12717
+2022-05-05 02:15:47,620-6-ERROR-Business.GAFFactura.GetAcuseCancelacion.1268: System.Net.WebException: Error de la solicitud con el código de estado HTTP 401: Unauthorized.
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en Business.ReportExecution.ReportExecutionService.LoadReport(String Report, String HistoryID) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\Web References\ReportExecution\Reference.cs:línea 287
+   en Business.GAFFactura.GetAcuseCancelacion(String report, Int64 idVenta, String estatus, String estatusCancela, String EstatusCancelacion) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\GAFFactura.cs:línea 1253
+2022-05-05 02:37:08,062-7-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ConsultaEstatusCFDI.48: consultando uuid en sat:0AB12204-AF12-11EC-A578-5196E1A829A4
+2022-05-05 02:37:10,743-7-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ConsultaEstatusCFDI.54: Codigo:S - Comprobante obtenido satisfactoriamente. Mensaje:
+2022-05-07 18:32:14,444-42-DEBUG-Business.GAFFactura.GetAcuseCancelacion.1224: /AcuseCancelacion->12716
+2022-05-07 18:32:15,279-42-ERROR-Business.GAFFactura.GetAcuseCancelacion.1268: System.Net.WebException: Error de la solicitud con el código de estado HTTP 401: Unauthorized.
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en Business.ReportExecution.ReportExecutionService.LoadReport(String Report, String HistoryID) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\Web References\ReportExecution\Reference.cs:línea 287
+   en Business.GAFFactura.GetAcuseCancelacion(String report, Int64 idVenta, String estatus, String estatusCancela, String EstatusCancelacion) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\GAFFactura.cs:línea 1253
+2022-05-07 18:34:38,842-5-DEBUG-Business.GAFFactura.GetAcuseCancelacion.1224: /AcuseCancelacion->12716
+2022-05-07 18:34:39,315-5-ERROR-Business.GAFFactura.GetAcuseCancelacion.1268: System.Net.WebException: Error de la solicitud con el código de estado HTTP 401: Unauthorized.
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en Business.ReportExecution.ReportExecutionService.LoadReport(String Report, String HistoryID) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\Web References\ReportExecution\Reference.cs:línea 287
+   en Business.GAFFactura.GetAcuseCancelacion(String report, Int64 idVenta, String estatus, String estatusCancela, String EstatusCancelacion) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\GAFFactura.cs:línea 1253
+2022-05-07 18:34:51,151-5-DEBUG-Business.GAFFactura.GetAcuseCancelacion.1224: /AcuseCancelacion->12716
+2022-05-07 18:35:21,985-5-ERROR-Business.GAFFactura.GetAcuseCancelacion.1268: System.Net.WebException: Error de la solicitud con el código de estado HTTP 401: Unauthorized.
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en Business.ReportExecution.ReportExecutionService.LoadReport(String Report, String HistoryID) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\Web References\ReportExecution\Reference.cs:línea 287
+   en Business.GAFFactura.GetAcuseCancelacion(String report, Int64 idVenta, String estatus, String estatusCancela, String EstatusCancelacion) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\GAFFactura.cs:línea 1253
+2022-05-07 18:35:30,718-5-DEBUG-Business.GAFFactura.GetAcuseCancelacion.1224: /AcuseCancelacion->12716
+2022-05-07 18:42:58,042-5-ERROR-Business.GAFFactura.GetAcuseCancelacion.1268: System.Net.WebException: Error de la solicitud con el código de estado HTTP 401: Unauthorized.
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en Business.ReportExecution.ReportExecutionService.LoadReport(String Report, String HistoryID) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\Web References\ReportExecution\Reference.cs:línea 287
+   en Business.GAFFactura.GetAcuseCancelacion(String report, Int64 idVenta, String estatus, String estatusCancela, String EstatusCancelacion) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\GAFFactura.cs:línea 1253
+2022-05-07 18:43:16,055-15-DEBUG-Business.GAFFactura.GetAcuseCancelacion.1224: /AcuseCancelacion->12716
+2022-05-07 18:43:16,855-15-ERROR-Business.GAFFactura.GetAcuseCancelacion.1268: System.Net.WebException: Error de la solicitud con el código de estado HTTP 401: Unauthorized.
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en Business.ReportExecution.ReportExecutionService.LoadReport(String Report, String HistoryID) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\Web References\ReportExecution\Reference.cs:línea 287
+   en Business.GAFFactura.GetAcuseCancelacion(String report, Int64 idVenta, String estatus, String estatusCancela, String EstatusCancelacion) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\GAFFactura.cs:línea 1253
+2022-05-07 18:43:46,079-5-DEBUG-Business.GAFFactura.GetAcuseCancelacion.1224: /AcuseCancelacion->12716
+2022-05-07 18:44:16,038-5-ERROR-Business.GAFFactura.GetAcuseCancelacion.1268: System.Net.WebException: Error de la solicitud con el código de estado HTTP 401: Unauthorized.
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en Business.ReportExecution.ReportExecutionService.LoadReport(String Report, String HistoryID) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\Web References\ReportExecution\Reference.cs:línea 287
+   en Business.GAFFactura.GetAcuseCancelacion(String report, Int64 idVenta, String estatus, String estatusCancela, String EstatusCancelacion) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\GAFFactura.cs:línea 1253
+2022-05-07 18:48:55,427-9-DEBUG-Business.GAFFactura.GetAcuseCancelacion.1224: /AcuseCancelacion->12716
+2022-05-07 18:49:22,862-9-DEBUG-Business.GAFFactura.GetAcuseCancelacion.1263: 68042
+2022-05-07 18:51:02,103-6-DEBUG-Business.GAFFactura.GetAcuseCancelacion.1224: /AcuseCancelacion->12716
+2022-05-07 18:51:25,322-6-DEBUG-Business.GAFFactura.GetAcuseCancelacion.1263: 68042
+2022-05-07 19:55:55,483-15-DEBUG-Business.GAFFactura.GetAcuseCancelacion.1224: /AcuseCancelacion->12716
+2022-05-07 19:55:58,031-15-DEBUG-Business.GAFFactura.GetAcuseCancelacion.1263: 68042
+2022-05-07 19:56:07,034-14-DEBUG-Business.GAFFactura.GetAcuseCancelacion.1224: /AcuseCancelacion->11716
+2022-05-07 19:56:08,030-14-DEBUG-Business.GAFFactura.GetAcuseCancelacion.1263: 68042
+2022-05-07 20:41:00,914-8-DEBUG-Business.GAFFactura.GetAcuseCancelacion.1224: /AcuseCancelacion->12716
+2022-05-07 20:41:03,726-8-DEBUG-Business.GAFFactura.GetAcuseCancelacion.1263: 68042
+2022-05-07 21:07:49,189-5-DEBUG-Business.GAFEmpresa.GuardarEmpresa.765: True
+2022-05-07 21:09:23,031-12-DEBUG-Business.GAFEmpresa.GuardarEmpresa.765: True
+2022-05-09 22:44:45,582-6-DEBUG-Business.GAFFactura.GuardarFactura33.283: 000001
+2022-05-09 22:44:45,899-6-DEBUG-Business.GAFFactura.GeneraCfd.351: CCF210527UW6
+2022-05-09 22:44:45,901-6-DEBUG-Business.GAFFactura.GeneraCfd.374: Ruta Llave C:\GAF\Resources\CCF210527UW6\Certs\csd.key
+2022-05-09 22:44:45,909-6-DEBUG-Business.GAFFactura.GetComprobante.677: 000001
+2022-05-09 22:44:46,044-6-DEBUG-Business.GeneradorCfdi.GenerarCfd.1124: Generando xml
+2022-05-09 22:44:47,201-6-DEBUG-Business.GeneradorCfdi.TimbrarComprobanteNtLink.845: Timbrando comprobante
+2022-05-09 22:44:58,375-6-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteTimbradoXPRESS.24: Timbrando comprobante
+2022-05-09 22:45:17,357-6-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteTimbradoXPRESS.29: Codigo:200 Mensaje:Solicitud procesada con éxito. - Solicitud de timbrado procesada.
+2022-05-09 22:45:49,631-6-DEBUG-Business.GeneradorCfdi.TimbrarComprobanteNtLink.870: <?xml version="1.0"?>
+<tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/TimbreFiscalDigital/TimbreFiscalDigitalv11.xsd" Version="1.1" UUID="6f96a14a-be4f-481f-b82e-42a59505b315" FechaTimbrado="2022-05-09T22:45:05" RfcProvCertif="SPR190613I52" SelloCFD="bD02F5CLRVPYNd3BpgaiOvCDXChKo9pq72nbIBvSkOWoAG5YvHIoVTIXHYWlQDuz1L8eER3Ofshv0CEXpNbW0d/tgxF3ctZildaEqRDY/InQMnB/y1qOvTXWjuVUgIXOxrBRXB8gz29kldkXMyoOqxR5TfS51AfHFS0KrfvK5VHuElcHrHQ3nh+sk2cv58Mn0dVZQ/DVRV13vSL56s/s48S0n3LU5uegl7vB7TUprwq4P2UYOzf1+0jq4Ffu0m4ckla6sN9Ym1RWO1v2OV71IHJ/GN0+q1N9C5fZvSvHlAMfQPcnpiG0jaRkxx1ha/233G8YWv/OIlO3ZWx7Tf6Jwg==" NoCertificadoSAT="30001000000400002495" SelloSAT="gu3SccnqMq1GcZ5I+RPL5gt8rXRK/tIT6ZsCfQTof9uwgnY0vMpQZpXwIK8KKswoyWUPE7Fdn35vWLb4TtCOo0w7jl5FdBR8hrwbdl5OrfK380OBrHlcHA+RJDI+yr4DfY9D98GK9fBvnTkkA0GiCNMotkZ7DnwrcNkd/NNYFhdFfKoFobwgmzDftbRMwOFNu7tN+ufcDEm4hCUevv3VyXRFbqxc+P823U6L/w8SBsXTgiHTKs70/Lm7Ag9BhiovsHKv7mYGJBbhySMnVeBUahImaWJHzMEtAkLKDySOcO1XRavnnFA21Ad2TowYnM7yM/1DnOMxXfsYju5OQNHufA=="/>
+
+2022-05-09 22:45:49,683-6-DEBUG-Business.GAFFactura.GeneraCfd.386: <?xml version="1.0" encoding="utf-8"?><cfdi:Comprobante xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv33.xsd" Version="3.3" Folio="000001" Fecha="2022-05-09T22:44:45" FormaPago="99" NoCertificado="00001000000508947384" Certificado="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" SubTotal="1.00" Moneda="MXN" Total="1.16" TipoDeComprobante="I" MetodoPago="PPD" LugarExpedicion="86690" xmlns:cfdi="http://www.sat.gob.mx/cfd/3" Sello="bD02F5CLRVPYNd3BpgaiOvCDXChKo9pq72nbIBvSkOWoAG5YvHIoVTIXHYWlQDuz1L8eER3Ofshv0CEXpNbW0d/tgxF3ctZildaEqRDY/InQMnB/y1qOvTXWjuVUgIXOxrBRXB8gz29kldkXMyoOqxR5TfS51AfHFS0KrfvK5VHuElcHrHQ3nh+sk2cv58Mn0dVZQ/DVRV13vSL56s/s48S0n3LU5uegl7vB7TUprwq4P2UYOzf1+0jq4Ffu0m4ckla6sN9Ym1RWO1v2OV71IHJ/GN0+q1N9C5fZvSvHlAMfQPcnpiG0jaRkxx1ha/233G8YWv/OIlO3ZWx7Tf6Jwg=="><cfdi:Emisor Rfc="CCF210527UW6" Nombre="CENTRALIZACION COMERCIAL FAYEROL SA DE CV" RegimenFiscal="601" /><cfdi:Receptor Rfc="GEN2010234F9" Nombre="GRAYSON ENGINEERING SA DE CV" UsoCFDI="G01" /><cfdi:Conceptos><cfdi:Concepto ClaveProdServ="78101802" Cantidad="1" ClaveUnidad="E48" Unidad="Unidad de servicio" Descripcion="xxx" ValorUnitario="1.00" Importe="1.00"><cfdi:Impuestos><cfdi:Traslados><cfdi:Traslado Base="1" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="0.16" /></cfdi:Traslados></cfdi:Impuestos></cfdi:Concepto></cfdi:Conceptos><cfdi:Impuestos TotalImpuestosTrasladados="0.16"><cfdi:Traslados><cfdi:Traslado Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="0.16" /></cfdi:Traslados></cfdi:Impuestos><cfdi:Complemento><tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/TimbreFiscalDigital/TimbreFiscalDigitalv11.xsd" Version="1.1" UUID="6f96a14a-be4f-481f-b82e-42a59505b315" FechaTimbrado="2022-05-09T22:45:05" RfcProvCertif="SPR190613I52" SelloCFD="bD02F5CLRVPYNd3BpgaiOvCDXChKo9pq72nbIBvSkOWoAG5YvHIoVTIXHYWlQDuz1L8eER3Ofshv0CEXpNbW0d/tgxF3ctZildaEqRDY/InQMnB/y1qOvTXWjuVUgIXOxrBRXB8gz29kldkXMyoOqxR5TfS51AfHFS0KrfvK5VHuElcHrHQ3nh+sk2cv58Mn0dVZQ/DVRV13vSL56s/s48S0n3LU5uegl7vB7TUprwq4P2UYOzf1+0jq4Ffu0m4ckla6sN9Ym1RWO1v2OV71IHJ/GN0+q1N9C5fZvSvHlAMfQPcnpiG0jaRkxx1ha/233G8YWv/OIlO3ZWx7Tf6Jwg==" NoCertificadoSAT="30001000000400002495" SelloSAT="gu3SccnqMq1GcZ5I+RPL5gt8rXRK/tIT6ZsCfQTof9uwgnY0vMpQZpXwIK8KKswoyWUPE7Fdn35vWLb4TtCOo0w7jl5FdBR8hrwbdl5OrfK380OBrHlcHA+RJDI+yr4DfY9D98GK9fBvnTkkA0GiCNMotkZ7DnwrcNkd/NNYFhdFfKoFobwgmzDftbRMwOFNu7tN+ufcDEm4hCUevv3VyXRFbqxc+P823U6L/w8SBsXTgiHTKs70/Lm7Ag9BhiovsHKv7mYGJBbhySMnVeBUahImaWJHzMEtAkLKDySOcO1XRavnnFA21Ad2TowYnM7yM/1DnOMxXfsYju5OQNHufA==" /></cfdi:Complemento></cfdi:Comprobante>
+2022-05-09 22:47:06,831-6-ERROR-Business.GeneradorCfdi.GetPdfFromComprobante.218: System.ServiceModel.FaultException: No esta configurada la plantilla para este comprobante
+   en Business.GeneradorCfdi.GetPdfFromComprobante(Comprobante comprobante, Int32 orientacion, TipoDocumento tipo, Int64& id, String metodoPago) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\GeneradorCfdi.cs:línea 197
+2022-05-09 22:47:06,846-6-ERROR-Business.GAFFactura.GeneraCfd.407: System.ServiceModel.FaultException: No esta configurada la plantilla para este comprobante
+   en Business.GeneradorCfdi.GetPdfFromComprobante(Comprobante comprobante, Int32 orientacion, TipoDocumento tipo, Int64& id, String metodoPago) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\GeneradorCfdi.cs:línea 221
+   en Business.GAFFactura.GeneraCfd(GAFFactura factura, Boolean enviar, facturaComplementos complementos) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\GAFFactura.cs:línea 399
+2022-05-09 22:47:06,847-6-DEBUG-Business.GAFFactura.GeneraCfd.416: Enviar Correo
+2022-05-09 22:47:06,867-6-DEBUG-Business.Mailer.Send.45: Enviando a 1 emails
+2022-05-09 22:47:06,905-6-INFO-Business.Mailer.Send.65: Creando MailMessage
+2022-05-09 22:47:06,917-6-INFO-Business.Mailer.Send.76: Cargando Bcc: cconsultc3@gmail.com
+2022-05-09 22:47:06,918-6-INFO-Business.Mailer.Send.84: Agregando attach
+2022-05-09 22:47:06,920-6-INFO-Business.Mailer.Send.96: Enviando a la direccion: engineeringgrayson@GMAIL.COM
+2022-05-09 22:47:12,906-6-ERROR-Business.Mailer.Send.107: System.Net.Mail.SmtpException: Error al enviar correo. ---> System.Net.WebException: No se puede resolver el nombre remoto: 'mail.ovjme.com'
+   en System.Net.ServicePoint.GetConnection(PooledStream PooledStream, Object owner, Boolean async, IPAddress& address, Socket& abortSocket, Socket& abortSocket6)
+   en System.Net.PooledStream.Activate(Object owningObject, Boolean async, GeneralAsyncDelegate asyncCallback)
+   en System.Net.PooledStream.Activate(Object owningObject, GeneralAsyncDelegate asyncCallback)
+   en System.Net.ConnectionPool.GetConnection(Object owningObject, GeneralAsyncDelegate asyncCallback, Int32 creationTimeout)
+   en System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpClient.GetConnection()
+   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   en Business.Mailer.Send(List`1 recipients, List`1 attachments, String message, String subject, String fromEmail, String fromDescription) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\Mailer.cs:línea 100
+2022-05-09 22:47:12,926-6-ERROR-Business.GAFFactura.GeneraCfd.458: Ocurrio un error al enviar el correo
+2022-05-09 22:47:44,032-6-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteCancelarXPRESS.37: Cancelando comprobante
+2022-05-09 22:48:09,643-6-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteCancelarXPRESS.42: Codigo:CACFDI33 Mensaje:Problemas con el xml. - CA305 - Certificado Inválido.
+2022-05-09 22:53:18,984-27-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteCancelarXPRESS.37: Cancelando comprobante
+2022-05-09 22:53:28,788-27-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteCancelarXPRESS.42: Codigo:CACFDI33 Mensaje:Problemas con el xml. - CA305 - Certificado Inválido.
+2022-05-09 22:55:29,702-20-DEBUG-Business.GAFFactura.GuardarFactura33.283: 000002
+2022-05-09 22:55:29,733-20-DEBUG-Business.GAFFactura.GeneraCfd.351: CCF210527UW6
+2022-05-09 22:55:29,735-20-DEBUG-Business.GAFFactura.GeneraCfd.374: Ruta Llave C:\GAF\Resources\CCF210527UW6\Certs\csd.key
+2022-05-09 22:55:29,735-20-DEBUG-Business.GAFFactura.GetComprobante.677: 000002
+2022-05-09 22:55:29,741-20-DEBUG-Business.GeneradorCfdi.GenerarCfd.1124: Generando xml
+2022-05-09 22:55:29,866-20-DEBUG-Business.GeneradorCfdi.TimbrarComprobanteNtLink.845: Timbrando comprobante
+2022-05-09 22:55:34,012-20-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteTimbradoXPRESS.24: Timbrando comprobante
+2022-05-09 22:55:38,791-20-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteTimbradoXPRESS.29: Codigo:200 Mensaje:Solicitud procesada con éxito. - Solicitud de timbrado procesada.
+2022-05-09 22:55:49,616-20-DEBUG-Business.GeneradorCfdi.TimbrarComprobanteNtLink.870: <?xml version="1.0"?>
+<tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/TimbreFiscalDigital/TimbreFiscalDigitalv11.xsd" Version="1.1" UUID="706b8f8d-4a68-4e69-91b9-c1ac63dd9aee" FechaTimbrado="2022-05-09T22:55:38" RfcProvCertif="SPR190613I52" SelloCFD="T8KaCw5ZcvlF5DkeKHzkRHoE7+2ZxWyuHIn1DArCvXZX3s7jaIs6nKsPFupHK8qtLtF0YmMQbrVmn8Z1mW7euTiHAa/CQkbHrxBcdMHIvt5k6++GJbjQ79qU2ULcbbhndaEt388JdXxv6GWmnG178uez75qvaVaycAKxwY5xn41QCrJIbqfrEuw2+VtunTbhw3VHuvFOGHwnnFF0gCBjPQ5ph8fONZ7LXQF1R6SdSWczvFP+SouCDvbldFp/OHwfhLi+d6c1x7HTSAldx02E6VSEE/9Kgt83iydXuxfnt/hUqNgpx2pVpwjMl2Ew//pTLUgpMBwzRnIY4QGQn234Ug==" NoCertificadoSAT="30001000000400002495" SelloSAT="L9dd/BfCxIyZij4wvprn1vYBz+aiUf6iONmoSAdsdzDAM6EHEPiKtHVp45tmB3H1GQ0xJpeTIC1HFjV5tCKx9cM5cDBlOXkpHQE51aobqAUdgYw92IQyidA4UAiMjSXayNvUoUOl9tOFZrFRX6ZtkwxgPwd+ICKiRF8g8hFAscqwhOAR2Y89+PFhLLjern6Z2Y/Su09sSy/1pVn7m+yrx+KsAotgisbhzy+YUduoTUh1AKjpfyWv7Y6jCh1/GCYBV91hoa38JZgYJyQKafl9YSN1Pmlz72uwCRmAwRD5448vf6qdoxfD/sfb81/gbbPntIqi2fJtOIT6zUv3jCVqbA=="/>
+
+2022-05-09 22:56:05,927-20-DEBUG-Business.GAFFactura.GeneraCfd.386: <?xml version="1.0" encoding="utf-8"?><cfdi:Comprobante xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv33.xsd" Version="3.3" Folio="000002" Fecha="2022-05-09T22:55:29" FormaPago="99" NoCertificado="00001000000508947384" Certificado="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" SubTotal="1.00" Moneda="MXN" Total="1.16" TipoDeComprobante="I" MetodoPago="PPD" LugarExpedicion="86690" xmlns:cfdi="http://www.sat.gob.mx/cfd/3" Sello="T8KaCw5ZcvlF5DkeKHzkRHoE7+2ZxWyuHIn1DArCvXZX3s7jaIs6nKsPFupHK8qtLtF0YmMQbrVmn8Z1mW7euTiHAa/CQkbHrxBcdMHIvt5k6++GJbjQ79qU2ULcbbhndaEt388JdXxv6GWmnG178uez75qvaVaycAKxwY5xn41QCrJIbqfrEuw2+VtunTbhw3VHuvFOGHwnnFF0gCBjPQ5ph8fONZ7LXQF1R6SdSWczvFP+SouCDvbldFp/OHwfhLi+d6c1x7HTSAldx02E6VSEE/9Kgt83iydXuxfnt/hUqNgpx2pVpwjMl2Ew//pTLUgpMBwzRnIY4QGQn234Ug=="><cfdi:Emisor Rfc="CCF210527UW6" Nombre="CENTRALIZACION COMERCIAL FAYEROL SA DE CV" RegimenFiscal="601" /><cfdi:Receptor Rfc="GEN2010234F9" Nombre="GRAYSON ENGINEERING SA DE CV" UsoCFDI="G01" /><cfdi:Conceptos><cfdi:Concepto ClaveProdServ="78101802" Cantidad="1" ClaveUnidad="E48" Unidad="Unidad de servicio" Descripcion="x" ValorUnitario="1.00" Importe="1.00"><cfdi:Impuestos><cfdi:Traslados><cfdi:Traslado Base="1" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="0.16" /></cfdi:Traslados></cfdi:Impuestos></cfdi:Concepto></cfdi:Conceptos><cfdi:Impuestos TotalImpuestosTrasladados="0.16"><cfdi:Traslados><cfdi:Traslado Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="0.16" /></cfdi:Traslados></cfdi:Impuestos><cfdi:Complemento><tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/TimbreFiscalDigital/TimbreFiscalDigitalv11.xsd" Version="1.1" UUID="706b8f8d-4a68-4e69-91b9-c1ac63dd9aee" FechaTimbrado="2022-05-09T22:55:38" RfcProvCertif="SPR190613I52" SelloCFD="T8KaCw5ZcvlF5DkeKHzkRHoE7+2ZxWyuHIn1DArCvXZX3s7jaIs6nKsPFupHK8qtLtF0YmMQbrVmn8Z1mW7euTiHAa/CQkbHrxBcdMHIvt5k6++GJbjQ79qU2ULcbbhndaEt388JdXxv6GWmnG178uez75qvaVaycAKxwY5xn41QCrJIbqfrEuw2+VtunTbhw3VHuvFOGHwnnFF0gCBjPQ5ph8fONZ7LXQF1R6SdSWczvFP+SouCDvbldFp/OHwfhLi+d6c1x7HTSAldx02E6VSEE/9Kgt83iydXuxfnt/hUqNgpx2pVpwjMl2Ew//pTLUgpMBwzRnIY4QGQn234Ug==" NoCertificadoSAT="30001000000400002495" SelloSAT="L9dd/BfCxIyZij4wvprn1vYBz+aiUf6iONmoSAdsdzDAM6EHEPiKtHVp45tmB3H1GQ0xJpeTIC1HFjV5tCKx9cM5cDBlOXkpHQE51aobqAUdgYw92IQyidA4UAiMjSXayNvUoUOl9tOFZrFRX6ZtkwxgPwd+ICKiRF8g8hFAscqwhOAR2Y89+PFhLLjern6Z2Y/Su09sSy/1pVn7m+yrx+KsAotgisbhzy+YUduoTUh1AKjpfyWv7Y6jCh1/GCYBV91hoa38JZgYJyQKafl9YSN1Pmlz72uwCRmAwRD5448vf6qdoxfD/sfb81/gbbPntIqi2fJtOIT6zUv3jCVqbA==" /></cfdi:Complemento></cfdi:Comprobante>
+2022-05-09 22:56:06,127-20-ERROR-Business.GeneradorCfdi.GetPdfFromComprobante.218: System.ServiceModel.FaultException: No esta configurada la plantilla para este comprobante
+   en Business.GeneradorCfdi.GetPdfFromComprobante(Comprobante comprobante, Int32 orientacion, TipoDocumento tipo, Int64& id, String metodoPago) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\GeneradorCfdi.cs:línea 197
+2022-05-09 22:56:06,144-20-ERROR-Business.GAFFactura.GeneraCfd.407: System.ServiceModel.FaultException: No esta configurada la plantilla para este comprobante
+   en Business.GeneradorCfdi.GetPdfFromComprobante(Comprobante comprobante, Int32 orientacion, TipoDocumento tipo, Int64& id, String metodoPago) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\GeneradorCfdi.cs:línea 221
+   en Business.GAFFactura.GeneraCfd(GAFFactura factura, Boolean enviar, facturaComplementos complementos) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\GAFFactura.cs:línea 399
+2022-05-09 22:56:06,145-20-DEBUG-Business.GAFFactura.GeneraCfd.416: Enviar Correo
+2022-05-09 22:56:06,152-20-DEBUG-Business.Mailer.Send.45: Enviando a 1 emails
+2022-05-09 22:56:06,153-20-INFO-Business.Mailer.Send.65: Creando MailMessage
+2022-05-09 22:56:06,154-20-INFO-Business.Mailer.Send.76: Cargando Bcc: cconsultc3@gmail.com
+2022-05-09 22:56:06,155-20-INFO-Business.Mailer.Send.84: Agregando attach
+2022-05-09 22:56:06,155-20-INFO-Business.Mailer.Send.96: Enviando a la direccion: engineeringgrayson@GMAIL.COM
+2022-05-09 22:56:07,428-20-ERROR-Business.Mailer.Send.107: System.Net.Mail.SmtpException: Error al enviar correo. ---> System.Net.WebException: No se puede resolver el nombre remoto: 'mail.ovjme.com'
+   en System.Net.ServicePoint.GetConnection(PooledStream PooledStream, Object owner, Boolean async, IPAddress& address, Socket& abortSocket, Socket& abortSocket6)
+   en System.Net.PooledStream.Activate(Object owningObject, Boolean async, GeneralAsyncDelegate asyncCallback)
+   en System.Net.PooledStream.Activate(Object owningObject, GeneralAsyncDelegate asyncCallback)
+   en System.Net.ConnectionPool.GetConnection(Object owningObject, GeneralAsyncDelegate asyncCallback, Int32 creationTimeout)
+   en System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpClient.GetConnection()
+   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   en Business.Mailer.Send(List`1 recipients, List`1 attachments, String message, String subject, String fromEmail, String fromDescription) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\Mailer.cs:línea 100
+2022-05-09 22:56:07,444-20-ERROR-Business.GAFFactura.GeneraCfd.458: Ocurrio un error al enviar el correo
+2022-05-09 22:56:44,390-27-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteCancelarXPRESS.37: Cancelando comprobante
+2022-05-09 22:56:47,401-27-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteCancelarXPRESS.42: Codigo:CACFDI33 Mensaje:Problemas con el xml. - CA305 - Certificado Inválido.
+2022-05-09 23:08:43,530-6-DEBUG-Business.GAFFactura.GuardarFactura33.283: 000003
+2022-05-09 23:08:43,653-6-DEBUG-Business.GAFFactura.GeneraCfd.351: CCF210527UW6
+2022-05-09 23:08:43,654-6-DEBUG-Business.GAFFactura.GeneraCfd.374: Ruta Llave C:\GAF\Resources\CCF210527UW6\Certs\csd.key
+2022-05-09 23:08:43,667-6-DEBUG-Business.GAFFactura.GetComprobante.677: 000003
+2022-05-09 23:08:43,693-6-DEBUG-Business.GeneradorCfdi.GenerarCfd.1124: Generando xml
+2022-05-09 23:08:44,021-6-DEBUG-Business.GeneradorCfdi.TimbrarComprobanteNtLink.845: Timbrando comprobante
+2022-05-09 23:08:48,955-6-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteTimbradoXPRESS.24: Timbrando comprobante
+2022-05-09 23:08:54,818-6-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteTimbradoXPRESS.29: Codigo:200 Mensaje:Solicitud procesada con éxito. - Solicitud de timbrado procesada.
+2022-05-09 23:09:04,193-6-DEBUG-Business.GeneradorCfdi.TimbrarComprobanteNtLink.870: <?xml version="1.0"?>
+<tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/TimbreFiscalDigital/TimbreFiscalDigitalv11.xsd" Version="1.1" UUID="a330f799-86bf-4b44-9af9-f07c02e3d05f" FechaTimbrado="2022-05-09T23:08:53" RfcProvCertif="LSO1306189R5" SelloCFD="Q8xy9jmXDwGVNlOCvs3O6ysL1kEQDeq2zq3Tp6INYNZ7tvWZ6M1og9m/Pv5CsHfCH9ZJF1AtQ/GzmMnf7N5tVAjInF1SZztuGGLOAHxgvRzzu48YgTAgKZr/bxDd6p/lZEni6reF+6udJYgUQ5aPggoQaA9KkAXFlLM97K5af6onNsVGH9G/Fp01IIUPTTBQcYi4RkpnoAaCwcjz2ojG/j+WUlVPt1BXyWoVeB72u8FhH5bpqIJ2NObRLU4oEru2OSODZLkwURdc3eWcUzC3c+WnLJZD46R6vA0t3v8hx3rLx93e9TMvbIF8cUsws9j4/BQNKVO3Qg3PxV+xG9s8/g==" NoCertificadoSAT="00001000000509846663" SelloSAT="AD294B7Fl/ACqRY9h52eFA+hsBBkiLIgkIAMZVGMrPLiDC5rUALBj2zaWYtvHHf/cSK5QXljAuwC6iyktlAXI2k5XKLjOD5pOgZAxv+W6PQhwyi9NO4biQbhKI8DjEHedfu+stf1V2le9KWakLfSQaZ4MT4gzjAlHsy5SvHmHmT43b/7CUNPvisoFKncIh2jvt5f49iH3fnUPz4CjbW1oAgCPhUNtKKw29hf1mM66ZIrxj/zjA8BptYWkyw90g8NUOJZqtQ03S97D2KXJ0i0QHoDI+0qr9ob8Ib4C31rX26RrkA6ZLqs39BOP+lO6oofUffvcqbm98nFkfqKQRNxRQ=="/>
+
+2022-05-09 23:09:12,803-6-DEBUG-Business.GAFFactura.GeneraCfd.386: <?xml version="1.0" encoding="utf-8"?><cfdi:Comprobante xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv33.xsd" Version="3.3" Folio="000003" Fecha="2022-05-09T23:08:43" FormaPago="99" NoCertificado="00001000000508947384" Certificado="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" SubTotal="1.00" Moneda="MXN" Total="1.16" TipoDeComprobante="I" MetodoPago="PPD" LugarExpedicion="86690" xmlns:cfdi="http://www.sat.gob.mx/cfd/3" Sello="Q8xy9jmXDwGVNlOCvs3O6ysL1kEQDeq2zq3Tp6INYNZ7tvWZ6M1og9m/Pv5CsHfCH9ZJF1AtQ/GzmMnf7N5tVAjInF1SZztuGGLOAHxgvRzzu48YgTAgKZr/bxDd6p/lZEni6reF+6udJYgUQ5aPggoQaA9KkAXFlLM97K5af6onNsVGH9G/Fp01IIUPTTBQcYi4RkpnoAaCwcjz2ojG/j+WUlVPt1BXyWoVeB72u8FhH5bpqIJ2NObRLU4oEru2OSODZLkwURdc3eWcUzC3c+WnLJZD46R6vA0t3v8hx3rLx93e9TMvbIF8cUsws9j4/BQNKVO3Qg3PxV+xG9s8/g=="><cfdi:Emisor Rfc="CCF210527UW6" Nombre="CENTRALIZACION COMERCIAL FAYEROL SA DE CV" RegimenFiscal="601" /><cfdi:Receptor Rfc="GEN2010234F9" Nombre="GRAYSON ENGINEERING SA DE CV" UsoCFDI="G01" /><cfdi:Conceptos><cfdi:Concepto ClaveProdServ="78101802" Cantidad="1" ClaveUnidad="E48" Unidad="Unidad de servicio" Descripcion="x" ValorUnitario="1.00" Importe="1.00"><cfdi:Impuestos><cfdi:Traslados><cfdi:Traslado Base="1" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="0.16" /></cfdi:Traslados></cfdi:Impuestos></cfdi:Concepto></cfdi:Conceptos><cfdi:Impuestos TotalImpuestosTrasladados="0.16"><cfdi:Traslados><cfdi:Traslado Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="0.16" /></cfdi:Traslados></cfdi:Impuestos><cfdi:Complemento><tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/TimbreFiscalDigital/TimbreFiscalDigitalv11.xsd" Version="1.1" UUID="a330f799-86bf-4b44-9af9-f07c02e3d05f" FechaTimbrado="2022-05-09T23:08:53" RfcProvCertif="LSO1306189R5" SelloCFD="Q8xy9jmXDwGVNlOCvs3O6ysL1kEQDeq2zq3Tp6INYNZ7tvWZ6M1og9m/Pv5CsHfCH9ZJF1AtQ/GzmMnf7N5tVAjInF1SZztuGGLOAHxgvRzzu48YgTAgKZr/bxDd6p/lZEni6reF+6udJYgUQ5aPggoQaA9KkAXFlLM97K5af6onNsVGH9G/Fp01IIUPTTBQcYi4RkpnoAaCwcjz2ojG/j+WUlVPt1BXyWoVeB72u8FhH5bpqIJ2NObRLU4oEru2OSODZLkwURdc3eWcUzC3c+WnLJZD46R6vA0t3v8hx3rLx93e9TMvbIF8cUsws9j4/BQNKVO3Qg3PxV+xG9s8/g==" NoCertificadoSAT="00001000000509846663" SelloSAT="AD294B7Fl/ACqRY9h52eFA+hsBBkiLIgkIAMZVGMrPLiDC5rUALBj2zaWYtvHHf/cSK5QXljAuwC6iyktlAXI2k5XKLjOD5pOgZAxv+W6PQhwyi9NO4biQbhKI8DjEHedfu+stf1V2le9KWakLfSQaZ4MT4gzjAlHsy5SvHmHmT43b/7CUNPvisoFKncIh2jvt5f49iH3fnUPz4CjbW1oAgCPhUNtKKw29hf1mM66ZIrxj/zjA8BptYWkyw90g8NUOJZqtQ03S97D2KXJ0i0QHoDI+0qr9ob8Ib4C31rX26RrkA6ZLqs39BOP+lO6oofUffvcqbm98nFkfqKQRNxRQ==" /></cfdi:Complemento></cfdi:Comprobante>
+2022-05-09 23:09:14,078-6-ERROR-Business.GeneradorCfdi.GetPdfFromComprobante.218: System.ServiceModel.FaultException: No esta configurada la plantilla para este comprobante
+   en Business.GeneradorCfdi.GetPdfFromComprobante(Comprobante comprobante, Int32 orientacion, TipoDocumento tipo, Int64& id, String metodoPago) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\GeneradorCfdi.cs:línea 197
+2022-05-09 23:09:14,091-6-ERROR-Business.GAFFactura.GeneraCfd.407: System.ServiceModel.FaultException: No esta configurada la plantilla para este comprobante
+   en Business.GeneradorCfdi.GetPdfFromComprobante(Comprobante comprobante, Int32 orientacion, TipoDocumento tipo, Int64& id, String metodoPago) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\GeneradorCfdi.cs:línea 221
+   en Business.GAFFactura.GeneraCfd(GAFFactura factura, Boolean enviar, facturaComplementos complementos) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\GAFFactura.cs:línea 399
+2022-05-09 23:09:14,092-6-DEBUG-Business.GAFFactura.GeneraCfd.416: Enviar Correo
+2022-05-09 23:09:14,098-6-DEBUG-Business.Mailer.Send.45: Enviando a 1 emails
+2022-05-09 23:09:14,119-6-INFO-Business.Mailer.Send.65: Creando MailMessage
+2022-05-09 23:09:14,121-6-INFO-Business.Mailer.Send.76: Cargando Bcc: cconsultc3@gmail.com
+2022-05-09 23:09:14,122-6-INFO-Business.Mailer.Send.84: Agregando attach
+2022-05-09 23:09:14,123-6-INFO-Business.Mailer.Send.96: Enviando a la direccion: engineeringgrayson@GMAIL.COM
+2022-05-09 23:09:15,948-6-ERROR-Business.Mailer.Send.107: System.Net.Mail.SmtpException: Error al enviar correo. ---> System.Net.WebException: No se puede resolver el nombre remoto: 'mail.ovjme.com'
+   en System.Net.ServicePoint.GetConnection(PooledStream PooledStream, Object owner, Boolean async, IPAddress& address, Socket& abortSocket, Socket& abortSocket6)
+   en System.Net.PooledStream.Activate(Object owningObject, Boolean async, GeneralAsyncDelegate asyncCallback)
+   en System.Net.PooledStream.Activate(Object owningObject, GeneralAsyncDelegate asyncCallback)
+   en System.Net.ConnectionPool.GetConnection(Object owningObject, GeneralAsyncDelegate asyncCallback, Int32 creationTimeout)
+   en System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpClient.GetConnection()
+   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   en Business.Mailer.Send(List`1 recipients, List`1 attachments, String message, String subject, String fromEmail, String fromDescription) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\Mailer.cs:línea 100
+2022-05-09 23:09:15,963-6-ERROR-Business.GAFFactura.GeneraCfd.458: Ocurrio un error al enviar el correo
+2022-05-09 23:10:44,255-6-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteCancelarXPRESS.37: Cancelando comprobante
+2022-05-09 23:11:13,484-6-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteCancelarXPRESS.42: Codigo:201 Mensaje:Solicitud de cancelación exitosa. - 
+2022-05-09 23:11:31,113-6-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ConsultaEstatusCFDI.51: consultando uuid en sat:a330f799-86bf-4b44-9af9-f07c02e3d05f
+2022-05-09 23:12:02,790-6-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ConsultaEstatusCFDI.57: Codigo:S - Comprobante obtenido satisfactoriamente. Mensaje:Cancelado|Cancelable sin aceptación|Cancelado sin aceptación
+2022-05-09 23:17:02,700-6-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteCancelarXPRESS.37: Cancelando comprobante
+2022-05-09 23:17:07,784-6-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteCancelarXPRESS.42: Codigo:202 Mensaje:UUID Previamente cancelado. - 
+2022-05-09 23:21:21,916-6-DEBUG-Business.GAFFactura.GetAcuseCancelacion.1224: /AcuseCancelacion->12720
+2022-05-09 23:21:31,414-6-DEBUG-Business.GAFFactura.GetAcuseCancelacion.1263: 68034
+2022-05-12 23:28:11,547-5-DEBUG-Business.GAFFactura.GuardarFactura33.283: 000013
+2022-05-12 23:28:11,919-5-DEBUG-Business.GAFFactura.GeneraCfd.351: XAMA620210DQ5
+2022-05-12 23:28:11,921-5-DEBUG-Business.GAFFactura.GeneraCfd.374: Ruta Llave C:\GAF\Resources\XAMA620210DQ5\Certs\csd.key
+2022-05-12 23:28:11,935-5-DEBUG-Business.GAFFactura.GetComprobante.677: 000013
+2022-05-12 23:28:15,252-5-DEBUG-Business.GeneradorCfdi.GenerarCfd.1124: Generando xml
+2022-05-12 23:28:16,163-5-DEBUG-Business.GeneradorCfdi.TimbrarComprobanteNtLink.845: Timbrando comprobante
+2022-05-12 23:28:23,553-5-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteTimbradoXPRESS.24: Timbrando comprobante
+2022-05-12 23:28:59,024-5-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteTimbradoXPRESS.29: Codigo:200 Mensaje:Solicitud procesada con éxito. - Solicitud de timbrado procesada.
+2022-05-12 23:28:59,891-5-DEBUG-Business.GeneradorCfdi.TimbrarComprobanteNtLink.870: <?xml version="1.0"?>
+<tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/TimbreFiscalDigital/TimbreFiscalDigitalv11.xsd" Version="1.1" UUID="57757d77-783b-4ba7-8e8a-df623af85a59" FechaTimbrado="2022-05-12T23:28:50" RfcProvCertif="SPR190613I52" SelloCFD="ZbxP9oPWDxfIYMvvIwhayuOxYyuAr72JsVVBl6fc/bp/piQXIa0fEVdbFZGEKWIf/SRah3TqvLfPWUEl+tHp9G0/PXUQxl5GZ9tQFCkdwQ9+G+u9MZ9LZ0Q+H10I3RY6wLXtXFaL2DvJU/byJqbNf1HtTlt7pumZYgnaM9z5MS/ypuVRtxzuAjQof7dXO59wb0mkODnZH1gsMrbmTM4jn0WqSGTjgiurn8du0+2x30tQZiYL5QQupBQX/vhaapgfweHqcPL064Roy5NQD4sx5YpMWJQeD9v2crI05iHliyKB1GdKWdeP4g/7998Tzy7pSQshH/AMv9np+XvgKwMk+w==" NoCertificadoSAT="30001000000400002495" SelloSAT="LBa2355+YdMjxCmhpseJIS1RQGeRCPYs2Wv5qsBmauGRNxbklRTVyvHOhXOx7c2i6ON/Jt6vUBhD96WXGIvnOIStXhnhMt5kQnrvBHYVmNV1uZ5lKdkLdGUxtJ3/MVPhsUXU3ejvmqVRgxKkTXL4V4zPgZPGjxkO2G0YNMAzHkaChwIMvISEM642etZRp+0yypmXjfPDQsWPH0FMLy5L3iiWuPEzwiOHow3hqjKBgYP/qRyO3OkRVLwDcNCl+6oKLl6jUh4h4ncOMWfR3sn6Zse3VcNlE60/iyDHL/BOM1lzEcHuDQkSBJ9M8Vhzr2P1R+9vd/cpnT2WHsekIKl0kw=="/>
+
+2022-05-12 23:28:59,961-5-DEBUG-Business.GAFFactura.GeneraCfd.386: <?xml version="1.0" encoding="utf-8"?><cfdi:Comprobante xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv33.xsd" Version="3.3" Folio="000013" Fecha="2022-05-12T23:28:11" FormaPago="99" NoCertificado="30001000000400002326" Certificado="MIIFijCCA3KgAwIBAgIUMzAwMDEwMDAwMDA0MDAwMDIzMjYwDQYJKoZIhvcNAQELBQAwggErMQ8wDQYDVQQDDAZBQyBVQVQxLjAsBgNVBAoMJVNFUlZJQ0lPIERFIEFETUlOSVNUUkFDSU9OIFRSSUJVVEFSSUExGjAYBgNVBAsMEVNBVC1JRVMgQXV0aG9yaXR5MSgwJgYJKoZIhvcNAQkBFhlvc2Nhci5tYXJ0aW5lekBzYXQuZ29iLm14MR0wGwYDVQQJDBQzcmEgY2VycmFkYSBkZSBjYWRpejEOMAwGA1UEEQwFMDYzNzAxCzAJBgNVBAYTAk1YMRkwFwYDVQQIDBBDSVVEQUQgREUgTUVYSUNPMREwDwYDVQQHDAhDT1lPQUNBTjERMA8GA1UELRMIMi41LjQuNDUxJTAjBgkqhkiG9w0BCQITFnJlc3BvbnNhYmxlOiBBQ0RNQS1TQVQwHhcNMTkwNTI5MTgxMTQ4WhcNMjMwNTI5MTgxMTQ4WjCBsTEdMBsGA1UEAxMUQUxCQSBYS0FSQUpBTSBNRU5ERVoxHTAbBgNVBCkTFEFMQkEgWEtBUkFKQU0gTUVOREVaMR0wGwYDVQQKExRBTEJBIFhLQVJBSkFNIE1FTkRFWjEWMBQGA1UELRMNWEFNQTYyMDIxMERRNTEbMBkGA1UEBRMSWEFNQTYyMDIxME1TTEtOTDA0MR0wGwYDVQQLExRBTEJBIFhLQVJBSkFNIE1FTkRFWjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAK2HkPEtxQ+eUC6J428PU1OHXmr7cHtTlE5+Zk0eYykm1tVNivygT+kz7FTgw1b0yoFh96Xp3tXBSeAmsO+DShFFyYMB6x3lllIEmMZD5JbMaCpzyPMRzAq6850Am3/ShjigUPRorUhdLO1Yes2CyySzYlhA08fq3FmOCQ4eQmSPN7422T+Srhm6pFYaVjwS0MlskslCIi+ANqL5RWg75tNjpJzLQXPJyG0KU1AaqXgUT1e+aTn38AyNVQc30QAjiI50CTUq5MJFixoCB9vol421L7peEIAox3DRVw9H/wns9973XLedyuj5r8ZZfs4BinkVh+mykTyZE63rEv14uncCAwEAAaMdMBswDAYDVR0TAQH/BAIwADALBgNVHQ8EBAMCBsAwDQYJKoZIhvcNAQELBQADggIBAAR/KOWy29oitYdYzuGe1o+JOx/AowEJuu9S4/thFE9ugvHiceFK3cUD8v4M4/AS9D+NVrcMpJocNwpUsW/GiGFqOHNcFVnoSsaeEUMSIW949/0lCeMusR10VnpUaXmYFVYZkFV0PsDYUHna+lqmHDLwzSpfyU20UapgpkPe7Ib6/5CmsPQ7GcF7HBrshO8MyLyYSi193MTDKO86thq5iBnTrt4qyCgI7+Hpk770C4wMskpitf0Z9BUUrBxAk+ZoH1fw1ysZtK+v4vS/wquib2SK+MpvlYEfam/613EE/PEAlBTXPDaWTxporKJJxnv/iOsm97FmvRuwAnB13r5cxc/UJFjD2bFm38/2wOUG1H3srG8xhVSTKUYQjvJU+V10dQe0O/QkWx9sPHlY67CdB5SlsCBl0mkB7mA2fsPyuP28EQtEenjm48wpBXgb4exOYq4flMPZ7LpO79SmnQPSeTIt8CIlc0HomkMCl30HQzGSMoItxGSO9Rrx3ogpNNcdhpD6p59TkYd2zM7argPP/lfbl7/3EbbN5miC1JgNgRfAq02CREdMEAK9Z6ErVWUUl8gd0Tva/C3ykCJdTdNgfEI8gONS2ky/axDNDHL8d4+I6tGItfM4drtukL9Trh8/5RPuPvKHg1tKonDp50mxu4ubXBDF2LAnsOshAB44fn+r" SubTotal="1.00" Moneda="MXN" Total="1.16" TipoDeComprobante="I" MetodoPago="PPD" LugarExpedicion="86690" xmlns:cfdi="http://www.sat.gob.mx/cfd/3" Sello="ZbxP9oPWDxfIYMvvIwhayuOxYyuAr72JsVVBl6fc/bp/piQXIa0fEVdbFZGEKWIf/SRah3TqvLfPWUEl+tHp9G0/PXUQxl5GZ9tQFCkdwQ9+G+u9MZ9LZ0Q+H10I3RY6wLXtXFaL2DvJU/byJqbNf1HtTlt7pumZYgnaM9z5MS/ypuVRtxzuAjQof7dXO59wb0mkODnZH1gsMrbmTM4jn0WqSGTjgiurn8du0+2x30tQZiYL5QQupBQX/vhaapgfweHqcPL064Roy5NQD4sx5YpMWJQeD9v2crI05iHliyKB1GdKWdeP4g/7998Tzy7pSQshH/AMv9np+XvgKwMk+w=="><cfdi:Emisor Rfc="XAMA620210DQ5" Nombre="XAMA620210DQ5" RegimenFiscal="605" /><cfdi:Receptor Rfc="NDA170619JC9" Nombre="NIEMAN DISEÑOS ARQUITECTONICOS S.A. DE C.V." UsoCFDI="G01" /><cfdi:Conceptos><cfdi:Concepto ClaveProdServ="78101802" Cantidad="1" ClaveUnidad="E48" Unidad="Unidad de servicio" Descripcion="x" ValorUnitario="1.00" Importe="1.00"><cfdi:Impuestos><cfdi:Traslados><cfdi:Traslado Base="1" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="0.16" /></cfdi:Traslados></cfdi:Impuestos></cfdi:Concepto></cfdi:Conceptos><cfdi:Impuestos TotalImpuestosTrasladados="0.16"><cfdi:Traslados><cfdi:Traslado Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="0.16" /></cfdi:Traslados></cfdi:Impuestos><cfdi:Complemento><tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/TimbreFiscalDigital/TimbreFiscalDigitalv11.xsd" Version="1.1" UUID="57757d77-783b-4ba7-8e8a-df623af85a59" FechaTimbrado="2022-05-12T23:28:50" RfcProvCertif="SPR190613I52" SelloCFD="ZbxP9oPWDxfIYMvvIwhayuOxYyuAr72JsVVBl6fc/bp/piQXIa0fEVdbFZGEKWIf/SRah3TqvLfPWUEl+tHp9G0/PXUQxl5GZ9tQFCkdwQ9+G+u9MZ9LZ0Q+H10I3RY6wLXtXFaL2DvJU/byJqbNf1HtTlt7pumZYgnaM9z5MS/ypuVRtxzuAjQof7dXO59wb0mkODnZH1gsMrbmTM4jn0WqSGTjgiurn8du0+2x30tQZiYL5QQupBQX/vhaapgfweHqcPL064Roy5NQD4sx5YpMWJQeD9v2crI05iHliyKB1GdKWdeP4g/7998Tzy7pSQshH/AMv9np+XvgKwMk+w==" NoCertificadoSAT="30001000000400002495" SelloSAT="LBa2355+YdMjxCmhpseJIS1RQGeRCPYs2Wv5qsBmauGRNxbklRTVyvHOhXOx7c2i6ON/Jt6vUBhD96WXGIvnOIStXhnhMt5kQnrvBHYVmNV1uZ5lKdkLdGUxtJ3/MVPhsUXU3ejvmqVRgxKkTXL4V4zPgZPGjxkO2G0YNMAzHkaChwIMvISEM642etZRp+0yypmXjfPDQsWPH0FMLy5L3iiWuPEzwiOHow3hqjKBgYP/qRyO3OkRVLwDcNCl+6oKLl6jUh4h4ncOMWfR3sn6Zse3VcNlE60/iyDHL/BOM1lzEcHuDQkSBJ9M8Vhzr2P1R+9vd/cpnT2WHsekIKl0kw==" /></cfdi:Complemento></cfdi:Comprobante>
+2022-05-12 23:30:19,126-5-ERROR-Business.GeneradorCfdi.GetPdfFromComprobante.218: System.ServiceModel.FaultException: No esta configurada la plantilla para este comprobante
+   en Business.GeneradorCfdi.GetPdfFromComprobante(Comprobante comprobante, Int32 orientacion, TipoDocumento tipo, Int64& id, String metodoPago) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\GeneradorCfdi.cs:línea 197
+2022-05-12 23:30:19,150-5-ERROR-Business.GAFFactura.GeneraCfd.407: System.ServiceModel.FaultException: No esta configurada la plantilla para este comprobante
+   en Business.GeneradorCfdi.GetPdfFromComprobante(Comprobante comprobante, Int32 orientacion, TipoDocumento tipo, Int64& id, String metodoPago) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\GeneradorCfdi.cs:línea 221
+   en Business.GAFFactura.GeneraCfd(GAFFactura factura, Boolean enviar, facturaComplementos complementos) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\GAFFactura.cs:línea 399
+2022-05-12 23:30:19,150-5-DEBUG-Business.GAFFactura.GeneraCfd.416: Enviar Correo
+2022-05-12 23:30:19,183-5-DEBUG-Business.Mailer.Send.45: Enviando a 1 emails
+2022-05-12 23:30:19,310-5-INFO-Business.Mailer.Send.65: Creando MailMessage
+2022-05-12 23:30:19,312-5-INFO-Business.Mailer.Send.76: Cargando Bcc: nieman2020dlb@gmail.com
+2022-05-12 23:30:19,312-5-INFO-Business.Mailer.Send.84: Agregando attach
+2022-05-12 23:30:19,313-5-INFO-Business.Mailer.Send.96: Enviando a la direccion: nieman2020dlb@gmail.com
+2022-05-12 23:30:20,379-5-ERROR-Business.Mailer.Send.107: System.Net.Mail.SmtpException: Error al enviar correo. ---> System.Net.WebException: No se puede resolver el nombre remoto: 'mail.ovjme.com'
+   en System.Net.ServicePoint.GetConnection(PooledStream PooledStream, Object owner, Boolean async, IPAddress& address, Socket& abortSocket, Socket& abortSocket6)
+   en System.Net.PooledStream.Activate(Object owningObject, Boolean async, GeneralAsyncDelegate asyncCallback)
+   en System.Net.PooledStream.Activate(Object owningObject, GeneralAsyncDelegate asyncCallback)
+   en System.Net.ConnectionPool.GetConnection(Object owningObject, GeneralAsyncDelegate asyncCallback, Int32 creationTimeout)
+   en System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpClient.GetConnection()
+   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   en Business.Mailer.Send(List`1 recipients, List`1 attachments, String message, String subject, String fromEmail, String fromDescription) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\Mailer.cs:línea 100
+2022-05-12 23:30:20,414-5-ERROR-Business.GAFFactura.GeneraCfd.458: Ocurrio un error al enviar el correo
+2022-05-12 23:31:11,051-10-DEBUG-Business.GAFFactura.GuardarFactura33.283: 000014
+2022-05-12 23:31:11,086-10-DEBUG-Business.GAFFactura.GeneraCfd.351: XAMA620210DQ5
+2022-05-12 23:31:11,088-10-DEBUG-Business.GAFFactura.GeneraCfd.374: Ruta Llave C:\GAF\Resources\XAMA620210DQ5\Certs\csd.key
+2022-05-12 23:31:11,089-10-DEBUG-Business.GAFFactura.GetComprobante.677: 000014
+2022-05-12 23:31:13,218-10-DEBUG-Business.GeneradorCfdi.GenerarCfd.1124: Generando xml
+2022-05-12 23:31:13,365-10-DEBUG-Business.GeneradorCfdi.TimbrarComprobanteNtLink.845: Timbrando comprobante
+2022-05-12 23:31:15,664-10-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteTimbradoXPRESS.24: Timbrando comprobante
+2022-05-12 23:31:18,471-10-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteTimbradoXPRESS.29: Codigo:200 Mensaje:Solicitud procesada con éxito. - Solicitud de timbrado procesada.
+2022-05-12 23:31:19,428-10-DEBUG-Business.GeneradorCfdi.TimbrarComprobanteNtLink.870: <?xml version="1.0"?>
+<tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/TimbreFiscalDigital/TimbreFiscalDigitalv11.xsd" Version="1.1" UUID="01d728ba-7044-4c39-9ccf-b140067ee126" FechaTimbrado="2022-05-12T23:31:19" RfcProvCertif="SPR190613I52" SelloCFD="acl1brKN1sbABRJueDuNHWN9V2AmbT+dExA/eucZzVhoZZDjUgORfxhgXTW8RZALU6bJrJk96cUXuneSzvSCpBzoBjSJl8cVRvvlICfP7MyISCYJdYrbBGZbTDHJ1172cwb1cG2Jupb+xbDpYgVmKoeTDguBvBDZ11eJJIJwY0Qm0IAx2ibXBJjqG3KqEJ/Z/VeWRFN2l/Wgt+ROdGhIbuvT24AA17CK2tXB1bXUcmC3EB/68MD/2ekC75LgDgngrRPdH8cFl6h+r7WIGTex1hBOg5fC75EqS986Bwp20+e5w/p1Hbq9Eptphgg/DMFgBdYgFXwI1I3U+iWAPvOQAA==" NoCertificadoSAT="30001000000400002495" SelloSAT="SOHxnfAXBeZhBooOb/jvrxlOIs6hZPi3pRPLT5waVzVYbXiJ6Q3r+iAl85WldOVbRaYz9Ftngd6o5+cWjp4C2czi22x35NNaYSC6/Rl/YLIsck+0NpVyLkSaF76d3YwXUX09ysGWMbgqTpsxab/uupD1OpptTOL42tmslbq7QPFkanXnoG/mvgLhqQNryEVgT78Pu4Zn1qqKgvENwT/D+i+H3fA900dIPTuHdx7TnhTfGRozpkLngZMigGsBAf4Cqzb1T9Al5qmthsmzimCbBISBphffznc1isexabKGLf595BJDSCOgCPUouCSOBFRY3LCbMFezuNJUq29jbFQTqg=="/>
+
+2022-05-12 23:31:19,436-10-DEBUG-Business.GAFFactura.GeneraCfd.386: <?xml version="1.0" encoding="utf-8"?><cfdi:Comprobante xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv33.xsd" Version="3.3" Folio="000014" Fecha="2022-05-12T23:31:11" FormaPago="99" NoCertificado="30001000000400002326" Certificado="MIIFijCCA3KgAwIBAgIUMzAwMDEwMDAwMDA0MDAwMDIzMjYwDQYJKoZIhvcNAQELBQAwggErMQ8wDQYDVQQDDAZBQyBVQVQxLjAsBgNVBAoMJVNFUlZJQ0lPIERFIEFETUlOSVNUUkFDSU9OIFRSSUJVVEFSSUExGjAYBgNVBAsMEVNBVC1JRVMgQXV0aG9yaXR5MSgwJgYJKoZIhvcNAQkBFhlvc2Nhci5tYXJ0aW5lekBzYXQuZ29iLm14MR0wGwYDVQQJDBQzcmEgY2VycmFkYSBkZSBjYWRpejEOMAwGA1UEEQwFMDYzNzAxCzAJBgNVBAYTAk1YMRkwFwYDVQQIDBBDSVVEQUQgREUgTUVYSUNPMREwDwYDVQQHDAhDT1lPQUNBTjERMA8GA1UELRMIMi41LjQuNDUxJTAjBgkqhkiG9w0BCQITFnJlc3BvbnNhYmxlOiBBQ0RNQS1TQVQwHhcNMTkwNTI5MTgxMTQ4WhcNMjMwNTI5MTgxMTQ4WjCBsTEdMBsGA1UEAxMUQUxCQSBYS0FSQUpBTSBNRU5ERVoxHTAbBgNVBCkTFEFMQkEgWEtBUkFKQU0gTUVOREVaMR0wGwYDVQQKExRBTEJBIFhLQVJBSkFNIE1FTkRFWjEWMBQGA1UELRMNWEFNQTYyMDIxMERRNTEbMBkGA1UEBRMSWEFNQTYyMDIxME1TTEtOTDA0MR0wGwYDVQQLExRBTEJBIFhLQVJBSkFNIE1FTkRFWjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAK2HkPEtxQ+eUC6J428PU1OHXmr7cHtTlE5+Zk0eYykm1tVNivygT+kz7FTgw1b0yoFh96Xp3tXBSeAmsO+DShFFyYMB6x3lllIEmMZD5JbMaCpzyPMRzAq6850Am3/ShjigUPRorUhdLO1Yes2CyySzYlhA08fq3FmOCQ4eQmSPN7422T+Srhm6pFYaVjwS0MlskslCIi+ANqL5RWg75tNjpJzLQXPJyG0KU1AaqXgUT1e+aTn38AyNVQc30QAjiI50CTUq5MJFixoCB9vol421L7peEIAox3DRVw9H/wns9973XLedyuj5r8ZZfs4BinkVh+mykTyZE63rEv14uncCAwEAAaMdMBswDAYDVR0TAQH/BAIwADALBgNVHQ8EBAMCBsAwDQYJKoZIhvcNAQELBQADggIBAAR/KOWy29oitYdYzuGe1o+JOx/AowEJuu9S4/thFE9ugvHiceFK3cUD8v4M4/AS9D+NVrcMpJocNwpUsW/GiGFqOHNcFVnoSsaeEUMSIW949/0lCeMusR10VnpUaXmYFVYZkFV0PsDYUHna+lqmHDLwzSpfyU20UapgpkPe7Ib6/5CmsPQ7GcF7HBrshO8MyLyYSi193MTDKO86thq5iBnTrt4qyCgI7+Hpk770C4wMskpitf0Z9BUUrBxAk+ZoH1fw1ysZtK+v4vS/wquib2SK+MpvlYEfam/613EE/PEAlBTXPDaWTxporKJJxnv/iOsm97FmvRuwAnB13r5cxc/UJFjD2bFm38/2wOUG1H3srG8xhVSTKUYQjvJU+V10dQe0O/QkWx9sPHlY67CdB5SlsCBl0mkB7mA2fsPyuP28EQtEenjm48wpBXgb4exOYq4flMPZ7LpO79SmnQPSeTIt8CIlc0HomkMCl30HQzGSMoItxGSO9Rrx3ogpNNcdhpD6p59TkYd2zM7argPP/lfbl7/3EbbN5miC1JgNgRfAq02CREdMEAK9Z6ErVWUUl8gd0Tva/C3ykCJdTdNgfEI8gONS2ky/axDNDHL8d4+I6tGItfM4drtukL9Trh8/5RPuPvKHg1tKonDp50mxu4ubXBDF2LAnsOshAB44fn+r" SubTotal="1.00" Moneda="MXN" Total="1.16" TipoDeComprobante="I" MetodoPago="PPD" LugarExpedicion="86690" xmlns:cfdi="http://www.sat.gob.mx/cfd/3" Sello="acl1brKN1sbABRJueDuNHWN9V2AmbT+dExA/eucZzVhoZZDjUgORfxhgXTW8RZALU6bJrJk96cUXuneSzvSCpBzoBjSJl8cVRvvlICfP7MyISCYJdYrbBGZbTDHJ1172cwb1cG2Jupb+xbDpYgVmKoeTDguBvBDZ11eJJIJwY0Qm0IAx2ibXBJjqG3KqEJ/Z/VeWRFN2l/Wgt+ROdGhIbuvT24AA17CK2tXB1bXUcmC3EB/68MD/2ekC75LgDgngrRPdH8cFl6h+r7WIGTex1hBOg5fC75EqS986Bwp20+e5w/p1Hbq9Eptphgg/DMFgBdYgFXwI1I3U+iWAPvOQAA=="><cfdi:Emisor Rfc="XAMA620210DQ5" Nombre="XAMA620210DQ5" RegimenFiscal="605" /><cfdi:Receptor Rfc="NDA170619JC9" Nombre="NIEMAN DISEÑOS ARQUITECTONICOS S.A. DE C.V." UsoCFDI="G01" /><cfdi:Conceptos><cfdi:Concepto ClaveProdServ="78101802" Cantidad="1" ClaveUnidad="E48" Unidad="Unidad de servicio" Descripcion="x" ValorUnitario="1.00" Importe="1.00"><cfdi:Impuestos><cfdi:Traslados><cfdi:Traslado Base="1" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="0.16" /></cfdi:Traslados></cfdi:Impuestos></cfdi:Concepto></cfdi:Conceptos><cfdi:Impuestos TotalImpuestosTrasladados="0.16"><cfdi:Traslados><cfdi:Traslado Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="0.16" /></cfdi:Traslados></cfdi:Impuestos><cfdi:Complemento><tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/TimbreFiscalDigital/TimbreFiscalDigitalv11.xsd" Version="1.1" UUID="01d728ba-7044-4c39-9ccf-b140067ee126" FechaTimbrado="2022-05-12T23:31:19" RfcProvCertif="SPR190613I52" SelloCFD="acl1brKN1sbABRJueDuNHWN9V2AmbT+dExA/eucZzVhoZZDjUgORfxhgXTW8RZALU6bJrJk96cUXuneSzvSCpBzoBjSJl8cVRvvlICfP7MyISCYJdYrbBGZbTDHJ1172cwb1cG2Jupb+xbDpYgVmKoeTDguBvBDZ11eJJIJwY0Qm0IAx2ibXBJjqG3KqEJ/Z/VeWRFN2l/Wgt+ROdGhIbuvT24AA17CK2tXB1bXUcmC3EB/68MD/2ekC75LgDgngrRPdH8cFl6h+r7WIGTex1hBOg5fC75EqS986Bwp20+e5w/p1Hbq9Eptphgg/DMFgBdYgFXwI1I3U+iWAPvOQAA==" NoCertificadoSAT="30001000000400002495" SelloSAT="SOHxnfAXBeZhBooOb/jvrxlOIs6hZPi3pRPLT5waVzVYbXiJ6Q3r+iAl85WldOVbRaYz9Ftngd6o5+cWjp4C2czi22x35NNaYSC6/Rl/YLIsck+0NpVyLkSaF76d3YwXUX09ysGWMbgqTpsxab/uupD1OpptTOL42tmslbq7QPFkanXnoG/mvgLhqQNryEVgT78Pu4Zn1qqKgvENwT/D+i+H3fA900dIPTuHdx7TnhTfGRozpkLngZMigGsBAf4Cqzb1T9Al5qmthsmzimCbBISBphffznc1isexabKGLf595BJDSCOgCPUouCSOBFRY3LCbMFezuNJUq29jbFQTqg==" /></cfdi:Complemento></cfdi:Comprobante>
+2022-05-12 23:31:19,470-10-ERROR-Business.GeneradorCfdi.GetPdfFromComprobante.218: System.ServiceModel.FaultException: No esta configurada la plantilla para este comprobante
+   en Business.GeneradorCfdi.GetPdfFromComprobante(Comprobante comprobante, Int32 orientacion, TipoDocumento tipo, Int64& id, String metodoPago) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\GeneradorCfdi.cs:línea 197
+2022-05-12 23:31:19,489-10-ERROR-Business.GAFFactura.GeneraCfd.407: System.ServiceModel.FaultException: No esta configurada la plantilla para este comprobante
+   en Business.GeneradorCfdi.GetPdfFromComprobante(Comprobante comprobante, Int32 orientacion, TipoDocumento tipo, Int64& id, String metodoPago) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\GeneradorCfdi.cs:línea 221
+   en Business.GAFFactura.GeneraCfd(GAFFactura factura, Boolean enviar, facturaComplementos complementos) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\GAFFactura.cs:línea 399
+2022-05-12 23:31:19,490-10-DEBUG-Business.GAFFactura.GeneraCfd.416: Enviar Correo
+2022-05-12 23:31:19,493-10-DEBUG-Business.Mailer.Send.45: Enviando a 1 emails
+2022-05-12 23:31:19,494-10-INFO-Business.Mailer.Send.65: Creando MailMessage
+2022-05-12 23:31:19,494-10-INFO-Business.Mailer.Send.76: Cargando Bcc: nieman2020dlb@gmail.com
+2022-05-12 23:31:19,495-10-INFO-Business.Mailer.Send.84: Agregando attach
+2022-05-12 23:31:19,495-10-INFO-Business.Mailer.Send.96: Enviando a la direccion: nieman2020dlb@gmail.com
+2022-05-12 23:31:20,120-10-ERROR-Business.Mailer.Send.107: System.Net.Mail.SmtpException: Error al enviar correo. ---> System.Net.WebException: No se puede resolver el nombre remoto: 'mail.ovjme.com'
+   en System.Net.ServicePoint.GetConnection(PooledStream PooledStream, Object owner, Boolean async, IPAddress& address, Socket& abortSocket, Socket& abortSocket6)
+   en System.Net.PooledStream.Activate(Object owningObject, Boolean async, GeneralAsyncDelegate asyncCallback)
+   en System.Net.PooledStream.Activate(Object owningObject, GeneralAsyncDelegate asyncCallback)
+   en System.Net.ConnectionPool.GetConnection(Object owningObject, GeneralAsyncDelegate asyncCallback, Int32 creationTimeout)
+   en System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpClient.GetConnection()
+   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   en Business.Mailer.Send(List`1 recipients, List`1 attachments, String message, String subject, String fromEmail, String fromDescription) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\Mailer.cs:línea 100
+2022-05-12 23:31:20,134-10-ERROR-Business.GAFFactura.GeneraCfd.458: Ocurrio un error al enviar el correo
+2022-05-13 00:03:21,615-9-DEBUG-Business.GAFEmpresa.GuardarEmpresa.765: True
+2022-05-13 00:07:11,002-6-DEBUG-Business.GAFEmpresa.GuardarEmpresa.765: True
+2022-06-03 00:48:55,243-6-DEBUG-Business.GAFFactura.GuardarFactura33.288: 000016
+2022-06-03 00:48:55,519-6-DEBUG-Business.GAFFactura.GeneraCfd.356: XAMA620210DQ5
+2022-06-03 00:48:55,521-6-DEBUG-Business.GAFFactura.GeneraCfd.379: Ruta Llave C:\GAF\Resources\XAMA620210DQ5\Certs\csd.key
+2022-06-03 00:48:55,541-6-DEBUG-Business.GAFFactura.GetComprobante.682: 000016
+2022-06-03 00:49:00,404-6-DEBUG-Business.GeneradorCfdi.GenerarCfd.1125: Generando xml
+2022-06-03 00:49:00,835-6-DEBUG-Business.GeneradorCfdi.TimbrarComprobanteNtLink.846: Timbrando comprobante
+2022-06-03 00:49:02,766-6-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteTimbradoXPRESS.27: Timbrando comprobante
+2022-06-03 00:49:21,818-6-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteTimbradoXPRESS.32: Codigo:701 Mensaje:Créditos insuficientes.
+2022-06-03 00:49:24,133-6-ERROR-Business.GeneradorCfdi.TimbrarComprobanteNtLink.866: Créditos insuficientes.
+2022-06-03 00:49:24,206-6-INFO-Business.GeneradorCfdi.TimbrarComprobanteNtLink.973: System.ServiceModel.FaultException: Créditos insuficientes.
+   en Business.GeneradorCfdi.TimbrarComprobanteNtLink(Comprobante comp) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GeneradorCfdi.cs:línea 867
+2022-06-03 00:49:24,229-6-ERROR-Business.GeneradorCfdi.GenerarCfd.1183: System.ServiceModel.FaultException: Créditos insuficientes.
+   en Business.GeneradorCfdi.TimbrarComprobanteNtLink(Comprobante comp) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GeneradorCfdi.cs:línea 974
+   en Business.GeneradorCfdi.GenerarCfd(Comprobante comprobante, X509Certificate2 cert, String rutaLlave, String passLlave) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GeneradorCfdi.cs:línea 1177
+2022-06-03 00:52:28,824-7-DEBUG-Business.GAFFactura.GuardarFactura33.288: 000017
+2022-06-03 00:52:29,227-7-DEBUG-Business.GAFFactura.GeneraCfd.356: XAMA620210DQ5
+2022-06-03 00:52:29,229-7-DEBUG-Business.GAFFactura.GeneraCfd.379: Ruta Llave C:\GAF\Resources\XAMA620210DQ5\Certs\csd.key
+2022-06-03 00:52:29,242-7-DEBUG-Business.GAFFactura.GetComprobante.682: 000017
+2022-06-03 00:52:32,537-7-DEBUG-Business.GeneradorCfdi.GenerarCfd.1126: Generando xml
+2022-06-03 00:52:32,942-7-DEBUG-Business.GeneradorCfdi.TimbrarComprobanteNtLink.847: Timbrando comprobante
+2022-06-03 00:55:16,357-7-DEBUG-Business.GeneradorCfdi.TimbrarComprobanteNtLink.872: ex-unKnow-003-Excepcion: Declaración de espacio de nombres no válida. línea 1, posición 127.
+2022-06-03 00:55:16,468-7-ERROR-Business.GeneradorCfdi.TimbrarComprobanteNtLink.890: System.InvalidOperationException: Error en el documento XML (1, 1). ---> System.Xml.XmlException: Los datos del nivel de raíz no son válidos. línea 1, posición 1.
+   en System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   en System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   en System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   en System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   en System.Xml.XmlTextReaderImpl.Read()
+   en System.Xml.XmlTextReader.Read()
+   en System.Xml.XmlReader.MoveToContent()
+   en Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderTimbreFiscalDigital.Read3_TimbreFiscalDigital()
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   en System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader)
+   en Business.GeneradorCfdi.TimbrarComprobanteNtLink(Comprobante comp) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GeneradorCfdi.cs:línea 876
+2022-06-03 00:55:16,511-7-INFO-Business.GeneradorCfdi.TimbrarComprobanteNtLink.974: System.ServiceModel.FaultException: ex-unKnow-003-Excepcion: Declaración de espacio de nombres no válida. línea 1, posición 127.
+   en Business.GeneradorCfdi.TimbrarComprobanteNtLink(Comprobante comp) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GeneradorCfdi.cs:línea 891
+2022-06-03 00:55:16,523-7-ERROR-Business.GeneradorCfdi.GenerarCfd.1184: System.ServiceModel.FaultException: ex-unKnow-003-Excepcion: Declaración de espacio de nombres no válida. línea 1, posición 127.
+   en Business.GeneradorCfdi.TimbrarComprobanteNtLink(Comprobante comp) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GeneradorCfdi.cs:línea 975
+   en Business.GeneradorCfdi.GenerarCfd(Comprobante comprobante, X509Certificate2 cert, String rutaLlave, String passLlave) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GeneradorCfdi.cs:línea 1178
+2022-06-03 00:55:55,997-6-DEBUG-Business.GAFFactura.GuardarFactura33.288: 000018
+2022-06-03 00:55:56,044-6-DEBUG-Business.GAFFactura.GeneraCfd.356: XAMA620210DQ5
+2022-06-03 00:55:56,045-6-DEBUG-Business.GAFFactura.GeneraCfd.379: Ruta Llave C:\GAF\Resources\XAMA620210DQ5\Certs\csd.key
+2022-06-03 00:55:56,045-6-DEBUG-Business.GAFFactura.GetComprobante.682: 000018
+2022-06-03 00:55:59,069-6-DEBUG-Business.GeneradorCfdi.GenerarCfd.1126: Generando xml
+2022-06-03 00:55:59,218-6-DEBUG-Business.GeneradorCfdi.TimbrarComprobanteNtLink.847: Timbrando comprobante
+2022-06-03 00:55:59,512-6-DEBUG-Business.GeneradorCfdi.TimbrarComprobanteNtLink.872: ex-unKnow-003-Excepcion: Declaración de espacio de nombres no válida. línea 1, posición 127.
+2022-06-03 00:55:59,526-6-ERROR-Business.GeneradorCfdi.TimbrarComprobanteNtLink.890: System.InvalidOperationException: Error en el documento XML (1, 1). ---> System.Xml.XmlException: Los datos del nivel de raíz no son válidos. línea 1, posición 1.
+   en System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   en System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   en System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   en System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   en System.Xml.XmlTextReaderImpl.Read()
+   en System.Xml.XmlTextReader.Read()
+   en System.Xml.XmlReader.MoveToContent()
+   en Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderTimbreFiscalDigital.Read3_TimbreFiscalDigital()
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   en System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader)
+   en Business.GeneradorCfdi.TimbrarComprobanteNtLink(Comprobante comp) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GeneradorCfdi.cs:línea 876
+2022-06-03 00:55:59,543-6-INFO-Business.GeneradorCfdi.TimbrarComprobanteNtLink.974: System.ServiceModel.FaultException: ex-unKnow-003-Excepcion: Declaración de espacio de nombres no válida. línea 1, posición 127.
+   en Business.GeneradorCfdi.TimbrarComprobanteNtLink(Comprobante comp) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GeneradorCfdi.cs:línea 891
+2022-06-03 00:55:59,567-6-ERROR-Business.GeneradorCfdi.GenerarCfd.1184: System.ServiceModel.FaultException: ex-unKnow-003-Excepcion: Declaración de espacio de nombres no válida. línea 1, posición 127.
+   en Business.GeneradorCfdi.TimbrarComprobanteNtLink(Comprobante comp) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GeneradorCfdi.cs:línea 975
+   en Business.GeneradorCfdi.GenerarCfd(Comprobante comprobante, X509Certificate2 cert, String rutaLlave, String passLlave) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GeneradorCfdi.cs:línea 1178
+2022-06-03 14:43:45,979-6-DEBUG-Business.GAFFactura.GuardarFactura33.288: 000019
+2022-06-03 14:43:47,904-6-DEBUG-Business.GAFFactura.GeneraCfd.356: XAMA620210DQ5
+2022-06-03 14:43:47,907-6-DEBUG-Business.GAFFactura.GeneraCfd.379: Ruta Llave C:\GAF\Resources\XAMA620210DQ5\Certs\csd.key
+2022-06-03 14:43:47,927-6-DEBUG-Business.GAFFactura.GetComprobante.682: 000019
+2022-06-03 14:55:49,054-6-DEBUG-Business.GeneradorCfdi.GenerarCfd.1126: Generando xml
+2022-06-03 14:55:50,624-6-ERROR-Business.GeneradorCfdi.GetXmlPagos.828: System.InvalidOperationException: Error al generar el documento XML. ---> System.InvalidCastException: No se puede convertir un objeto de tipo 'Contract.Complemento40.Pagos' al tipo 'Contract.Complemento.Pagos'.
+   en Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationWriterPagos.Write10_Pagos(Object o)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Xml.Serialization.XmlSerializer.Serialize(XmlWriter xmlWriter, Object o, XmlSerializerNamespaces namespaces, String encodingStyle, String id)
+   en System.Xml.Serialization.XmlSerializer.Serialize(XmlWriter xmlWriter, Object o, XmlSerializerNamespaces namespaces)
+   en Business.GeneradorCfdi.GetXmlPagos(Pagos impuestos) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GeneradorCfdi.cs:línea 813
+2022-06-03 14:55:50,844-6-DEBUG-Business.GeneradorCfdi.TimbrarComprobanteNtLink.847: Timbrando comprobante
+2022-06-03 14:55:50,862-6-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteTimbradoXPRESS.27: Timbrando comprobante
+2022-06-03 18:25:27,858-7-DEBUG-Business.GAFFactura.GuardarFactura33.288: 000020
+2022-06-03 18:25:28,175-7-DEBUG-Business.GAFFactura.GeneraCfd.356: XAMA620210DQ5
+2022-06-03 18:25:28,177-7-DEBUG-Business.GAFFactura.GeneraCfd.379: Ruta Llave C:\GAF\Resources\XAMA620210DQ5\Certs\csd.key
+2022-06-03 18:25:28,188-7-DEBUG-Business.GAFFactura.GetComprobante.682: 000020
+2022-06-03 18:30:47,276-7-DEBUG-Business.GeneradorCfdi.GenerarCfd.1126: Generando xml
+2022-06-04 02:14:47,796-7-DEBUG-Business.GAFFactura.GuardarFactura33.289: 000029
+2022-06-04 02:14:47,929-7-DEBUG-Business.GAFFactura.GeneraCfd.357: XAMA620210DQ5
+2022-06-04 02:14:47,931-7-DEBUG-Business.GAFFactura.GeneraCfd.380: Ruta Llave C:\GAF\Resources\XAMA620210DQ5\Certs\csd.key
+2022-06-04 02:14:47,942-7-DEBUG-Business.GAFFactura.GetComprobante.683: 000029
+2022-06-13 23:46:15,211-6-ERROR-Business.GAFFactura.GetData.571: No se pudo encontrar el archivo 'C:\GAF\Salida\XAMA620210DQ5\fdfa50a2-7755-4e06-8698-92bba0fd554a.pdf'.
+2022-06-14 00:00:54,981-8-ERROR-Business.GAFFactura.GetData.571: No se pudo encontrar el archivo 'C:\GAF\Salida\XAMA620210DQ5\fdfa50a2-7755-4e06-8698-92bba0fd554a.pdf'.
+2022-06-14 00:00:56,773-8-DEBUG-Business.Mailer.Send.45: Enviando a 2 emails
+2022-06-14 00:00:56,849-8-INFO-Business.Mailer.Send.65: Creando MailMessage
+2022-06-14 00:00:56,854-8-INFO-Business.Mailer.Send.76: Cargando Bcc: 
+2022-06-14 00:00:56,855-8-INFO-Business.Mailer.Send.84: Agregando attach
+2022-06-14 00:00:56,872-8-ERROR-Business.Mailer.Send.107: System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en Business.Mailer.Send(List`1 recipients, List`1 attachments, String message, String subject, String fromEmail, String fromDescription) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\Mailer.cs:línea 90
+2022-06-14 00:02:11,679-7-ERROR-Business.GAFFactura.GetData.571: No se pudo encontrar el archivo 'C:\GAF\Salida\XAMA620210DQ5\fdfa50a2-7755-4e06-8698-92bba0fd554a.pdf'.
+2022-06-14 00:02:22,429-7-DEBUG-Business.Mailer.Send.45: Enviando a 2 emails
+2022-06-14 00:02:38,517-7-INFO-Business.Mailer.Send.65: Creando MailMessage
+2022-06-14 00:02:41,470-7-INFO-Business.Mailer.Send.76: Cargando Bcc: 
+2022-06-14 00:02:44,431-7-INFO-Business.Mailer.Send.84: Agregando attach
+2022-06-14 00:03:06,806-7-ERROR-Business.Mailer.Send.107: System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en Business.Mailer.Send(List`1 recipients, List`1 attachments, String message, String subject, String fromEmail, String fromDescription) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\Mailer.cs:línea 90
+2022-06-14 00:04:56,032-7-DEBUG-Business.Mailer.Send.45: Enviando a 2 emails
+2022-06-14 00:05:00,782-7-INFO-Business.Mailer.Send.65: Creando MailMessage
+2022-06-14 00:05:05,587-7-INFO-Business.Mailer.Send.76: Cargando Bcc: 
+2022-06-14 00:05:20,196-7-INFO-Business.Mailer.Send.84: Agregando attach
+2022-06-14 00:05:28,969-7-INFO-Business.Mailer.Send.96: Enviando a la direccion: ricardo_gomez_v@hotmail.com
+2022-06-14 00:05:31,856-7-INFO-Business.Mailer.Send.96: Enviando a la direccion: ricardo_gomez_v@hotmail.com
+2022-06-14 00:05:58,592-7-ERROR-Business.Mailer.Send.107: System.Net.Mail.SmtpException: El buzón de correo no está disponible. La respuesta del servidor fue: Access denied - Invalid HELO name (See RFC2821 4.1.1.1)
+   en System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   en System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   en System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   en Business.Mailer.Send(List`1 recipients, List`1 attachments, String message, String subject, String fromEmail, String fromDescription) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\Mailer.cs:línea 100
+2022-06-14 00:10:30,167-5-DEBUG-Business.Mailer.Send.45: Enviando a 2 emails
+2022-06-14 00:10:30,210-5-INFO-Business.Mailer.Send.65: Creando MailMessage
+2022-06-14 00:10:30,211-5-INFO-Business.Mailer.Send.76: Cargando Bcc: 
+2022-06-14 00:10:30,211-5-INFO-Business.Mailer.Send.84: Agregando attach
+2022-06-14 00:10:30,211-5-INFO-Business.Mailer.Send.96: Enviando a la direccion: ricardo_gomez_v@hotmail.com
+2022-06-14 00:10:30,212-5-INFO-Business.Mailer.Send.96: Enviando a la direccion: systemconsult360@gmail.com
+2022-06-14 00:12:58,244-5-ERROR-Business.Mailer.Send.107: System.Net.Mail.SmtpException: Se excedió el tiempo de espera de la operación.
+   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   en Business.Mailer.Send(List`1 recipients, List`1 attachments, String message, String subject, String fromEmail, String fromDescription) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\Mailer.cs:línea 100
+2022-06-14 00:12:59,040-12-DEBUG-Business.Mailer.Send.45: Enviando a 2 emails
+2022-06-14 00:12:59,108-12-INFO-Business.Mailer.Send.65: Creando MailMessage
+2022-06-14 00:12:59,109-12-INFO-Business.Mailer.Send.76: Cargando Bcc: 
+2022-06-14 00:12:59,109-12-INFO-Business.Mailer.Send.84: Agregando attach
+2022-06-14 00:12:59,109-12-INFO-Business.Mailer.Send.96: Enviando a la direccion: ricardo_gomez_v@hotmail.com
+2022-06-14 00:12:59,109-12-INFO-Business.Mailer.Send.96: Enviando a la direccion: systemconsult360@gmail.com
+2022-06-14 00:15:20,735-12-ERROR-Business.Mailer.Send.107: System.Net.Mail.SmtpException: Se excedió el tiempo de espera de la operación.
+   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   en Business.Mailer.Send(List`1 recipients, List`1 attachments, String message, String subject, String fromEmail, String fromDescription) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\Mailer.cs:línea 100
+2022-06-14 00:18:17,162-5-DEBUG-Business.Mailer.Send.45: Enviando a 2 emails
+2022-06-14 00:18:17,162-5-INFO-Business.Mailer.Send.65: Creando MailMessage
+2022-06-14 00:18:17,163-5-INFO-Business.Mailer.Send.76: Cargando Bcc: 
+2022-06-14 00:18:17,163-5-INFO-Business.Mailer.Send.84: Agregando attach
+2022-06-14 00:18:17,164-5-INFO-Business.Mailer.Send.96: Enviando a la direccion: ricardo_gomez_v@hotmail.com
+2022-06-14 00:18:17,164-5-INFO-Business.Mailer.Send.96: Enviando a la direccion: systemconsult360@gmail.com
+2022-06-14 00:20:03,736-5-ERROR-Business.Mailer.Send.107: System.Net.Mail.SmtpException: Se excedió el tiempo de espera de la operación.
+   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   en Business.Mailer.Send(List`1 recipients, List`1 attachments, String message, String subject, String fromEmail, String fromDescription) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\Mailer.cs:línea 100
+2022-06-14 00:22:10,467-7-DEBUG-Business.Mailer.Send.45: Enviando a 2 emails
+2022-06-14 00:22:10,528-7-INFO-Business.Mailer.Send.65: Creando MailMessage
+2022-06-14 00:22:10,529-7-INFO-Business.Mailer.Send.76: Cargando Bcc: 
+2022-06-14 00:22:10,530-7-INFO-Business.Mailer.Send.84: Agregando attach
+2022-06-14 00:22:10,531-7-INFO-Business.Mailer.Send.96: Enviando a la direccion: ricardo_gomez_v@hotmail.com
+2022-06-14 00:22:10,532-7-INFO-Business.Mailer.Send.96: Enviando a la direccion: systemconsult360@gmail.com
+2022-06-14 00:22:14,583-7-DEBUG-Business.Mailer.Send.103: Enviado correctamente

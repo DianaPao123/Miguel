@@ -315,7 +315,7 @@ namespace GAFWEB
                     this.gvFacturaCustumer.DataSource = lista;
                     this.gvFacturaCustumer.DataBind();
                 }
-
+            UpdatePanel2.Update();
         }
 
         private void CalculaTotales(List<vprefactura> lista)

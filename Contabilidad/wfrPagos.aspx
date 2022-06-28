@@ -27,6 +27,7 @@
                         <asp:Label ID="lblLinea" runat="server" Text="Linea:"></asp:Label>
                         <asp:DropDownList runat="server" ID="ddlLinea" AutoPostBack="True" CssClass="form-control"
                         onselectedindexchanged="ddlLinea_SelectedIndexChanged">
+                             <asp:ListItem Value="A" Text="A" ></asp:ListItem> 
                              <asp:ListItem Value="B" Text="B" ></asp:ListItem> 
                             <asp:ListItem Value="C" Text="C" ></asp:ListItem> 
                             <asp:ListItem Value="D" Text="D" ></asp:ListItem> 
@@ -52,7 +53,8 @@
                         <asp:Label ID="Label6" runat="server" Text="LineaCliente:"></asp:Label>
                         <asp:DropDownList runat="server" ID="ddlLineaCliente" AutoPostBack="True" CssClass="form-control"
                         onselectedindexchanged="ddlLineaCliente_SelectedIndexChanged">
-                             <asp:ListItem Value="B" Text="B" ></asp:ListItem> 
+                            <asp:ListItem Value="A" Text="A" ></asp:ListItem> 
+                          <asp:ListItem Value="B" Text="B" ></asp:ListItem> 
                             <asp:ListItem Value="C" Text="C" ></asp:ListItem> 
                             <asp:ListItem Value="D" Text="D" ></asp:ListItem> 
                         </asp:DropDownList>

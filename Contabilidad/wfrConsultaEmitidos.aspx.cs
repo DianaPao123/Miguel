@@ -104,26 +104,26 @@ namespace GAFWEB
 
         protected void gvFacturas_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-           
-            if(e.CommandName.Equals("DescargarXml"))
+
+            if (e.CommandName.Equals("DescargarXml"))
             {
                 string uuid = this.gvFacturas.Rows[Convert.ToInt32(e.CommandArgument)].Cells[3].Text;
-                var cliente =new Factura();
+                var cliente = new Factura();
                 using (cliente as IDisposable)
                 {
                     var id = (int)this.gvFacturas.DataKeys[Convert.ToInt32(e.CommandArgument)].Values["idventa"];
                     var cfd = cliente.GetById(id);
                     string xml = Encoding.UTF8.GetString(GAFFactura.GetData(uuid, "xml"));
                     //-------------------
-                    var clien = new GAFClientes();string RFC="";
+                    var clien = new GAFClientes(); string RFC = "";
                     using (clien as IDisposable)
                     {
                         var cli = clien.GetCliente(Convert.ToInt32(cfd.idcliente));
-                        RFC=cli.RFC;
+                        RFC = cli.RFC;
                     }
                     //------------------------
-                    Response.AddHeader("Content-Disposition", "attachment; filename=" +RFC + "_" + cfd.Folio + "_" + cfd.Fecha.ToString("yyyyMMdd") + "_" + uuid + ".xml");
-                   
+                    Response.AddHeader("Content-Disposition", "attachment; filename=" + RFC + "_" + cfd.Folio + "_" + cfd.Fecha.ToString("yyyyMMdd") + "_" + uuid + ".xml");
+
                     this.Response.ContentType = "text/xml";
                     this.Response.Charset = "UTF-8";
                     this.Response.Write(xml);
@@ -132,7 +132,7 @@ namespace GAFWEB
             }
             else if (e.CommandName.Equals("DescargarPdf"))
             {
-                
+
                 string uuid = this.gvFacturas.Rows[Convert.ToInt32(e.CommandArgument)].Cells[3].Text;
                 var cliente = new Factura();
                 using (cliente as IDisposable)
@@ -150,12 +150,12 @@ namespace GAFWEB
                     Response.AddHeader("Content-Disposition", "attachment; filename=" + RFC + "_" + cfd.Folio + "_" + cfd.Fecha.ToString("yyyyMMdd") + "_" + uuid + ".pdf");
                     //Response.AddHeader("Content-Disposition", "attachment; filename=" +  uuid + ".pdf");
                     this.Response.ContentType = "application/pdf";
-                    
+
                     var fact = new GAFFactura();
                     byte[] pdf;
                     using (fact as IDisposable)
                     {
-                      pdf=  fact.GetPdfData(uuid);
+                        pdf = fact.GetPdfData(uuid);
                     }
                     if (pdf == null)
                     {
@@ -165,7 +165,7 @@ namespace GAFWEB
                     this.Response.BinaryWrite(pdf);
                     this.Response.End();
                 }
-                 
+
             }
             else if (e.CommandName.Equals("EnviarEmail"))
             {
@@ -180,14 +180,14 @@ namespace GAFWEB
                 this.lblGuid.Text = this.gvFacturas.Rows[Convert.ToInt32(e.CommandArgument)].Cells[3].Text;
                 this.mpeEmail.Show();
             }
-            else if(e.CommandName.Equals("Pagar"))
+            else if (e.CommandName.Equals("Pagar"))
             {
                 var id = (int)this.gvFacturas.DataKeys[Convert.ToInt32(e.CommandArgument)].Values["idventa"];
-                var cliente =new  Factura();
+                var cliente = new Factura();
                 using (cliente as IDisposable)
                 {
                     var venta = cliente.GetById(id);
-                    this.txtFechaPago.Text = venta.FechaPago!=null ? Convert.ToDateTime( venta.FechaPago).ToString("dd/MM/yyyy") : string.Empty;
+                    this.txtFechaPago.Text = venta.FechaPago != null ? Convert.ToDateTime(venta.FechaPago).ToString("dd/MM/yyyy") : string.Empty;
                     this.lblFolioPago.Text = venta.Folio.ToString();
                     this.txtReferenciaPago.Text = venta.ReferenciaPago;
                 }
@@ -261,15 +261,15 @@ namespace GAFWEB
                     sel = false;
                     //SelText = "Seleccionar Todos";
                     SelText = "Todos";
-                     hidSel.Value = "Sel";
-                     ViewState["select"] = "Sel";
+                    hidSel.Value = "Sel";
+                    ViewState["select"] = "Sel";
                 }
                 else
                 {
-                    
+
                     sel = true;
                     SelText = "Ninguno";
-                   // SelText = "Seleccionar Ninguno";
+                    // SelText = "Seleccionar Ninguno";
                     hidSel.Value = "Des";
                     ViewState["select"] = "Des";
                 }
@@ -285,13 +285,24 @@ namespace GAFWEB
                     }
                     gvFacturas.DataSource = lista;
                     gvFacturas.DataBind();
-                    
+
                 }
             }
-           
+            else if (e.CommandName.Equals("PORPAGAR"))
+            {
+                var id = (int)this.gvFacturas.DataKeys[Convert.ToInt32(e.CommandArgument)].Values["idventa"];
+                var cliente = new Factura();
+                using (cliente as IDisposable)
+                {  var cfd = cliente.GetById(id);
+
+                    PorPagar((int)cfd.IdEmpresa, cfd.idcliente,cfd.PreFolio);
+                }
+                gvFacturas.DataSource = ViewState["facturas"];
+                gvFacturas.DataBind();
+            }
 
         }
-        private void IngesoEgresoExportar()
+            private void IngesoEgresoExportar()
         {
 
             DataTable dt = new DataTable("GridView_Data");
@@ -628,7 +639,32 @@ namespace GAFWEB
         }
 
         #region Helper Methods
+        private void PorPagar(int empresa,int cliente ,string prefolio)
+        {
+            var factu = new Prefactura();
+            using (factu as IDisposable)
+            {
+                var ventas = factu.GetListPagoPorPagarPrefactura(empresa, 0, cliente);
+                
+                List<vPrefacturaPorPagar> lista;
+                {
+                    lista = ventas.Where(p => p.PreFolio == prefolio).ToList();
+                }
 
+                foreach (var x in lista)
+                {
+                    x.SaldoAnteriorPago = Decimal.Round((decimal)x.SaldoAnteriorPago, 2);
+                }
+
+                ViewState["pagosPendientes"] = lista;
+
+                this.gvPagos.DataSource = lista;
+                this.gvPagos.DataBind();
+                mpePORPAGAR.Show();
+            }
+
+
+        }
         private void FillView()
         {
             
@@ -663,7 +699,7 @@ namespace GAFWEB
                     int.Parse(this.ddlClientes.SelectedValue) )  ;
                 foreach (var v in ventas)
                 {
-                  
+                        v.EDI = false;
                     if (filtro == "Pago")
                         v.EstusCFDI = "Liquidado";
                     else
@@ -676,18 +712,23 @@ namespace GAFWEB
                         {
                             if (ddlLinea.SelectedValue == "A")
                             {
-                                if (v.SaldoAnteriorPago == 0)
-                                    v.EstusCFDI = "Liquidado";
-                                else
-                                    v.EstusCFDI = "Pendiente";
+                                    if (v.SaldoAnteriorPago == 0)
+                                        v.EstusCFDI = "Liquidado";
+                                    else
+                                    {
+                                        v.EDI = true;
+                                        v.EstusCFDI = "Pendiente";
+                                    }
                             }
                             else  // las que no traen pre
                             {
-                                if (v.SaldoAnteriorFactura == 0)
-                                    v.EstusCFDI = "Liquidado";
-                                else
-                                    v.EstusCFDI = "Pendiente";
-
+                                    if (v.SaldoAnteriorFactura == 0)
+                                        v.EstusCFDI = "Liquidado";
+                                    else
+                                    {
+                                        v.EDI = true;
+                                        v.EstusCFDI = "Pendiente";
+                                    }
                             }
                         }
                     }
@@ -750,7 +791,7 @@ namespace GAFWEB
                     this.gvFacturaPagoCustumer.DataBind();
                 }
             }
-              
+            UpdatePanel2.Update();
         }
         
         private void CalculaTotales(List<vfacturasEmitidos> lista)
@@ -803,7 +844,18 @@ namespace GAFWEB
             if (e.Row.RowType == DataControlRowType.DataRow)
             {
                 if (e.Row.Cells[15].Text != "Pendiente")
-                 e.Row.BackColor = Color.FromName("#b3d243");
+                {
+                    e.Row.BackColor = Color.FromName("#b3d243");
+                    LinkButton btn = (LinkButton)e.Row.Cells[19].Controls[0];
+                    btn.Visible = false;
+                }
+                else
+                {
+                    if (string.IsNullOrEmpty(e.Row.Cells[1].Text.Replace("&nbsp;", "")))
+                        e.Row.Cells[19].Text = "";
+
+
+                }
                 if (!string.IsNullOrEmpty(e.Row.Cells[16].Text.Replace("&nbsp;","")))
                     e.Row.BackColor = Color.FromName("#F6DDCC");
               
@@ -1248,6 +1300,86 @@ namespace GAFWEB
 
 
         }
-        
+
+        protected void gvOrders3_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+
+
+            if (e.CommandName.Equals("DescargarXml"))
+            {
+
+                GridView gridview = (GridView)e.CommandSource;
+                int rowIndex = int.Parse(e.CommandArgument.ToString());
+                string uuid = gridview.DataKeys[rowIndex].Values["Uid"].ToString();
+                var id = (int)gridview.DataKeys[rowIndex].Values["idventa"];
+
+                //string uuid = this.gvFacturasPagos.DataKeys[Convert.ToInt32(e.CommandArgument)].Values["Uid"].ToString();
+
+                // string uuid = this.gvFacturasPagos.Rows[Convert.ToInt32(e.CommandArgument)].Cells[3].Text;
+                var cliente = new Factura();
+                using (cliente as IDisposable)
+                {
+                   // var id = (int)this.gvFacturasPagos.DataKeys[Convert.ToInt32(e.CommandArgument)].Values["idventa"];
+                    var cfd = cliente.GetById(id);
+                    string xml = Encoding.UTF8.GetString(GAFFactura.GetData(uuid, "xml"));
+                    //-------------------
+                    var clien = new GAFClientes(); string RFC = "";
+                    using (clien as IDisposable)
+                    {
+                        var cli = clien.GetCliente(Convert.ToInt32(cfd.idcliente));
+                        RFC = cli.RFC;
+                    }
+                    //------------------------
+                    Response.AddHeader("Content-Disposition", "attachment; filename=" + RFC + "_" + cfd.Folio + "_" + cfd.Fecha.ToString("yyyyMMdd") + "_" + uuid + ".xml");
+
+                    this.Response.ContentType = "text/xml";
+                    this.Response.Charset = "UTF-8";
+                    this.Response.Write(xml);
+                    this.Response.End();
+                }
+            }
+            else if (e.CommandName.Equals("DescargarPdf"))
+            {
+                GridView gridview = (GridView)e.CommandSource;
+                int rowIndex = int.Parse(e.CommandArgument.ToString());
+                string uuid = gridview.DataKeys[rowIndex].Values["Uid"].ToString();
+                var id = (int)gridview.DataKeys[rowIndex].Values["idventa"];
+
+               // string uuid = this.gvFacturasPagos.Rows[Convert.ToInt32(e.CommandArgument)].Cells[3].Text;
+                var cliente = new Factura();
+                using (cliente as IDisposable)
+                {
+                 //   var id = (int)this.gvFacturasPagos.DataKeys[Convert.ToInt32(e.CommandArgument)].Values["idventa"];
+                    var cfd = cliente.GetById(id);
+                    //-----------
+                    var clien = new GAFClientes(); string RFC = "";
+                    using (clien as IDisposable)
+                    {
+                        var cli = clien.GetCliente(Convert.ToInt32(cfd.idcliente));
+                        RFC = cli.RFC;
+                    }
+                    //---------------
+                    Response.AddHeader("Content-Disposition", "attachment; filename=" + RFC + "_" + cfd.Folio + "_" + cfd.Fecha.ToString("yyyyMMdd") + "_" + uuid + ".pdf");
+                    //Response.AddHeader("Content-Disposition", "attachment; filename=" +  uuid + ".pdf");
+                    this.Response.ContentType = "application/pdf";
+
+                    var fact = new GAFFactura();
+                    byte[] pdf;
+                    using (fact as IDisposable)
+                    {
+                        pdf = fact.GetPdfData(uuid);
+                    }
+                    if (pdf == null)
+                    {
+                        this.lblError.Text = "Archivo no encontrado";
+                        return;
+                    }
+                    this.Response.BinaryWrite(pdf);
+                    this.Response.End();
+                }
+
+            }
+           
+        }
     }
 }

@@ -1,0 +1,692 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="urn:ws_api" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="urn:ws_api" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="urn:ws_api">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+      <xsd:complexType name="RespuestaConsultarCFDI">
+        <xsd:all>
+          <xsd:element name="code" type="xsd:string" />
+          <xsd:element name="message" type="xsd:string" />
+          <xsd:element name="data" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="RespuestaTimbrado">
+        <xsd:all>
+          <xsd:element name="code" type="xsd:string" />
+          <xsd:element name="message" type="xsd:string" />
+          <xsd:element name="data" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="RespuestaCancelar">
+        <xsd:all>
+          <xsd:element name="code" type="xsd:string" />
+          <xsd:element name="message" type="xsd:string" />
+          <xsd:element name="data" type="xsd:string" />
+          <xsd:element name="status" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="RespuestaEstatusSAT">
+        <xsd:all>
+          <xsd:element name="CodigoEstatus" type="xsd:string" />
+          <xsd:element name="EsCancelable" type="xsd:string" />
+          <xsd:element name="Estado" type="xsd:string" />
+          <xsd:element name="EstatusCancelacion" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="RespuestaCreditos">
+        <xsd:all>
+          <xsd:element name="code" type="xsd:string" />
+          <xsd:element name="message" type="xsd:string" />
+          <xsd:element name="data" type="xsd:int" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="RespuestaRelacionados">
+        <xsd:all>
+          <xsd:element name="code" type="xsd:string" />
+          <xsd:element name="message" type="xsd:string" />
+          <xsd:element name="data" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="RespuestaPendientes">
+        <xsd:all>
+          <xsd:element name="code" type="xsd:string" />
+          <xsd:element name="message" type="xsd:string" />
+          <xsd:element name="data" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="RespuestaAutorizar">
+        <xsd:all>
+          <xsd:element name="code" type="xsd:string" />
+          <xsd:element name="message" type="xsd:string" />
+          <xsd:element name="data" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="RespuestaTimbradoSP">
+        <xsd:all>
+          <xsd:element name="code" type="xsd:string" />
+          <xsd:element name="message" type="xsd:string" />
+          <xsd:element name="data" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="RespuestaValidacion">
+        <xsd:all>
+          <xsd:element name="code" type="xsd:string" />
+          <xsd:element name="message" type="xsd:string" />
+          <xsd:element name="data" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="consultarCFDIRequest">
+    <wsdl:part name="apikey" type="xsd:string" />
+    <wsdl:part name="uuid" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="consultarCFDIResponse">
+    <wsdl:part name="return" type="tns:RespuestaConsultarCFDI" />
+  </wsdl:message>
+  <wsdl:message name="timbrarRequest">
+    <wsdl:part name="apikey" type="xsd:string" />
+    <wsdl:part name="xmlCFDI" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="timbrarResponse">
+    <wsdl:part name="return" type="tns:RespuestaTimbrado" />
+  </wsdl:message>
+  <wsdl:message name="timbrar3Request">
+    <wsdl:part name="apikey" type="xsd:string" />
+    <wsdl:part name="xmlCFDI" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="timbrar3Response">
+    <wsdl:part name="return" type="tns:RespuestaTimbrado" />
+  </wsdl:message>
+  <wsdl:message name="timbrarTFDRequest">
+    <wsdl:part name="apikey" type="xsd:string" />
+    <wsdl:part name="xmlCFDI" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="timbrarTFDResponse">
+    <wsdl:part name="return" type="tns:RespuestaTimbrado" />
+  </wsdl:message>
+  <wsdl:message name="timbrarConSelloRequest">
+    <wsdl:part name="apikey" type="xsd:string" />
+    <wsdl:part name="xmlCFDI" type="xsd:string" />
+    <wsdl:part name="keyPEM" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="timbrarConSelloResponse">
+    <wsdl:part name="return" type="tns:RespuestaTimbrado" />
+  </wsdl:message>
+  <wsdl:message name="timbrarJSONRequest">
+    <wsdl:part name="apikey" type="xsd:string" />
+    <wsdl:part name="jsonB64" type="xsd:string" />
+    <wsdl:part name="keyPEM" type="xsd:string" />
+    <wsdl:part name="cerPEM" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="timbrarJSONResponse">
+    <wsdl:part name="return" type="tns:RespuestaTimbrado" />
+  </wsdl:message>
+  <wsdl:message name="timbrarJSON2Request">
+    <wsdl:part name="apikey" type="xsd:string" />
+    <wsdl:part name="jsonB64" type="xsd:string" />
+    <wsdl:part name="keyPEM" type="xsd:string" />
+    <wsdl:part name="cerPEM" type="xsd:string" />
+    <wsdl:part name="plantilla" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="timbrarJSON2Response">
+    <wsdl:part name="return" type="tns:RespuestaTimbrado" />
+  </wsdl:message>
+  <wsdl:message name="timbrarJSON3Request">
+    <wsdl:part name="apikey" type="xsd:string" />
+    <wsdl:part name="jsonB64" type="xsd:string" />
+    <wsdl:part name="keyPEM" type="xsd:string" />
+    <wsdl:part name="cerPEM" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="timbrarJSON3Response">
+    <wsdl:part name="return" type="tns:RespuestaTimbrado" />
+  </wsdl:message>
+  <wsdl:message name="timbrarTXTRequest">
+    <wsdl:part name="apikey" type="xsd:string" />
+    <wsdl:part name="txtB64" type="xsd:string" />
+    <wsdl:part name="keyPEM" type="xsd:string" />
+    <wsdl:part name="cerPEM" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="timbrarTXTResponse">
+    <wsdl:part name="return" type="tns:RespuestaTimbrado" />
+  </wsdl:message>
+  <wsdl:message name="timbrarTXT2Request">
+    <wsdl:part name="apikey" type="xsd:string" />
+    <wsdl:part name="txtB64" type="xsd:string" />
+    <wsdl:part name="keyPEM" type="xsd:string" />
+    <wsdl:part name="cerPEM" type="xsd:string" />
+    <wsdl:part name="plantilla" type="xsd:string" />
+    <wsdl:part name="logoB64" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="timbrarTXT2Response">
+    <wsdl:part name="return" type="tns:RespuestaTimbrado" />
+  </wsdl:message>
+  <wsdl:message name="timbrarTXT3Request">
+    <wsdl:part name="apikey" type="xsd:string" />
+    <wsdl:part name="txtB64" type="xsd:string" />
+    <wsdl:part name="keyPEM" type="xsd:string" />
+    <wsdl:part name="cerPEM" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="timbrarTXT3Response">
+    <wsdl:part name="return" type="tns:RespuestaTimbrado" />
+  </wsdl:message>
+  <wsdl:message name="cancelarRequest">
+    <wsdl:part name="apikey" type="xsd:string" />
+    <wsdl:part name="keyCSD" type="xsd:string" />
+    <wsdl:part name="cerCSD" type="xsd:string" />
+    <wsdl:part name="passCSD" type="xsd:string" />
+    <wsdl:part name="uuid" type="xsd:string" />
+    <wsdl:part name="rfcEmisor" type="xsd:string" />
+    <wsdl:part name="rfcReceptor" type="xsd:string" />
+    <wsdl:part name="total" type="xsd:double" />
+  </wsdl:message>
+  <wsdl:message name="cancelarResponse">
+    <wsdl:part name="return" type="tns:RespuestaCancelar" />
+  </wsdl:message>
+  <wsdl:message name="cancelar2Request">
+    <wsdl:part name="apikey" type="xsd:string" />
+    <wsdl:part name="keyCSD" type="xsd:string" />
+    <wsdl:part name="cerCSD" type="xsd:string" />
+    <wsdl:part name="passCSD" type="xsd:string" />
+    <wsdl:part name="uuid" type="xsd:string" />
+    <wsdl:part name="rfcEmisor" type="xsd:string" />
+    <wsdl:part name="rfcReceptor" type="xsd:string" />
+    <wsdl:part name="total" type="xsd:double" />
+    <wsdl:part name="motivo" type="xsd:string" />
+    <wsdl:part name="folioSustitucion" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="cancelar2Response">
+    <wsdl:part name="return" type="tns:RespuestaCancelar" />
+  </wsdl:message>
+  <wsdl:message name="cancelarPFXRequest">
+    <wsdl:part name="apikey" type="xsd:string" />
+    <wsdl:part name="filePFX" type="xsd:string" />
+    <wsdl:part name="passPFX" type="xsd:string" />
+    <wsdl:part name="uuid" type="xsd:string" />
+    <wsdl:part name="rfcEmisor" type="xsd:string" />
+    <wsdl:part name="rfcReceptor" type="xsd:string" />
+    <wsdl:part name="total" type="xsd:double" />
+  </wsdl:message>
+  <wsdl:message name="cancelarPFXResponse">
+    <wsdl:part name="return" type="tns:RespuestaCancelar" />
+  </wsdl:message>
+  <wsdl:message name="cancelarPFX2Request">
+    <wsdl:part name="apikey" type="xsd:string" />
+    <wsdl:part name="filePFX" type="xsd:string" />
+    <wsdl:part name="passPFX" type="xsd:string" />
+    <wsdl:part name="uuid" type="xsd:string" />
+    <wsdl:part name="rfcEmisor" type="xsd:string" />
+    <wsdl:part name="rfcReceptor" type="xsd:string" />
+    <wsdl:part name="total" type="xsd:double" />
+    <wsdl:part name="motivo" type="xsd:string" />
+    <wsdl:part name="folioSustitucion" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="cancelarPFX2Response">
+    <wsdl:part name="return" type="tns:RespuestaCancelar" />
+  </wsdl:message>
+  <wsdl:message name="consultarEstadoSATRequest">
+    <wsdl:part name="apikey" type="xsd:string" />
+    <wsdl:part name="uuid" type="xsd:string" />
+    <wsdl:part name="rfcEmisor" type="xsd:string" />
+    <wsdl:part name="rfcReceptor" type="xsd:string" />
+    <wsdl:part name="total" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="consultarEstadoSATResponse">
+    <wsdl:part name="return" type="tns:RespuestaEstatusSAT" />
+  </wsdl:message>
+  <wsdl:message name="consultarCreditosDisponiblesRequest">
+    <wsdl:part name="apikey" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="consultarCreditosDisponiblesResponse">
+    <wsdl:part name="return" type="tns:RespuestaCreditos" />
+  </wsdl:message>
+  <wsdl:message name="consultarCfdisRelacionadosRequest">
+    <wsdl:part name="apikey" type="xsd:string" />
+    <wsdl:part name="keyPEM" type="xsd:string" />
+    <wsdl:part name="cerPEM" type="xsd:string" />
+    <wsdl:part name="uuid" type="xsd:string" />
+    <wsdl:part name="rfcEmisor" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="consultarCfdisRelacionadosResponse">
+    <wsdl:part name="return" type="tns:RespuestaRelacionados" />
+  </wsdl:message>
+  <wsdl:message name="consultarAutorizacionesPendientesRequest">
+    <wsdl:part name="apikey" type="xsd:string" />
+    <wsdl:part name="keyPEM" type="xsd:string" />
+    <wsdl:part name="cerPEM" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="consultarAutorizacionesPendientesResponse">
+    <wsdl:part name="return" type="tns:RespuestaPendientes" />
+  </wsdl:message>
+  <wsdl:message name="autorizarCancelacionRequest">
+    <wsdl:part name="apikey" type="xsd:string" />
+    <wsdl:part name="keyPEM" type="xsd:string" />
+    <wsdl:part name="cerPEM" type="xsd:string" />
+    <wsdl:part name="uuid" type="xsd:string" />
+    <wsdl:part name="respuesta" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="autorizarCancelacionResponse">
+    <wsdl:part name="return" type="tns:RespuestaAutorizar" />
+  </wsdl:message>
+  <wsdl:message name="timbrarRetencionRequest">
+    <wsdl:part name="apikey" type="xsd:string" />
+    <wsdl:part name="xml" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="timbrarRetencionResponse">
+    <wsdl:part name="return" type="tns:RespuestaTimbrado" />
+  </wsdl:message>
+  <wsdl:message name="timbrarRetencionTFDRequest">
+    <wsdl:part name="apikey" type="xsd:string" />
+    <wsdl:part name="xml" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="timbrarRetencionTFDResponse">
+    <wsdl:part name="return" type="tns:RespuestaTimbrado" />
+  </wsdl:message>
+  <wsdl:message name="timbrarRetencionJSONRequest">
+    <wsdl:part name="apikey" type="xsd:string" />
+    <wsdl:part name="jsonB64" type="xsd:string" />
+    <wsdl:part name="keyPEM" type="xsd:string" />
+    <wsdl:part name="cerPEM" type="xsd:string" />
+    <wsdl:part name="plantilla" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="timbrarRetencionJSONResponse">
+    <wsdl:part name="return" type="tns:RespuestaTimbrado" />
+  </wsdl:message>
+  <wsdl:message name="cancelarRetencionCSDRequest">
+    <wsdl:part name="apikey" type="xsd:string" />
+    <wsdl:part name="keyCSD" type="xsd:string" />
+    <wsdl:part name="cerCSD" type="xsd:string" />
+    <wsdl:part name="passCSD" type="xsd:string" />
+    <wsdl:part name="rfcEmisor" type="xsd:string" />
+    <wsdl:part name="uuid" type="xsd:string" />
+    <wsdl:part name="motivo" type="xsd:string" />
+    <wsdl:part name="folioSustitucion" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="cancelarRetencionCSDResponse">
+    <wsdl:part name="return" type="tns:RespuestaCancelar" />
+  </wsdl:message>
+  <wsdl:message name="timbrarSPRequest">
+    <wsdl:part name="apikey" type="xsd:string" />
+    <wsdl:part name="xmlCFDI" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="timbrarSPResponse">
+    <wsdl:part name="return" type="tns:RespuestaTimbradoSP" />
+  </wsdl:message>
+  <wsdl:message name="cancelarSPRequest">
+    <wsdl:part name="apikey" type="xsd:string" />
+    <wsdl:part name="rfcEmisor" type="xsd:string" />
+    <wsdl:part name="uuid" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="cancelarSPResponse">
+    <wsdl:part name="return" type="tns:RespuestaCancelar" />
+  </wsdl:message>
+  <wsdl:message name="validarRequest">
+    <wsdl:part name="apikey" type="xsd:string" />
+    <wsdl:part name="xmlCFDI" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="validarResponse">
+    <wsdl:part name="return" type="tns:RespuestaValidacion" />
+  </wsdl:message>
+  <wsdl:portType name="ServicioTimbradoWSPortType">
+    <wsdl:operation name="consultarCFDI">
+      <wsdl:input message="tns:consultarCFDIRequest" />
+      <wsdl:output message="tns:consultarCFDIResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="timbrar">
+      <wsdl:input message="tns:timbrarRequest" />
+      <wsdl:output message="tns:timbrarResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="timbrar3">
+      <wsdl:input message="tns:timbrar3Request" />
+      <wsdl:output message="tns:timbrar3Response" />
+    </wsdl:operation>
+    <wsdl:operation name="timbrarTFD">
+      <wsdl:input message="tns:timbrarTFDRequest" />
+      <wsdl:output message="tns:timbrarTFDResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="timbrarConSello">
+      <wsdl:input message="tns:timbrarConSelloRequest" />
+      <wsdl:output message="tns:timbrarConSelloResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="timbrarJSON">
+      <wsdl:input message="tns:timbrarJSONRequest" />
+      <wsdl:output message="tns:timbrarJSONResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="timbrarJSON2">
+      <wsdl:input message="tns:timbrarJSON2Request" />
+      <wsdl:output message="tns:timbrarJSON2Response" />
+    </wsdl:operation>
+    <wsdl:operation name="timbrarJSON3">
+      <wsdl:input message="tns:timbrarJSON3Request" />
+      <wsdl:output message="tns:timbrarJSON3Response" />
+    </wsdl:operation>
+    <wsdl:operation name="timbrarTXT">
+      <wsdl:input message="tns:timbrarTXTRequest" />
+      <wsdl:output message="tns:timbrarTXTResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="timbrarTXT2">
+      <wsdl:input message="tns:timbrarTXT2Request" />
+      <wsdl:output message="tns:timbrarTXT2Response" />
+    </wsdl:operation>
+    <wsdl:operation name="timbrarTXT3">
+      <wsdl:input message="tns:timbrarTXT3Request" />
+      <wsdl:output message="tns:timbrarTXT3Response" />
+    </wsdl:operation>
+    <wsdl:operation name="cancelar">
+      <wsdl:input message="tns:cancelarRequest" />
+      <wsdl:output message="tns:cancelarResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="cancelar2">
+      <wsdl:input message="tns:cancelar2Request" />
+      <wsdl:output message="tns:cancelar2Response" />
+    </wsdl:operation>
+    <wsdl:operation name="cancelarPFX">
+      <wsdl:input message="tns:cancelarPFXRequest" />
+      <wsdl:output message="tns:cancelarPFXResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="cancelarPFX2">
+      <wsdl:input message="tns:cancelarPFX2Request" />
+      <wsdl:output message="tns:cancelarPFX2Response" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarEstadoSAT">
+      <wsdl:input message="tns:consultarEstadoSATRequest" />
+      <wsdl:output message="tns:consultarEstadoSATResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarCreditosDisponibles">
+      <wsdl:input message="tns:consultarCreditosDisponiblesRequest" />
+      <wsdl:output message="tns:consultarCreditosDisponiblesResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarCfdisRelacionados">
+      <wsdl:input message="tns:consultarCfdisRelacionadosRequest" />
+      <wsdl:output message="tns:consultarCfdisRelacionadosResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarAutorizacionesPendientes">
+      <wsdl:input message="tns:consultarAutorizacionesPendientesRequest" />
+      <wsdl:output message="tns:consultarAutorizacionesPendientesResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="autorizarCancelacion">
+      <wsdl:input message="tns:autorizarCancelacionRequest" />
+      <wsdl:output message="tns:autorizarCancelacionResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="timbrarRetencion">
+      <wsdl:input message="tns:timbrarRetencionRequest" />
+      <wsdl:output message="tns:timbrarRetencionResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="timbrarRetencionTFD">
+      <wsdl:input message="tns:timbrarRetencionTFDRequest" />
+      <wsdl:output message="tns:timbrarRetencionTFDResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="timbrarRetencionJSON">
+      <wsdl:input message="tns:timbrarRetencionJSONRequest" />
+      <wsdl:output message="tns:timbrarRetencionJSONResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="cancelarRetencionCSD">
+      <wsdl:input message="tns:cancelarRetencionCSDRequest" />
+      <wsdl:output message="tns:cancelarRetencionCSDResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="timbrarSP">
+      <wsdl:input message="tns:timbrarSPRequest" />
+      <wsdl:output message="tns:timbrarSPResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="cancelarSP">
+      <wsdl:input message="tns:cancelarSPRequest" />
+      <wsdl:output message="tns:cancelarSPResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="validar">
+      <wsdl:input message="tns:validarRequest" />
+      <wsdl:output message="tns:validarResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServicioTimbradoWSBinding" type="tns:ServicioTimbradoWSPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="consultarCFDI">
+      <soap:operation soapAction="urn:ServicioTimbradoWS#consultarCFDI" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:ws_api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:ws_api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="timbrar">
+      <soap:operation soapAction="urn:ServicioTimbradoWS#timbrar" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:ws_api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:ws_api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="timbrar3">
+      <soap:operation soapAction="urn:ServicioTimbradoWS#timbrar3" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:ws_api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:ws_api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="timbrarTFD">
+      <soap:operation soapAction="urn:ServicioTimbradoWS#timbrar3" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:ws_api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:ws_api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="timbrarConSello">
+      <soap:operation soapAction="urn:ServicioTimbradoWS#timbrar3" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:ws_api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:ws_api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="timbrarJSON">
+      <soap:operation soapAction="urn:ServicioTimbradoWS#timbrarJSON" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:ws_api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:ws_api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="timbrarJSON2">
+      <soap:operation soapAction="urn:ServicioTimbradoWS#timbrarJSON2" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:ws_api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:ws_api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="timbrarJSON3">
+      <soap:operation soapAction="urn:ServicioTimbradoWS#timbrarJSON3" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:ws_api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:ws_api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="timbrarTXT">
+      <soap:operation soapAction="urn:ServicioTimbradoWS#timbrarTXT" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:ws_api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:ws_api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="timbrarTXT2">
+      <soap:operation soapAction="urn:ServicioTimbradoWS#timbrarTXT2" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:ws_api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:ws_api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="timbrarTXT3">
+      <soap:operation soapAction="urn:ServicioTimbradoWS#timbrarTXT3" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:ws_api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:ws_api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelar">
+      <soap:operation soapAction="urn:ServicioTimbradoWS#cancelar" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:ws_api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:ws_api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelar2">
+      <soap:operation soapAction="urn:ServicioTimbradoWS#cancelar2" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:ws_api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:ws_api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelarPFX">
+      <soap:operation soapAction="urn:ServicioTimbradoWS#cancelarPFX" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:ws_api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:ws_api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelarPFX2">
+      <soap:operation soapAction="urn:ServicioTimbradoWS#cancelarPFX2" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:ws_api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:ws_api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarEstadoSAT">
+      <soap:operation soapAction="urn:ServicioTimbradoWS#consultarEstadoSAT" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:ws_api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:ws_api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarCreditosDisponibles">
+      <soap:operation soapAction="urn:ServicioTimbradoWS#consultarCreditosDisponibles" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:ws_api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:ws_api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarCfdisRelacionados">
+      <soap:operation soapAction="urn:ServicioTimbradoWS#consultarCfdisRelacionados" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:ws_api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:ws_api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarAutorizacionesPendientes">
+      <soap:operation soapAction="urn:ServicioTimbradoWS#consultarAutorizacionesPendientes" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:ws_api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:ws_api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="autorizarCancelacion">
+      <soap:operation soapAction="urn:ServicioTimbradoWS#autorizarCancelacion" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:ws_api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:ws_api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="timbrarRetencion">
+      <soap:operation soapAction="urn:ServicioTimbradoWS#timbrarRetencion" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:ws_api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:ws_api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="timbrarRetencionTFD">
+      <soap:operation soapAction="urn:ServicioTimbradoWS#timbrarRetencionTFD" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:ws_api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:ws_api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="timbrarRetencionJSON">
+      <soap:operation soapAction="urn:ServicioTimbradoWS#timbrarRetencionJSON" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:ws_api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:ws_api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelarRetencionCSD">
+      <soap:operation soapAction="urn:ServicioTimbradoWS#cancelarRetencionCSD" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:ws_api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:ws_api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="timbrarSP">
+      <soap:operation soapAction="urn:ServicioTimbradoWS#timbrarSP" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:ws_api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:ws_api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelarSP">
+      <soap:operation soapAction="urn:ServicioTimbradoWS#cancelarSP" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:ws_api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:ws_api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validar">
+      <soap:operation soapAction="urn:ServicioTimbradoWS#validar" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:ws_api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:ws_api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServicioTimbradoWS">
+    <wsdl:port name="ServicioTimbradoWSPort" binding="tns:ServicioTimbradoWSBinding">
+      <soap:address location="https://dev.timbradorxpress.mx:443/ws/servicio.do" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

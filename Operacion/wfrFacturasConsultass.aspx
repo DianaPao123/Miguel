@@ -88,7 +88,7 @@
 		<tr>
 			
 			<td>
-				<asp:RadioButtonList RepeatDirection="Horizontal" ID="rbStatus" runat="server" Visible="false" >
+				<asp:RadioButtonList RepeatDirection="Horizontal" ID="rbStatus" runat="server" Visible="false" Width="100%" >
 					<asp:ListItem Text="Todas" Value="Todos" Selected="True"/>
 					
 					<asp:ListItem Text="Pendientes" Value="Pendiente"/>

@@ -92,53 +92,61 @@ namespace Business
         //-----------------------------------------------------------------
         public string GenerarTransferenciasExcelMasivas(DataTable dt, System.Guid usuario)
         {
-           string Error = "";
-           int i=0;
-            List<ConceptosCargados> concep = null;
-         String Nada = "";
-            var contains = dt.AsEnumerable().Where(row => Nada != row[0].ToString()).ToList();
-
-            foreach (DataRow row in contains)
+            try
             {
+                string Error = "";
+                int i = 0;
+                List<ConceptosCargados> concep = null;
+                String Nada = "";
+                var contains = dt.AsEnumerable().Where(row => Nada != row[0].ToString()).ToList();
+
+                foreach (DataRow row in contains)
+                {
                     string ID = row[0].ToString();
-                    if (!string.IsNullOrEmpty(ID)&& ID!="ID")
+                    if (!string.IsNullOrEmpty(ID) && ID != "ID")
                     {
                         string Empresa = row[6].ToString();
                         string Total = row[4].ToString();
                         string Cliente = row[2].ToString();
 
                         concep = null;
-                        var conceptos = dt.AsEnumerable().Where(r =>ID == r[8].ToString()).ToList();
-                      if (conceptos.Any())
-                      {
-                        concep= new List<ConceptosCargados>();
-                        ConceptosCargados c = new ConceptosCargados();
-                        foreach (DataRow row2 in conceptos)
+                        var conceptos = dt.AsEnumerable().Where(r => ID == r[8].ToString()).ToList();
+                        if (conceptos.Any())
                         {
-                            c.Cantidad = row2[9].ToString();
-                            c.Clave = row2[10].ToString();
-                            c.Unidad = row2[11].ToString();
-                            c.Precio = row2[12].ToString();
-                            c.Descripcion = row2[13].ToString();
-                            concep.Add(c);
+                            concep = new List<ConceptosCargados>();
+                            ConceptosCargados c = new ConceptosCargados();
+                            foreach (DataRow row2 in conceptos)
+                            {
+                                c.Cantidad = row2[9].ToString();
+                                c.Clave = row2[10].ToString();
+                                c.Unidad = row2[11].ToString();
+                                c.Precio = row2[12].ToString();
+                                c.Descripcion = row2[13].ToString();
+                                concep.Add(c);
+                            }
                         }
-                      }
 
                         if (!string.IsNullOrEmpty(Cliente) && !string.IsNullOrEmpty(Empresa))
                         {
-                            string s = GuardarExcelTrasferencia(Empresa, Cliente, Total, usuario,concep);
+                            string s = GuardarExcelTrasferencia(Empresa, Cliente, Total, usuario, concep);
                             if (s != "OK")
                                 Error = Error + "<br/>" + s;
                         }
                     }
-                   
-              
+
+
+
+                }
+                if (Error != "")
+                    return Error;
+                else
+                    return "OK";
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
 
             }
-            if (Error != "")
-                return Error;
-            else
-            return "OK";
         }
 
         private string GuardarExcelTrasferencia(string empresa,string cliente, string total, System.Guid usuario, List<ConceptosCargados> C)

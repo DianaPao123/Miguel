@@ -397,8 +397,12 @@ namespace GAFWEB
                     var ventas = factu.GetListPagofacturaRechazadosValidados(fechaInicial, fechaFinal, int.Parse(this.ddlEmpresas.SelectedValue), filtro,
                         int.Parse(this.ddlClientes.SelectedValue));
 
-
-                    List<vPrefacturaPagos> lista;
+                    foreach (var da in ventas)
+                    {
+                        if(!string.IsNullOrEmpty(da.FormaPago))
+                            da.FormaPago=  FormaPagosValor[Convert.ToInt16(da.FormaPago)];
+                    }
+                        List<vPrefacturaPagos> lista;
                     /* if(!string.IsNullOrEmpty(this.txtTexto.Text))
                      {
                          lista = ventas.Where(l => (l.Cliente != null && l.Cliente.Contains(this.txtTexto.Text))
@@ -425,7 +429,7 @@ namespace GAFWEB
                     this.gvFacturaCustumer.DataSource = lista;
                     this.gvFacturaCustumer.DataBind();
                 }
-
+            UpdatePanel2.Update();
         }
 
         private void CalculaTotales(List<vPrefacturaPagos> lista)
@@ -465,17 +469,17 @@ namespace GAFWEB
             if (e.Row.RowType == DataControlRowType.DataRow)
             {
 
-                if (e.Row.Cells[8].Text == "1")
-                    e.Row.Cells[8].Text = "Validado";
+                if (e.Row.Cells[9].Text == "1")
+                    e.Row.Cells[9].Text = "Validado";
                 else
                 {
-                    if (e.Row.Cells[8].Text == "-1")
+                    if (e.Row.Cells[9].Text == "-1")
                     {
-                        e.Row.Cells[8].Text = "Rechazado";
+                        e.Row.Cells[9].Text = "Rechazado";
                         e.Row.BackColor = Color.FromName("#F6DDCC");
                     }
                     else
-                        e.Row.Cells[8].Text = "Timbrado";
+                        e.Row.Cells[9].Text = "Timbrado";
                 }
             }
         }
@@ -669,5 +673,41 @@ namespace GAFWEB
 
         }
         //--------------------------
+        public  IDictionary<int, string> FormaPagosValor
+        {
+            get
+            {
+                var result = new Dictionary<int, string>
+                                 {
+                                     {1, "Efectivo"},
+                                     {2, "Cheque nominativo"},
+                                    { 3, "Transferencia electrónica de fondos" },
+                                    {4, "Tarjeta de crédito" },
+                                    {5, "Monedero electrónico" },
+                                    {6, "Dinero electrónico" },
+                                    {7, "Vales de despensa" },
+                                   {12, "Dación en pago" },
+                                   {13, "Pago por subrogación" },
+                                   {14, "Pago por consignación" },
+                                   {15, "Condonación" },
+                                   {17, "Compensación" },
+                                   {23, "Novación" },
+                                    {24, "Confusión" },
+                                   { 25, "Remisión de deuda" },
+                                   {26, "Prescripción o caducidad" },
+                                   {27,"A satisfacción del acreedor" },
+                                   {28,  "Tarjeta de débito" },
+                                   {29,  "Tarjeta de servicios" },
+                                   {30,  "Aplicación de anticipos" },
+                                   {99,     "Por definir" },
+
+
+
+                                 };
+
+                return result;
+            }
+        }
+
     }
 }

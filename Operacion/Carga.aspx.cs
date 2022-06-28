@@ -15,6 +15,8 @@ using System.Xml.Linq;
 using System.Xml.Serialization;
 using System.Text;
 using Contract;
+using Business.CFDI40;
+
 namespace GAFWEB
 {
     public partial class Carga : System.Web.UI.Page

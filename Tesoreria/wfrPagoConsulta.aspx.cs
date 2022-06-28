@@ -141,11 +141,11 @@ namespace GAFWEB
             {
                 this.lblFecha.Text = "Fecha: " ;
                 this.lblBanco.Text = "Moneda: ";
-                this.lblMonto.Text = "Monto: "; 
-
+                this.lblMonto.Text = "Monto: ";
+                this.lblFormaPagoP.Text = "Forma de Pago:";
 
                 string folio = this.gvFacturas.Rows[Convert.ToInt32(e.CommandArgument)].Cells[0].Text;
-             
+                string formapago = this.gvFacturas.Rows[Convert.ToInt32(e.CommandArgument)].Cells[6].Text;
                 var id = this.gvFacturas.DataKeys[Convert.ToInt32(e.CommandArgument)].Values["idPreFactura"];
                 string ruta = ViewState["rutaPago"].ToString();
                 //ruta = ConfigurationManager.AppSettings["RutaPago"] + id;
@@ -178,9 +178,17 @@ namespace GAFWEB
                    string imgurl= PAGOPRo.RutaImagen;
                    this.lblFecha.Text = "<b>" + this.lblFecha.Text + "</b>" + PAGOPRo.FechaPago;
                    this.lblBanco.Text = "<b>" + this.lblBanco.Text + "</b>" + PAGOPRo.MonedaP;
-                   this.lblMonto.Text = "<b>" + this.lblMonto.Text + "</b>" + PAGOPRo.Monto.ToString("F"); 
+                   this.lblMonto.Text = "<b>" + this.lblMonto.Text + "</b>" + PAGOPRo.Monto.ToString("F");
+                        //string forma = PAGOPRo.FormaDePagoP;
+                        //if (PAGOPRo.FormaDePagoP == "01")
+                        //    forma = "Efectivo";
+                        //if (PAGOPRo.FormaDePagoP == "02")
+                        //    forma = "Cheque nominativo";
+                        //if (PAGOPRo.FormaDePagoP == "03")
+                        //    forma = "Transferencia electrónica de fondos";
 
-                   if (string.IsNullOrEmpty(imgurl))
+                        this.lblFormaPagoP.Text= "<b>" + this.lblFormaPagoP.Text + "</b>" + formapago;
+                        if (string.IsNullOrEmpty(imgurl))
                    {
                        imgurl = ConfigurationManager.AppSettings["RutaPago"];
                        imgurl = Path.Combine(imgurl, "comprobante.png");
@@ -263,9 +271,16 @@ namespace GAFWEB
 
             if (e.CommandName.Equals("Rechazar"))
             {
-                var id = Convert.ToInt32(e.CommandArgument);
+                //  var id = Convert.ToInt32(e.CommandArgument);
+                var id = this.gvFacturas.DataKeys[Convert.ToInt32(e.CommandArgument)].Values["idPreFactura"];
+
                 Label1.Text = id.ToString();
+                //   mpePagar.Show();
+
                 mpeCancelar.Show();
+                //gvFacturas.DataSource = ViewState["facturas"];
+                //gvFacturas.DataBind();
+
             }
         }
         protected void btnCancelar_Click(object sender, EventArgs e)
@@ -403,6 +418,11 @@ namespace GAFWEB
                     var ventas = factu.GetListPagofacturaValidar(fechaInicial, fechaFinal, int.Parse(this.ddlEmpresas.SelectedValue), filtro,
                         int.Parse(this.ddlClientes.SelectedValue));
 
+                    foreach (var da in ventas)
+                    {
+                        if (!string.IsNullOrEmpty(da.FormaPago))
+                            da.FormaPago = FormaPagosValor[Convert.ToInt16(da.FormaPago)];
+                    }
 
                     List<vPrefacturaPagos> lista;
                     /* if(!string.IsNullOrEmpty(this.txtTexto.Text))
@@ -431,7 +451,7 @@ namespace GAFWEB
                     this.gvFacturaCustumer.DataSource = lista;
                     this.gvFacturaCustumer.DataBind();
                 }
-
+            UpdatePanel2.Update();
         }
 
         private void CalculaTotales(List<vPrefacturaPagos> lista)
@@ -470,6 +490,8 @@ namespace GAFWEB
         {
             if (e.Row.RowType == DataControlRowType.DataRow)
             {
+                //if (e.Row.Cells[6].Text == "3")
+                    e.Row.Cells[6].Text= FormaPagosValor[3];
                 /*
                 if (e.Row.Cells[5].Text == "0")
                     e.Row.Cells[5].Text = "Pendiente por Revisar";
@@ -479,7 +501,7 @@ namespace GAFWEB
                     e.Row.Cells[5].Text = "Pagada";
                 if (e.Row.Cells[5].Text == "3")
                     e.Row.Cells[5].Text = "Rechazada";
-                 */ 
+                 */
             }
         }
 
@@ -672,5 +694,41 @@ namespace GAFWEB
 
         }
         //--------------------------
+        public IDictionary<int, string> FormaPagosValor
+        {
+            get
+            {
+                var result = new Dictionary<int, string>
+                                 {
+                                     {1, "Efectivo"},
+                                     {2, "Cheque nominativo"},
+                                    { 3, "Transferencia electrónica de fondos" },
+                                    {4, "Tarjeta de crédito" },
+                                    {5, "Monedero electrónico" },
+                                    {6, "Dinero electrónico" },
+                                    {7, "Vales de despensa" },
+                                   {12, "Dación en pago" },
+                                   {13, "Pago por subrogación" },
+                                   {14, "Pago por consignación" },
+                                   {15, "Condonación" },
+                                   {17, "Compensación" },
+                                   {23, "Novación" },
+                                    {24, "Confusión" },
+                                   { 25, "Remisión de deuda" },
+                                   {26, "Prescripción o caducidad" },
+                                   {27,"A satisfacción del acreedor" },
+                                   {28,  "Tarjeta de débito" },
+                                   {29,  "Tarjeta de servicios" },
+                                   {30,  "Aplicación de anticipos" },
+                                   {99,     "Por definir" },
+
+
+
+                                 };
+
+                return result;
+            }
+        }
+
     }
 }

@@ -87,7 +87,7 @@ namespace GAFWEB
             var cliente =new GAFClientes();
             using (cliente as IDisposable)
             {
-                var clientes = cliente.GetClientePromotorAllBC( txtBusqueda.Text);
+                var clientes = cliente.GetClientePromotorAllBC( txtBusqueda.Text,ddlLinea.SelectedValue);
                 ViewState["clientes"] = clientes;
                 this.gvClientes.DataSource = clientes;
                 this.gvClientes.DataBind();
@@ -96,8 +96,12 @@ namespace GAFWEB
 
         #endregion
 
-       
+        protected void ddlLinea_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.GetClientes();
 
-      
+        }
+
+
     }
 }

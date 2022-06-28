@@ -216,7 +216,7 @@
                         <asp:GridView ID="gvCfdiRelacionado" runat="server" AutoGenerateColumns="False" 
                           onrowcommand="gvCfdiRelacionado_RowCommand" ShowHeaderWhenEmpty="True" Width="80%">
                             <Columns>
-                                <asp:BoundField DataField="ID" HeaderText="ID" ItemStyle-HorizontalAlign="Center" />
+                                <asp:BoundField DataField="TipoRelacion" HeaderText="TipoRelacion" ItemStyle-HorizontalAlign="Center" />
                                 <asp:BoundField DataField="UUID" HeaderText="UUID" ItemStyle-HorizontalAlign="Center" />
                                 <asp:ButtonField CommandName="EliminarCfdiRelacionado" ItemStyle-HorizontalAlign="Center" 
                                 Text="Eliminar" Visible="True" />

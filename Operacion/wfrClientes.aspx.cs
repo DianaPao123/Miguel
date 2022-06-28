@@ -229,14 +229,17 @@ namespace GAFWEB
          //   this.txtDiasRevision.Text = cliente.DiasRevision.ToString();
          //   this.txtCuentaContable.Text = cliente.Cuenta;
             this.txtBcc.Text = cliente.Bcc;
-          //  this.txtInt.Text = cliente.NoInt;
-          //  this.txtExt.Text = cliente.NoExt;
-          //  this.txtLocalidad.Text = cliente.Localidad;
-          //  this.txtReferencia.Text = cliente.Referencia;
-           // this.txtCuentaDeposito.Text = cliente.CuentaPago;
-         //   this.txtCurp.Text = cliente.CURP;
-         //   this.ddlNacionalidad.SelectedValue = cliente.Nacionalidad;//para constacia de retenciones
-         //   this.txtNumRegIdTrib.Text = cliente.NumRegIdTrib;//para constacia de retenciones
+            if (cliente.RegimenFiscal != null)
+                this.ddlRegimen.SelectedValue = cliente.RegimenFiscal;
+
+            //  this.txtInt.Text = cliente.NoInt;
+            //  this.txtExt.Text = cliente.NoExt;
+            //  this.txtLocalidad.Text = cliente.Localidad;
+            //  this.txtReferencia.Text = cliente.Referencia;
+            // this.txtCuentaDeposito.Text = cliente.CuentaPago;
+            //   this.txtCurp.Text = cliente.CURP;
+            //   this.ddlNacionalidad.SelectedValue = cliente.Nacionalidad;//para constacia de retenciones
+            //   this.txtNumRegIdTrib.Text = cliente.NumRegIdTrib;//para constacia de retenciones
         }
 
         private clientes GetClientFromView()
@@ -258,7 +261,9 @@ namespace GAFWEB
                                 //  Contacto = this.txtContacto.Text,
                                //   Cuenta = this.txtCuentaContable.Text,
                                    Bcc = txtBcc.Text,
-                                  };
+                                RegimenFiscal = ddlRegimen.SelectedValue
+
+            };
 
             
             cliente.NoExt = string.IsNullOrEmpty(txtExt.Text) ? null : txtExt.Text;

@@ -42,6 +42,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClienteTimbradoNtlink.cs" />
+    <Compile Include="ClienteTimbradoXpress.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\facturacionmoderna\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -61,6 +63,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\TimbradoXpress\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="ValidaXpress.cs" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
@@ -78,10 +86,42 @@
     <None Include="Service References\NtLinkService\CertificadorService1.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\TimbradoXpress\ClienteNtLink.TimbradoXpress.RespuestaAutorizar.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TimbradoXpress\ClienteNtLink.TimbradoXpress.RespuestaCancelar.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TimbradoXpress\ClienteNtLink.TimbradoXpress.RespuestaConsultarCFDI.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TimbradoXpress\ClienteNtLink.TimbradoXpress.RespuestaCreditos.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TimbradoXpress\ClienteNtLink.TimbradoXpress.RespuestaEstatusSAT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TimbradoXpress\ClienteNtLink.TimbradoXpress.RespuestaPendientes.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TimbradoXpress\ClienteNtLink.TimbradoXpress.RespuestaRelacionados.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TimbradoXpress\ClienteNtLink.TimbradoXpress.RespuestaTimbrado.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TimbradoXpress\ClienteNtLink.TimbradoXpress.RespuestaTimbradoSP.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TimbradoXpress\ClienteNtLink.TimbradoXpress.RespuestaValidacion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TimbradoXpress\servicio.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\facturacionmoderna\" />
     <WCFMetadataStorage Include="Service References\NtLinkService\" />
+    <WCFMetadataStorage Include="Service References\TimbradoXpress\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\NtLinkService\CertificadorService.disco" />
@@ -115,6 +155,18 @@
       <Project>{FCF2A140-B45A-4F6A-9258-92355687704B}</Project>
       <Name>Contract</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TimbradoXpress\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TimbradoXpress\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TimbradoXpress\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

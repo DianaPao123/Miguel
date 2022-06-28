@@ -37,9 +37,9 @@
             Width="62px" />
     </p>
     <asp:GridView runat="server" ID="gvClientes" AutoGenerateColumns="False" 
-        onrowcommand="gvClientes_RowCommand" CssClass="style124"
+        onrowcommand="gvClientes_RowCommand" CssClass="style124" Width="100%" Height="90%"
      DataKeyNames="idCliente" AllowPaging="True" 
-        onpageindexchanging="gvClientes_PageIndexChanging" Width="741px" >
+        onpageindexchanging="gvClientes_PageIndexChanging"  >
         <EmptyDataTemplate>
             No se encontraron registros.
         </EmptyDataTemplate>

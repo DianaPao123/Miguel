@@ -9,6 +9,8 @@ namespace Contract
     [Serializable()]
    public class PagoDoctoRelacionado
     {
+        public List<facturasdetalleRT> Impuestos;
+
         [DataMemberAttribute]
         public string ID { get; set; }
           
@@ -32,7 +34,11 @@ namespace Contract
            public string ImpPagado { get; set; }
            [DataMemberAttribute]
            public string ImpSaldoInsoluto { get; set; }
-         
+        // nuevos
+        [DataMemberAttribute]
+        public string EquivalenciaDR { get; set; }
+        [DataMemberAttribute]
+        public string ObjetoImpDR { get; set; }
     }
 
 }

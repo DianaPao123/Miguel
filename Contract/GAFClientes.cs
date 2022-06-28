@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Data.Objects;
 using System.Linq;
@@ -339,7 +340,7 @@ namespace Contract
 
         }
       
-        public List<clientes> GetClientePromotorAllBC(string RFC)
+        public List<clientes> GetClientePromotorAllBC(string RFC,string LineA)
         {
 
             try
@@ -348,9 +349,9 @@ namespace Contract
                 using (var db = new GAFEntities())
                 {
                     if (string.IsNullOrEmpty(RFC))
-                        cliente = db.clientes.Where(c=>c.Linea!="A").ToList();
+                        cliente = db.clientes.Where(c=>c.Linea== LineA).ToList();
                     else
-                        cliente = db.clientes.Where(c => c.RFC == RFC && c.Linea != "A").ToList();
+                        cliente = db.clientes.Where(c => c.RFC == RFC && c.Linea == LineA).ToList();
 
                     return cliente;
                 }

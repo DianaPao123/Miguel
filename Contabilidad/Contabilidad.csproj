@@ -44,13 +44,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AjaxControlToolkit">
-      <HintPath>..\Promotores\bin\AjaxControlToolkit.dll</HintPath>
+      <HintPath>..\Administracion\bin\AjaxControlToolkit.dll</HintPath>
     </Reference>
     <Reference Include="ClosedXML">
       <HintPath>..\..\..\Sistemas2\Contabilidad\bin\ClosedXML.dll</HintPath>
     </Reference>
     <Reference Include="DobleClip">
-      <HintPath>..\Promotores\bin\DobleClip.dll</HintPath>
+      <HintPath>..\Administracion\bin\DobleClip.dll</HintPath>
     </Reference>
     <Reference Include="DocumentFormat.OpenXml, Version=2.15.0.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
       <HintPath>..\packages\DocumentFormat.OpenXml.2.15.0\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
@@ -243,7 +243,9 @@
     <Content Include="Styles\bootstrap.min.css" />
     <Content Include="Styles\bootstrap4.css" />
     <Content Include="Styles\Site.css" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="wfrClientes.aspx" />
     <Content Include="wfrClientes2.aspx" />
     <Content Include="wfrClientesConsulta.aspx" />

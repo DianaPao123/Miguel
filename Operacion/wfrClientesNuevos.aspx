@@ -152,7 +152,40 @@
                 </div>                                
             </div>
            
-            
+               <div class = "form-group row justify-content-center align-items-center">
+                <div class = "col-md-2">
+                    <asp:Label ID="Label1" runat="server" Text="Régimen Fiscal"></asp:Label>
+                </div>
+                <div class = "col-md-6">
+                    <asp:DropDownList runat="server" ID="ddlRegimen" 
+                    CssClass="form-control"  >
+                 <asp:ListItem Value="601" Text="General de Ley Personas Morales"	 runat="server" />
+ <asp:ListItem Value="603" Text="Personas Morales con Fines no Lucrativos"	 runat="server" />
+ <asp:ListItem Value="605" Text="Sueldos y Salarios e Ingresos Asimilados a Salarios"	 runat="server" />
+ <asp:ListItem Value="606" Text="Arrendamiento"	 runat="server" />
+ <asp:ListItem Value="608" Text="Demás ingresos"	 runat="server" />
+ <asp:ListItem Value="609" Text="Consolidación"	 runat="server" />
+ <asp:ListItem Value="610" Text="Residentes en el Extranjero sin Establecimiento Permanente en México"	 runat="server"/>
+ <asp:ListItem Value="611" Text="Ingresos por Dividendos (socios y accionistas)"	 runat="server" />
+ <asp:ListItem Value="612" Text="Personas Físicas con Actividades Empresariales y Profesionales"	 runat="server" />
+ <asp:ListItem Value="614" Text="Ingresos por intereses"	 runat="server" />
+ <asp:ListItem Value="616" Text="Sin obligaciones fiscales"	 runat="server" />
+ <asp:ListItem Value="620" Text="Sociedades Cooperativas de Producción que optan por diferir sus ingresos"	 runat="server" />
+ <asp:ListItem Value="621" Text="Incorporación Fiscal"	 runat="server" />
+ <asp:ListItem Value="622" Text="Actividades Agrícolas, Ganaderas, Silvícolas y Pesqueras"	 runat="server" />
+ <asp:ListItem Value="623" Text="Opcional para Grupos de Sociedades"	 runat="server" />
+ <asp:ListItem Value="624" Text="Coordinados"	 runat="server" />
+ <asp:ListItem Value="625" Text="Régimen de las Actividades Empresariales con ingresos a través de Plataformas Tecnológicas"	 runat="server" />
+ <asp:ListItem Value="628" Text="Hidrocarburos"	 runat="server" />
+ <asp:ListItem Value="607" Text="Régimen de Enajenación o Adquisición de Bienes"	 runat="server" />
+ <asp:ListItem Value="629" Text="De los Regímenes Fiscales Preferentes y de las Empresas Multinacionales"	 runat="server" />
+ <asp:ListItem Value="630" Text="Enajenación de acciones en bolsa de valores"	 runat="server" />
+ <asp:ListItem Value="615" Text="Régimen de los ingresos por obtención de premios"	 runat="server" />
+   <asp:ListItem Value="626" Text="Regimen Simplificado de Confianza"	 runat="server" />        
+                </asp:DropDownList>
+              
+                </div>                                
+            </div>
              <p>
                 <asp:Label runat="server" ID="lblMensaje" ForeColor="Red" />
             </p>

@@ -75,7 +75,21 @@
                         ErrorMessage="* Requerido" ForeColor="Red" ValidationGroup="AgregarCliente" />
                 </div>                                
             </div>
-                       
+             <div class = "form-group row justify-content-center align-items-center">
+                <div class = "col-md-2">
+                    <asp:Label ID="Label2" runat="server" Text="Confirmar Contraseña"></asp:Label>
+                </div>
+                <div class = "col-md-6">
+                 <asp:TextBox runat="server" ID="txtConfirmarContraseña" CssClass="form-control" TextMode="Password"/> 
+                       <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="txtConfirmarContraseña" 
+                        Display="Dynamic" ErrorMessage="*Requerido" ForeColor="Red" ValidationGroup="AgregarCliente"></asp:RequiredFieldValidator>
+                    
+                                    <asp:CompareValidator id="valComparar" ControlToValidate="txtConfirmarContraseña" runat="server"
+                    ControlToCompare="txtContraseña" Display="Dynamic" ForeColor="Red" ErrorMessage="*Ambas contraseñas deben coincidir" ValidationGroup="AgregarCliente" />
+                      </div>                                
+            </div>          
+
+
             <div class = "form-group row justify-content-center align-items-center">
                 <div class = "col-md-2">
                     <asp:Label ID="lblEmail" runat="server" Text="Email"></asp:Label>

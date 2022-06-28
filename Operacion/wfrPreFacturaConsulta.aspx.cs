@@ -232,7 +232,11 @@ namespace GAFWEB
 
                         txtMotivoCancela.Text = R.MotivoRechazo;
                 }
+                
+                gvFacturas.DataSource = ViewState["facturas"];
+                gvFacturas.DataBind();
                 mpeCancelar.Show();
+                UpdatePanel10.Update();
             }
         }
 
@@ -376,6 +380,7 @@ namespace GAFWEB
                     CalculaTotales(lista);
                     this.gvFacturaCustumer.DataSource = lista;
                     this.gvFacturaCustumer.DataBind();
+                    UpdatePanel2.Update();
                 }
 
         }

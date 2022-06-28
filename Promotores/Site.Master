@@ -78,7 +78,7 @@
                   temporal
                       --%>   <asp:MenuItem NavigateUrl="~/wfrPreFacturaConsulta.aspx" Text="Reportes Prefactura" />
                              <asp:MenuItem NavigateUrl="~/wfrFacturasConsulta.aspx" Text="Reportes CFDI" />
-                             <asp:MenuItem NavigateUrl="~/wfrPreImpuestosLocales.aspx" Text="OUTSOURCING" />
+<%--                             <asp:MenuItem NavigateUrl="~/wfrPreImpuestosLocales.aspx" Text="OUTSOURCING" />--%>
             <%--                  <asp:MenuItem NavigateUrl="~/wfrFacturaLineaB.aspx" Text="CFDI LineaB" />
                              <asp:MenuItem NavigateUrl="~/wfrFacturasConsultaB.aspx" Text="Reportes LineaB" />
             --%>  <%--             <asp:MenuItem NavigateUrl="~/wfrPagos.aspx?id=61674" Text="Pago" />

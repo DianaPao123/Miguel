@@ -718,7 +718,7 @@ namespace GAFWEB
                                fact.AutorizoPuesto = this.txtAutorizoPuesto.Text,
                                fact.AutorizoArea = this.txtAutorizoArea.Text, 
                                */
-                               fact.UsoCFDI = "P01";// se define para complemento de pago
+                               fact.UsoCFDI = "CP01";// se define para complemento de pago
                                fact.Estatus = 0;//Convert.ToInt16( ddlStatusFactura.SelectedValue);
 
 

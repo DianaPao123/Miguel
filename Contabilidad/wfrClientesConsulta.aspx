@@ -29,17 +29,39 @@
 <link href="Styles/StyleBoton.css" rel="stylesheet" type="text/css" />
 
     <h1>Consulta de Clientes</h1>
+    <table>
+       <tr>
+   <td align="right">Linea:</td>
+   <td><asp:DropDownList runat="server" ID="ddlLinea" AutoPostBack="True"  onselectedindexchanged="ddlLinea_SelectedIndexChanged"
+       CssClass="form-control form-control-sm" Width="100px" 
+            >
+                  
+                    <asp:ListItem Value="A" Text="A" ></asp:ListItem> 
+                    <asp:ListItem Value="B" Text="B" ></asp:ListItem> 
+                    <asp:ListItem Value="C" Text="C" ></asp:ListItem> 
+                  
+            </asp:DropDownList>
+                
     
-        RFC : <asp:TextBox runat="server" ID="txtBusqueda" Width="400px" />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            
+            </td>
+           <td> &nbsp;&nbsp;&nbsp;</td>
+            <td>
+        RFC :</td><td> <asp:TextBox runat="server" ID="txtBusqueda" Width="400px" CssClass="form-control form-control-sm" />
+        </td>
+           <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td align="right">
         <asp:Button runat="server" ID="btnBuscar" Text="Buscar" 
             onclick="btnBuscar_Click" class="btn btn-outline-primary" Height="34px" 
             Width="62px" />
-    </p>
-    <asp:GridView runat="server" ID="gvClientes" AutoGenerateColumns="False" 
+                </td>
+            </tr>
+        </table>
+    <br />
+    <asp:GridView runat="server" ID="gvClientes" AutoGenerateColumns="False" Width="100%" Height="90%"
         onrowcommand="gvClientes_RowCommand" CssClass="style124"
      DataKeyNames="idCliente" AllowPaging="True" 
-        onpageindexchanging="gvClientes_PageIndexChanging" Width="741px" >
+        onpageindexchanging="gvClientes_PageIndexChanging"  >
         <EmptyDataTemplate>
             No se encontraron registros.
         </EmptyDataTemplate>
@@ -53,7 +75,7 @@
             <asp:BoundField HeaderText="PorcentajeDespacho" DataField="PorcentajeEmpresa" />
             <asp:BoundField HeaderText="PorcentajePromotor" DataField="PorcentajePromotor" />
         --%>
-
+             <asp:BoundField HeaderText="Linea" DataField="Linea" />
             <asp:ButtonField Text="Editar" ButtonType="Link" CommandName="EditarCliente"/>
 
             <%--<asp:TemplateField>

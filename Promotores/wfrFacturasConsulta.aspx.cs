@@ -182,7 +182,9 @@ namespace GAFWEB
                 }
                 this.lblGuid.Text = this.gvFacturas.Rows[Convert.ToInt32(e.CommandArgument)].Cells[2].Text;
                 this.mpeEmail.Show();
-                
+                gvFacturas.DataSource = ViewState["facturas"];
+                gvFacturas.DataBind();
+
             }
             else if(e.CommandName.Equals("Pagar"))
             {
@@ -386,7 +388,8 @@ namespace GAFWEB
 
                 byte[] xml = cliente.GetXmlData(uuid);
                 byte[] pdf = cliente.GetPdfData(uuid);
-                
+                var f = cliente.GetFacturaUUID(uuid);
+
                 var atts = new List<EmailAttachment>();
                 atts.Add(new EmailAttachment { Attachment = xml,Name = uuid + ".xml"});
                 atts.Add(new EmailAttachment {Attachment = pdf, Name = uuid + ".pdf"});
@@ -402,8 +405,30 @@ namespace GAFWEB
                 emails.AddRange(this.txtEmails.Text.Split(','));
                 try
                 {
-                    m.Send(emails, atts, "Se envia la factura con folio " + uuid + " su la representación visual.",
-                          "Envio de Facturas", empresa.Email, empresa.RazonSocial);
+                    if (f == null)
+                    {
+                        m.Send(emails, atts, "Se envia la factura con folio " + uuid + " en formato XML y PDF.",
+                              "Envio de Factura", empresa.Email, empresa.RazonSocial);
+                    }
+                    if (f.TipoDocumentoStr == "Ingreso")
+                    {
+                        m.Send(emails, atts,
+                            "Se envia la factura con folio " + uuid + " en formato XML y PDF.",
+                            "Envío de Factura", empresa.Email, empresa.RazonSocial);
+                    }
+                    if (f.TipoDocumentoStr == "Egreso")
+                    {
+                        m.Send(emails, atts,
+                            "Se envia la nota de crédito con folio " + uuid + " en formato XML y PDF.",
+                            "Envío de la nota de crédito", empresa.Email, empresa.RazonSocial);
+                    }
+                    if (f.TipoDocumentoStr == "Pago")
+                    {
+                        m.Send(emails, atts,
+                            "Se envia el comprobante de pago con folio " + uuid + " en formato XML y PDF.",
+                            "Envío el comprobante de pago", empresa.Email, empresa.RazonSocial);
+                    }
+
                 }
                 catch (FaultException fe)
                 {
@@ -411,6 +436,9 @@ namespace GAFWEB
                 }
                 
                 this.mpeEmail.Hide();
+                gvFacturas.DataSource = ViewState["facturas"];
+                gvFacturas.DataBind();
+                up1.Update();
             }
              
         }
@@ -515,7 +543,7 @@ namespace GAFWEB
                 this.gvFacturaCustumer.DataSource = lista;
                 this.gvFacturaCustumer.DataBind();
             }
-              
+            UpdatePanel2.Update();
         }
         
         private void CalculaTotales(List<vfacturasPromotores> lista)
