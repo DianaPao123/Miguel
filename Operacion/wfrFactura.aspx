@@ -163,30 +163,30 @@
                     <div class = "form-group col-md-6 col-sm-12">
                         <asp:Label ID="lblUsoCFDI" runat="server" Text="Uso del CFDI"></asp:Label>
                         <asp:DropDownList ID="ddlUsoCFDI" runat="server" AutoPostBack="True" CssClass="form-control">
-                            <asp:ListItem runat="server" Text="Adquisición de mercancias" Value="G01"></asp:ListItem>
-                            <asp:ListItem runat="server" Text="Devoluciones, descuentos o bonificaciones" Value="G02"></asp:ListItem>
-                            <asp:ListItem runat="server" Text="Gastos en general" Value="G03"></asp:ListItem>
-                            <asp:ListItem runat="server" Text="Construcciones" Value="I01"></asp:ListItem>
-                            <asp:ListItem runat="server" Text="Mobilario y equipo de oficina por inversiones" Value="I02"></asp:ListItem>
-                            <asp:ListItem runat="server" Text="Equipo de transporte" Value="I03"></asp:ListItem>
-                            <asp:ListItem runat="server" Text="Equipo de computo y accesorios" Value="I04"></asp:ListItem>
-                            <asp:ListItem runat="server" Text="Dados, troqueles, moldes, matrices y herramental" Value="I05"></asp:ListItem>
-                            <asp:ListItem runat="server" Text="Comunicaciones telefónicas" Value="I06"></asp:ListItem>
-                            <asp:ListItem runat="server" Text="Comunicaciones satelitales" Value="I07"></asp:ListItem>
-                            <asp:ListItem runat="server" Text="Otra maquinaria y equipo" Value="I08"></asp:ListItem>
-                            <asp:ListItem runat="server" Text="Honorarios médicos, dentales y gastos hospitalarios." Value="D01"></asp:ListItem>
-                            <asp:ListItem runat="server" Text="Gastos médicos por incapacidad o discapacidad" Value="D02"></asp:ListItem>
-                            <asp:ListItem runat="server" Text="Gastos funerales." Value="D03"></asp:ListItem>
-                            <asp:ListItem runat="server" Text="Donativos." Value="D04"></asp:ListItem>
-                            <asp:ListItem runat="server" Text="Intereses reales efectivamente pagados por créditos hipotecarios (casa habitación)." 
-                            Value="D05"></asp:ListItem>
-                            <asp:ListItem runat="server" Text="Aportaciones voluntarias al SAR." Value="D06"></asp:ListItem>
-                            <asp:ListItem runat="server" Text="Primas por seguros de gastos médicos." Value="D07"></asp:ListItem>
-                            <asp:ListItem runat="server" Text="Gastos de transportación escolar obligatoria." Value="D08"></asp:ListItem>
-                            <asp:ListItem runat="server" Text="Depósitos en cuentas para el ahorro, primas que tengan como base planes de pensiones." 
-                            Value="D09"></asp:ListItem>
-                            <asp:ListItem runat="server" Text="Pagos por servicios educativos (colegiaturas)" Value="D10"></asp:ListItem>
-                            <asp:ListItem runat="server" Text="Por definir" Value="P01"></asp:ListItem>
+                            <asp:ListItem runat="server"  Value="G01" Text="Adquisición de mercancías."></asp:ListItem>
+<asp:ListItem runat="server"  Value="G02" Text="Devoluciones, descuentos o bonificaciones."></asp:ListItem>
+<asp:ListItem runat="server"  Value="G03" Text="Gastos en general."></asp:ListItem>
+<asp:ListItem runat="server"  Value="I01" Text="Construcciones."></asp:ListItem>
+<asp:ListItem runat="server"  Value="I02" Text="Mobiliario y equipo de oficina por inversiones."></asp:ListItem>
+<asp:ListItem runat="server"  Value="I03" Text="Equipo de transporte."></asp:ListItem>
+<asp:ListItem runat="server"  Value="I04" Text="Equipo de computo y accesorios."></asp:ListItem>
+<asp:ListItem runat="server"  Value="I05" Text="Dados, troqueles, moldes, matrices y herramental."></asp:ListItem>
+<asp:ListItem runat="server"  Value="I06" Text="Comunicaciones telefónicas."></asp:ListItem>
+<asp:ListItem runat="server"  Value="I07" Text="Comunicaciones satelitales."></asp:ListItem>
+<asp:ListItem runat="server"  Value="I08" Text="Otra maquinaria y equipo."></asp:ListItem>
+<asp:ListItem runat="server"  Value="D01" Text="Honorarios médicos, dentales y gastos hospitalarios."></asp:ListItem>
+<asp:ListItem runat="server"  Value="D02" Text="Gastos médicos por incapacidad o discapacidad."></asp:ListItem>
+<asp:ListItem runat="server"  Value="D03" Text="Gastos funerales."></asp:ListItem>
+<asp:ListItem runat="server"  Value="D04" Text="Donativos."></asp:ListItem>
+<asp:ListItem runat="server"  Value="D05" Text="Intereses reales efectivamente pagados por créditos hipotecarios (casa habitación)."></asp:ListItem>
+<asp:ListItem runat="server"  Value="D06" Text="Aportaciones voluntarias al SAR."></asp:ListItem>
+<asp:ListItem runat="server"  Value="D07" Text="Primas por seguros de gastos médicos."></asp:ListItem>
+<asp:ListItem runat="server"  Value="D08" Text="Gastos de transportación escolar obligatoria."></asp:ListItem>
+<asp:ListItem runat="server"  Value="D09" Text="Depósitos en cuentas para el ahorro, primas que tengan como base planes de pensiones."></asp:ListItem>
+<asp:ListItem runat="server"  Value="D10" Text="Pagos por servicios educativos (colegiaturas)."></asp:ListItem>
+<asp:ListItem runat="server"  Value="S01" Text="Sin efectos fiscales."></asp:ListItem>
+<asp:ListItem runat="server"  Value="CP01" Text="Pagos"></asp:ListItem>
+<asp:ListItem runat="server"  Value="CN01" Text="Nómina"></asp:ListItem>
                         </asp:DropDownList>
                     </div>
                     <div class = "form-group col-md-6 col-sm-12">
@@ -236,7 +236,7 @@
                         <asp:GridView ID="gvCfdiRelacionado" runat="server" AutoGenerateColumns="False" 
                           onrowcommand="gvCfdiRelacionado_RowCommand" ShowHeaderWhenEmpty="True" Width="80%">
                             <Columns>
-                                <asp:BoundField DataField="ID" HeaderText="ID" ItemStyle-HorizontalAlign="Center" />
+                                <asp:BoundField DataField="TipoRelacion" HeaderText="TipoRelacion" ItemStyle-HorizontalAlign="Center" />
                                 <asp:BoundField DataField="UUID" HeaderText="UUID" ItemStyle-HorizontalAlign="Center" />
                                 <asp:ButtonField CommandName="EliminarCfdiRelacionado" ItemStyle-HorizontalAlign="Center" 
                                 Text="Eliminar" Visible="True" />

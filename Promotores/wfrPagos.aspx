@@ -132,7 +132,7 @@
         <br />
         <asp:CheckBox runat="server" ID="cbDoctoRelacionado" Text="Active la casilla si su factura es 3.2" 
                     AutoPostBack="True" oncheckedchanged="cbDoctoRelacionado_CheckedChanged" 
-                    style="font-weight: 700"/>
+                    style="font-weight: 700" Visible="false"/>
  <div id="RelacionadosDIV" runat="server">
             <asp:Panel ID="Panel5" runat="server"  CssClass="page1" BorderStyle="Double" HorizontalAlign="Left" Width="100%" > 
 		

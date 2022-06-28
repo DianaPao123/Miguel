@@ -68,22 +68,15 @@
                      <asp:MenuItem NavigateUrl="~/wfrClientesConsulta.aspx" Text="Clientes" />
                         
                      <asp:MenuItem Text="Empresas" NavigateUrl="~/wfrEmpresasConsulta.aspx" />
-              <%--         <asp:MenuItem NavigateUrl="~/wfrClientesConsulta.aspx" Text="Clientes" />
-              --%>          <asp:MenuItem NavigateUrl="~/wfrPreFacturaConsulta.aspx" Text="Revisión Prefactura"/>
-                          <%--  <asp:MenuItem NavigateUrl="~/wfrPagoConsulta.aspx" Text="Revisión Pago"/>--%>
-                             
-                       <%--      <asp:MenuItem NavigateUrl="~/wfrPreFactura.aspx" Text="Generar Pre-CFDI"/>
-                             <asp:MenuItem NavigateUrl="~/wfrPreFacturaPago.aspx" Text="Complemento Pago" />
-                   --%>   
-                   <%--      <asp:MenuItem NavigateUrl="~/wfrFacturasConsulta.aspx" Text="Reportes CFDI" />
-                         <asp:MenuItem NavigateUrl="~/wfrPreFacturaConsulta.aspx" Text="Reportes Pre-CFDI" />
-                  --%>   <asp:MenuItem NavigateUrl="~/wfrPrefacturaConsultaDevolucion.aspx" Text="Devoluciónes" />
+                     <asp:MenuItem NavigateUrl="~/wfrPreFacturaConsulta.aspx" Text="Revisión Prefactura"/>
+                       
+                        <%-- <asp:MenuItem NavigateUrl="~/wfrPrefacturaConsultaDevolucion.aspx" Text="Devoluciónes" />--%>
          
                          <asp:MenuItem NavigateUrl="~/wfrFacturasConsulta.aspx" Text="Reportes CFDI" />
-                         <asp:MenuItem NavigateUrl="~/wfrFacturaLineaB.aspx" Text="CFDI LineaB" />
+                       <%--  <asp:MenuItem NavigateUrl="~/wfrFacturaLineaB.aspx" Text="CFDI LineaB" />--%>
                          <asp:MenuItem NavigateUrl="~/wfrPagosConsulta.aspx" Text="Consulta Pago" />
-                           <asp:MenuItem NavigateUrl="~/wfrPagos.aspx?id=61674" Text="Pago Lineas" /> <%-- pago line b --%> 
-                                            <asp:MenuItem NavigateUrl="~/Carga.aspx" Text="Carga XML" />
+                          <%-- <asp:MenuItem NavigateUrl="~/wfrPagos.aspx?id=61674" Text="Pago Lineas" />--%> <%-- pago line b --%> 
+                        <%--                    <asp:MenuItem NavigateUrl="~/Carga.aspx" Text="Carga XML" />--%>
                     </Items>
                 </asp:Menu>
             </div>

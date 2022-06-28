@@ -1,376 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
   <!-- EF Runtime content -->
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="GAFModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
-        <EntityContainer Name="GAFModelStoreContainer">
-          <EntitySet Name="Catalogo-Giros" EntityType="GAFModel.Store.Catalogo-Giros" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="ClientePromotor" EntityType="GAFModel.Store.ClientePromotor" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="clientes" EntityType="GAFModel.Store.clientes" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="ComprobantePdf" EntityType="GAFModel.Store.ComprobantePdf" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Conceptos" EntityType="GAFModel.Store.Conceptos" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Devoluciones" EntityType="GAFModel.Store.Devoluciones" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="empresa" EntityType="GAFModel.Store.empresa" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Empresa_CuentasBancos" EntityType="GAFModel.Store.Empresa_CuentasBancos" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="FacturaPagoRelacionados" EntityType="GAFModel.Store.FacturaPagoRelacionados" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="facturas" EntityType="GAFModel.Store.facturas" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="FolioFallas" EntityType="GAFModel.Store.FolioFallas" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="MovimientosBancos" EntityType="GAFModel.Store.MovimientosBancos" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="PagosF" EntityType="GAFModel.Store.PagosF" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="PagosPromotor" EntityType="GAFModel.Store.PagosPromotor" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="PreCfdiRelacionado" EntityType="GAFModel.Store.PreCfdiRelacionado" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="PreComplementoImpLocal" EntityType="GAFModel.Store.PreComplementoImpLocal" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="PreComplementoPago" EntityType="GAFModel.Store.PreComplementoPago" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="PreConceptos" EntityType="GAFModel.Store.PreConceptos" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="PreFactura" EntityType="GAFModel.Store.PreFactura" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="PreFCPDoctoRelacionado" EntityType="GAFModel.Store.PreFCPDoctoRelacionado" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="PreFolios" EntityType="GAFModel.Store.PreFolios" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="PreImpuestos" EntityType="GAFModel.Store.PreImpuestos" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="PreInformacionAduanera" EntityType="GAFModel.Store.PreInformacionAduanera" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="PrePagos" EntityType="GAFModel.Store.PrePagos" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="producto" EntityType="GAFModel.Store.producto" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Sucursales" EntityType="GAFModel.Store.Sucursales" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="sysdiagrams" EntityType="GAFModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="TransferenciasExcel" EntityType="GAFModel.Store.TransferenciasExcel" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="TransferenciasExcelConceptos" EntityType="GAFModel.Store.TransferenciasExcelConceptos" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Usuario" EntityType="GAFModel.Store.Usuario" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="vClientePromotor" EntityType="GAFModel.Store.vClientePromotor" store:Type="Views" store:Schema="dbo" store:Name="vClientePromotor">
-            <DefiningQuery>SELECT 
-      [vClientePromotor].[idCliente] AS [idCliente], 
-      [vClientePromotor].[RazonSocial] AS [RazonSocial], 
-      [vClientePromotor].[RFC] AS [RFC], 
-      [vClientePromotor].[PorcentajeCliente] AS [PorcentajeCliente], 
-      [vClientePromotor].[PorcentajeContacto] AS [PorcentajeContacto], 
-      [vClientePromotor].[PorcentajeEmpresa] AS [PorcentajeEmpresa], 
-      [vClientePromotor].[PorcentajePromotor] AS [PorcentajePromotor], 
-      [vClientePromotor].[IdPromotor] AS [IdPromotor], 
-      [vClientePromotor].[NombreCompleto] AS [NombreCompleto], 
-      [vClientePromotor].[idClientePromotor] AS [idClientePromotor]
-      FROM [dbo].[vClientePromotor] AS [vClientePromotor]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="vDevoluciones" EntityType="GAFModel.Store.vDevoluciones" store:Type="Views" store:Schema="dbo" store:Name="vDevoluciones">
-            <DefiningQuery>SELECT 
-      [vDevoluciones].[idPreFactura] AS [idPreFactura], 
-      [vDevoluciones].[DTCliente] AS [DTCliente], 
-      [vDevoluciones].[DTContacto] AS [DTContacto], 
-      [vDevoluciones].[DTEmpresa] AS [DTEmpresa], 
-      [vDevoluciones].[DTPromotor] AS [DTPromotor], 
-      [vDevoluciones].[Fecha] AS [Fecha], 
-      [vDevoluciones].[Folio] AS [Folio], 
-      [vDevoluciones].[idCliente] AS [idCliente], 
-      [vDevoluciones].[idEmpresa] AS [idEmpresa], 
-      [vDevoluciones].[Serie] AS [Serie], 
-      [vDevoluciones].[Total] AS [Total], 
-      [vDevoluciones].[Estatus] AS [Estatus], 
-      [vDevoluciones].[SubTotal] AS [SubTotal], 
-      [vDevoluciones].[IDUsuario] AS [IDUsuario], 
-      [vDevoluciones].[RazonSocial] AS [RazonSocial]
-      FROM [dbo].[vDevoluciones] AS [vDevoluciones]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="vEmpresasCuentasBancos" EntityType="GAFModel.Store.vEmpresasCuentasBancos" store:Type="Views" store:Schema="dbo" store:Name="vEmpresasCuentasBancos">
-            <DefiningQuery>SELECT 
-      [vEmpresasCuentasBancos].[nombreCuenta] AS [nombreCuenta], 
-      [vEmpresasCuentasBancos].[Linea] AS [Linea], 
-      [vEmpresasCuentasBancos].[idEmpresa] AS [idEmpresa]
-      FROM [dbo].[vEmpresasCuentasBancos] AS [vEmpresasCuentasBancos]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="vFacturaPagos" EntityType="GAFModel.Store.vFacturaPagos" store:Type="Views" store:Schema="dbo" store:Name="vFacturaPagos">
-            <DefiningQuery>SELECT 
-      [vFacturaPagos].[RazonSocial] AS [RazonSocial], 
-      [vFacturaPagos].[Folio] AS [Folio], 
-      [vFacturaPagos].[Serie] AS [Serie], 
-      [vFacturaPagos].[Fecha] AS [Fecha], 
-      [vFacturaPagos].[SubTotal] AS [SubTotal], 
-      [vFacturaPagos].[Pagado] AS [Pagado], 
-      [vFacturaPagos].[IdEmpresa] AS [IdEmpresa], 
-      [vFacturaPagos].[idcliente] AS [idcliente], 
-      [vFacturaPagos].[nombreEmpresa] AS [nombreEmpresa], 
-      [vFacturaPagos].[PreFolio] AS [PreFolio], 
-      [vFacturaPagos].[FormaPago] AS [FormaPago]
-      FROM [dbo].[vFacturaPagos] AS [vFacturaPagos]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="vfacturas" EntityType="GAFModel.Store.vfacturas" store:Type="Views" store:Schema="dbo" store:Name="vfacturas">
-            <DefiningQuery>SELECT 
-      [vfacturas].[Usuario] AS [Usuario], 
-      [vfacturas].[idVenta] AS [idVenta], 
-      [vfacturas].[Fecha] AS [Fecha], 
-      [vfacturas].[Serie] AS [Serie], 
-      [vfacturas].[Uid] AS [Uid], 
-      [vfacturas].[Total] AS [Total], 
-      [vfacturas].[SubTotal] AS [SubTotal], 
-      [vfacturas].[Folio] AS [Folio], 
-      [vfacturas].[StatusFactura] AS [StatusFactura], 
-      [vfacturas].[nombrecliente] AS [nombrecliente], 
-      [vfacturas].[IdEmpresa] AS [IdEmpresa], 
-      [vfacturas].[idCliente] AS [idCliente], 
-      [vfacturas].[nombreempresa] AS [nombreempresa], 
-      [vfacturas].[Cancelado] AS [Cancelado], 
-      [vfacturas].[FechaCancelacion] AS [FechaCancelacion], 
-      [vfacturas].[PreFolio] AS [PreFolio], 
-      [vfacturas].[nombreUsuario] AS [nombreUsuario], 
-      [vfacturas].[promotor] AS [promotor], 
-      [vfacturas].[idUsuario] AS [idUsuario], 
-      [vfacturas].[Linea] AS [Linea], 
-      [vfacturas].[TipoDocumentoStr] AS [TipoDocumentoStr], 
-      [vfacturas].[StatusPago] AS [StatusPago], 
-      [vfacturas].[Monto] AS [Monto], 
-      [vfacturas].[SaldoAnteriorPago] AS [SaldoAnteriorPago], 
-      [vfacturas].[Parcialidad] AS [Parcialidad], 
-      [vfacturas].[FormaPago] AS [FormaPago]
-      FROM [dbo].[vfacturas] AS [vfacturas]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="vfacturasCanceladas" EntityType="GAFModel.Store.vfacturasCanceladas" store:Type="Views" store:Schema="dbo" store:Name="vfacturasCanceladas">
-            <DefiningQuery>SELECT 
-      [vfacturasCanceladas].[idVenta] AS [idVenta], 
-      [vfacturasCanceladas].[Fecha] AS [Fecha], 
-      [vfacturasCanceladas].[Serie] AS [Serie], 
-      [vfacturasCanceladas].[Uid] AS [Uid], 
-      [vfacturasCanceladas].[FechaCancelacion] AS [FechaCancelacion], 
-      [vfacturasCanceladas].[RFC] AS [RFC], 
-      [vfacturasCanceladas].[EstatusCancelacion] AS [EstatusCancelacion], 
-      [vfacturasCanceladas].[SelloCancelacion] AS [SelloCancelacion]
-      FROM [dbo].[vfacturasCanceladas] AS [vfacturasCanceladas]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="vfacturasContabilidad" EntityType="GAFModel.Store.vfacturasContabilidad" store:Type="Views" store:Schema="dbo" store:Name="vfacturasContabilidad">
-            <DefiningQuery>SELECT 
-      [vfacturasContabilidad].[Usuario] AS [Usuario], 
-      [vfacturasContabilidad].[idVenta] AS [idVenta], 
-      [vfacturasContabilidad].[Fecha] AS [Fecha], 
-      [vfacturasContabilidad].[Serie] AS [Serie], 
-      [vfacturasContabilidad].[Uid] AS [Uid], 
-      [vfacturasContabilidad].[Total] AS [Total], 
-      [vfacturasContabilidad].[SubTotal] AS [SubTotal], 
-      [vfacturasContabilidad].[Folio] AS [Folio], 
-      [vfacturasContabilidad].[StatusFactura] AS [StatusFactura], 
-      [vfacturasContabilidad].[nombrecliente] AS [nombrecliente], 
-      [vfacturasContabilidad].[IdEmpresa] AS [IdEmpresa], 
-      [vfacturasContabilidad].[idCliente] AS [idCliente], 
-      [vfacturasContabilidad].[nombreempresa] AS [nombreempresa], 
-      [vfacturasContabilidad].[Cancelado] AS [Cancelado], 
-      [vfacturasContabilidad].[FechaCancelacion] AS [FechaCancelacion], 
-      [vfacturasContabilidad].[PreFolio] AS [PreFolio], 
-      [vfacturasContabilidad].[nombreUsuario] AS [nombreUsuario], 
-      [vfacturasContabilidad].[promotor] AS [promotor], 
-      [vfacturasContabilidad].[idUsuario] AS [idUsuario], 
-      [vfacturasContabilidad].[Linea] AS [Linea], 
-      [vfacturasContabilidad].[TipoDocumentoStr] AS [TipoDocumentoStr], 
-      [vfacturasContabilidad].[StatusPago] AS [StatusPago], 
-      [vfacturasContabilidad].[Monto] AS [Monto], 
-      [vfacturasContabilidad].[SaldoAnteriorPago] AS [SaldoAnteriorPago], 
-      [vfacturasContabilidad].[Parcialidad] AS [Parcialidad], 
-      [vfacturasContabilidad].[FormaPago] AS [FormaPago], 
-      [vfacturasContabilidad].[SaldoAnteriorFactura] AS [SaldoAnteriorFactura], 
-      [vfacturasContabilidad].[Pagado] AS [Pagado]
-      FROM [dbo].[vfacturasContabilidad] AS [vfacturasContabilidad]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="vfacturasEmitidos" EntityType="GAFModel.Store.vfacturasEmitidos" store:Type="Views" store:Schema="dbo" store:Name="vfacturasEmitidos">
-            <DefiningQuery>SELECT 
-      [vfacturasEmitidos].[idVenta] AS [idVenta], 
-      [vfacturasEmitidos].[Fecha] AS [Fecha], 
-      [vfacturasEmitidos].[Serie] AS [Serie], 
-      [vfacturasEmitidos].[Uid] AS [Uid], 
-      [vfacturasEmitidos].[Total] AS [Total], 
-      [vfacturasEmitidos].[SubTotal] AS [SubTotal], 
-      [vfacturasEmitidos].[Folio] AS [Folio], 
-      [vfacturasEmitidos].[StatusFactura] AS [StatusFactura], 
-      [vfacturasEmitidos].[nombrecliente] AS [nombrecliente], 
-      [vfacturasEmitidos].[IdEmpresa] AS [IdEmpresa], 
-      [vfacturasEmitidos].[idCliente] AS [idCliente], 
-      [vfacturasEmitidos].[nombreempresa] AS [nombreempresa], 
-      [vfacturasEmitidos].[Cancelado] AS [Cancelado], 
-      [vfacturasEmitidos].[FechaCancelacion] AS [FechaCancelacion], 
-      [vfacturasEmitidos].[RFCEmpresa] AS [RFCEmpresa], 
-      [vfacturasEmitidos].[RFCCliente] AS [RFCCliente], 
-      [vfacturasEmitidos].[IVA] AS [IVA], 
-      [vfacturasEmitidos].[FormaPago] AS [FormaPago], 
-      [vfacturasEmitidos].[Moneda] AS [Moneda], 
-      [vfacturasEmitidos].[UUDI] AS [UUDI], 
-      [vfacturasEmitidos].[TipoRelacion] AS [TipoRelacion], 
-      [vfacturasEmitidos].[NombreUsuario] AS [NombreUsuario], 
-      [vfacturasEmitidos].[TipoDocumentoStr] AS [TipoDocumentoStr], 
-      [vfacturasEmitidos].[Linea] AS [Linea], 
-      [vfacturasEmitidos].[PreFolio] AS [PreFolio], 
-      [vfacturasEmitidos].[Monto] AS [Monto], 
-      [vfacturasEmitidos].[idPreFactura] AS [idPreFactura], 
-      [vfacturasEmitidos].[SaldoAnteriorPago] AS [SaldoAnteriorPago], 
-      [vfacturasEmitidos].[Parcialidad] AS [Parcialidad], 
-      [vfacturasEmitidos].[SaldoAnteriorFactura] AS [SaldoAnteriorFactura], 
-      [vfacturasEmitidos].[Pagado] AS [Pagado]
-      FROM [dbo].[vfacturasEmitidos] AS [vfacturasEmitidos]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="vfacturasPorPagar" EntityType="GAFModel.Store.vfacturasPorPagar" store:Type="Views" store:Schema="dbo" store:Name="vfacturasPorPagar">
-            <DefiningQuery>SELECT 
-      [vfacturasPorPagar].[Usuario] AS [Usuario], 
-      [vfacturasPorPagar].[idVenta] AS [idVenta], 
-      [vfacturasPorPagar].[Fecha] AS [Fecha], 
-      [vfacturasPorPagar].[Serie] AS [Serie], 
-      [vfacturasPorPagar].[Uid] AS [Uid], 
-      [vfacturasPorPagar].[Total] AS [Total], 
-      [vfacturasPorPagar].[SubTotal] AS [SubTotal], 
-      [vfacturasPorPagar].[Folio] AS [Folio], 
-      [vfacturasPorPagar].[StatusFactura] AS [StatusFactura], 
-      [vfacturasPorPagar].[Cancelado] AS [Cancelado], 
-      [vfacturasPorPagar].[PreFolio] AS [PreFolio], 
-      [vfacturasPorPagar].[Parcialidad] AS [Parcialidad], 
-      [vfacturasPorPagar].[FormaPago] AS [FormaPago], 
-      [vfacturasPorPagar].[SaldoAnteriorPago] AS [SaldoAnteriorPago], 
-      [vfacturasPorPagar].[TipoDocumentoStr] AS [TipoDocumentoStr], 
-      [vfacturasPorPagar].[Linea] AS [Linea], 
-      [vfacturasPorPagar].[IdEmpresa] AS [IdEmpresa], 
-      [vfacturasPorPagar].[idcliente] AS [idcliente]
-      FROM [dbo].[vfacturasPorPagar] AS [vfacturasPorPagar]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="vfacturasPorPagarTodasLineas" EntityType="GAFModel.Store.vfacturasPorPagarTodasLineas" store:Type="Views" store:Schema="dbo" store:Name="vfacturasPorPagarTodasLineas">
-            <DefiningQuery>SELECT 
-      [vfacturasPorPagarTodasLineas].[Usuario] AS [Usuario], 
-      [vfacturasPorPagarTodasLineas].[idVenta] AS [idVenta], 
-      [vfacturasPorPagarTodasLineas].[Fecha] AS [Fecha], 
-      [vfacturasPorPagarTodasLineas].[Serie] AS [Serie], 
-      [vfacturasPorPagarTodasLineas].[Uid] AS [Uid], 
-      [vfacturasPorPagarTodasLineas].[Total] AS [Total], 
-      [vfacturasPorPagarTodasLineas].[SubTotal] AS [SubTotal], 
-      [vfacturasPorPagarTodasLineas].[Folio] AS [Folio], 
-      [vfacturasPorPagarTodasLineas].[StatusFactura] AS [StatusFactura], 
-      [vfacturasPorPagarTodasLineas].[Cancelado] AS [Cancelado], 
-      [vfacturasPorPagarTodasLineas].[PreFolio] AS [PreFolio], 
-      [vfacturasPorPagarTodasLineas].[Parcialidad] AS [Parcialidad], 
-      [vfacturasPorPagarTodasLineas].[FormaPago] AS [FormaPago], 
-      [vfacturasPorPagarTodasLineas].[SaldoAnteriorPago] AS [SaldoAnteriorPago], 
-      [vfacturasPorPagarTodasLineas].[TipoDocumentoStr] AS [TipoDocumentoStr], 
-      [vfacturasPorPagarTodasLineas].[Linea] AS [Linea], 
-      [vfacturasPorPagarTodasLineas].[IdEmpresa] AS [IdEmpresa], 
-      [vfacturasPorPagarTodasLineas].[idcliente] AS [idcliente]
-      FROM [dbo].[vfacturasPorPagarTodasLineas] AS [vfacturasPorPagarTodasLineas]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="vfacturasPromotores" EntityType="GAFModel.Store.vfacturasPromotores" store:Type="Views" store:Schema="dbo" store:Name="vfacturasPromotores">
-            <DefiningQuery>SELECT 
-      [vfacturasPromotores].[idVenta] AS [idVenta], 
-      [vfacturasPromotores].[Fecha] AS [Fecha], 
-      [vfacturasPromotores].[Serie] AS [Serie], 
-      [vfacturasPromotores].[Uid] AS [Uid], 
-      [vfacturasPromotores].[Total] AS [Total], 
-      [vfacturasPromotores].[SubTotal] AS [SubTotal], 
-      [vfacturasPromotores].[Folio] AS [Folio], 
-      [vfacturasPromotores].[StatusFactura] AS [StatusFactura], 
-      [vfacturasPromotores].[nombrecliente] AS [nombrecliente], 
-      [vfacturasPromotores].[IdEmpresa] AS [IdEmpresa], 
-      [vfacturasPromotores].[idCliente] AS [idCliente], 
-      [vfacturasPromotores].[nombreempresa] AS [nombreempresa], 
-      [vfacturasPromotores].[Cancelado] AS [Cancelado], 
-      [vfacturasPromotores].[FechaCancelacion] AS [FechaCancelacion], 
-      [vfacturasPromotores].[IDUsuario] AS [IDUsuario], 
-      [vfacturasPromotores].[PreFolio] AS [PreFolio], 
-      [vfacturasPromotores].[idPreFactura] AS [idPreFactura], 
-      [vfacturasPromotores].[TipoDocumentoStr] AS [TipoDocumentoStr], 
-      [vfacturasPromotores].[StatusPago] AS [StatusPago], 
-      [vfacturasPromotores].[Monto] AS [Monto], 
-      [vfacturasPromotores].[FormaPago] AS [FormaPago], 
-      [vfacturasPromotores].[SaldoAnteriorPago] AS [SaldoAnteriorPago], 
-      [vfacturasPromotores].[Parcialidad] AS [Parcialidad]
-      FROM [dbo].[vfacturasPromotores] AS [vfacturasPromotores]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="vprefactura" EntityType="GAFModel.Store.vprefactura" store:Type="Views" store:Schema="dbo" store:Name="vprefactura">
-            <DefiningQuery>SELECT 
-      [vprefactura].[RazonSocial] AS [RazonSocial], 
-      [vprefactura].[IDUsuario] AS [IDUsuario], 
-      [vprefactura].[idPreFactura] AS [idPreFactura], 
-      [vprefactura].[Folio] AS [Folio], 
-      [vprefactura].[Serie] AS [Serie], 
-      [vprefactura].[Fecha] AS [Fecha], 
-      [vprefactura].[SubTotal] AS [SubTotal], 
-      [vprefactura].[Total] AS [Total], 
-      [vprefactura].[idEmpresa] AS [idEmpresa], 
-      [vprefactura].[idCliente] AS [idCliente], 
-      [vprefactura].[CFDI] AS [CFDI], 
-      [vprefactura].[Timbrado] AS [Timbrado], 
-      [vprefactura].[Estatus] AS [Estatus], 
-      [vprefactura].[nombreEmpresa] AS [nombreEmpresa], 
-      [vprefactura].[EstatusVista] AS [EstatusVista], 
-      [vprefactura].[nombreUsuario] AS [nombreUsuario], 
-      [vprefactura].[PreFolio] AS [PreFolio], 
-      [vprefactura].[FormaPago] AS [FormaPago], 
-      [vprefactura].[pagoVerificado] AS [pagoVerificado], 
-      [vprefactura].[TipoDeComprobante] AS [TipoDeComprobante]
-      FROM [dbo].[vprefactura] AS [vprefactura]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="vPrefacturaPagos" EntityType="GAFModel.Store.vPrefacturaPagos" store:Type="Views" store:Schema="dbo" store:Name="vPrefacturaPagos">
-            <DefiningQuery>SELECT 
-      [vPrefacturaPagos].[RazonSocial] AS [RazonSocial], 
-      [vPrefacturaPagos].[IDUsuario] AS [IDUsuario], 
-      [vPrefacturaPagos].[idPreFactura] AS [idPreFactura], 
-      [vPrefacturaPagos].[Folio] AS [Folio], 
-      [vPrefacturaPagos].[Serie] AS [Serie], 
-      [vPrefacturaPagos].[Fecha] AS [Fecha], 
-      [vPrefacturaPagos].[SubTotal] AS [SubTotal], 
-      [vPrefacturaPagos].[Total] AS [Total], 
-      [vPrefacturaPagos].[idEmpresa] AS [idEmpresa], 
-      [vPrefacturaPagos].[idCliente] AS [idCliente], 
-      [vPrefacturaPagos].[CFDI] AS [CFDI], 
-      [vPrefacturaPagos].[Timbrado] AS [Timbrado], 
-      [vPrefacturaPagos].[Estatus] AS [Estatus], 
-      [vPrefacturaPagos].[nombreEmpresa] AS [nombreEmpresa], 
-      [vPrefacturaPagos].[EstatusVista] AS [EstatusVista], 
-      [vPrefacturaPagos].[nombreUsuario] AS [nombreUsuario], 
-      [vPrefacturaPagos].[PreFolio] AS [PreFolio], 
-      [vPrefacturaPagos].[FormaPago] AS [FormaPago], 
-      [vPrefacturaPagos].[pagoVerificado] AS [pagoVerificado], 
-      [vPrefacturaPagos].[Monto] AS [Monto], 
-      [vPrefacturaPagos].[MonedaP] AS [MonedaP], 
-      [vPrefacturaPagos].[FechaPago] AS [FechaPago], 
-      [vPrefacturaPagos].[TipoDeComprobante] AS [TipoDeComprobante], 
-      [vPrefacturaPagos].[FechaPagoCFDI] AS [FechaPagoCFDI], 
-      [vPrefacturaPagos].[MontoCFDI] AS [MontoCFDI], 
-      [vPrefacturaPagos].[Validador1] AS [Validador1], 
-      [vPrefacturaPagos].[Validador2] AS [Validador2]
-      FROM [dbo].[vPrefacturaPagos] AS [vPrefacturaPagos]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="vPrefacturaPorPagar" EntityType="GAFModel.Store.vPrefacturaPorPagar" store:Type="Views" store:Schema="dbo" store:Name="vPrefacturaPorPagar">
-            <DefiningQuery>SELECT 
-      [vPrefacturaPorPagar].[idPreFactura] AS [idPreFactura], 
-      [vPrefacturaPorPagar].[MetodoPago] AS [MetodoPago], 
-      [vPrefacturaPorPagar].[PreFolio] AS [PreFolio], 
-      [vPrefacturaPorPagar].[Parcialidad] AS [Parcialidad], 
-      [vPrefacturaPorPagar].[SaldoAnteriorPago] AS [SaldoAnteriorPago], 
-      [vPrefacturaPorPagar].[CFDI] AS [CFDI], 
-      [vPrefacturaPorPagar].[Total] AS [Total], 
-      [vPrefacturaPorPagar].[Timbrado] AS [Timbrado], 
-      [vPrefacturaPorPagar].[Fecha] AS [Fecha], 
-      [vPrefacturaPorPagar].[Cancelado] AS [Cancelado], 
-      [vPrefacturaPorPagar].[idEmpresa] AS [idEmpresa], 
-      [vPrefacturaPorPagar].[idCliente] AS [idCliente]
-      FROM [dbo].[vPrefacturaPorPagar] AS [vPrefacturaPorPagar]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="vventas" EntityType="GAFModel.Store.vventas" store:Type="Views" store:Schema="dbo" store:Name="vventas">
-            <DefiningQuery>SELECT 
-      [vventas].[idVenta] AS [idVenta], 
-      [vventas].[Fecha] AS [Fecha], 
-      [vventas].[Serie] AS [Serie], 
-      [vventas].[Uid] AS [Uid], 
-      [vventas].[Total] AS [Total], 
-      [vventas].[SubTotal] AS [SubTotal], 
-      [vventas].[Folio] AS [Folio], 
-      [vventas].[StatusFactura] AS [StatusFactura], 
-      [vventas].[RazonSocial] AS [RazonSocial], 
-      [vventas].[IDUsuario] AS [IDUsuario], 
-      [vventas].[idPreFactura] AS [idPreFactura], 
-      [vventas].[MetodoPago] AS [MetodoPago]
-      FROM [dbo].[vventas] AS [vventas]</DefiningQuery>
-          </EntitySet>
-        </EntityContainer>
+    <Schema Namespace="GAFModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Catalogo-Giros">
           <Key>
             <PropertyRef Name="Id_Giro" />
           </Key>
           <Property Name="Id_Giro" Type="bigint" Nullable="false" />
-          <Property Name="Descripcion" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Descripcion" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="ClientePromotor">
           <Key>
             <PropertyRef Name="idClientePromotor" />
           </Key>
-          <Property Name="idClientePromotor" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="idClientePromotor" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="IdPromotor" Type="uniqueidentifier" />
           <Property Name="PorcentajeCliente" Type="decimal" Precision="5" Scale="2" />
           <Property Name="PorcentajeEmpresa" Type="decimal" Precision="5" Scale="2" />
@@ -384,8 +30,8 @@
           <Key>
             <PropertyRef Name="idCliente" />
           </Key>
-          <Property Name="idCliente" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="RazonSocial" Type="nvarchar" Nullable="false" MaxLength="999" />
+          <Property Name="idCliente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RazonSocial" Type="nvarchar" MaxLength="999" Nullable="false" />
           <Property Name="Direccion" Type="nvarchar" MaxLength="100" />
           <Property Name="Colonia" Type="nvarchar" MaxLength="100" />
           <Property Name="Ciudad" Type="nvarchar" MaxLength="100" />
@@ -412,6 +58,7 @@
           <Property Name="NoInt" Type="nvarchar" MaxLength="50" />
           <Property Name="NoExt" Type="nvarchar" MaxLength="50" />
           <Property Name="Linea" Type="nvarchar" MaxLength="1" />
+          <Property Name="RegimenFiscal" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="ComprobantePdf">
           <Key>
@@ -427,7 +74,7 @@
           <Property Name="timbre_SelloCFD" Type="nvarchar(max)" />
           <Property Name="timbre_NoCertificadoSAT" Type="nvarchar(max)" />
           <Property Name="timbre_SelloSAT" Type="nvarchar(max)" />
-          <Property Name="IdComprobantePdf" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdComprobantePdf" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="timbre_RfcProvCertif" Type="varchar(max)" />
           <Property Name="timbre_Leyenda" Type="varchar(max)" />
           <Property Name="QrCode" Type="image" />
@@ -436,28 +83,28 @@
           <Key>
             <PropertyRef Name="idConcepto" />
           </Key>
-          <Property Name="idConcepto" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="idConcepto" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="idFactura" Type="bigint" />
           <Property Name="ClaveProdServ" Type="varchar" MaxLength="10" />
           <Property Name="NoIdentificacion" Type="varchar" MaxLength="10" />
-          <Property Name="Cantidad" Type="decimal" Scale="6" />
+          <Property Name="Cantidad" Type="decimal" Precision="18" Scale="6" />
           <Property Name="ClaveUnidad" Type="varchar" MaxLength="50" />
           <Property Name="Unidad" Type="varchar" MaxLength="50" />
           <Property Name="Descripcion" Type="varchar(max)" />
-          <Property Name="ValorUnitario" Type="decimal" Scale="6" />
-          <Property Name="Importe" Type="decimal" Scale="6" />
-          <Property Name="Descuento" Type="decimal" Scale="6" />
+          <Property Name="ValorUnitario" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="Importe" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="Descuento" Type="decimal" Precision="18" Scale="6" />
           <Property Name="CuentaPredial" Type="varchar" MaxLength="150" />
-          <Property Name="IVA" Type="decimal" Scale="6" />
+          <Property Name="IVA" Type="decimal" Precision="18" Scale="6" />
         </EntityType>
         <EntityType Name="Devoluciones">
           <Key>
             <PropertyRef Name="idDevoluciones" />
           </Key>
-          <Property Name="idDevoluciones" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="idDevoluciones" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Promotor" Type="varchar" MaxLength="350" />
-          <Property Name="Monto" Type="decimal" Scale="6" />
-          <Property Name="Pendiente" Type="decimal" Scale="6" />
+          <Property Name="Monto" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="Pendiente" Type="decimal" Precision="18" Scale="6" />
           <Property Name="fecha" Type="datetime" />
           <Property Name="IdPreFacturas" Type="varchar(max)" />
         </EntityType>
@@ -465,7 +112,7 @@
           <Key>
             <PropertyRef Name="IdEmpresa" />
           </Key>
-          <Property Name="IdEmpresa" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdEmpresa" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="idSistema" Type="bigint" />
           <Property Name="Id_Giro" Type="bigint" />
           <Property Name="RazonSocial" Type="varchar" MaxLength="100" />
@@ -506,25 +153,25 @@
           <Key>
             <PropertyRef Name="idEmpresaCuenta" />
           </Key>
-          <Property Name="idEmpresaCuenta" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="idEmpresaCuenta" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="idEmpresa" Type="int" Nullable="false" />
-          <Property Name="nombreCuenta" Type="nvarchar" Nullable="false" MaxLength="500" />
-          <Property Name="numeroCuenta" Type="nvarchar" Nullable="false" MaxLength="50" />
-          <Property Name="nombreBanco" Type="nvarchar" Nullable="false" MaxLength="200" />
-          <Property Name="saldoInicial" Type="decimal" Scale="6" />
+          <Property Name="nombreCuenta" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="numeroCuenta" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="nombreBanco" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="saldoInicial" Type="decimal" Precision="18" Scale="6" />
           <Property Name="fechaSaldoInicial" Type="datetime" />
           <Property Name="EsActivo" Type="bit" />
           <Property Name="fechaRegistro" Type="datetime" Nullable="false" />
           <Property Name="idUsuarioRegistro" Type="uniqueidentifier" Nullable="false" />
           <Property Name="fechaActualizacion" Type="datetime" />
           <Property Name="idUsuarioActualizacion" Type="uniqueidentifier" />
-          <Property Name="saldoActual" Type="decimal" Scale="6" />
+          <Property Name="saldoActual" Type="decimal" Precision="18" Scale="6" />
         </EntityType>
         <EntityType Name="FacturaPagoRelacionados">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="IdFactura" Type="bigint" />
           <Property Name="Ids" Type="nvarchar(max)" />
         </EntityType>
@@ -532,15 +179,15 @@
           <Key>
             <PropertyRef Name="idVenta" />
           </Key>
-          <Property Name="idVenta" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="idVenta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Fecha" Type="datetime" Nullable="false" />
           <Property Name="idcliente" Type="int" Nullable="false" />
-          <Property Name="Importe" Type="decimal" Nullable="false" Precision="19" Scale="2" />
+          <Property Name="Importe" Type="decimal" Precision="19" Scale="2" Nullable="false" />
           <Property Name="Descuento" Type="nvarchar" MaxLength="48" />
           <Property Name="nProducto" Type="int" />
           <Property Name="captura" Type="datetime" Nullable="false" />
           <Property Name="Tipo" Type="int" />
-          <Property Name="Folio" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="Folio" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="Cancelado" Type="smallint" />
           <Property Name="Observaciones" Type="varchar(max)" />
           <Property Name="Pagado" Type="decimal" Precision="19" Scale="2" />
@@ -566,13 +213,13 @@
           <Property Name="ReferenciaPago" Type="nvarchar" MaxLength="254" />
           <Property Name="StatusFactura" Type="varchar" MaxLength="20" />
           <Property Name="Usuario" Type="uniqueidentifier" />
-          <Property Name="IVA" Type="decimal" Scale="6" />
+          <Property Name="IVA" Type="decimal" Precision="18" Scale="6" />
           <Property Name="FormaPago" Type="nvarchar" MaxLength="250" />
           <Property Name="UUDI" Type="nvarchar" MaxLength="40" />
           <Property Name="TipoRelacion" Type="varchar" MaxLength="3" />
           <Property Name="PreFolio" Type="varchar" MaxLength="40" />
           <Property Name="Promotor" Type="uniqueidentifier" />
-          <Property Name="SaldoAnteriorPago" Type="decimal" Scale="6" />
+          <Property Name="SaldoAnteriorPago" Type="decimal" Precision="18" Scale="6" />
           <Property Name="Parcialidad" Type="int" />
           <Property Name="MetodoPago" Type="varchar" MaxLength="3" />
         </EntityType>
@@ -580,7 +227,7 @@
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Folio" Type="varchar" MaxLength="50" />
           <Property Name="Fecha" Type="datetime" />
           <Property Name="idEmpresa" Type="int" />
@@ -591,14 +238,14 @@
           <Key>
             <PropertyRef Name="idMovimiento" />
           </Key>
-          <Property Name="idMovimiento" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="idMovimiento" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="idOrdinal" Type="int" Nullable="false" />
           <Property Name="fecha" Type="datetime" Nullable="false" />
           <Property Name="idNumeroCuentaOrigen" Type="bigint" />
           <Property Name="idNumeroCuentaDestino" Type="bigint" />
-          <Property Name="tipoDocumento" Type="nvarchar" Nullable="false" MaxLength="15" />
-          <Property Name="monto" Type="decimal" Nullable="false" Scale="6" />
-          <Property Name="saldo" Type="decimal" Scale="6" />
+          <Property Name="tipoDocumento" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="monto" Type="decimal" Precision="18" Scale="6" Nullable="false" />
+          <Property Name="saldo" Type="decimal" Precision="18" Scale="6" />
           <Property Name="referencia" Type="nvarchar" MaxLength="3000" />
           <Property Name="EsCargaManual" Type="bit" Nullable="false" />
           <Property Name="nombreArchivo" Type="nvarchar" MaxLength="1000" />
@@ -617,9 +264,9 @@
           <Key>
             <PropertyRef Name="IdPagos" />
           </Key>
-          <Property Name="IdPagos" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdPagos" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="IdPrefactura" Type="bigint" />
-          <Property Name="Monto" Type="decimal" Scale="6" />
+          <Property Name="Monto" Type="decimal" Precision="18" Scale="6" />
           <Property Name="Banco" Type="varchar" MaxLength="50" />
           <Property Name="RutaImagen" Type="nvarchar" MaxLength="250" />
           <Property Name="fecha" Type="datetime" />
@@ -628,9 +275,9 @@
           <Key>
             <PropertyRef Name="IdPagos" />
           </Key>
-          <Property Name="IdPagos" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdPagos" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="IdPrefactura" Type="bigint" />
-          <Property Name="Monto" Type="decimal" Scale="6" />
+          <Property Name="Monto" Type="decimal" Precision="18" Scale="6" />
           <Property Name="Banco" Type="varchar" MaxLength="50" />
           <Property Name="RutaImagen" Type="nvarchar" MaxLength="250" />
           <Property Name="fecha" Type="datetime" />
@@ -639,7 +286,7 @@
           <Key>
             <PropertyRef Name="IdCfdiRelacionado" />
           </Key>
-          <Property Name="IdCfdiRelacionado" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdCfdiRelacionado" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="IdPrefactura" Type="bigint" Nullable="false" />
           <Property Name="UUDI" Type="nvarchar" MaxLength="40" />
           <Property Name="TipoRelacion" Type="varchar" MaxLength="3" />
@@ -648,25 +295,25 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="TotaldeRetenciones" Type="decimal" Scale="6" />
-          <Property Name="TotaldeTraslados" Type="decimal" Scale="6" />
+          <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TotaldeRetenciones" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="TotaldeTraslados" Type="decimal" Precision="18" Scale="6" />
           <Property Name="implocal" Type="varchar" MaxLength="25" />
           <Property Name="ImpLoc" Type="nvarchar(max)" />
-          <Property Name="Tasade" Type="decimal" Scale="6" />
-          <Property Name="Importe" Type="decimal" Scale="6" />
+          <Property Name="Tasade" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="Importe" Type="decimal" Precision="18" Scale="6" />
           <Property Name="idPreFactura" Type="bigint" />
         </EntityType>
         <EntityType Name="PreComplementoPago">
           <Key>
             <PropertyRef Name="IdComplementoPago" />
           </Key>
-          <Property Name="IdComplementoPago" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdComplementoPago" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="FechaPago" Type="datetime" />
           <Property Name="FormaDePagoP" Type="varchar" MaxLength="3" />
           <Property Name="MonedaP" Type="varchar" MaxLength="3" />
-          <Property Name="TipoCambioP" Type="decimal" Scale="6" />
-          <Property Name="Monto" Type="decimal" Nullable="false" Scale="6" />
+          <Property Name="TipoCambioP" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="Monto" Type="decimal" Precision="18" Scale="6" Nullable="false" />
           <Property Name="NumOperacion" Type="varchar" MaxLength="100" />
           <Property Name="RfcEmisorCtaOrd" Type="varchar" MaxLength="13" />
           <Property Name="NomBancoOrdExt" Type="varchar" MaxLength="300" />
@@ -682,25 +329,25 @@
           <Key>
             <PropertyRef Name="idPreConcepto" />
           </Key>
-          <Property Name="idPreConcepto" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="idPreConcepto" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="idPreFactura" Type="bigint" />
           <Property Name="ClaveProdServ" Type="varchar" MaxLength="10" />
           <Property Name="NoIdentificacion" Type="varchar" MaxLength="10" />
-          <Property Name="Cantidad" Type="decimal" Scale="6" />
+          <Property Name="Cantidad" Type="decimal" Precision="18" Scale="6" />
           <Property Name="ClaveUnidad" Type="varchar" MaxLength="50" />
           <Property Name="Unidad" Type="varchar" MaxLength="50" />
           <Property Name="Descripcion" Type="varchar(max)" />
-          <Property Name="ValorUnitario" Type="decimal" Scale="6" />
-          <Property Name="Importe" Type="decimal" Scale="6" />
-          <Property Name="Descuento" Type="decimal" Scale="6" />
+          <Property Name="ValorUnitario" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="Importe" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="Descuento" Type="decimal" Precision="18" Scale="6" />
           <Property Name="CuentaPredial" Type="varchar" MaxLength="150" />
-          <Property Name="IVA" Type="decimal" Scale="6" />
+          <Property Name="IVA" Type="decimal" Precision="18" Scale="6" />
         </EntityType>
         <EntityType Name="PreFactura">
           <Key>
             <PropertyRef Name="idPreFactura" />
           </Key>
-          <Property Name="idPreFactura" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="idPreFactura" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Version" Type="varchar" MaxLength="3" />
           <Property Name="Serie" Type="varchar" MaxLength="25" />
           <Property Name="Folio" Type="varchar" MaxLength="40" />
@@ -710,11 +357,11 @@
           <Property Name="NoCertificado" Type="varchar" MaxLength="20" />
           <Property Name="Certificado" Type="varchar(max)" />
           <Property Name="CondicionesDePago" Type="varchar(max)" />
-          <Property Name="SubTotal" Type="decimal" Scale="6" />
-          <Property Name="Descuento" Type="decimal" Scale="6" />
+          <Property Name="SubTotal" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="Descuento" Type="decimal" Precision="18" Scale="6" />
           <Property Name="Moneda" Type="varchar" MaxLength="3" />
-          <Property Name="TipoCambio" Type="decimal" Scale="6" />
-          <Property Name="Total" Type="decimal" Nullable="false" Scale="6" />
+          <Property Name="TipoCambio" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="Total" Type="decimal" Precision="18" Scale="6" Nullable="false" />
           <Property Name="TipoDeComprobante" Type="varchar" MaxLength="20" />
           <Property Name="MetodoPago" Type="varchar" MaxLength="3" />
           <Property Name="LugarExpedicion" Type="varchar" MaxLength="6" />
@@ -731,13 +378,13 @@
           <Property Name="Timbrado" Type="bit" />
           <Property Name="IdFactura" Type="bigint" />
           <Property Name="CFDI" Type="varchar" MaxLength="2" />
-          <Property Name="DTPromotor" Type="decimal" Scale="6" />
-          <Property Name="DTCliente" Type="decimal" Scale="6" />
-          <Property Name="DTEmpresa" Type="decimal" Scale="6" />
-          <Property Name="DTContacto" Type="decimal" Scale="6" />
-          <Property Name="IVA" Type="decimal" Scale="6" />
+          <Property Name="DTPromotor" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="DTCliente" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="DTEmpresa" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="DTContacto" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="IVA" Type="decimal" Precision="18" Scale="6" />
           <Property Name="PreFolio" Type="varchar" MaxLength="40" />
-          <Property Name="SaldoAnteriorPago" Type="decimal" Scale="6" />
+          <Property Name="SaldoAnteriorPago" Type="decimal" Precision="18" Scale="6" />
           <Property Name="Parcialidad" Type="int" />
           <Property Name="Validador1" Type="nvarchar(max)" />
           <Property Name="Validador2" Type="nvarchar(max)" />
@@ -747,17 +394,17 @@
           <Key>
             <PropertyRef Name="IdDoctoRelacionado" />
           </Key>
-          <Property Name="IdDoctoRelacionado" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdDoctoRelacionado" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="IdDocumento" Type="varchar" MaxLength="36" />
           <Property Name="Serie" Type="varchar" MaxLength="25" />
           <Property Name="Folio" Type="varchar" MaxLength="40" />
           <Property Name="MonedaDR" Type="varchar" MaxLength="3" />
-          <Property Name="TipoCambioDR" Type="decimal" Scale="6" />
+          <Property Name="TipoCambioDR" Type="decimal" Precision="18" Scale="6" />
           <Property Name="MetodoDePagoDR" Type="nchar" MaxLength="10" />
           <Property Name="NumParcialidad" Type="int" />
-          <Property Name="ImpSaldoAnt" Type="decimal" Scale="6" />
-          <Property Name="ImpPagado" Type="decimal" Scale="6" />
-          <Property Name="ImpSaldoInsoluto" Type="decimal" Scale="6" />
+          <Property Name="ImpSaldoAnt" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="ImpPagado" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="ImpSaldoInsoluto" Type="decimal" Precision="18" Scale="6" />
           <Property Name="IdPreComplementoPago" Type="bigint" />
         </EntityType>
         <EntityType Name="PreFolios">
@@ -773,20 +420,20 @@
           <Key>
             <PropertyRef Name="IdPreImpuestos" />
           </Key>
-          <Property Name="IdPreImpuestos" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdPreImpuestos" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="IdPreConceptos" Type="bigint" />
           <Property Name="TipoImpuesto" Type="varchar" MaxLength="11" />
-          <Property Name="Base" Type="decimal" Scale="6" />
+          <Property Name="Base" Type="decimal" Precision="18" Scale="6" />
           <Property Name="Impuesto" Type="varchar" MaxLength="3" />
           <Property Name="TipoFactor" Type="varchar" MaxLength="6" />
-          <Property Name="TasaOCuota" Type="decimal" Scale="6" />
-          <Property Name="Importe" Type="decimal" Scale="6" />
+          <Property Name="TasaOCuota" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="Importe" Type="decimal" Precision="18" Scale="6" />
         </EntityType>
         <EntityType Name="PreInformacionAduanera">
           <Key>
             <PropertyRef Name="idInformacionAduanera" />
           </Key>
-          <Property Name="idInformacionAduanera" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="idInformacionAduanera" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="idPreConceptos" Type="bigint" />
           <Property Name="NumeroPedimento" Type="varchar" MaxLength="30" />
         </EntityType>
@@ -794,9 +441,9 @@
           <Key>
             <PropertyRef Name="idPagos" />
           </Key>
-          <Property Name="idPagos" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="idPagos" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="idDevoluciones" Type="bigint" Nullable="false" />
-          <Property Name="Monto" Type="decimal" Scale="6" />
+          <Property Name="Monto" Type="decimal" Precision="18" Scale="6" />
           <Property Name="MetodoPago" Type="varchar" MaxLength="50" />
           <Property Name="Fecha" Type="datetime" />
           <Property Name="Observaciones" Type="varchar(max)" />
@@ -814,7 +461,7 @@
           <Key>
             <PropertyRef Name="IdProducto" />
           </Key>
-          <Property Name="IdProducto" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdProducto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Modelo" Type="int" />
           <Property Name="Aplicacion" Type="nvarchar" MaxLength="100" />
           <Property Name="Linea" Type="int" />
@@ -834,7 +481,7 @@
           <Property Name="CostoP" Type="decimal" Precision="19" Scale="2" />
           <Property Name="Existencia" Type="int" />
           <Property Name="PrecioP" Type="decimal" Precision="19" Scale="2" />
-          <Property Name="Unidad" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Unidad" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="IdEmpresa" Type="int" />
           <Property Name="CuentaPredial" Type="nvarchar" MaxLength="255" />
         </EntityType>
@@ -842,10 +489,10 @@
           <Key>
             <PropertyRef Name="IdSucursal" />
           </Key>
-          <Property Name="IdSucursal" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdSucursal" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="IdEmpresa" Type="int" Nullable="false" />
-          <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="255" />
-          <Property Name="LugarExpedicion" Type="nvarchar" Nullable="false" MaxLength="255" />
+          <Property Name="Nombre" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="LugarExpedicion" Type="nvarchar" MaxLength="255" Nullable="false" />
           <Property Name="Direccion" Type="nvarchar(max)" />
           <Property Name="Estado" Type="nchar" MaxLength="3" />
           <Property Name="Municipio" Type="nchar" MaxLength="3" />
@@ -854,9 +501,9 @@
           <Key>
             <PropertyRef Name="diagram_id" />
           </Key>
-          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
           <Property Name="principal_id" Type="int" Nullable="false" />
-          <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="version" Type="int" />
           <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
@@ -864,12 +511,12 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="IdEmpres" Type="int" />
           <Property Name="IdCliente" Type="int" />
           <Property Name="RazonSocialEmpresa" Type="varchar" MaxLength="100" />
           <Property Name="RazonSocialCliente" Type="varchar" MaxLength="100" />
-          <Property Name="Total" Type="decimal" Scale="6" />
+          <Property Name="Total" Type="decimal" Precision="18" Scale="6" />
           <Property Name="usuario" Type="uniqueidentifier" Nullable="false" />
           <Property Name="Activo" Type="bit" />
         </EntityType>
@@ -877,12 +524,12 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ClaveProdServ" Type="varchar" MaxLength="10" />
-          <Property Name="Cantidad" Type="decimal" Scale="6" />
+          <Property Name="Cantidad" Type="decimal" Precision="18" Scale="6" />
           <Property Name="ClaveUnidad" Type="varchar" MaxLength="50" />
           <Property Name="Descripcion" Type="varchar(max)" />
-          <Property Name="ValorUnitario" Type="decimal" Scale="6" />
+          <Property Name="ValorUnitario" Type="decimal" Precision="18" Scale="6" />
           <Property Name="IDTrasferencias" Type="int" />
         </EntityType>
         <EntityType Name="Usuario">
@@ -901,13 +548,12 @@
           <Property Name="Activo" Type="bit" />
           <Property Name="FechaAcceso" Type="datetime" />
           <Property Name="Rol" Type="varchar" MaxLength="250" />
-          <Property Name="id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="idUsuario" Type="uniqueidentifier" />
           <Property Name="Usuario" Type="varchar" MaxLength="50" />
         </EntityType>
-        <!--Se encontraron errores durante la generación:
-      advertencia 6002: La tabla o vista 'GAF.dbo.vClientePromotor' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
-      -->
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'GAF.dbo.vClientePromotor' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="vClientePromotor">
           <Key>
             <PropertyRef Name="idCliente" />
@@ -915,7 +561,7 @@
             <PropertyRef Name="idClientePromotor" />
           </Key>
           <Property Name="idCliente" Type="int" Nullable="false" />
-          <Property Name="RazonSocial" Type="nvarchar" Nullable="false" MaxLength="999" />
+          <Property Name="RazonSocial" Type="nvarchar" MaxLength="999" Nullable="false" />
           <Property Name="RFC" Type="nvarchar" MaxLength="14" />
           <Property Name="PorcentajeCliente" Type="decimal" Precision="5" Scale="2" />
           <Property Name="PorcentajeContacto" Type="decimal" Precision="5" Scale="2" />
@@ -925,9 +571,8 @@
           <Property Name="NombreCompleto" Type="varchar" MaxLength="101" />
           <Property Name="idClientePromotor" Type="int" Nullable="false" />
         </EntityType>
-        <!--Se encontraron errores durante la generación:
-      advertencia 6002: La tabla o vista 'GAF.dbo.vDevoluciones' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
-      -->
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'GAF.dbo.vDevoluciones' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="vDevoluciones">
           <Key>
             <PropertyRef Name="idPreFactura" />
@@ -935,36 +580,34 @@
             <PropertyRef Name="RazonSocial" />
           </Key>
           <Property Name="idPreFactura" Type="bigint" Nullable="false" />
-          <Property Name="DTCliente" Type="decimal" Scale="6" />
-          <Property Name="DTContacto" Type="decimal" Scale="6" />
-          <Property Name="DTEmpresa" Type="decimal" Scale="6" />
-          <Property Name="DTPromotor" Type="decimal" Scale="6" />
+          <Property Name="DTCliente" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="DTContacto" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="DTEmpresa" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="DTPromotor" Type="decimal" Precision="18" Scale="6" />
           <Property Name="Fecha" Type="datetime" />
           <Property Name="Folio" Type="varchar" MaxLength="40" />
           <Property Name="idCliente" Type="int" />
           <Property Name="idEmpresa" Type="int" />
           <Property Name="Serie" Type="varchar" MaxLength="25" />
-          <Property Name="Total" Type="decimal" Nullable="false" Scale="6" />
+          <Property Name="Total" Type="decimal" Precision="18" Scale="6" Nullable="false" />
           <Property Name="Estatus" Type="int" />
-          <Property Name="SubTotal" Type="decimal" Scale="6" />
+          <Property Name="SubTotal" Type="decimal" Precision="18" Scale="6" />
           <Property Name="IDUsuario" Type="uniqueidentifier" />
-          <Property Name="RazonSocial" Type="nvarchar" Nullable="false" MaxLength="999" />
+          <Property Name="RazonSocial" Type="nvarchar" MaxLength="999" Nullable="false" />
         </EntityType>
-        <!--Se encontraron errores durante la generación:
-      advertencia 6002: La tabla o vista 'GAF.dbo.vEmpresasCuentasBancos' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
-      -->
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'GAF.dbo.vEmpresasCuentasBancos' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="vEmpresasCuentasBancos">
           <Key>
             <PropertyRef Name="nombreCuenta" />
             <PropertyRef Name="idEmpresa" />
           </Key>
-          <Property Name="nombreCuenta" Type="nvarchar" Nullable="false" MaxLength="500" />
+          <Property Name="nombreCuenta" Type="nvarchar" MaxLength="500" Nullable="false" />
           <Property Name="Linea" Type="nvarchar" MaxLength="1" />
           <Property Name="idEmpresa" Type="int" Nullable="false" />
         </EntityType>
-        <!--Se encontraron errores durante la generación:
-      advertencia 6002: La tabla o vista 'GAF.dbo.vFacturaPagos' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
-      -->
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'GAF.dbo.vFacturaPagos' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="vFacturaPagos">
           <Key>
             <PropertyRef Name="RazonSocial" />
@@ -972,8 +615,8 @@
             <PropertyRef Name="Fecha" />
             <PropertyRef Name="idcliente" />
           </Key>
-          <Property Name="RazonSocial" Type="nvarchar" Nullable="false" MaxLength="999" />
-          <Property Name="Folio" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="RazonSocial" Type="nvarchar" MaxLength="999" Nullable="false" />
+          <Property Name="Folio" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="Serie" Type="nvarchar" MaxLength="25" />
           <Property Name="Fecha" Type="datetime" Nullable="false" />
           <Property Name="SubTotal" Type="decimal" Precision="19" Scale="2" />
@@ -984,9 +627,8 @@
           <Property Name="PreFolio" Type="varchar" MaxLength="40" />
           <Property Name="FormaPago" Type="nvarchar" MaxLength="250" />
         </EntityType>
-        <!--Se encontraron errores durante la generación:
-      advertencia 6002: La tabla o vista 'GAF.dbo.vfacturas' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
-      -->
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'GAF.dbo.vfacturas' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="vfacturas">
           <Key>
             <PropertyRef Name="idVenta" />
@@ -1006,29 +648,28 @@
           <Property Name="Uid" Type="nvarchar" MaxLength="64" />
           <Property Name="Total" Type="decimal" Precision="19" Scale="2" />
           <Property Name="SubTotal" Type="decimal" Precision="19" Scale="2" />
-          <Property Name="Folio" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="Folio" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="StatusFactura" Type="varchar" MaxLength="20" />
-          <Property Name="nombrecliente" Type="nvarchar" Nullable="false" MaxLength="999" />
+          <Property Name="nombrecliente" Type="nvarchar" MaxLength="999" Nullable="false" />
           <Property Name="IdEmpresa" Type="int" Nullable="false" />
           <Property Name="idCliente" Type="int" Nullable="false" />
           <Property Name="nombreempresa" Type="varchar" MaxLength="100" />
           <Property Name="Cancelado" Type="smallint" />
           <Property Name="FechaCancelacion" Type="nvarchar" MaxLength="40" />
           <Property Name="PreFolio" Type="varchar" MaxLength="40" />
-          <Property Name="nombreUsuario" Type="varchar" Nullable="false" MaxLength="150" />
-          <Property Name="promotor" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="nombreUsuario" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="promotor" Type="varchar" MaxLength="150" Nullable="false" />
           <Property Name="idUsuario" Type="uniqueidentifier" />
           <Property Name="Linea" Type="nvarchar" MaxLength="1" />
           <Property Name="TipoDocumentoStr" Type="nvarchar" MaxLength="50" />
           <Property Name="StatusPago" Type="bit" Nullable="false" />
-          <Property Name="Monto" Type="decimal" Scale="6" />
-          <Property Name="SaldoAnteriorPago" Type="decimal" Scale="6" />
+          <Property Name="Monto" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="SaldoAnteriorPago" Type="decimal" Precision="18" Scale="6" />
           <Property Name="Parcialidad" Type="int" />
           <Property Name="FormaPago" Type="nvarchar" MaxLength="250" />
         </EntityType>
-        <!--Se encontraron errores durante la generación:
-      advertencia 6002: La tabla o vista 'GAF.dbo.vfacturasCanceladas' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
-      -->
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'GAF.dbo.vfacturasCanceladas' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="vfacturasCanceladas">
           <Key>
             <PropertyRef Name="idVenta" />
@@ -1043,9 +684,8 @@
           <Property Name="EstatusCancelacion" Type="nvarchar" MaxLength="40" />
           <Property Name="SelloCancelacion" Type="nvarchar" MaxLength="128" />
         </EntityType>
-        <!--Se encontraron errores durante la generación:
-      advertencia 6002: La tabla o vista 'GAF.dbo.vfacturasContabilidad' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
-      -->
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'GAF.dbo.vfacturasContabilidad' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="vfacturasContabilidad">
           <Key>
             <PropertyRef Name="idVenta" />
@@ -1065,31 +705,30 @@
           <Property Name="Uid" Type="nvarchar" MaxLength="64" />
           <Property Name="Total" Type="decimal" Precision="19" Scale="2" />
           <Property Name="SubTotal" Type="decimal" Precision="19" Scale="2" />
-          <Property Name="Folio" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="Folio" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="StatusFactura" Type="varchar" MaxLength="20" />
-          <Property Name="nombrecliente" Type="nvarchar" Nullable="false" MaxLength="999" />
+          <Property Name="nombrecliente" Type="nvarchar" MaxLength="999" Nullable="false" />
           <Property Name="IdEmpresa" Type="int" Nullable="false" />
           <Property Name="idCliente" Type="int" Nullable="false" />
           <Property Name="nombreempresa" Type="varchar" MaxLength="100" />
           <Property Name="Cancelado" Type="smallint" />
           <Property Name="FechaCancelacion" Type="nvarchar" MaxLength="40" />
           <Property Name="PreFolio" Type="varchar" MaxLength="40" />
-          <Property Name="nombreUsuario" Type="varchar" Nullable="false" MaxLength="150" />
-          <Property Name="promotor" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="nombreUsuario" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="promotor" Type="varchar" MaxLength="150" Nullable="false" />
           <Property Name="idUsuario" Type="uniqueidentifier" />
           <Property Name="Linea" Type="nvarchar" MaxLength="1" />
           <Property Name="TipoDocumentoStr" Type="nvarchar" MaxLength="50" />
           <Property Name="StatusPago" Type="bit" Nullable="false" />
-          <Property Name="Monto" Type="decimal" Scale="6" />
-          <Property Name="SaldoAnteriorPago" Type="decimal" Scale="6" />
+          <Property Name="Monto" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="SaldoAnteriorPago" Type="decimal" Precision="18" Scale="6" />
           <Property Name="Parcialidad" Type="int" />
           <Property Name="FormaPago" Type="nvarchar" MaxLength="250" />
-          <Property Name="SaldoAnteriorFactura" Type="decimal" Scale="6" />
+          <Property Name="SaldoAnteriorFactura" Type="decimal" Precision="18" Scale="6" />
           <Property Name="Pagado" Type="decimal" Precision="19" Scale="2" />
         </EntityType>
-        <!--Se encontraron errores durante la generación:
-      advertencia 6002: La tabla o vista 'GAF.dbo.vfacturasEmitidos' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
-      -->
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'GAF.dbo.vfacturasEmitidos' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="vfacturasEmitidos">
           <Key>
             <PropertyRef Name="idVenta" />
@@ -1105,9 +744,9 @@
           <Property Name="Uid" Type="nvarchar" MaxLength="64" />
           <Property Name="Total" Type="decimal" Precision="19" Scale="2" />
           <Property Name="SubTotal" Type="decimal" Precision="19" Scale="2" />
-          <Property Name="Folio" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="Folio" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="StatusFactura" Type="varchar" MaxLength="20" />
-          <Property Name="nombrecliente" Type="nvarchar" Nullable="false" MaxLength="999" />
+          <Property Name="nombrecliente" Type="nvarchar" MaxLength="999" Nullable="false" />
           <Property Name="IdEmpresa" Type="int" Nullable="false" />
           <Property Name="idCliente" Type="int" Nullable="false" />
           <Property Name="nombreempresa" Type="varchar" MaxLength="100" />
@@ -1115,7 +754,7 @@
           <Property Name="FechaCancelacion" Type="nvarchar" MaxLength="40" />
           <Property Name="RFCEmpresa" Type="varchar" MaxLength="14" />
           <Property Name="RFCCliente" Type="nvarchar" MaxLength="14" />
-          <Property Name="IVA" Type="decimal" Scale="6" />
+          <Property Name="IVA" Type="decimal" Precision="18" Scale="6" />
           <Property Name="FormaPago" Type="nvarchar" MaxLength="250" />
           <Property Name="Moneda" Type="nvarchar" MaxLength="200" />
           <Property Name="UUDI" Type="nvarchar" MaxLength="40" />
@@ -1124,16 +763,15 @@
           <Property Name="TipoDocumentoStr" Type="nvarchar" MaxLength="50" />
           <Property Name="Linea" Type="nvarchar" MaxLength="1" />
           <Property Name="PreFolio" Type="varchar" MaxLength="40" />
-          <Property Name="Monto" Type="decimal" Scale="6" />
+          <Property Name="Monto" Type="decimal" Precision="18" Scale="6" />
           <Property Name="idPreFactura" Type="bigint" />
-          <Property Name="SaldoAnteriorPago" Type="decimal" Scale="6" />
+          <Property Name="SaldoAnteriorPago" Type="decimal" Precision="18" Scale="6" />
           <Property Name="Parcialidad" Type="int" />
-          <Property Name="SaldoAnteriorFactura" Type="decimal" Scale="6" />
+          <Property Name="SaldoAnteriorFactura" Type="decimal" Precision="18" Scale="6" />
           <Property Name="Pagado" Type="decimal" Precision="19" Scale="2" />
         </EntityType>
-        <!--Se encontraron errores durante la generación:
-      advertencia 6002: La tabla o vista 'GAF.dbo.vfacturasPorPagar' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
-      -->
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'GAF.dbo.vfacturasPorPagar' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="vfacturasPorPagar">
           <Key>
             <PropertyRef Name="idVenta" />
@@ -1148,21 +786,20 @@
           <Property Name="Uid" Type="nvarchar" MaxLength="64" />
           <Property Name="Total" Type="decimal" Precision="19" Scale="2" />
           <Property Name="SubTotal" Type="decimal" Precision="19" Scale="2" />
-          <Property Name="Folio" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="Folio" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="StatusFactura" Type="varchar" MaxLength="20" />
           <Property Name="Cancelado" Type="smallint" />
           <Property Name="PreFolio" Type="varchar" MaxLength="40" />
           <Property Name="Parcialidad" Type="int" />
           <Property Name="FormaPago" Type="nvarchar" MaxLength="250" />
-          <Property Name="SaldoAnteriorPago" Type="decimal" Scale="6" />
+          <Property Name="SaldoAnteriorPago" Type="decimal" Precision="18" Scale="6" />
           <Property Name="TipoDocumentoStr" Type="nvarchar" MaxLength="50" />
           <Property Name="Linea" Type="nvarchar" MaxLength="1" />
           <Property Name="IdEmpresa" Type="int" />
           <Property Name="idcliente" Type="int" Nullable="false" />
         </EntityType>
-        <!--Se encontraron errores durante la generación:
-      advertencia 6002: La tabla o vista 'GAF.dbo.vfacturasPorPagarTodasLineas' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
-      -->
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'GAF.dbo.vfacturasPorPagarTodasLineas' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="vfacturasPorPagarTodasLineas">
           <Key>
             <PropertyRef Name="idVenta" />
@@ -1177,21 +814,20 @@
           <Property Name="Uid" Type="nvarchar" MaxLength="64" />
           <Property Name="Total" Type="decimal" Precision="19" Scale="2" />
           <Property Name="SubTotal" Type="decimal" Precision="19" Scale="2" />
-          <Property Name="Folio" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="Folio" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="StatusFactura" Type="varchar" MaxLength="20" />
           <Property Name="Cancelado" Type="smallint" />
           <Property Name="PreFolio" Type="varchar" MaxLength="40" />
           <Property Name="Parcialidad" Type="int" />
           <Property Name="FormaPago" Type="nvarchar" MaxLength="250" />
-          <Property Name="SaldoAnteriorPago" Type="decimal" Scale="6" />
+          <Property Name="SaldoAnteriorPago" Type="decimal" Precision="18" Scale="6" />
           <Property Name="TipoDocumentoStr" Type="nvarchar" MaxLength="50" />
           <Property Name="Linea" Type="nvarchar" MaxLength="1" />
           <Property Name="IdEmpresa" Type="int" />
           <Property Name="idcliente" Type="int" Nullable="false" />
         </EntityType>
-        <!--Se encontraron errores durante la generación:
-      advertencia 6002: La tabla o vista 'GAF.dbo.vfacturasPromotores' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
-      -->
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'GAF.dbo.vfacturasPromotores' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="vfacturasPromotores">
           <Key>
             <PropertyRef Name="idVenta" />
@@ -1209,9 +845,9 @@
           <Property Name="Uid" Type="nvarchar" MaxLength="64" />
           <Property Name="Total" Type="decimal" Precision="19" Scale="2" />
           <Property Name="SubTotal" Type="decimal" Precision="19" Scale="2" />
-          <Property Name="Folio" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="Folio" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="StatusFactura" Type="varchar" MaxLength="20" />
-          <Property Name="nombrecliente" Type="nvarchar" Nullable="false" MaxLength="999" />
+          <Property Name="nombrecliente" Type="nvarchar" MaxLength="999" Nullable="false" />
           <Property Name="IdEmpresa" Type="int" Nullable="false" />
           <Property Name="idCliente" Type="int" Nullable="false" />
           <Property Name="nombreempresa" Type="varchar" MaxLength="100" />
@@ -1222,28 +858,27 @@
           <Property Name="idPreFactura" Type="bigint" Nullable="false" />
           <Property Name="TipoDocumentoStr" Type="nvarchar" MaxLength="50" />
           <Property Name="StatusPago" Type="bit" Nullable="false" />
-          <Property Name="Monto" Type="decimal" Scale="6" />
+          <Property Name="Monto" Type="decimal" Precision="18" Scale="6" />
           <Property Name="FormaPago" Type="nvarchar" MaxLength="250" />
-          <Property Name="SaldoAnteriorPago" Type="decimal" Scale="6" />
+          <Property Name="SaldoAnteriorPago" Type="decimal" Precision="18" Scale="6" />
           <Property Name="Parcialidad" Type="int" />
         </EntityType>
-        <!--Se encontraron errores durante la generación:
-      advertencia 6002: La tabla o vista 'GAF.dbo.vprefactura' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
-      -->
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'GAF.dbo.vprefactura' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="vprefactura">
           <Key>
             <PropertyRef Name="RazonSocial" />
             <PropertyRef Name="idPreFactura" />
             <PropertyRef Name="Total" />
           </Key>
-          <Property Name="RazonSocial" Type="nvarchar" Nullable="false" MaxLength="999" />
+          <Property Name="RazonSocial" Type="nvarchar" MaxLength="999" Nullable="false" />
           <Property Name="IDUsuario" Type="uniqueidentifier" />
           <Property Name="idPreFactura" Type="bigint" Nullable="false" />
           <Property Name="Folio" Type="varchar" MaxLength="40" />
           <Property Name="Serie" Type="varchar" MaxLength="25" />
           <Property Name="Fecha" Type="datetime" />
-          <Property Name="SubTotal" Type="decimal" Scale="6" />
-          <Property Name="Total" Type="decimal" Nullable="false" Scale="6" />
+          <Property Name="SubTotal" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="Total" Type="decimal" Precision="18" Scale="6" Nullable="false" />
           <Property Name="idEmpresa" Type="int" />
           <Property Name="idCliente" Type="int" />
           <Property Name="CFDI" Type="varchar" MaxLength="2" />
@@ -1257,9 +892,8 @@
           <Property Name="pagoVerificado" Type="int" />
           <Property Name="TipoDeComprobante" Type="varchar" MaxLength="20" />
         </EntityType>
-        <!--Se encontraron errores durante la generación:
-      advertencia 6002: La tabla o vista 'GAF.dbo.vPrefacturaPagos' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
-      -->
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'GAF.dbo.vPrefacturaPagos' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="vPrefacturaPagos">
           <Key>
             <PropertyRef Name="RazonSocial" />
@@ -1267,14 +901,14 @@
             <PropertyRef Name="Total" />
             <PropertyRef Name="nombreUsuario" />
           </Key>
-          <Property Name="RazonSocial" Type="nvarchar" Nullable="false" MaxLength="999" />
+          <Property Name="RazonSocial" Type="nvarchar" MaxLength="999" Nullable="false" />
           <Property Name="IDUsuario" Type="uniqueidentifier" />
           <Property Name="idPreFactura" Type="bigint" Nullable="false" />
           <Property Name="Folio" Type="varchar" MaxLength="40" />
           <Property Name="Serie" Type="varchar" MaxLength="25" />
           <Property Name="Fecha" Type="datetime" />
-          <Property Name="SubTotal" Type="decimal" Scale="6" />
-          <Property Name="Total" Type="decimal" Nullable="false" Scale="6" />
+          <Property Name="SubTotal" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="Total" Type="decimal" Precision="18" Scale="6" Nullable="false" />
           <Property Name="idEmpresa" Type="int" />
           <Property Name="idCliente" Type="int" />
           <Property Name="CFDI" Type="varchar" MaxLength="2" />
@@ -1282,22 +916,22 @@
           <Property Name="Estatus" Type="int" />
           <Property Name="nombreEmpresa" Type="varchar" MaxLength="100" />
           <Property Name="EstatusVista" Type="int" />
-          <Property Name="nombreUsuario" Type="varchar" Nullable="false" MaxLength="152" />
+          <Property Name="nombreUsuario" Type="varchar" MaxLength="152" Nullable="false" />
           <Property Name="PreFolio" Type="varchar" MaxLength="40" />
           <Property Name="FormaPago" Type="varchar" MaxLength="3" />
           <Property Name="pagoVerificado" Type="int" />
-          <Property Name="Monto" Type="decimal" Scale="6" />
+          <Property Name="Monto" Type="decimal" Precision="18" Scale="6" />
           <Property Name="MonedaP" Type="varchar" MaxLength="3" />
           <Property Name="FechaPago" Type="datetime" />
           <Property Name="TipoDeComprobante" Type="varchar" MaxLength="20" />
           <Property Name="FechaPagoCFDI" Type="datetime" />
-          <Property Name="MontoCFDI" Type="decimal" Scale="6" />
+          <Property Name="MontoCFDI" Type="decimal" Precision="18" Scale="6" />
           <Property Name="Validador1" Type="nvarchar(max)" />
           <Property Name="Validador2" Type="nvarchar(max)" />
+          <Property Name="FormaDePagoP" Type="varchar" MaxLength="3" />
         </EntityType>
-        <!--Se encontraron errores durante la generación:
-      advertencia 6002: La tabla o vista 'GAF.dbo.vPrefacturaPorPagar' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
-      -->
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'GAF.dbo.vPrefacturaPorPagar' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="vPrefacturaPorPagar">
           <Key>
             <PropertyRef Name="idPreFactura" />
@@ -1307,18 +941,17 @@
           <Property Name="MetodoPago" Type="varchar" MaxLength="3" />
           <Property Name="PreFolio" Type="varchar" MaxLength="40" />
           <Property Name="Parcialidad" Type="int" />
-          <Property Name="SaldoAnteriorPago" Type="decimal" Scale="6" />
+          <Property Name="SaldoAnteriorPago" Type="decimal" Precision="18" Scale="6" />
           <Property Name="CFDI" Type="varchar" MaxLength="2" />
-          <Property Name="Total" Type="decimal" Nullable="false" Scale="6" />
+          <Property Name="Total" Type="decimal" Precision="18" Scale="6" Nullable="false" />
           <Property Name="Timbrado" Type="bit" />
           <Property Name="Fecha" Type="datetime" />
           <Property Name="Cancelado" Type="smallint" />
           <Property Name="idEmpresa" Type="int" />
           <Property Name="idCliente" Type="int" />
         </EntityType>
-        <!--Se encontraron errores durante la generación:
-      advertencia 6002: La tabla o vista 'GAF.dbo.vventas' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
-      -->
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'GAF.dbo.vventas' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="vventas">
           <Key>
             <PropertyRef Name="idVenta" />
@@ -1333,21 +966,375 @@
           <Property Name="Uid" Type="nvarchar" MaxLength="64" />
           <Property Name="Total" Type="decimal" Precision="19" Scale="2" />
           <Property Name="SubTotal" Type="decimal" Precision="19" Scale="2" />
-          <Property Name="Folio" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="Folio" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="StatusFactura" Type="varchar" MaxLength="20" />
-          <Property Name="RazonSocial" Type="nvarchar" Nullable="false" MaxLength="999" />
+          <Property Name="RazonSocial" Type="nvarchar" MaxLength="999" Nullable="false" />
           <Property Name="IDUsuario" Type="uniqueidentifier" />
           <Property Name="idPreFactura" Type="bigint" Nullable="false" />
           <Property Name="MetodoPago" Type="varchar" MaxLength="3" />
         </EntityType>
+        <EntityContainer Name="GAFModelStoreContainer">
+          <EntitySet Name="Catalogo-Giros" EntityType="Self.Catalogo-Giros" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ClientePromotor" EntityType="Self.ClientePromotor" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="clientes" EntityType="Self.clientes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ComprobantePdf" EntityType="Self.ComprobantePdf" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Conceptos" EntityType="Self.Conceptos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Devoluciones" EntityType="Self.Devoluciones" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="empresa" EntityType="Self.empresa" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Empresa_CuentasBancos" EntityType="Self.Empresa_CuentasBancos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FacturaPagoRelacionados" EntityType="Self.FacturaPagoRelacionados" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="facturas" EntityType="Self.facturas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FolioFallas" EntityType="Self.FolioFallas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MovimientosBancos" EntityType="Self.MovimientosBancos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PagosF" EntityType="Self.PagosF" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PagosPromotor" EntityType="Self.PagosPromotor" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PreCfdiRelacionado" EntityType="Self.PreCfdiRelacionado" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PreComplementoImpLocal" EntityType="Self.PreComplementoImpLocal" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PreComplementoPago" EntityType="Self.PreComplementoPago" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PreConceptos" EntityType="Self.PreConceptos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PreFactura" EntityType="Self.PreFactura" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PreFCPDoctoRelacionado" EntityType="Self.PreFCPDoctoRelacionado" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PreFolios" EntityType="Self.PreFolios" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PreImpuestos" EntityType="Self.PreImpuestos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PreInformacionAduanera" EntityType="Self.PreInformacionAduanera" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PrePagos" EntityType="Self.PrePagos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="producto" EntityType="Self.producto" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sucursales" EntityType="Self.Sucursales" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TransferenciasExcel" EntityType="Self.TransferenciasExcel" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TransferenciasExcelConceptos" EntityType="Self.TransferenciasExcelConceptos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="vClientePromotor" EntityType="Self.vClientePromotor" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[vClientePromotor].[idCliente] AS [idCliente], 
+[vClientePromotor].[RazonSocial] AS [RazonSocial], 
+[vClientePromotor].[RFC] AS [RFC], 
+[vClientePromotor].[PorcentajeCliente] AS [PorcentajeCliente], 
+[vClientePromotor].[PorcentajeContacto] AS [PorcentajeContacto], 
+[vClientePromotor].[PorcentajeEmpresa] AS [PorcentajeEmpresa], 
+[vClientePromotor].[PorcentajePromotor] AS [PorcentajePromotor], 
+[vClientePromotor].[IdPromotor] AS [IdPromotor], 
+[vClientePromotor].[NombreCompleto] AS [NombreCompleto], 
+[vClientePromotor].[idClientePromotor] AS [idClientePromotor]
+FROM [dbo].[vClientePromotor] AS [vClientePromotor]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vDevoluciones" EntityType="Self.vDevoluciones" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[vDevoluciones].[idPreFactura] AS [idPreFactura], 
+[vDevoluciones].[DTCliente] AS [DTCliente], 
+[vDevoluciones].[DTContacto] AS [DTContacto], 
+[vDevoluciones].[DTEmpresa] AS [DTEmpresa], 
+[vDevoluciones].[DTPromotor] AS [DTPromotor], 
+[vDevoluciones].[Fecha] AS [Fecha], 
+[vDevoluciones].[Folio] AS [Folio], 
+[vDevoluciones].[idCliente] AS [idCliente], 
+[vDevoluciones].[idEmpresa] AS [idEmpresa], 
+[vDevoluciones].[Serie] AS [Serie], 
+[vDevoluciones].[Total] AS [Total], 
+[vDevoluciones].[Estatus] AS [Estatus], 
+[vDevoluciones].[SubTotal] AS [SubTotal], 
+[vDevoluciones].[IDUsuario] AS [IDUsuario], 
+[vDevoluciones].[RazonSocial] AS [RazonSocial]
+FROM [dbo].[vDevoluciones] AS [vDevoluciones]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vEmpresasCuentasBancos" EntityType="Self.vEmpresasCuentasBancos" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[vEmpresasCuentasBancos].[nombreCuenta] AS [nombreCuenta], 
+[vEmpresasCuentasBancos].[Linea] AS [Linea], 
+[vEmpresasCuentasBancos].[idEmpresa] AS [idEmpresa]
+FROM [dbo].[vEmpresasCuentasBancos] AS [vEmpresasCuentasBancos]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vFacturaPagos" EntityType="Self.vFacturaPagos" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[vFacturaPagos].[RazonSocial] AS [RazonSocial], 
+[vFacturaPagos].[Folio] AS [Folio], 
+[vFacturaPagos].[Serie] AS [Serie], 
+[vFacturaPagos].[Fecha] AS [Fecha], 
+[vFacturaPagos].[SubTotal] AS [SubTotal], 
+[vFacturaPagos].[Pagado] AS [Pagado], 
+[vFacturaPagos].[IdEmpresa] AS [IdEmpresa], 
+[vFacturaPagos].[idcliente] AS [idcliente], 
+[vFacturaPagos].[nombreEmpresa] AS [nombreEmpresa], 
+[vFacturaPagos].[PreFolio] AS [PreFolio], 
+[vFacturaPagos].[FormaPago] AS [FormaPago]
+FROM [dbo].[vFacturaPagos] AS [vFacturaPagos]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vfacturas" EntityType="Self.vfacturas" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[vfacturas].[Usuario] AS [Usuario], 
+[vfacturas].[idVenta] AS [idVenta], 
+[vfacturas].[Fecha] AS [Fecha], 
+[vfacturas].[Serie] AS [Serie], 
+[vfacturas].[Uid] AS [Uid], 
+[vfacturas].[Total] AS [Total], 
+[vfacturas].[SubTotal] AS [SubTotal], 
+[vfacturas].[Folio] AS [Folio], 
+[vfacturas].[StatusFactura] AS [StatusFactura], 
+[vfacturas].[nombrecliente] AS [nombrecliente], 
+[vfacturas].[IdEmpresa] AS [IdEmpresa], 
+[vfacturas].[idCliente] AS [idCliente], 
+[vfacturas].[nombreempresa] AS [nombreempresa], 
+[vfacturas].[Cancelado] AS [Cancelado], 
+[vfacturas].[FechaCancelacion] AS [FechaCancelacion], 
+[vfacturas].[PreFolio] AS [PreFolio], 
+[vfacturas].[nombreUsuario] AS [nombreUsuario], 
+[vfacturas].[promotor] AS [promotor], 
+[vfacturas].[idUsuario] AS [idUsuario], 
+[vfacturas].[Linea] AS [Linea], 
+[vfacturas].[TipoDocumentoStr] AS [TipoDocumentoStr], 
+[vfacturas].[StatusPago] AS [StatusPago], 
+[vfacturas].[Monto] AS [Monto], 
+[vfacturas].[SaldoAnteriorPago] AS [SaldoAnteriorPago], 
+[vfacturas].[Parcialidad] AS [Parcialidad], 
+[vfacturas].[FormaPago] AS [FormaPago]
+FROM [dbo].[vfacturas] AS [vfacturas]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vfacturasCanceladas" EntityType="Self.vfacturasCanceladas" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[vfacturasCanceladas].[idVenta] AS [idVenta], 
+[vfacturasCanceladas].[Fecha] AS [Fecha], 
+[vfacturasCanceladas].[Serie] AS [Serie], 
+[vfacturasCanceladas].[Uid] AS [Uid], 
+[vfacturasCanceladas].[FechaCancelacion] AS [FechaCancelacion], 
+[vfacturasCanceladas].[RFC] AS [RFC], 
+[vfacturasCanceladas].[EstatusCancelacion] AS [EstatusCancelacion], 
+[vfacturasCanceladas].[SelloCancelacion] AS [SelloCancelacion]
+FROM [dbo].[vfacturasCanceladas] AS [vfacturasCanceladas]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vfacturasContabilidad" EntityType="Self.vfacturasContabilidad" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[vfacturasContabilidad].[Usuario] AS [Usuario], 
+[vfacturasContabilidad].[idVenta] AS [idVenta], 
+[vfacturasContabilidad].[Fecha] AS [Fecha], 
+[vfacturasContabilidad].[Serie] AS [Serie], 
+[vfacturasContabilidad].[Uid] AS [Uid], 
+[vfacturasContabilidad].[Total] AS [Total], 
+[vfacturasContabilidad].[SubTotal] AS [SubTotal], 
+[vfacturasContabilidad].[Folio] AS [Folio], 
+[vfacturasContabilidad].[StatusFactura] AS [StatusFactura], 
+[vfacturasContabilidad].[nombrecliente] AS [nombrecliente], 
+[vfacturasContabilidad].[IdEmpresa] AS [IdEmpresa], 
+[vfacturasContabilidad].[idCliente] AS [idCliente], 
+[vfacturasContabilidad].[nombreempresa] AS [nombreempresa], 
+[vfacturasContabilidad].[Cancelado] AS [Cancelado], 
+[vfacturasContabilidad].[FechaCancelacion] AS [FechaCancelacion], 
+[vfacturasContabilidad].[PreFolio] AS [PreFolio], 
+[vfacturasContabilidad].[nombreUsuario] AS [nombreUsuario], 
+[vfacturasContabilidad].[promotor] AS [promotor], 
+[vfacturasContabilidad].[idUsuario] AS [idUsuario], 
+[vfacturasContabilidad].[Linea] AS [Linea], 
+[vfacturasContabilidad].[TipoDocumentoStr] AS [TipoDocumentoStr], 
+[vfacturasContabilidad].[StatusPago] AS [StatusPago], 
+[vfacturasContabilidad].[Monto] AS [Monto], 
+[vfacturasContabilidad].[SaldoAnteriorPago] AS [SaldoAnteriorPago], 
+[vfacturasContabilidad].[Parcialidad] AS [Parcialidad], 
+[vfacturasContabilidad].[FormaPago] AS [FormaPago], 
+[vfacturasContabilidad].[SaldoAnteriorFactura] AS [SaldoAnteriorFactura], 
+[vfacturasContabilidad].[Pagado] AS [Pagado]
+FROM [dbo].[vfacturasContabilidad] AS [vfacturasContabilidad]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vfacturasEmitidos" EntityType="Self.vfacturasEmitidos" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[vfacturasEmitidos].[idVenta] AS [idVenta], 
+[vfacturasEmitidos].[Fecha] AS [Fecha], 
+[vfacturasEmitidos].[Serie] AS [Serie], 
+[vfacturasEmitidos].[Uid] AS [Uid], 
+[vfacturasEmitidos].[Total] AS [Total], 
+[vfacturasEmitidos].[SubTotal] AS [SubTotal], 
+[vfacturasEmitidos].[Folio] AS [Folio], 
+[vfacturasEmitidos].[StatusFactura] AS [StatusFactura], 
+[vfacturasEmitidos].[nombrecliente] AS [nombrecliente], 
+[vfacturasEmitidos].[IdEmpresa] AS [IdEmpresa], 
+[vfacturasEmitidos].[idCliente] AS [idCliente], 
+[vfacturasEmitidos].[nombreempresa] AS [nombreempresa], 
+[vfacturasEmitidos].[Cancelado] AS [Cancelado], 
+[vfacturasEmitidos].[FechaCancelacion] AS [FechaCancelacion], 
+[vfacturasEmitidos].[RFCEmpresa] AS [RFCEmpresa], 
+[vfacturasEmitidos].[RFCCliente] AS [RFCCliente], 
+[vfacturasEmitidos].[IVA] AS [IVA], 
+[vfacturasEmitidos].[FormaPago] AS [FormaPago], 
+[vfacturasEmitidos].[Moneda] AS [Moneda], 
+[vfacturasEmitidos].[UUDI] AS [UUDI], 
+[vfacturasEmitidos].[TipoRelacion] AS [TipoRelacion], 
+[vfacturasEmitidos].[NombreUsuario] AS [NombreUsuario], 
+[vfacturasEmitidos].[TipoDocumentoStr] AS [TipoDocumentoStr], 
+[vfacturasEmitidos].[Linea] AS [Linea], 
+[vfacturasEmitidos].[PreFolio] AS [PreFolio], 
+[vfacturasEmitidos].[Monto] AS [Monto], 
+[vfacturasEmitidos].[idPreFactura] AS [idPreFactura], 
+[vfacturasEmitidos].[SaldoAnteriorPago] AS [SaldoAnteriorPago], 
+[vfacturasEmitidos].[Parcialidad] AS [Parcialidad], 
+[vfacturasEmitidos].[SaldoAnteriorFactura] AS [SaldoAnteriorFactura], 
+[vfacturasEmitidos].[Pagado] AS [Pagado]
+FROM [dbo].[vfacturasEmitidos] AS [vfacturasEmitidos]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vfacturasPorPagar" EntityType="Self.vfacturasPorPagar" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[vfacturasPorPagar].[Usuario] AS [Usuario], 
+[vfacturasPorPagar].[idVenta] AS [idVenta], 
+[vfacturasPorPagar].[Fecha] AS [Fecha], 
+[vfacturasPorPagar].[Serie] AS [Serie], 
+[vfacturasPorPagar].[Uid] AS [Uid], 
+[vfacturasPorPagar].[Total] AS [Total], 
+[vfacturasPorPagar].[SubTotal] AS [SubTotal], 
+[vfacturasPorPagar].[Folio] AS [Folio], 
+[vfacturasPorPagar].[StatusFactura] AS [StatusFactura], 
+[vfacturasPorPagar].[Cancelado] AS [Cancelado], 
+[vfacturasPorPagar].[PreFolio] AS [PreFolio], 
+[vfacturasPorPagar].[Parcialidad] AS [Parcialidad], 
+[vfacturasPorPagar].[FormaPago] AS [FormaPago], 
+[vfacturasPorPagar].[SaldoAnteriorPago] AS [SaldoAnteriorPago], 
+[vfacturasPorPagar].[TipoDocumentoStr] AS [TipoDocumentoStr], 
+[vfacturasPorPagar].[Linea] AS [Linea], 
+[vfacturasPorPagar].[IdEmpresa] AS [IdEmpresa], 
+[vfacturasPorPagar].[idcliente] AS [idcliente]
+FROM [dbo].[vfacturasPorPagar] AS [vfacturasPorPagar]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vfacturasPorPagarTodasLineas" EntityType="Self.vfacturasPorPagarTodasLineas" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[vfacturasPorPagarTodasLineas].[Usuario] AS [Usuario], 
+[vfacturasPorPagarTodasLineas].[idVenta] AS [idVenta], 
+[vfacturasPorPagarTodasLineas].[Fecha] AS [Fecha], 
+[vfacturasPorPagarTodasLineas].[Serie] AS [Serie], 
+[vfacturasPorPagarTodasLineas].[Uid] AS [Uid], 
+[vfacturasPorPagarTodasLineas].[Total] AS [Total], 
+[vfacturasPorPagarTodasLineas].[SubTotal] AS [SubTotal], 
+[vfacturasPorPagarTodasLineas].[Folio] AS [Folio], 
+[vfacturasPorPagarTodasLineas].[StatusFactura] AS [StatusFactura], 
+[vfacturasPorPagarTodasLineas].[Cancelado] AS [Cancelado], 
+[vfacturasPorPagarTodasLineas].[PreFolio] AS [PreFolio], 
+[vfacturasPorPagarTodasLineas].[Parcialidad] AS [Parcialidad], 
+[vfacturasPorPagarTodasLineas].[FormaPago] AS [FormaPago], 
+[vfacturasPorPagarTodasLineas].[SaldoAnteriorPago] AS [SaldoAnteriorPago], 
+[vfacturasPorPagarTodasLineas].[TipoDocumentoStr] AS [TipoDocumentoStr], 
+[vfacturasPorPagarTodasLineas].[Linea] AS [Linea], 
+[vfacturasPorPagarTodasLineas].[IdEmpresa] AS [IdEmpresa], 
+[vfacturasPorPagarTodasLineas].[idcliente] AS [idcliente]
+FROM [dbo].[vfacturasPorPagarTodasLineas] AS [vfacturasPorPagarTodasLineas]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vfacturasPromotores" EntityType="Self.vfacturasPromotores" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[vfacturasPromotores].[idVenta] AS [idVenta], 
+[vfacturasPromotores].[Fecha] AS [Fecha], 
+[vfacturasPromotores].[Serie] AS [Serie], 
+[vfacturasPromotores].[Uid] AS [Uid], 
+[vfacturasPromotores].[Total] AS [Total], 
+[vfacturasPromotores].[SubTotal] AS [SubTotal], 
+[vfacturasPromotores].[Folio] AS [Folio], 
+[vfacturasPromotores].[StatusFactura] AS [StatusFactura], 
+[vfacturasPromotores].[nombrecliente] AS [nombrecliente], 
+[vfacturasPromotores].[IdEmpresa] AS [IdEmpresa], 
+[vfacturasPromotores].[idCliente] AS [idCliente], 
+[vfacturasPromotores].[nombreempresa] AS [nombreempresa], 
+[vfacturasPromotores].[Cancelado] AS [Cancelado], 
+[vfacturasPromotores].[FechaCancelacion] AS [FechaCancelacion], 
+[vfacturasPromotores].[IDUsuario] AS [IDUsuario], 
+[vfacturasPromotores].[PreFolio] AS [PreFolio], 
+[vfacturasPromotores].[idPreFactura] AS [idPreFactura], 
+[vfacturasPromotores].[TipoDocumentoStr] AS [TipoDocumentoStr], 
+[vfacturasPromotores].[StatusPago] AS [StatusPago], 
+[vfacturasPromotores].[Monto] AS [Monto], 
+[vfacturasPromotores].[FormaPago] AS [FormaPago], 
+[vfacturasPromotores].[SaldoAnteriorPago] AS [SaldoAnteriorPago], 
+[vfacturasPromotores].[Parcialidad] AS [Parcialidad]
+FROM [dbo].[vfacturasPromotores] AS [vfacturasPromotores]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vprefactura" EntityType="Self.vprefactura" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[vprefactura].[RazonSocial] AS [RazonSocial], 
+[vprefactura].[IDUsuario] AS [IDUsuario], 
+[vprefactura].[idPreFactura] AS [idPreFactura], 
+[vprefactura].[Folio] AS [Folio], 
+[vprefactura].[Serie] AS [Serie], 
+[vprefactura].[Fecha] AS [Fecha], 
+[vprefactura].[SubTotal] AS [SubTotal], 
+[vprefactura].[Total] AS [Total], 
+[vprefactura].[idEmpresa] AS [idEmpresa], 
+[vprefactura].[idCliente] AS [idCliente], 
+[vprefactura].[CFDI] AS [CFDI], 
+[vprefactura].[Timbrado] AS [Timbrado], 
+[vprefactura].[Estatus] AS [Estatus], 
+[vprefactura].[nombreEmpresa] AS [nombreEmpresa], 
+[vprefactura].[EstatusVista] AS [EstatusVista], 
+[vprefactura].[nombreUsuario] AS [nombreUsuario], 
+[vprefactura].[PreFolio] AS [PreFolio], 
+[vprefactura].[FormaPago] AS [FormaPago], 
+[vprefactura].[pagoVerificado] AS [pagoVerificado], 
+[vprefactura].[TipoDeComprobante] AS [TipoDeComprobante]
+FROM [dbo].[vprefactura] AS [vprefactura]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vPrefacturaPagos" EntityType="Self.vPrefacturaPagos" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[vPrefacturaPagos].[RazonSocial] AS [RazonSocial], 
+[vPrefacturaPagos].[IDUsuario] AS [IDUsuario], 
+[vPrefacturaPagos].[idPreFactura] AS [idPreFactura], 
+[vPrefacturaPagos].[Folio] AS [Folio], 
+[vPrefacturaPagos].[Serie] AS [Serie], 
+[vPrefacturaPagos].[Fecha] AS [Fecha], 
+[vPrefacturaPagos].[SubTotal] AS [SubTotal], 
+[vPrefacturaPagos].[Total] AS [Total], 
+[vPrefacturaPagos].[idEmpresa] AS [idEmpresa], 
+[vPrefacturaPagos].[idCliente] AS [idCliente], 
+[vPrefacturaPagos].[CFDI] AS [CFDI], 
+[vPrefacturaPagos].[Timbrado] AS [Timbrado], 
+[vPrefacturaPagos].[Estatus] AS [Estatus], 
+[vPrefacturaPagos].[nombreEmpresa] AS [nombreEmpresa], 
+[vPrefacturaPagos].[EstatusVista] AS [EstatusVista], 
+[vPrefacturaPagos].[nombreUsuario] AS [nombreUsuario], 
+[vPrefacturaPagos].[PreFolio] AS [PreFolio], 
+[vPrefacturaPagos].[FormaPago] AS [FormaPago], 
+[vPrefacturaPagos].[pagoVerificado] AS [pagoVerificado], 
+[vPrefacturaPagos].[Monto] AS [Monto], 
+[vPrefacturaPagos].[MonedaP] AS [MonedaP], 
+[vPrefacturaPagos].[FechaPago] AS [FechaPago], 
+[vPrefacturaPagos].[TipoDeComprobante] AS [TipoDeComprobante], 
+[vPrefacturaPagos].[FechaPagoCFDI] AS [FechaPagoCFDI], 
+[vPrefacturaPagos].[MontoCFDI] AS [MontoCFDI], 
+[vPrefacturaPagos].[Validador1] AS [Validador1], 
+[vPrefacturaPagos].[Validador2] AS [Validador2], 
+[vPrefacturaPagos].[FormaDePagoP] AS [FormaDePagoP]
+FROM [dbo].[vPrefacturaPagos] AS [vPrefacturaPagos]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vPrefacturaPorPagar" EntityType="Self.vPrefacturaPorPagar" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[vPrefacturaPorPagar].[idPreFactura] AS [idPreFactura], 
+[vPrefacturaPorPagar].[MetodoPago] AS [MetodoPago], 
+[vPrefacturaPorPagar].[PreFolio] AS [PreFolio], 
+[vPrefacturaPorPagar].[Parcialidad] AS [Parcialidad], 
+[vPrefacturaPorPagar].[SaldoAnteriorPago] AS [SaldoAnteriorPago], 
+[vPrefacturaPorPagar].[CFDI] AS [CFDI], 
+[vPrefacturaPorPagar].[Total] AS [Total], 
+[vPrefacturaPorPagar].[Timbrado] AS [Timbrado], 
+[vPrefacturaPorPagar].[Fecha] AS [Fecha], 
+[vPrefacturaPorPagar].[Cancelado] AS [Cancelado], 
+[vPrefacturaPorPagar].[idEmpresa] AS [idEmpresa], 
+[vPrefacturaPorPagar].[idCliente] AS [idCliente]
+FROM [dbo].[vPrefacturaPorPagar] AS [vPrefacturaPorPagar]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vventas" EntityType="Self.vventas" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[vventas].[idVenta] AS [idVenta], 
+[vventas].[Fecha] AS [Fecha], 
+[vventas].[Serie] AS [Serie], 
+[vventas].[Uid] AS [Uid], 
+[vventas].[Total] AS [Total], 
+[vventas].[SubTotal] AS [SubTotal], 
+[vventas].[Folio] AS [Folio], 
+[vventas].[StatusFactura] AS [StatusFactura], 
+[vventas].[RazonSocial] AS [RazonSocial], 
+[vventas].[IDUsuario] AS [IDUsuario], 
+[vventas].[idPreFactura] AS [idPreFactura], 
+[vventas].[MetodoPago] AS [MetodoPago]
+FROM [dbo].[vventas] AS [vventas]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="GAFModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
-        <EntityContainer Name="GAFEntities" annotation:LazyLoadingEnabled="true">
+      <Schema Namespace="GAFModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntityContainer Name="GAFEntities" annotation:LazyLoadingEnabled="true" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
           <EntitySet Name="Catalogo_Giros" EntityType="GAFModel.Catalogo_Giros" />
           <EntitySet Name="ClientePromotor" EntityType="GAFModel.ClientePromotor" />
-          <EntitySet Name="clientes" EntityType="GAFModel.clientes" />
           <EntitySet Name="ComprobantePdf" EntityType="GAFModel.ComprobantePdf" />
           <EntitySet Name="Conceptos" EntityType="GAFModel.Conceptos" />
           <EntitySet Name="Devoluciones" EntityType="GAFModel.Devoluciones" />
@@ -1375,7 +1362,6 @@
           <EntitySet Name="vfacturasCanceladas" EntityType="GAFModel.vfacturasCanceladas" />
           <EntitySet Name="vventas" EntityType="GAFModel.vventas" />
           <EntitySet Name="vprefactura" EntityType="GAFModel.vprefactura" />
-          <EntitySet Name="vPrefacturaPagos" EntityType="GAFModel.vPrefacturaPagos" />
           <EntitySet Name="PreFactura" EntityType="GAFModel.PreFactura" />
           <EntitySet Name="PreComplementoPago" EntityType="GAFModel.PreComplementoPago" />
           <EntitySet Name="vfacturas" EntityType="GAFModel.vfacturas" />
@@ -1390,6 +1376,8 @@
           <EntitySet Name="vFacturaPagos" EntityType="GAFModel.vFacturaPagos" />
           <EntitySet Name="vfacturasPorPagarTodasLineas" EntityType="GAFModel.vfacturasPorPagarTodasLineas" />
           <EntitySet Name="TransferenciasExcelConceptos" EntityType="GAFModel.TransferenciasExcelConceptos" />
+          <EntitySet Name="vPrefacturaPagos" EntityType="GAFModel.vPrefacturaPagos" />
+          <EntitySet Name="clientes" EntityType="GAFModel.clientes" />
         </EntityContainer>
         <EntityType Name="Catalogo_Giros">
           <Key>
@@ -1402,7 +1390,7 @@
           <Key>
             <PropertyRef Name="idClientePromotor" />
           </Key>
-          <Property Name="idClientePromotor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idClientePromotor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="IdPromotor" Type="Guid" />
           <Property Name="PorcentajeCliente" Type="Decimal" Precision="5" Scale="2" />
           <Property Name="PorcentajeEmpresa" Type="Decimal" Precision="5" Scale="2" />
@@ -1411,39 +1399,6 @@
           <Property Name="idCliente" Type="Int32" />
           <Property Name="RazonSocial" Type="String" MaxLength="999" Unicode="true" FixedLength="false" />
           <Property Name="Validado" Type="Boolean" />
-        </EntityType>
-        <EntityType Name="clientes">
-          <Key>
-            <PropertyRef Name="idCliente" />
-          </Key>
-          <Property Name="idCliente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="RazonSocial" Type="String" Nullable="false" MaxLength="999" Unicode="true" FixedLength="false" />
-          <Property Name="Direccion" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
-          <Property Name="Colonia" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
-          <Property Name="Ciudad" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
-          <Property Name="Estado" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
-          <Property Name="CP" Type="String" MaxLength="5" Unicode="true" FixedLength="false" />
-          <Property Name="RFC" Type="String" MaxLength="14" Unicode="true" FixedLength="false" />
-          <Property Name="Telefonos" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
-          <Property Name="Fax" Type="String" MaxLength="32" Unicode="true" FixedLength="false" />
-          <Property Name="Email" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
-          <Property Name="Pagina" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
-          <Property Name="Contacto" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
-          <Property Name="Tipo" Type="Int16" />
-          <Property Name="EmailContacto" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
-          <Property Name="idempresa" Type="Int32" />
-          <Property Name="Descuento" Type="Int32" />
-          <Property Name="idVendedor" Type="Int32" />
-          <Property Name="Cuenta" Type="String" MaxLength="32" Unicode="true" FixedLength="false" />
-          <Property Name="DiasRevision" Type="Int32" />
-          <Property Name="MetodoPago" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="CuentaPago" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="Bcc" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
-          <Property Name="Pais" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
-          <Property Name="CURP" Type="String" MaxLength="24" Unicode="true" FixedLength="false" />
-          <Property Name="NoInt" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="NoExt" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="Linea" Type="String" MaxLength="1" Unicode="true" FixedLength="false" />
         </EntityType>
         <EntityType Name="ComprobantePdf">
           <Key>
@@ -1459,7 +1414,7 @@
           <Property Name="timbre_SelloCFD" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
           <Property Name="timbre_NoCertificadoSAT" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
           <Property Name="timbre_SelloSAT" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="IdComprobantePdf" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdComprobantePdf" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="timbre_RfcProvCertif" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
           <Property Name="timbre_Leyenda" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
           <Property Name="QrCode" Type="Binary" MaxLength="Max" FixedLength="false" />
@@ -1468,7 +1423,7 @@
           <Key>
             <PropertyRef Name="idConcepto" />
           </Key>
-          <Property Name="idConcepto" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idConcepto" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="idFactura" Type="Int64" />
           <Property Name="ClaveProdServ" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
           <Property Name="NoIdentificacion" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
@@ -1486,18 +1441,18 @@
           <Key>
             <PropertyRef Name="idDevoluciones" />
           </Key>
-          <Property Name="idDevoluciones" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idDevoluciones" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="Promotor" Type="String" MaxLength="350" Unicode="false" FixedLength="false" />
           <Property Name="Monto" Type="Decimal" Precision="18" Scale="6" />
           <Property Name="Pendiente" Type="Decimal" Precision="18" Scale="6" />
-          <Property Name="fecha" Type="DateTime" />
+          <Property Name="fecha" Type="DateTime" Precision="3" />
           <Property Name="IdPreFacturas" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
         </EntityType>
         <EntityType Name="empresa">
           <Key>
             <PropertyRef Name="IdEmpresa" />
           </Key>
-          <Property Name="IdEmpresa" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdEmpresa" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="idSistema" Type="Int64" />
           <Property Name="Id_Giro" Type="Int64" />
           <Property Name="RazonSocial" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
@@ -1538,17 +1493,17 @@
           <Key>
             <PropertyRef Name="idEmpresaCuenta" />
           </Key>
-          <Property Name="idEmpresaCuenta" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idEmpresaCuenta" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="idEmpresa" Type="Int32" Nullable="false" />
           <Property Name="nombreCuenta" Type="String" Nullable="false" MaxLength="500" Unicode="true" FixedLength="false" />
           <Property Name="numeroCuenta" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="nombreBanco" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
           <Property Name="saldoInicial" Type="Decimal" Precision="18" Scale="6" />
-          <Property Name="fechaSaldoInicial" Type="DateTime" />
+          <Property Name="fechaSaldoInicial" Type="DateTime" Precision="3" />
           <Property Name="EsActivo" Type="Boolean" />
-          <Property Name="fechaRegistro" Type="DateTime" Nullable="false" />
+          <Property Name="fechaRegistro" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="idUsuarioRegistro" Type="Guid" Nullable="false" />
-          <Property Name="fechaActualizacion" Type="DateTime" />
+          <Property Name="fechaActualizacion" Type="DateTime" Precision="3" />
           <Property Name="idUsuarioActualizacion" Type="Guid" />
           <Property Name="saldoActual" Type="Decimal" Precision="18" Scale="6" />
         </EntityType>
@@ -1556,9 +1511,9 @@
           <Key>
             <PropertyRef Name="idMovimiento" />
           </Key>
-          <Property Name="idMovimiento" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idMovimiento" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="idOrdinal" Type="Int32" Nullable="false" />
-          <Property Name="fecha" Type="DateTime" Nullable="false" />
+          <Property Name="fecha" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="idNumeroCuentaOrigen" Type="Int64" />
           <Property Name="idNumeroCuentaDestino" Type="Int64" />
           <Property Name="tipoDocumento" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
@@ -1573,38 +1528,38 @@
           <Property Name="EsExceptuado" Type="Boolean" Nullable="false" />
           <Property Name="razonExcepcion" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
           <Property Name="EsProcesado" Type="Boolean" Nullable="false" />
-          <Property Name="fechaRegistro" Type="DateTime" Nullable="false" />
+          <Property Name="fechaRegistro" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="idUsuarioRegistro" Type="Guid" Nullable="false" />
-          <Property Name="fechaActualizacion" Type="DateTime" />
+          <Property Name="fechaActualizacion" Type="DateTime" Precision="3" />
           <Property Name="idUsuarioActualizacion" Type="Guid" />
         </EntityType>
         <EntityType Name="PagosF">
           <Key>
             <PropertyRef Name="IdPagos" />
           </Key>
-          <Property Name="IdPagos" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdPagos" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="IdPrefactura" Type="Int64" />
           <Property Name="Monto" Type="Decimal" Precision="18" Scale="6" />
           <Property Name="Banco" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
           <Property Name="RutaImagen" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
-          <Property Name="fecha" Type="DateTime" />
+          <Property Name="fecha" Type="DateTime" Precision="3" />
         </EntityType>
         <EntityType Name="PagosPromotor">
           <Key>
             <PropertyRef Name="IdPagos" />
           </Key>
-          <Property Name="IdPagos" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdPagos" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="IdPrefactura" Type="Int64" />
           <Property Name="Monto" Type="Decimal" Precision="18" Scale="6" />
           <Property Name="Banco" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
           <Property Name="RutaImagen" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
-          <Property Name="fecha" Type="DateTime" />
+          <Property Name="fecha" Type="DateTime" Precision="3" />
         </EntityType>
         <EntityType Name="PreCfdiRelacionado">
           <Key>
             <PropertyRef Name="IdCfdiRelacionado" />
           </Key>
-          <Property Name="IdCfdiRelacionado" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdCfdiRelacionado" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="IdPrefactura" Type="Int64" Nullable="false" />
           <Property Name="UUDI" Type="String" MaxLength="40" Unicode="true" FixedLength="false" />
           <Property Name="TipoRelacion" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
@@ -1613,7 +1568,7 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="TotaldeRetenciones" Type="Decimal" Precision="18" Scale="6" />
           <Property Name="TotaldeTraslados" Type="Decimal" Precision="18" Scale="6" />
           <Property Name="implocal" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
@@ -1626,7 +1581,7 @@
           <Key>
             <PropertyRef Name="idPreConcepto" />
           </Key>
-          <Property Name="idPreConcepto" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idPreConcepto" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="idPreFactura" Type="Int64" />
           <Property Name="ClaveProdServ" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
           <Property Name="NoIdentificacion" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
@@ -1644,7 +1599,7 @@
           <Key>
             <PropertyRef Name="IdDoctoRelacionado" />
           </Key>
-          <Property Name="IdDoctoRelacionado" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdDoctoRelacionado" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="IdDocumento" Type="String" MaxLength="36" Unicode="false" FixedLength="false" />
           <Property Name="Serie" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
           <Property Name="Folio" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
@@ -1670,7 +1625,7 @@
           <Key>
             <PropertyRef Name="IdPreImpuestos" />
           </Key>
-          <Property Name="IdPreImpuestos" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdPreImpuestos" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="IdPreConceptos" Type="Int64" />
           <Property Name="TipoImpuesto" Type="String" MaxLength="11" Unicode="false" FixedLength="false" />
           <Property Name="Base" Type="Decimal" Precision="18" Scale="6" />
@@ -1683,7 +1638,7 @@
           <Key>
             <PropertyRef Name="idInformacionAduanera" />
           </Key>
-          <Property Name="idInformacionAduanera" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idInformacionAduanera" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="idPreConceptos" Type="Int64" />
           <Property Name="NumeroPedimento" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
         </EntityType>
@@ -1691,14 +1646,14 @@
           <Key>
             <PropertyRef Name="idPagos" />
           </Key>
-          <Property Name="idPagos" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idPagos" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="idDevoluciones" Type="Int64" Nullable="false" />
           <Property Name="Monto" Type="Decimal" Precision="18" Scale="6" />
           <Property Name="MetodoPago" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-          <Property Name="Fecha" Type="DateTime" />
+          <Property Name="Fecha" Type="DateTime" Precision="3" />
           <Property Name="Observaciones" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
           <Property Name="EsRegistrado" Type="Boolean" Nullable="false" />
-          <Property Name="FechaRegistro" Type="DateTime" />
+          <Property Name="FechaRegistro" Type="DateTime" Precision="3" />
           <Property Name="idUsuarioRegistro" Type="Guid" />
           <Property Name="Banco" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
           <Property Name="ClabeInterbancaria" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
@@ -1711,13 +1666,13 @@
           <Key>
             <PropertyRef Name="IdProducto" />
           </Key>
-          <Property Name="IdProducto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdProducto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="Modelo" Type="Int32" />
           <Property Name="Aplicacion" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
           <Property Name="Linea" Type="Int32" />
           <Property Name="Sublinea" Type="Int32" />
-          <Property Name="Modificacion" Type="DateTime" Nullable="false" />
-          <Property Name="Creacion" Type="DateTime" Nullable="false" />
+          <Property Name="Modificacion" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Creacion" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="Marca" Type="Int32" />
           <Property Name="IdUsuario" Type="Int32" />
           <Property Name="Descripcion" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
@@ -1739,7 +1694,7 @@
           <Key>
             <PropertyRef Name="IdSucursal" />
           </Key>
-          <Property Name="IdSucursal" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdSucursal" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
           <Property Name="Nombre" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
           <Property Name="LugarExpedicion" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
@@ -1753,7 +1708,7 @@
           </Key>
           <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
           <Property Name="principal_id" Type="Int32" Nullable="false" />
-          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="version" Type="Int32" />
           <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
@@ -1761,7 +1716,7 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="IdEmpres" Type="Int32" />
           <Property Name="IdCliente" Type="Int32" />
           <Property Name="RazonSocialEmpresa" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
@@ -1780,13 +1735,13 @@
           <Property Name="Contraseña" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
           <Property Name="Email" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
           <Property Name="Bloqueado" Type="Boolean" />
-          <Property Name="FechaFallo" Type="DateTime" />
+          <Property Name="FechaFallo" Type="DateTime" Precision="3" />
           <Property Name="Intentos" Type="Int32" />
-          <Property Name="FechaAlta" Type="DateTime" />
+          <Property Name="FechaAlta" Type="DateTime" Precision="3" />
           <Property Name="Activo" Type="Boolean" />
-          <Property Name="FechaAcceso" Type="DateTime" />
+          <Property Name="FechaAcceso" Type="DateTime" Precision="3" />
           <Property Name="Rol" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
-          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="idUsuario" Type="Guid" />
           <Property Name="Usuario1" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
         </EntityType>
@@ -1818,7 +1773,7 @@
           <Property Name="DTContacto" Type="Decimal" Precision="18" Scale="6" />
           <Property Name="DTEmpresa" Type="Decimal" Precision="18" Scale="6" />
           <Property Name="DTPromotor" Type="Decimal" Precision="18" Scale="6" />
-          <Property Name="Fecha" Type="DateTime" />
+          <Property Name="Fecha" Type="DateTime" Precision="3" />
           <Property Name="Folio" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
           <Property Name="idCliente" Type="Int32" />
           <Property Name="idEmpresa" Type="Int32" />
@@ -1844,7 +1799,7 @@
             <PropertyRef Name="Fecha" />
           </Key>
           <Property Name="idVenta" Type="Int32" Nullable="false" />
-          <Property Name="Fecha" Type="DateTime" Nullable="false" />
+          <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="Serie" Type="String" MaxLength="25" Unicode="true" FixedLength="false" />
           <Property Name="Uid" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
           <Property Name="FechaCancelacion" Type="String" MaxLength="40" Unicode="true" FixedLength="false" />
@@ -1861,7 +1816,7 @@
             <PropertyRef Name="idPreFactura" />
           </Key>
           <Property Type="Int32" Name="idVenta" Nullable="false" />
-          <Property Type="DateTime" Name="Fecha" Nullable="false" />
+          <Property Type="DateTime" Name="Fecha" Nullable="false" Precision="3" />
           <Property Type="String" Name="Serie" MaxLength="25" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Uid" MaxLength="64" FixedLength="false" Unicode="true" />
           <Property Type="Decimal" Name="Total" Precision="19" Scale="2" />
@@ -1884,7 +1839,7 @@
           <Property Type="Int64" Name="idPreFactura" Nullable="false" />
           <Property Type="String" Name="Folio" MaxLength="40" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="Serie" MaxLength="25" FixedLength="false" Unicode="false" />
-          <Property Type="DateTime" Name="Fecha" />
+          <Property Type="DateTime" Name="Fecha" Precision="3" />
           <Property Type="Decimal" Name="SubTotal" Precision="18" Scale="6" />
           <Property Type="Decimal" Name="Total" Nullable="false" Precision="18" Scale="6" />
           <Property Type="Int32" Name="idEmpresa" />
@@ -1900,50 +1855,15 @@
           <Property Type="Int32" Name="pagoVerificado" />
           <Property Type="String" Name="TipoDeComprobante" MaxLength="20" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityType Name="vPrefacturaPagos">
-          <Key>
-            <PropertyRef Name="RazonSocial" />
-            <PropertyRef Name="idPreFactura" />
-            <PropertyRef Name="Total" />
-            <PropertyRef Name="nombreUsuario" />
-          </Key>
-          <Property Type="String" Name="RazonSocial" Nullable="false" MaxLength="999" FixedLength="false" Unicode="true" />
-          <Property Type="Guid" Name="IDUsuario" />
-          <Property Type="Int64" Name="idPreFactura" Nullable="false" />
-          <Property Type="String" Name="Folio" MaxLength="40" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="Serie" MaxLength="25" FixedLength="false" Unicode="false" />
-          <Property Type="DateTime" Name="Fecha" />
-          <Property Type="Decimal" Name="SubTotal" Precision="18" Scale="6" />
-          <Property Type="Decimal" Name="Total" Nullable="false" Precision="18" Scale="6" />
-          <Property Type="Int32" Name="idEmpresa" />
-          <Property Type="Int32" Name="idCliente" />
-          <Property Type="String" Name="CFDI" MaxLength="2" FixedLength="false" Unicode="false" />
-          <Property Type="Boolean" Name="Timbrado" />
-          <Property Type="Int32" Name="Estatus" />
-          <Property Type="String" Name="nombreEmpresa" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Type="Int32" Name="EstatusVista" />
-          <Property Type="String" Name="nombreUsuario" Nullable="false" MaxLength="152" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="PreFolio" MaxLength="40" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="FormaPago" MaxLength="3" FixedLength="false" Unicode="false" />
-          <Property Type="Int32" Name="pagoVerificado" />
-          <Property Type="Decimal" Name="Monto" Precision="18" Scale="6" />
-          <Property Type="String" Name="MonedaP" MaxLength="3" FixedLength="false" Unicode="false" />
-          <Property Type="DateTime" Name="FechaPago" />
-          <Property Type="String" Name="TipoDeComprobante" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Type="DateTime" Name="FechaPagoCFDI" />
-          <Property Type="Decimal" Name="MontoCFDI" Precision="18" Scale="6" />
-          <Property Type="String" Name="Validador1" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Validador2" MaxLength="Max" FixedLength="false" Unicode="true" />
-        </EntityType>
         <EntityType Name="PreFactura">
           <Key>
             <PropertyRef Name="idPreFactura" />
           </Key>
-          <Property Type="Int64" Name="idPreFactura" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int64" Name="idPreFactura" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="String" Name="Version" MaxLength="3" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="Serie" MaxLength="25" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="Folio" MaxLength="40" FixedLength="false" Unicode="false" />
-          <Property Type="DateTime" Name="Fecha" />
+          <Property Type="DateTime" Name="Fecha" Precision="3" />
           <Property Type="String" Name="Sello" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="FormaPago" MaxLength="3" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="NoCertificado" MaxLength="20" FixedLength="false" Unicode="false" />
@@ -1962,9 +1882,9 @@
           <Property Type="Int32" Name="idCliente" />
           <Property Type="Int32" Name="pagoVerificado" />
           <Property Type="Guid" Name="IDUsuario" />
-          <Property Type="DateTime" Name="FechaUltimaModificacion" />
+          <Property Type="DateTime" Name="FechaUltimaModificacion" Precision="3" />
           <Property Type="Int32" Name="Estatus" />
-          <Property Type="DateTime" Name="estampaTiempo" />
+          <Property Type="DateTime" Name="estampaTiempo" Precision="3" />
           <Property Type="String" Name="UsoCFDI" MaxLength="3" FixedLength="false" Unicode="false" />
           <Property Type="Int32" Name="EstatusVista" />
           <Property Type="Boolean" Name="Timbrado" />
@@ -1986,8 +1906,8 @@
           <Key>
             <PropertyRef Name="IdComplementoPago" />
           </Key>
-          <Property Type="Int64" Name="IdComplementoPago" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="DateTime" Name="FechaPago" />
+          <Property Type="Int64" Name="IdComplementoPago" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Type="DateTime" Name="FechaPago" Precision="3" />
           <Property Type="String" Name="FormaDePagoP" MaxLength="3" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="MonedaP" MaxLength="3" FixedLength="false" Unicode="false" />
           <Property Type="Decimal" Name="TipoCambioP" Precision="18" Scale="6" />
@@ -2017,7 +1937,7 @@
           </Key>
           <Property Type="Guid" Name="Usuario" />
           <Property Type="Int32" Name="idVenta" Nullable="false" />
-          <Property Type="DateTime" Name="Fecha" Nullable="false" />
+          <Property Type="DateTime" Name="Fecha" Nullable="false" Precision="3" />
           <Property Type="String" Name="Serie" MaxLength="25" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Uid" MaxLength="64" FixedLength="false" Unicode="true" />
           <Property Type="Decimal" Name="Total" Precision="19" Scale="2" />
@@ -2054,7 +1974,7 @@
             <PropertyRef Name="StatusPago" />
           </Key>
           <Property Type="Int32" Name="idVenta" Nullable="false" />
-          <Property Type="DateTime" Name="Fecha" Nullable="false" />
+          <Property Type="DateTime" Name="Fecha" Nullable="false" Precision="3" />
           <Property Type="String" Name="Serie" MaxLength="25" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Uid" MaxLength="64" FixedLength="false" Unicode="true" />
           <Property Type="Decimal" Name="Total" Precision="19" Scale="2" />
@@ -2086,7 +2006,7 @@
           </Key>
           <Property Type="Guid" Name="Usuario" />
           <Property Type="Int32" Name="idVenta" Nullable="false" />
-          <Property Type="DateTime" Name="Fecha" Nullable="false" />
+          <Property Type="DateTime" Name="Fecha" Nullable="false" Precision="3" />
           <Property Type="String" Name="Serie" MaxLength="25" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Uid" MaxLength="64" FixedLength="false" Unicode="true" />
           <Property Type="Decimal" Name="Total" Precision="19" Scale="2" />
@@ -2107,13 +2027,13 @@
           <Key>
             <PropertyRef Name="idVenta" />
           </Key>
-          <Property Type="Int32" Name="idVenta" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="DateTime" Name="Fecha" Nullable="false" />
+          <Property Type="Int32" Name="idVenta" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Type="DateTime" Name="Fecha" Nullable="false" Precision="3" />
           <Property Type="Int32" Name="idcliente" Nullable="false" />
           <Property Type="Decimal" Name="Importe" Nullable="false" Precision="19" Scale="2" />
           <Property Type="String" Name="Descuento" MaxLength="48" FixedLength="false" Unicode="true" />
           <Property Type="Int32" Name="nProducto" />
-          <Property Type="DateTime" Name="captura" Nullable="false" />
+          <Property Type="DateTime" Name="captura" Nullable="false" Precision="3" />
           <Property Type="Int32" Name="Tipo" />
           <Property Type="String" Name="Folio" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Type="Int16" Name="Cancelado" />
@@ -2121,7 +2041,7 @@
           <Property Type="Decimal" Name="Pagado" Precision="19" Scale="2" />
           <Property Type="String" Name="Moneda" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Type="Decimal" Name="TipoCambio" Precision="19" Scale="2" />
-          <Property Type="DateTime" Name="FechaPago" />
+          <Property Type="DateTime" Name="FechaPago" Precision="3" />
           <Property Type="String" Name="Serie" MaxLength="25" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Uid" MaxLength="64" FixedLength="false" Unicode="true" />
           <Property Type="Decimal" Name="Total" Precision="19" Scale="2" />
@@ -2165,7 +2085,7 @@
           </Key>
           <Property Type="Guid" Name="Usuario" />
           <Property Type="Int32" Name="idVenta" Nullable="false" />
-          <Property Type="DateTime" Name="Fecha" Nullable="false" />
+          <Property Type="DateTime" Name="Fecha" Nullable="false" Precision="3" />
           <Property Type="String" Name="Serie" MaxLength="25" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Uid" MaxLength="64" FixedLength="false" Unicode="true" />
           <Property Type="Decimal" Name="Total" Precision="19" Scale="2" />
@@ -2202,7 +2122,7 @@
             <PropertyRef Name="idCliente" />
           </Key>
           <Property Type="Int32" Name="idVenta" Nullable="false" />
-          <Property Type="DateTime" Name="Fecha" Nullable="false" />
+          <Property Type="DateTime" Name="Fecha" Nullable="false" Precision="3" />
           <Property Type="String" Name="Serie" MaxLength="25" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Uid" MaxLength="64" FixedLength="false" Unicode="true" />
           <Property Type="Decimal" Name="Total" Precision="19" Scale="2" />
@@ -2237,7 +2157,7 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Type="Int64" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int64" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="Int64" Name="IdFactura" />
           <Property Type="String" Name="Ids" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
@@ -2254,7 +2174,7 @@
           <Property Type="String" Name="CFDI" MaxLength="2" FixedLength="false" Unicode="false" />
           <Property Type="Decimal" Name="Total" Nullable="false" Precision="18" Scale="6" />
           <Property Type="Boolean" Name="Timbrado" />
-          <Property Type="DateTime" Name="Fecha" />
+          <Property Type="DateTime" Name="Fecha" Precision="3" />
           <Property Type="Int16" Name="Cancelado" />
           <Property Type="Int32" Name="idEmpresa" />
           <Property Type="Int32" Name="idCliente" />
@@ -2263,9 +2183,9 @@
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="String" Name="Folio" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="DateTime" Name="Fecha" />
+          <Property Type="DateTime" Name="Fecha" Precision="3" />
           <Property Type="Int32" Name="idEmpresa" />
           <Property Type="Int32" Name="idCliente" />
           <Property Type="String" Name="Descripcion" MaxLength="Max" FixedLength="false" Unicode="true" />
@@ -2280,7 +2200,7 @@
           <Property Type="String" Name="RazonSocial" Nullable="false" MaxLength="999" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Folio" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Serie" MaxLength="25" FixedLength="false" Unicode="true" />
-          <Property Type="DateTime" Name="Fecha" Nullable="false" />
+          <Property Type="DateTime" Name="Fecha" Nullable="false" Precision="3" />
           <Property Type="Decimal" Name="SubTotal" Precision="19" Scale="2" />
           <Property Type="Decimal" Name="Pagado" Precision="19" Scale="2" />
           <Property Type="Int32" Name="IdEmpresa" />
@@ -2298,7 +2218,7 @@
           </Key>
           <Property Type="Guid" Name="Usuario" />
           <Property Type="Int32" Name="idVenta" Nullable="false" />
-          <Property Type="DateTime" Name="Fecha" Nullable="false" />
+          <Property Type="DateTime" Name="Fecha" Nullable="false" Precision="3" />
           <Property Type="String" Name="Serie" MaxLength="25" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Uid" MaxLength="64" FixedLength="false" Unicode="true" />
           <Property Type="Decimal" Name="Total" Precision="19" Scale="2" />
@@ -2319,7 +2239,7 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="String" Name="ClaveProdServ" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Type="Decimal" Name="Cantidad" Precision="18" Scale="6" />
           <Property Type="String" Name="ClaveUnidad" MaxLength="50" FixedLength="false" Unicode="false" />
@@ -2327,11 +2247,81 @@
           <Property Type="Decimal" Name="ValorUnitario" Precision="18" Scale="6" />
           <Property Type="Int32" Name="IDTrasferencias" />
         </EntityType>
+        <EntityType Name="vPrefacturaPagos">
+          <Key>
+            <PropertyRef Name="RazonSocial" />
+            <PropertyRef Name="idPreFactura" />
+            <PropertyRef Name="Total" />
+            <PropertyRef Name="nombreUsuario" />
+          </Key>
+          <Property Name="RazonSocial" Type="String" Nullable="false" MaxLength="999" FixedLength="false" Unicode="true" />
+          <Property Name="IDUsuario" Type="Guid" />
+          <Property Name="idPreFactura" Type="Int64" Nullable="false" />
+          <Property Name="Folio" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="Serie" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha" Type="DateTime" Precision="3" />
+          <Property Name="SubTotal" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="Total" Type="Decimal" Nullable="false" Precision="18" Scale="6" />
+          <Property Name="idEmpresa" Type="Int32" />
+          <Property Name="idCliente" Type="Int32" />
+          <Property Name="CFDI" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="Timbrado" Type="Boolean" />
+          <Property Name="Estatus" Type="Int32" />
+          <Property Name="nombreEmpresa" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="EstatusVista" Type="Int32" />
+          <Property Name="nombreUsuario" Type="String" Nullable="false" MaxLength="152" FixedLength="false" Unicode="false" />
+          <Property Name="PreFolio" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="FormaPago" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="pagoVerificado" Type="Int32" />
+          <Property Name="Monto" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="MonedaP" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="FechaPago" Type="DateTime" Precision="3" />
+          <Property Name="TipoDeComprobante" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="FechaPagoCFDI" Type="DateTime" Precision="3" />
+          <Property Name="MontoCFDI" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="Validador1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Validador2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FormaDePagoP" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="clientes">
+          <Key>
+            <PropertyRef Name="idCliente" />
+          </Key>
+          <Property Name="idCliente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RazonSocial" Type="String" Nullable="false" MaxLength="999" FixedLength="false" Unicode="true" />
+          <Property Name="Direccion" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Colonia" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Ciudad" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Estado" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CP" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="RFC" Type="String" MaxLength="14" FixedLength="false" Unicode="true" />
+          <Property Name="Telefonos" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Fax" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="Pagina" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="Contacto" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Tipo" Type="Int16" />
+          <Property Name="EmailContacto" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="idempresa" Type="Int32" />
+          <Property Name="Descuento" Type="Int32" />
+          <Property Name="idVendedor" Type="Int32" />
+          <Property Name="Cuenta" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="DiasRevision" Type="Int32" />
+          <Property Name="MetodoPago" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CuentaPago" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Bcc" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="Pais" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CURP" Type="String" MaxLength="24" FixedLength="false" Unicode="true" />
+          <Property Name="NoInt" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NoExt" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Linea" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="RegimenFiscal" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
-      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="GAFModelStoreContainer" CdmEntityContainer="GAFEntities">
           <EntitySetMapping Name="Catalogo_Giros">
             <EntityTypeMapping TypeName="GAFModel.Catalogo_Giros">
@@ -2353,40 +2343,6 @@
                 <ScalarProperty Name="idCliente" ColumnName="idCliente" />
                 <ScalarProperty Name="RazonSocial" ColumnName="RazonSocial" />
                 <ScalarProperty Name="Validado" ColumnName="Validado" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="clientes">
-            <EntityTypeMapping TypeName="GAFModel.clientes">
-              <MappingFragment StoreEntitySet="clientes">
-                <ScalarProperty Name="idCliente" ColumnName="idCliente" />
-                <ScalarProperty Name="RazonSocial" ColumnName="RazonSocial" />
-                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
-                <ScalarProperty Name="Colonia" ColumnName="Colonia" />
-                <ScalarProperty Name="Ciudad" ColumnName="Ciudad" />
-                <ScalarProperty Name="Estado" ColumnName="Estado" />
-                <ScalarProperty Name="CP" ColumnName="CP" />
-                <ScalarProperty Name="RFC" ColumnName="RFC" />
-                <ScalarProperty Name="Telefonos" ColumnName="Telefonos" />
-                <ScalarProperty Name="Fax" ColumnName="Fax" />
-                <ScalarProperty Name="Email" ColumnName="Email" />
-                <ScalarProperty Name="Pagina" ColumnName="Pagina" />
-                <ScalarProperty Name="Contacto" ColumnName="Contacto" />
-                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
-                <ScalarProperty Name="EmailContacto" ColumnName="EmailContacto" />
-                <ScalarProperty Name="idempresa" ColumnName="idempresa" />
-                <ScalarProperty Name="Descuento" ColumnName="Descuento" />
-                <ScalarProperty Name="idVendedor" ColumnName="idVendedor" />
-                <ScalarProperty Name="Cuenta" ColumnName="Cuenta" />
-                <ScalarProperty Name="DiasRevision" ColumnName="DiasRevision" />
-                <ScalarProperty Name="MetodoPago" ColumnName="MetodoPago" />
-                <ScalarProperty Name="CuentaPago" ColumnName="CuentaPago" />
-                <ScalarProperty Name="Bcc" ColumnName="Bcc" />
-                <ScalarProperty Name="Pais" ColumnName="Pais" />
-                <ScalarProperty Name="CURP" ColumnName="CURP" />
-                <ScalarProperty Name="NoInt" ColumnName="NoInt" />
-                <ScalarProperty Name="NoExt" ColumnName="NoExt" />
-                <ScalarProperty Name="Linea" ColumnName="Linea" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -2860,39 +2816,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="vPrefacturaPagos">
-            <EntityTypeMapping TypeName="GAFModel.vPrefacturaPagos">
-              <MappingFragment StoreEntitySet="vPrefacturaPagos">
-                <ScalarProperty Name="Validador2" ColumnName="Validador2" />
-                <ScalarProperty Name="Validador1" ColumnName="Validador1" />
-                <ScalarProperty Name="MontoCFDI" ColumnName="MontoCFDI" />
-                <ScalarProperty Name="FechaPagoCFDI" ColumnName="FechaPagoCFDI" />
-                <ScalarProperty Name="TipoDeComprobante" ColumnName="TipoDeComprobante" />
-                <ScalarProperty Name="FechaPago" ColumnName="FechaPago" />
-                <ScalarProperty Name="MonedaP" ColumnName="MonedaP" />
-                <ScalarProperty Name="Monto" ColumnName="Monto" />
-                <ScalarProperty Name="pagoVerificado" ColumnName="pagoVerificado" />
-                <ScalarProperty Name="FormaPago" ColumnName="FormaPago" />
-                <ScalarProperty Name="PreFolio" ColumnName="PreFolio" />
-                <ScalarProperty Name="nombreUsuario" ColumnName="nombreUsuario" />
-                <ScalarProperty Name="EstatusVista" ColumnName="EstatusVista" />
-                <ScalarProperty Name="nombreEmpresa" ColumnName="nombreEmpresa" />
-                <ScalarProperty Name="Estatus" ColumnName="Estatus" />
-                <ScalarProperty Name="Timbrado" ColumnName="Timbrado" />
-                <ScalarProperty Name="CFDI" ColumnName="CFDI" />
-                <ScalarProperty Name="idCliente" ColumnName="idCliente" />
-                <ScalarProperty Name="idEmpresa" ColumnName="idEmpresa" />
-                <ScalarProperty Name="Total" ColumnName="Total" />
-                <ScalarProperty Name="SubTotal" ColumnName="SubTotal" />
-                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
-                <ScalarProperty Name="Serie" ColumnName="Serie" />
-                <ScalarProperty Name="Folio" ColumnName="Folio" />
-                <ScalarProperty Name="idPreFactura" ColumnName="idPreFactura" />
-                <ScalarProperty Name="IDUsuario" ColumnName="IDUsuario" />
-                <ScalarProperty Name="RazonSocial" ColumnName="RazonSocial" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="PreFactura">
             <EntityTypeMapping TypeName="GAFModel.PreFactura">
               <MappingFragment StoreEntitySet="PreFactura">
@@ -3261,73 +3184,143 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="vPrefacturaPagos">
+            <EntityTypeMapping TypeName="GAFModel.vPrefacturaPagos">
+              <MappingFragment StoreEntitySet="vPrefacturaPagos">
+                <ScalarProperty Name="FormaDePagoP" ColumnName="FormaDePagoP" />
+                <ScalarProperty Name="Validador2" ColumnName="Validador2" />
+                <ScalarProperty Name="Validador1" ColumnName="Validador1" />
+                <ScalarProperty Name="MontoCFDI" ColumnName="MontoCFDI" />
+                <ScalarProperty Name="FechaPagoCFDI" ColumnName="FechaPagoCFDI" />
+                <ScalarProperty Name="TipoDeComprobante" ColumnName="TipoDeComprobante" />
+                <ScalarProperty Name="FechaPago" ColumnName="FechaPago" />
+                <ScalarProperty Name="MonedaP" ColumnName="MonedaP" />
+                <ScalarProperty Name="Monto" ColumnName="Monto" />
+                <ScalarProperty Name="pagoVerificado" ColumnName="pagoVerificado" />
+                <ScalarProperty Name="FormaPago" ColumnName="FormaPago" />
+                <ScalarProperty Name="PreFolio" ColumnName="PreFolio" />
+                <ScalarProperty Name="nombreUsuario" ColumnName="nombreUsuario" />
+                <ScalarProperty Name="EstatusVista" ColumnName="EstatusVista" />
+                <ScalarProperty Name="nombreEmpresa" ColumnName="nombreEmpresa" />
+                <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+                <ScalarProperty Name="Timbrado" ColumnName="Timbrado" />
+                <ScalarProperty Name="CFDI" ColumnName="CFDI" />
+                <ScalarProperty Name="idCliente" ColumnName="idCliente" />
+                <ScalarProperty Name="idEmpresa" ColumnName="idEmpresa" />
+                <ScalarProperty Name="Total" ColumnName="Total" />
+                <ScalarProperty Name="SubTotal" ColumnName="SubTotal" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="Serie" ColumnName="Serie" />
+                <ScalarProperty Name="Folio" ColumnName="Folio" />
+                <ScalarProperty Name="idPreFactura" ColumnName="idPreFactura" />
+                <ScalarProperty Name="IDUsuario" ColumnName="IDUsuario" />
+                <ScalarProperty Name="RazonSocial" ColumnName="RazonSocial" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="clientes">
+            <EntityTypeMapping TypeName="GAFModel.clientes">
+              <MappingFragment StoreEntitySet="clientes">
+                <ScalarProperty Name="RegimenFiscal" ColumnName="RegimenFiscal" />
+                <ScalarProperty Name="Linea" ColumnName="Linea" />
+                <ScalarProperty Name="NoExt" ColumnName="NoExt" />
+                <ScalarProperty Name="NoInt" ColumnName="NoInt" />
+                <ScalarProperty Name="CURP" ColumnName="CURP" />
+                <ScalarProperty Name="Pais" ColumnName="Pais" />
+                <ScalarProperty Name="Bcc" ColumnName="Bcc" />
+                <ScalarProperty Name="CuentaPago" ColumnName="CuentaPago" />
+                <ScalarProperty Name="MetodoPago" ColumnName="MetodoPago" />
+                <ScalarProperty Name="DiasRevision" ColumnName="DiasRevision" />
+                <ScalarProperty Name="Cuenta" ColumnName="Cuenta" />
+                <ScalarProperty Name="idVendedor" ColumnName="idVendedor" />
+                <ScalarProperty Name="Descuento" ColumnName="Descuento" />
+                <ScalarProperty Name="idempresa" ColumnName="idempresa" />
+                <ScalarProperty Name="EmailContacto" ColumnName="EmailContacto" />
+                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+                <ScalarProperty Name="Contacto" ColumnName="Contacto" />
+                <ScalarProperty Name="Pagina" ColumnName="Pagina" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="Telefonos" ColumnName="Telefonos" />
+                <ScalarProperty Name="RFC" ColumnName="RFC" />
+                <ScalarProperty Name="CP" ColumnName="CP" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Ciudad" ColumnName="Ciudad" />
+                <ScalarProperty Name="Colonia" ColumnName="Colonia" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="RazonSocial" ColumnName="RazonSocial" />
+                <ScalarProperty Name="idCliente" ColumnName="idCliente" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
   </edmx:Runtime>
   <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
-  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
-    <Connection>
-      <DesignerInfoPropertySet>
-        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
-      </DesignerInfoPropertySet>
-    </Connection>
-    <Options>
-      <DesignerInfoPropertySet>
-        <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="False" />
-        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
-      </DesignerInfoPropertySet>
-    </Options>
+  <edmx:Designer>
+    <edmx:Connection>
+      <edmx:DesignerInfoPropertySet>
+        <edmx:DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </edmx:DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <edmx:DesignerInfoPropertySet>
+        <edmx:DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <edmx:DesignerProperty Name="EnablePluralization" Value="False" />
+        <edmx:DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <edmx:DesignerProperty Name="UseLegacyProvider" Value="True" />
+      </edmx:DesignerInfoPropertySet>
+    </edmx:Options>
     <!-- Diagram content (shape and connector positions) -->
-    <Diagrams>
-      <Diagram Name="Model" ZoomLevel="32">
-        <EntityTypeShape EntityType="GAFModel.Catalogo_Giros" Width="1.5" PointX="0.75" PointY="0.75" Height="1.4033821614583331" IsExpanded="true" />
-        <EntityTypeShape EntityType="GAFModel.ClientePromotor" Width="1.5" PointX="2.75" PointY="0.75" Height="2.7494921874999996" IsExpanded="true" />
-        <EntityTypeShape EntityType="GAFModel.clientes" Width="1.5" PointX="4.75" PointY="0.75" Height="6.4032194010416656" IsExpanded="true" />
-        <EntityTypeShape EntityType="GAFModel.ComprobantePdf" Width="1.5" PointX="0.75" PointY="4.75" Height="3.7109993489583335" IsExpanded="true" />
-        <EntityTypeShape EntityType="GAFModel.Conceptos" Width="1.5" PointX="6.75" PointY="0.75" Height="3.5186979166666656" IsExpanded="true" />
-        <EntityTypeShape EntityType="GAFModel.Devoluciones" Width="1.5" PointX="6.75" PointY="5.75" Height="2.1725878906249996" IsExpanded="true" />
-        <EntityTypeShape EntityType="GAFModel.empresa" Width="1.5" PointX="8.75" PointY="0.75" Height="7.9416308593750031" IsExpanded="true" />
-        <EntityTypeShape EntityType="GAFModel.Empresa_CuentasBancos" Width="1.5" PointX="2.75" PointY="8.75" Height="3.5186979166666674" IsExpanded="true" />
-        <EntityTypeShape EntityType="GAFModel.MovimientosBancos" Width="1.5" PointX="8.75" PointY="9.75" Height="5.0571093750000031" IsExpanded="true" />
-        <EntityTypeShape EntityType="GAFModel.PagosF" Width="1.5" PointX="10.75" PointY="0.75" Height="2.1725878906250031" IsExpanded="true" />
-        <EntityTypeShape EntityType="GAFModel.PagosPromotor" Width="1.5" PointX="10.75" PointY="3.75" Height="2.1725878906250031" IsExpanded="true" />
-        <EntityTypeShape EntityType="GAFModel.PreCfdiRelacionado" Width="1.5" PointX="10.75" PointY="6.75" Height="1.7879850260416674" IsExpanded="true" />
-        <EntityTypeShape EntityType="GAFModel.PreComplementoImpLocal" Width="1.5" PointX="10.75" PointY="9.75" Height="2.5571907552083388" IsExpanded="true" />
-        <EntityTypeShape EntityType="GAFModel.PreConceptos" Width="1.5" PointX="12.75" PointY="5.75" Height="3.5186979166666674" IsExpanded="true" />
-        <EntityTypeShape EntityType="GAFModel.PreFCPDoctoRelacionado" Width="1.5" PointX="0.75" PointY="13.75" Height="3.3263964843750031" IsExpanded="true" />
-        <EntityTypeShape EntityType="GAFModel.PreFolios" Width="1.5" PointX="14.75" PointY="0.75" Height="1.7879850260416674" IsExpanded="true" />
-        <EntityTypeShape EntityType="GAFModel.PreImpuestos" Width="1.5" PointX="14.75" PointY="3.75" Height="2.5571907552083317" IsExpanded="true" />
-        <EntityTypeShape EntityType="GAFModel.PreInformacionAduanera" Width="1.5" PointX="14.75" PointY="7.75" Height="1.5956835937500067" IsExpanded="true" />
-        <EntityTypeShape EntityType="GAFModel.PrePagos" Width="1.5" PointX="14.75" PointY="10.75" Height="3.9033007812500102" IsExpanded="true" />
-        <EntityTypeShape EntityType="GAFModel.producto" Width="1.5" PointX="8.75" PointY="15.75" Height="5.4417122395833246" IsExpanded="true" />
-        <EntityTypeShape EntityType="GAFModel.Sucursales" Width="1.5" PointX="14.75" PointY="15.75" Height="2.3648893229166674" IsExpanded="true" />
-        <EntityTypeShape EntityType="GAFModel.sysdiagrams" Width="1.5" PointX="16.75" PointY="0.75" Height="1.9802864583333246" IsExpanded="true" />
-        <EntityTypeShape EntityType="GAFModel.TransferenciasExcel" Width="1.5" PointX="16.75" PointY="3.75" Height="2.5571907552083246" IsExpanded="true" />
-        <EntityTypeShape EntityType="GAFModel.Usuario" Width="1.5" PointX="16.75" PointY="7.75" Height="3.9033007812500102" IsExpanded="true" />
-        <EntityTypeShape EntityType="GAFModel.vClientePromotor" Width="1.5" PointX="16.75" PointY="12.75" Height="2.9417936197916674" IsExpanded="true" />
-        <EntityTypeShape EntityType="GAFModel.vDevoluciones" Width="1.5" PointX="16.75" PointY="16.75" Height="3.9033007812500102" IsExpanded="true" />
-        <EntityTypeShape EntityType="GAFModel.vEmpresasCuentasBancos" Width="1.5" PointX="18.75" PointY="0.75" Height="1.5956835937500102" IsExpanded="true" />
-        <EntityTypeShape EntityType="GAFModel.vfacturasCanceladas" Width="1.5" PointX="2.75" PointY="18.75" Height="2.5571907552083246" IsExpanded="true" />
-        <EntityTypeShape EntityType="GAFModel.vventas" Width="1.5" PointX="5.375" PointY="19.75" Height="3.3263964843750102" />
-        <EntityTypeShape EntityType="GAFModel.vprefactura" Width="1.5" PointX="19.375" PointY="16.75" Height="4.8648079427083246" />
-        <EntityTypeShape EntityType="GAFModel.vPrefacturaPagos" Width="1.5" PointX="15.375" PointY="21.75" Height="6.210917968749996" />
-        <EntityTypeShape EntityType="GAFModel.PreFactura" Width="1.5" PointX="21.375" PointY="12.75" Height="9.095439453124996" />
-        <EntityTypeShape EntityType="GAFModel.PreComplementoPago" Width="1.5" PointX="19.375" PointY="7.75" Height="4.0956022135416674" />
-        <EntityTypeShape EntityType="GAFModel.vfacturas" Width="1.5" PointX="21.375" PointY="0.75" Height="6.0186165364583246" />
-        <EntityTypeShape EntityType="GAFModel.vfacturasPromotores" Width="1.5" PointX="0.75" PointY="22.75" Height="5.4417122395833246" />
-        <EntityTypeShape EntityType="GAFModel.vfacturasPorPagar" Width="1.5" PointX="11.375" PointY="13.75" Height="4.480205078124996" />
-        <EntityTypeShape EntityType="GAFModel.facturas" Width="1.5" PointX="17.375" PointY="22.75" Height="9.2877408854166674" />
-        <EntityTypeShape EntityType="GAFModel.vfacturasContabilidad" Width="1.5" PointX="7.375" PointY="22.75" Height="6.4032194010416674" />
-        <EntityTypeShape EntityType="GAFModel.vfacturasEmitidos" Width="1.5" PointX="11.375" PointY="19.75" Height="6.9801236979166674" />
-        <EntityTypeShape EntityType="GAFModel.FacturaPagoRelacionados" Width="1.5" PointX="3.375" PointY="13.75" Height="1.5956835937500102" />
-        <EntityTypeShape EntityType="GAFModel.vPrefacturaPorPagar" Width="1.5" PointX="21.375" PointY="7.75" Height="3.3263964843750102" />
-        <EntityTypeShape EntityType="GAFModel.FolioFallas" Width="1.5" PointX="19.375" PointY="22.75" Height="2.1725878906250102" />
-        <EntityTypeShape EntityType="GAFModel.vFacturaPagos" Width="1.5" PointX="5.375" PointY="12.75" Height="3.1340950520833246" />
-        <EntityTypeShape EntityType="GAFModel.vfacturasPorPagarTodasLineas" Width="1.5" PointX="21.375" PointY="22.75" Height="4.48020507812501" />
-        <EntityTypeShape EntityType="GAFModel.TransferenciasExcelConceptos" Width="1.5" PointX="5.375" PointY="8.75" Height="2.3648893229166674" />
-      </Diagram>
-    </Diagrams>
-  </Designer>
+    <edmx:Diagrams>
+      <edmx:Diagram Name="Model" ZoomLevel="32">
+        <edmx:EntityTypeShape EntityType="GAFModel.Catalogo_Giros" Width="1.5" PointX="0.75" PointY="0.75" Height="1.4033821614583331" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="GAFModel.ClientePromotor" Width="1.5" PointX="2.75" PointY="0.75" Height="2.7494921874999996" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="GAFModel.ComprobantePdf" Width="1.5" PointX="0.75" PointY="4.75" Height="3.7109993489583335" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="GAFModel.Conceptos" Width="1.5" PointX="6.75" PointY="0.75" Height="3.5186979166666656" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="GAFModel.Devoluciones" Width="1.5" PointX="6.75" PointY="5.75" Height="2.1725878906249996" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="GAFModel.empresa" Width="1.5" PointX="8.75" PointY="0.75" Height="7.9416308593750031" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="GAFModel.Empresa_CuentasBancos" Width="1.5" PointX="2.75" PointY="8.75" Height="3.5186979166666674" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="GAFModel.MovimientosBancos" Width="1.5" PointX="4.75" PointY="8.75" Height="5.0571093750000031" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="GAFModel.PagosF" Width="1.5" PointX="6.75" PointY="9.75" Height="2.1725878906250031" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="GAFModel.PagosPromotor" Width="1.5" PointX="8.75" PointY="9.75" Height="2.1725878906250031" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="GAFModel.PreCfdiRelacionado" Width="1.5" PointX="10.75" PointY="0.75" Height="1.7879850260416674" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="GAFModel.PreComplementoImpLocal" Width="1.5" PointX="10.75" PointY="3.75" Height="2.5571907552083388" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="GAFModel.PreConceptos" Width="1.5" PointX="10.75" PointY="7.75" Height="3.5186979166666674" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="GAFModel.PreFCPDoctoRelacionado" Width="1.5" PointX="12.75" PointY="0.75" Height="3.3263964843750031" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="GAFModel.PreFolios" Width="1.5" PointX="12.75" PointY="5.75" Height="1.7879850260416674" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="GAFModel.PreImpuestos" Width="1.5" PointX="6.75" PointY="12.75" Height="2.5571907552083317" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="GAFModel.PreInformacionAduanera" Width="1.5" PointX="12.75" PointY="8.75" Height="1.5956835937500067" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="GAFModel.PrePagos" Width="1.5" PointX="8.75" PointY="12.75" Height="3.9033007812500102" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="GAFModel.producto" Width="1.5" PointX="10.75" PointY="12.75" Height="5.4417122395833246" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="GAFModel.Sucursales" Width="1.5" PointX="12.75" PointY="11.75" Height="2.3648893229166674" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="GAFModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="13.75" Height="1.9802864583333246" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="GAFModel.TransferenciasExcel" Width="1.5" PointX="14.75" PointY="0.75" Height="2.5571907552083246" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="GAFModel.Usuario" Width="1.5" PointX="2.75" PointY="14.75" Height="3.9033007812500102" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="GAFModel.vClientePromotor" Width="1.5" PointX="14.75" PointY="4.75" Height="2.9417936197916674" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="GAFModel.vDevoluciones" Width="1.5" PointX="14.75" PointY="8.75" Height="3.9033007812500102" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="GAFModel.vEmpresasCuentasBancos" Width="1.5" PointX="14.75" PointY="13.75" Height="1.5956835937500102" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="GAFModel.vfacturasCanceladas" Width="1.5" PointX="16.75" PointY="0.75" Height="2.5571907552083246" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="GAFModel.vventas" Width="1.5" PointX="16.75" PointY="4.75" Height="3.3263964843750102" />
+        <edmx:EntityTypeShape EntityType="GAFModel.vprefactura" Width="1.5" PointX="4.75" PointY="16.75" Height="4.8648079427083246" />
+        <edmx:EntityTypeShape EntityType="GAFModel.PreFactura" Width="1.5" PointX="12.75" PointY="16.75" Height="9.095439453124996" />
+        <edmx:EntityTypeShape EntityType="GAFModel.PreComplementoPago" Width="1.5" PointX="14.75" PointY="16.75" Height="4.0956022135416674" />
+        <edmx:EntityTypeShape EntityType="GAFModel.vfacturas" Width="1.5" PointX="16.75" PointY="16.75" Height="6.0186165364583246" />
+        <edmx:EntityTypeShape EntityType="GAFModel.vfacturasPromotores" Width="1.5" PointX="6.75" PointY="17.75" Height="5.4417122395833246" />
+        <edmx:EntityTypeShape EntityType="GAFModel.vfacturasPorPagar" Width="1.5" PointX="18.75" PointY="0.75" Height="4.480205078124996" />
+        <edmx:EntityTypeShape EntityType="GAFModel.facturas" Width="1.5" PointX="18.75" PointY="6.75" Height="9.2877408854166674" />
+        <edmx:EntityTypeShape EntityType="GAFModel.vfacturasContabilidad" Width="1.5" PointX="18.75" PointY="17.75" Height="6.4032194010416674" />
+        <edmx:EntityTypeShape EntityType="GAFModel.vfacturasEmitidos" Width="1.5" PointX="0.75" PointY="19.75" Height="6.9801236979166674" />
+        <edmx:EntityTypeShape EntityType="GAFModel.FacturaPagoRelacionados" Width="1.5" PointX="8.75" PointY="19.75" Height="1.5956835937500102" />
+        <edmx:EntityTypeShape EntityType="GAFModel.vPrefacturaPorPagar" Width="1.5" PointX="20.75" PointY="0.75" Height="3.3263964843750102" />
+        <edmx:EntityTypeShape EntityType="GAFModel.FolioFallas" Width="1.5" PointX="20.75" PointY="5.75" Height="2.1725878906250102" />
+        <edmx:EntityTypeShape EntityType="GAFModel.vFacturaPagos" Width="1.5" PointX="20.75" PointY="8.75" Height="3.1340950520833246" />
+        <edmx:EntityTypeShape EntityType="GAFModel.vfacturasPorPagarTodasLineas" Width="1.5" PointX="20.75" PointY="12.75" Height="4.48020507812501" />
+        <edmx:EntityTypeShape EntityType="GAFModel.TransferenciasExcelConceptos" Width="1.5" PointX="20.75" PointY="18.75" Height="2.3648893229166674" />
+        <edmx:EntityTypeShape EntityType="GAFModel.vPrefacturaPagos" Width="1.5" PointX="3.375" PointY="22.75" />
+        <edmx:EntityTypeShape EntityType="GAFModel.clientes" Width="1.5" PointX="9.375" PointY="22.75" />
+      </edmx:Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
 </edmx:Edmx>

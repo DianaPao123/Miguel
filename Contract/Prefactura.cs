@@ -468,16 +468,19 @@ namespace Contract
                     
                     db.SaveChanges();
                     idComprobante = P.idPreFactura;
-                    
-                    foreach (var ui in factura.UUID)
+                    if(factura.TipoRelacion!=null)
+                    foreach (var tipo in factura.TipoRelacion)
                     {
-                        PreCfdiRelacionado cf = new PreCfdiRelacionado();
-                        cf.IdPrefactura = P.idPreFactura;
-                        cf.TipoRelacion = factura.TipoRelacion;
-                        cf.UUDI = ui;
-                        db.PreCfdiRelacionado.AddObject(cf);
-                      
-                        db.SaveChanges();
+                        foreach (var ui in tipo.uuid)
+                        {
+                            PreCfdiRelacionado cf = new PreCfdiRelacionado();
+                            cf.IdPrefactura = P.idPreFactura;
+                            cf.TipoRelacion = tipo.tipoRelacion;
+                            cf.UUDI = ui;
+                            db.PreCfdiRelacionado.AddObject(cf);
+
+                            db.SaveChanges();
+                        }
                     }
                     foreach (var de in factura.Detalles)
                     {
@@ -1022,7 +1025,7 @@ namespace Contract
                     }
                 //---------------------------------------------
                 List<PreCfdiRelacionado> R = new List<PreCfdiRelacionado>();
-                List<string>L=new List<string>();
+                List<DatosListaRelacionados> L=new List<DatosListaRelacionados>();
                   R = GetPreCfdiRelacionado(idPrefactura);
                 if(R!=null)
                     if (R.Count > 0)
@@ -1030,13 +1033,25 @@ namespace Contract
                         string r = ""; string TipoRelacion="";
                         foreach (var re in R)
                         {
-                            r = "";
-                            TipoRelacion = re.TipoRelacion;
-                            r = re.UUDI;
-                            L.Add(r);
+                                DatosListaRelacionados li = new DatosListaRelacionados();
+                               var x =L.Where(p => p.tipoRelacion == re.TipoRelacion).FirstOrDefault();
+                                if (x == null)
+                                {
+                                    li.tipoRelacion = re.TipoRelacion;
+                                    if (li.uuid == null)
+                                        li.uuid = new List<string>();
+                                    li.uuid.Add(re.UUDI);
+                                    L.Add(li);
+                                }
+                                else
+                                {
+                                    if (x.uuid == null)
+                                        x.uuid = new List<string>();
+                                    x.uuid.Add(re.UUDI);                                     
+                                }
+                            
                         }
-                      DP.UUID=L;
-                      DP.TipoRelacion = TipoRelacion;
+                      DP.TipoRelacion = L;
 
                     }
                  /*
@@ -1457,7 +1472,7 @@ namespace Contract
 
                         if (idCliente == 0)
                         {
-                            lista = db.vPrefacturaPagos.Where(p => p.Fecha >= fechaInicial &&
+                            lista = db.vPrefacturaPagos.Where(p => p.Fecha >= fechaInicial && 
                                                           p.Fecha <= fechaFinal && p.CFDI == "P" && p.pagoVerificado == null).OrderByDescending(p => p.Fecha).ToList();
                         }
                         else

@@ -40,7 +40,7 @@
    <table width="50%" style=" text-align:left"  >
    <tr>
    <td align="right">Linea:</td>
-   <td><asp:DropDownList runat="server" ID="ddlLinea" AutoPostBack="True" 
+   <td><asp:DropDownList runat="server" ID="ddlLinea" AutoPostBack="True" CssClass="form-control form-control-sm" Width="100px" 
            onselectedindexchanged="ddlLinea_SelectedIndexChanged" >
                   
                     <asp:ListItem Value="A" Text="A" ></asp:ListItem> 
@@ -54,7 +54,8 @@
             </td>
    </tr>
    </table>
-    <asp:GridView runat="server" ID="gvEmpresas"  CssClass="style124" 
+        <br />
+    <asp:GridView runat="server" ID="gvEmpresas"  CssClass="style124" Width="100%" Height="90%"
         AutoGenerateColumns="False" onrowcommand="gvEmpresas_RowCommand"
      DataKeyNames="IdEmpresa" AllowPaging="True" 
         onpageindexchanging="gvEmpresas_PageIndexChanging" >

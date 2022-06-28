@@ -130,18 +130,28 @@ namespace GAFWEB
                     //string Var_Sub = factu.timbre_SelloCFD.Substring((tam_var - 8), 8);
                     string Var_Sub = "";
 
-                    string URL = @"https://verificacfdi.facturaelectronica.sat.gob.mx/default.aspx";
+                   // string URL = @"https://verificacfdi.facturaelectronica.sat.gob.mx/default.aspx";
 
-                    string cadena = URL + "?&id=" + (venta.Uid).ToString().ToUpper() + "&re=" + emp.RFC + "&rr=" + c.RFC + "&tt=" + venta.Total + "&fe=" + Var_Sub;
+                   // string cadena = URL + "?&id=" + (venta.Uid).ToString().ToUpper() + "&re=" + emp.RFC + "&rr=" + c.RFC + "&tt=" + venta.Total + "&fe=" + Var_Sub;
                     //---------------
+                    var cancelacion = cliente.CancelarFacturaX(emp.RFC, c.RFC, emp.PassKey, venta.Uid, (double)venta.Total, ddlMotivo.SelectedValue, txtFolioSustituto.Text);
 
 
-                    var cancelacion = cliente.CancelarFactura(emp.RFC, venta.Uid, cadena, c.RFC, ddlMotivo.SelectedValue, txtFolioSustituto.Text);
+                    //var cancelacion = cliente.CancelarFactura(emp.RFC, venta.Uid, cadena, c.RFC, ddlMotivo.SelectedValue, txtFolioSustituto.Text);
                     lblError.Text = cancelacion;
                     this.FillView();
 
                     if (cancelacion == "Comprobante Cancelado correctamente")
                     {
+                        //----------------------------------Consultar en SAT por si cancela inmediato
+                        try
+                        {
+                            cliente.ConsultaEstatusCFDIServicioSAT(venta.Uid, emp.RFC, c.RFC, venta.Total.ToString());
+                        }
+                        catch (Exception ex)
+                        {
+                        }
+                        //-------------------------------------------
                         string xml = Encoding.UTF8.GetString(GAFFactura.GetData(venta.Uid, "xml"));
                         bool pago10 = xml.Contains("pago10:Pagos");
                         if (pago10)
@@ -157,6 +167,20 @@ namespace GAFWEB
                                     }
                             }
 
+                        }
+                        bool pago20 = xml.Contains("pago20:Pagos");
+                        if (pago20)
+                        {
+                            PagoXML pago = new PagoXML();
+                            var P = pago.DesSerializarPagos20(xml);
+                            foreach (var pagos in P.Pago)
+                            {
+                                if (pagos.DoctoRelacionado != null)
+                                    foreach (var doc in pagos.DoctoRelacionado)
+                                    {
+                                        cliente.CancelarActaulizaMontosFactura(venta.idVenta, doc.IdDocumento, Convert.ToDecimal(doc.ImpPagado), Convert.ToInt16(doc.NumParcialidad));
+                                    }
+                            }
                         }
 
                     }
@@ -464,6 +488,7 @@ namespace GAFWEB
 
                 byte[] xml = cliente.GetXmlData(uuid);
                 byte[] pdf = cliente.GetPdfData(uuid);
+                var f = cliente.GetFacturaUUID(uuid);
 
                 var atts = new List<EmailAttachment>();
                 atts.Add(new EmailAttachment { Attachment = xml, Name = uuid + ".xml" });
@@ -480,8 +505,29 @@ namespace GAFWEB
                 emails.AddRange(this.txtEmails.Text.Split(','));
                 try
                 {
-                    m.Send(emails, atts, "Se envia la factura con folio " + uuid + " su la representación visual.",
-                          "Envio de Facturas", empresa.Email, empresa.RazonSocial);
+                    if (f == null)
+                    {
+                        m.Send(emails, atts, "Se envia la factura con folio " + uuid + " en formato XML y PDF.",
+                              "Envio de Factura", empresa.Email, empresa.RazonSocial);
+                    }
+                    if (f.TipoDocumentoStr == "Ingreso")
+                    {
+                        m.Send(emails, atts,
+                            "Se envia la factura con folio " + uuid + " en formato XML y PDF.",
+                            "Envío de Factura", empresa.Email, empresa.RazonSocial);
+                    }
+                    if (f.TipoDocumentoStr == "Egreso")
+                    {
+                        m.Send(emails, atts,
+                            "Se envia la nota de crédito con folio " + uuid + " en formato XML y PDF.",
+                            "Envío de la nota de crédito", empresa.Email, empresa.RazonSocial);
+                    }
+                    if (f.TipoDocumentoStr == "Pago")
+                    {
+                        m.Send(emails, atts,
+                            "Se envia el comprobante de pago con folio " + uuid + " en formato XML y PDF.",
+                            "Envío el comprobante de pago", empresa.Email, empresa.RazonSocial);
+                    }
                 }
                 catch (FaultException fe)
                 {
@@ -566,7 +612,8 @@ namespace GAFWEB
                CalculaTotales(lista);
                 this.gvFacturaCustumer.DataSource = lista;
                 this.gvFacturaCustumer.DataBind();
-            }
+                    UpdatePanel2.Update();
+                }
               
         }
         
@@ -627,6 +674,7 @@ namespace GAFWEB
 
             try
             {
+                lblError.Text = "";
                 List<int> lista = new List<int>();
                 foreach (GridViewRow row in gvFacturas.Rows)
                 {
@@ -638,42 +686,65 @@ namespace GAFWEB
                     }
 
                 }
-                //Crear zip
-                var cte = new GAFFactura();
-                var emp = new GAFEmpresa();
-                byte[] bytes; string RFC = "";
-                using (cte as IDisposable)
+                if (lista.Count > 0)
                 {
-                    var idEmp = ddlEmpresas.SelectedValue;
-                    //var idEmp = Session["idEmpresa"] as int?;
-                    if (idEmp == null)
-                        return;
 
-                    using (emp as IDisposable)
+                    //Crear zip
+                    var cte = new GAFFactura();
+                    var emp = new GAFEmpresa();
+                    byte[] bytes; string RFC = "";
+                    using (cte as IDisposable)
                     {
-                        var empre = emp.GetById(Convert.ToInt32(idEmp));
-                        RFC = empre.RFC;
+                        var idEmp = ddlEmpresas.SelectedValue;
+                        //var idEmp = Session["idEmpresa"] as int?;
+                        if (idEmp == null)
+                            return;
+
+                        using (emp as IDisposable)
+                        {
+                            var empre = emp.GetById(Convert.ToInt32(idEmp));
+                            if (empre == null)
+                                RFC = "TODOS";
+                            else
+                                RFC = empre.RFC;
+                        }
+
+                        if (RFC != "TODOS")
+                        {
+
+                            bytes = cte.GetZipFacturas(lista, RFC);
+
+                            /*
+                                Response.ClearContent();
+                                Response.ClearHeaders();
+                                Response.AddHeader("Content-Disposition", "attachment; filename=" + RFC + "_Comprobantes" + ".zip");
+                            this.Response.ContentType = "application/zip, application/octet-stream";
+
+                            this.Response.BinaryWrite(bytes);
+                            this.Response.End();
+                            */
+                            HttpContext.Current.Response.ClearContent();
+                            HttpContext.Current.Response.Clear();
+                            HttpContext.Current.Response.AddHeader("Content-Disposition", "attachment; filename=" + RFC + "_Comprobantes" + ".zip");
+                            HttpContext.Current.Response.ContentType = "application/zip, application/octet-stream";
+                            HttpContext.Current.Response.BinaryWrite(bytes);
+                            // HttpContext.Current.Response.Flush();
+                            // HttpContext.Current.Response.Close();
+                            HttpContext.Current.Response.End();
+                        }
+                        else
+                        {
+                            gvFacturas.DataSource = ViewState["facturas"];
+                            gvFacturas.DataBind();
+                            lblError.Text = "Seleccione una empresa";
+                        }
                     }
-
-                    bytes = cte.GetZipFacturas(lista, RFC);
-
-                    /*
-                        Response.ClearContent();
-                        Response.ClearHeaders();
-                        Response.AddHeader("Content-Disposition", "attachment; filename=" + RFC + "_Comprobantes" + ".zip");
-                    this.Response.ContentType = "application/zip, application/octet-stream";
-                
-                    this.Response.BinaryWrite(bytes);
-                    this.Response.End();
-                    */
-                    HttpContext.Current.Response.ClearContent();
-                    HttpContext.Current.Response.Clear();
-                    HttpContext.Current.Response.AddHeader("Content-Disposition", "attachment; filename=" + RFC + "_Comprobantes" + ".zip");
-                    HttpContext.Current.Response.ContentType = "application/zip, application/octet-stream";
-                    HttpContext.Current.Response.BinaryWrite(bytes);
-                   // HttpContext.Current.Response.Flush();
-                    // HttpContext.Current.Response.Close();
-                    HttpContext.Current.Response.End();
+                    UpdatePanel2.Update();
+                }
+                else
+                {
+                    gvFacturas.DataSource = ViewState["facturas"];
+                    gvFacturas.DataBind();
                 }
             }
             catch (FaultException fe)

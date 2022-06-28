@@ -13,6 +13,7 @@ namespace Contract
          public decimal SubTotalPago { get; set; }
         public decimal IVAPago { get; set; }
         public string EstusCFDI { get; set; }
+        public bool EDI { get; set; }
     }
 
 }

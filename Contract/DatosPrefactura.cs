@@ -35,7 +35,9 @@ namespace Contract
      [Serializable()]
     public class DatosPrefactura
     {
-        
+        [DataMemberAttribute()]
+        public string Exportacion { get; set; }
+
         [DataMemberAttribute()]
         public string Regimen { get; set; }
         [DataMemberAttribute()]
@@ -113,8 +115,9 @@ namespace Contract
          [DataMemberAttribute]
          public ImpLocales ImpuestosLocales { get; set; }
         [DataMemberAttribute]
-         public string TipoRelacion { get; set; }// para CfdiRelacionados
-        public List<string> UUID { get; set; } // para CfdiRelacionados
+        public List<DatosListaRelacionados> TipoRelacion { get; set; }
+        [DataMemberAttribute]
+        public List<string> UUID { get; set; }
         [DataMemberAttribute()]
         public System.Guid promotor { get; set; }
       

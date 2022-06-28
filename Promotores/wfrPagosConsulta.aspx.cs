@@ -371,6 +371,7 @@ namespace GAFWEB
                     this.gvFacturaCustumer.DataBind();
                 }
 
+            UpdatePanel2.Update();
         }
 
         private void CalculaTotales(List<vPrefacturaPagos> lista)

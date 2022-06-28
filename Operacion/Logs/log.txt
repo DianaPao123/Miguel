@@ -5567,3 +5567,533 @@ Nombre del parámetro: address
 2020-09-24 22:57:13,671-14-INFO-GAFBusiness.Mailer.Send.96: Enviando a la direccion: ricardo_gomez_v@hotmail.com
 2020-09-24 22:57:19,976-14-DEBUG-GAFBusiness.Mailer.Send.103: Enviado correctamente
 2022-01-05 22:01:44,269-16-DEBUG-GAFBusiness.GAFEmpresa.GuardarEmpresa.746: True
+2022-02-22 22:38:31,260-7-DEBUG-Business.GAFFactura.GetAcuseCancelacion.1209: /AcuseCancelacion->11715
+2022-02-22 22:38:31,838-7-ERROR-Business.GAFFactura.GetAcuseCancelacion.1253: System.Net.WebException: Error de la solicitud con el código de estado HTTP 401: Unauthorized.
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en Business.ReportExecution.ReportExecutionService.LoadReport(String Report, String HistoryID) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\Web References\ReportExecution\Reference.cs:línea 287
+   en Business.GAFFactura.GetAcuseCancelacion(String report, Int64 idVenta, String estatus, String estatusCancela, String EstatusCancelacion) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\GAFFactura.cs:línea 1238
+2022-02-22 22:39:00,596-10-ERROR-Business.GAFFactura.GetData.537: No se pudo encontrar el archivo 'C:\GAF\Salida\XAMA620210DQ5\C47C0E5E-8561-11EC-9CD7-3FEB0F8E6DE9.pdf'.
+2022-02-22 22:39:00,611-10-DEBUG-Business.Mailer.Send.45: Enviando a 2 emails
+2022-02-22 22:39:00,642-10-INFO-Business.Mailer.Send.65: Creando MailMessage
+2022-02-22 22:39:00,649-10-INFO-Business.Mailer.Send.76: Cargando Bcc: 
+2022-02-22 22:39:00,649-10-INFO-Business.Mailer.Send.84: Agregando attach
+2022-02-22 22:39:00,665-10-ERROR-Business.Mailer.Send.107: System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en Business.Mailer.Send(List`1 recipients, List`1 attachments, String message, String subject, String fromEmail, String fromDescription) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\Mailer.cs:línea 90
+2022-02-22 22:39:06,681-9-ERROR-Business.GAFFactura.GetData.537: No se pudo encontrar el archivo 'C:\GAF\Salida\XAMA620210DQ5\C47C0E5E-8561-11EC-9CD7-3FEB0F8E6DE9.pdf'.
+2022-02-22 22:39:18,984-8-DEBUG-Business.GAFFactura.GetAcuseCancelacion.1209: /AcuseCancelacion->11715
+2022-02-22 22:39:19,012-8-ERROR-Business.GAFFactura.GetAcuseCancelacion.1253: System.Net.WebException: Error de la solicitud con el código de estado HTTP 401: Unauthorized.
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en Business.ReportExecution.ReportExecutionService.LoadReport(String Report, String HistoryID) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\Web References\ReportExecution\Reference.cs:línea 287
+   en Business.GAFFactura.GetAcuseCancelacion(String report, Int64 idVenta, String estatus, String estatusCancela, String EstatusCancelacion) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\GAFFactura.cs:línea 1238
+2022-02-23 00:01:05,576-15-DEBUG-Business.GAFFactura.GetAcuseCancelacion.1209: /AcuseCancelacion->11715
+2022-02-23 00:01:05,987-15-ERROR-Business.GAFFactura.GetAcuseCancelacion.1253: System.Net.WebException: Error de la solicitud con el código de estado HTTP 401: Unauthorized.
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en Business.ReportExecution.ReportExecutionService.LoadReport(String Report, String HistoryID) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\Web References\ReportExecution\Reference.cs:línea 287
+   en Business.GAFFactura.GetAcuseCancelacion(String report, Int64 idVenta, String estatus, String estatusCancela, String EstatusCancelacion) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\GAFFactura.cs:línea 1238
+2022-02-23 00:01:13,964-12-DEBUG-Business.GAFFactura.GetAcuseCancelacion.1209: /AcuseCancelacion->11715
+2022-02-23 00:01:13,989-12-ERROR-Business.GAFFactura.GetAcuseCancelacion.1253: System.Net.WebException: Error de la solicitud con el código de estado HTTP 401: Unauthorized.
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en Business.ReportExecution.ReportExecutionService.LoadReport(String Report, String HistoryID) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\Web References\ReportExecution\Reference.cs:línea 287
+   en Business.GAFFactura.GetAcuseCancelacion(String report, Int64 idVenta, String estatus, String estatusCancela, String EstatusCancelacion) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\GAFFactura.cs:línea 1238
+2022-02-23 00:01:32,141-15-ERROR-Business.GAFFactura.GetData.537: No se pudo encontrar el archivo 'C:\GAF\Salida\XAMA620210DQ5\C47C0E5E-8561-11EC-9CD7-3FEB0F8E6DE9.pdf'.
+2022-02-23 00:01:32,147-15-DEBUG-Business.Mailer.Send.45: Enviando a 2 emails
+2022-02-23 00:01:32,169-15-INFO-Business.Mailer.Send.65: Creando MailMessage
+2022-02-23 00:01:32,170-15-INFO-Business.Mailer.Send.76: Cargando Bcc: 
+2022-02-23 00:01:32,170-15-INFO-Business.Mailer.Send.84: Agregando attach
+2022-02-23 00:01:32,188-15-ERROR-Business.Mailer.Send.107: System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en Business.Mailer.Send(List`1 recipients, List`1 attachments, String message, String subject, String fromEmail, String fromDescription) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\Mailer.cs:línea 90
+2022-02-23 00:01:37,729-15-ERROR-Business.GAFFactura.GetData.537: No se pudo encontrar el archivo 'C:\GAF\Salida\XAMA620210DQ5\C47C0E5E-8561-11EC-9CD7-3FEB0F8E6DE9.pdf'.
+2022-02-23 00:03:22,908-15-DEBUG-Business.GAFFactura.GetAcuseCancelacion.1209: /AcuseCancelacion->11715
+2022-02-23 00:03:22,936-15-ERROR-Business.GAFFactura.GetAcuseCancelacion.1253: System.Net.WebException: Error de la solicitud con el código de estado HTTP 401: Unauthorized.
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en Business.ReportExecution.ReportExecutionService.LoadReport(String Report, String HistoryID) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\Web References\ReportExecution\Reference.cs:línea 287
+   en Business.GAFFactura.GetAcuseCancelacion(String report, Int64 idVenta, String estatus, String estatusCancela, String EstatusCancelacion) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\GAFFactura.cs:línea 1238
+2022-02-23 00:09:37,765-8-ERROR-Business.GAFFactura.GetData.537: No se pudo encontrar el archivo 'C:\GAF\Salida\XAMA620210DQ5\C47C0E5E-8561-11EC-9CD7-3FEB0F8E6DE9.pdf'.
+2022-02-23 00:12:40,579-5-DEBUG-Business.GAFFactura.GetAcuseCancelacion.1209: /AcuseCancelacion->11715
+2022-02-23 00:12:40,942-5-ERROR-Business.GAFFactura.GetAcuseCancelacion.1253: System.Net.WebException: Error de la solicitud con el código de estado HTTP 401: Unauthorized.
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en Business.ReportExecution.ReportExecutionService.LoadReport(String Report, String HistoryID) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\Web References\ReportExecution\Reference.cs:línea 287
+   en Business.GAFFactura.GetAcuseCancelacion(String report, Int64 idVenta, String estatus, String estatusCancela, String EstatusCancelacion) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\GAFFactura.cs:línea 1238
+2022-02-23 00:13:04,164-10-DEBUG-Business.GAFFactura.GetAcuseCancelacion.1209: /AcuseCancelacion->11715
+2022-02-23 00:13:04,183-10-ERROR-Business.GAFFactura.GetAcuseCancelacion.1253: System.Net.WebException: Error de la solicitud con el código de estado HTTP 401: Unauthorized.
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en Business.ReportExecution.ReportExecutionService.LoadReport(String Report, String HistoryID) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\Web References\ReportExecution\Reference.cs:línea 287
+   en Business.GAFFactura.GetAcuseCancelacion(String report, Int64 idVenta, String estatus, String estatusCancela, String EstatusCancelacion) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\GAFFactura.cs:línea 1238
+2022-02-23 00:13:42,369-8-ERROR-Business.GAFFactura.GetData.537: No se pudo encontrar el archivo 'C:\GAF\Salida\XAMA620210DQ5\C47C0E5E-8561-11EC-9CD7-3FEB0F8E6DE9.pdf'.
+2022-02-23 00:13:42,374-8-DEBUG-Business.Mailer.Send.45: Enviando a 2 emails
+2022-02-23 00:13:42,393-8-INFO-Business.Mailer.Send.65: Creando MailMessage
+2022-02-23 00:13:42,394-8-INFO-Business.Mailer.Send.76: Cargando Bcc: 
+2022-02-23 00:13:42,395-8-INFO-Business.Mailer.Send.84: Agregando attach
+2022-02-23 00:13:42,407-8-ERROR-Business.Mailer.Send.107: System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en Business.Mailer.Send(List`1 recipients, List`1 attachments, String message, String subject, String fromEmail, String fromDescription) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\Mailer.cs:línea 90
+2022-02-23 00:16:31,350-7-DEBUG-Business.GAFFactura.GetAcuseCancelacion.1209: /AcuseCancelacion->11715
+2022-02-23 00:16:31,801-7-ERROR-Business.GAFFactura.GetAcuseCancelacion.1253: System.Net.WebException: Error de la solicitud con el código de estado HTTP 401: Unauthorized.
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en Business.ReportExecution.ReportExecutionService.LoadReport(String Report, String HistoryID) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\Web References\ReportExecution\Reference.cs:línea 287
+   en Business.GAFFactura.GetAcuseCancelacion(String report, Int64 idVenta, String estatus, String estatusCancela, String EstatusCancelacion) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\GAFFactura.cs:línea 1238
+2022-02-23 00:21:36,760-7-DEBUG-Business.GAFFactura.GetAcuseCancelacion.1209: /AcuseCancelacion->11715
+2022-02-23 00:21:37,123-7-ERROR-Business.GAFFactura.GetAcuseCancelacion.1253: System.Net.WebException: Error de la solicitud con el código de estado HTTP 401: Unauthorized.
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en Business.ReportExecution.ReportExecutionService.LoadReport(String Report, String HistoryID) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\Web References\ReportExecution\Reference.cs:línea 287
+   en Business.GAFFactura.GetAcuseCancelacion(String report, Int64 idVenta, String estatus, String estatusCancela, String EstatusCancelacion) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\GAFFactura.cs:línea 1238
+2022-02-23 00:23:22,440-7-ERROR-Business.GAFFactura.GetData.537: No se pudo encontrar el archivo 'C:\GAF\Salida\XAMA620210DQ5\C47C0E5E-8561-11EC-9CD7-3FEB0F8E6DE9.pdf'.
+2022-02-23 00:23:22,478-7-DEBUG-Business.Mailer.Send.45: Enviando a 2 emails
+2022-02-23 00:23:22,499-7-INFO-Business.Mailer.Send.65: Creando MailMessage
+2022-02-23 00:23:22,500-7-INFO-Business.Mailer.Send.76: Cargando Bcc: 
+2022-02-23 00:23:22,500-7-INFO-Business.Mailer.Send.84: Agregando attach
+2022-02-23 00:23:22,513-7-ERROR-Business.Mailer.Send.107: System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en Business.Mailer.Send(List`1 recipients, List`1 attachments, String message, String subject, String fromEmail, String fromDescription) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\Mailer.cs:línea 90
+2022-02-23 00:28:45,379-9-ERROR-Business.GAFFactura.GetData.537: No se pudo encontrar el archivo 'C:\GAF\Salida\XAMA620210DQ5\C47C0E5E-8561-11EC-9CD7-3FEB0F8E6DE9.pdf'.
+2022-02-23 00:38:49,897-9-ERROR-Business.GAFFactura.GetData.537: No se pudo encontrar el archivo 'C:\GAF\Salida\XAMA620210DQ5\C47C0E5E-8561-11EC-9CD7-3FEB0F8E6DE9.pdf'.
+2022-02-23 00:39:16,834-6-DEBUG-Business.GAFFactura.GetAcuseCancelacion.1209: /AcuseCancelacion->11715
+2022-02-23 00:39:17,169-6-ERROR-Business.GAFFactura.GetAcuseCancelacion.1253: System.Net.WebException: Error de la solicitud con el código de estado HTTP 401: Unauthorized.
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en Business.ReportExecution.ReportExecutionService.LoadReport(String Report, String HistoryID) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\Web References\ReportExecution\Reference.cs:línea 287
+   en Business.GAFFactura.GetAcuseCancelacion(String report, Int64 idVenta, String estatus, String estatusCancela, String EstatusCancelacion) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\GAFFactura.cs:línea 1238
+2022-02-23 00:40:50,457-6-DEBUG-Business.GAFFactura.GetAcuseCancelacion.1209: /AcuseCancelacion->11715
+2022-02-23 00:40:50,478-6-ERROR-Business.GAFFactura.GetAcuseCancelacion.1253: System.Net.WebException: Error de la solicitud con el código de estado HTTP 401: Unauthorized.
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en Business.ReportExecution.ReportExecutionService.LoadReport(String Report, String HistoryID) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\Web References\ReportExecution\Reference.cs:línea 287
+   en Business.GAFFactura.GetAcuseCancelacion(String report, Int64 idVenta, String estatus, String estatusCancela, String EstatusCancelacion) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\GAFFactura.cs:línea 1238
+2022-02-23 00:43:49,313-13-DEBUG-Business.GAFFactura.GetAcuseCancelacion.1209: /AcuseCancelacion->11715
+2022-02-23 00:43:49,348-13-ERROR-Business.GAFFactura.GetAcuseCancelacion.1253: System.Net.WebException: Error de la solicitud con el código de estado HTTP 401: Unauthorized.
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en Business.ReportExecution.ReportExecutionService.LoadReport(String Report, String HistoryID) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\Web References\ReportExecution\Reference.cs:línea 287
+   en Business.GAFFactura.GetAcuseCancelacion(String report, Int64 idVenta, String estatus, String estatusCancela, String EstatusCancelacion) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\GAFFactura.cs:línea 1238
+2022-02-23 00:44:33,076-18-DEBUG-Business.GAFFactura.GetAcuseCancelacion.1209: /AcuseCancelacion->11715
+2022-02-23 00:44:33,103-18-ERROR-Business.GAFFactura.GetAcuseCancelacion.1253: System.Net.WebException: Error de la solicitud con el código de estado HTTP 401: Unauthorized.
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en Business.ReportExecution.ReportExecutionService.LoadReport(String Report, String HistoryID) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\Web References\ReportExecution\Reference.cs:línea 287
+   en Business.GAFFactura.GetAcuseCancelacion(String report, Int64 idVenta, String estatus, String estatusCancela, String EstatusCancelacion) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\GAFFactura.cs:línea 1238
+2022-02-23 00:45:15,514-16-DEBUG-Business.GAFFactura.GetAcuseCancelacion.1209: /AcuseCancelacion->11715
+2022-02-23 00:45:15,560-16-ERROR-Business.GAFFactura.GetAcuseCancelacion.1253: System.Net.WebException: Error de la solicitud con el código de estado HTTP 401: Unauthorized.
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en Business.ReportExecution.ReportExecutionService.LoadReport(String Report, String HistoryID) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\Web References\ReportExecution\Reference.cs:línea 287
+   en Business.GAFFactura.GetAcuseCancelacion(String report, Int64 idVenta, String estatus, String estatusCancela, String EstatusCancelacion) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\GAFFactura.cs:línea 1238
+2022-02-23 00:47:56,334-9-DEBUG-Business.GAFFactura.GetAcuseCancelacion.1209: /AcuseCancelacion->11715
+2022-02-23 00:47:56,789-9-ERROR-Business.GAFFactura.GetAcuseCancelacion.1253: System.Net.WebException: Error de la solicitud con el código de estado HTTP 401: Unauthorized.
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en Business.ReportExecution.ReportExecutionService.LoadReport(String Report, String HistoryID) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\Web References\ReportExecution\Reference.cs:línea 287
+   en Business.GAFFactura.GetAcuseCancelacion(String report, Int64 idVenta, String estatus, String estatusCancela, String EstatusCancelacion) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\GAFFactura.cs:línea 1238
+2022-02-23 00:48:34,731-9-DEBUG-Business.GAFFactura.GetAcuseCancelacion.1209: /AcuseCancelacion->11715
+2022-02-23 00:48:34,767-9-ERROR-Business.GAFFactura.GetAcuseCancelacion.1253: System.Net.WebException: Error de la solicitud con el código de estado HTTP 401: Unauthorized.
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en Business.ReportExecution.ReportExecutionService.LoadReport(String Report, String HistoryID) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\Web References\ReportExecution\Reference.cs:línea 287
+   en Business.GAFFactura.GetAcuseCancelacion(String report, Int64 idVenta, String estatus, String estatusCancela, String EstatusCancelacion) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\GAFFactura.cs:línea 1238
+2022-02-23 00:52:05,346-7-DEBUG-Business.GAFFactura.GetAcuseCancelacion.1209: /AcuseCancelacion->11715
+2022-02-23 00:52:05,374-7-ERROR-Business.GAFFactura.GetAcuseCancelacion.1253: System.Net.WebException: Error de la solicitud con el código de estado HTTP 401: Unauthorized.
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en Business.ReportExecution.ReportExecutionService.LoadReport(String Report, String HistoryID) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\Web References\ReportExecution\Reference.cs:línea 287
+   en Business.GAFFactura.GetAcuseCancelacion(String report, Int64 idVenta, String estatus, String estatusCancela, String EstatusCancelacion) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\GAFFactura.cs:línea 1238
+2022-02-23 00:52:34,544-7-ERROR-Business.GAFFactura.GetData.537: No se pudo encontrar el archivo 'C:\GAF\Salida\XAMA620210DQ5\C47C0E5E-8561-11EC-9CD7-3FEB0F8E6DE9.pdf'.
+2022-02-23 00:52:34,553-7-DEBUG-Business.Mailer.Send.45: Enviando a 2 emails
+2022-02-23 00:52:34,589-7-INFO-Business.Mailer.Send.65: Creando MailMessage
+2022-02-23 00:52:34,591-7-INFO-Business.Mailer.Send.76: Cargando Bcc: 
+2022-02-23 00:52:34,591-7-INFO-Business.Mailer.Send.84: Agregando attach
+2022-02-23 00:52:34,604-7-ERROR-Business.Mailer.Send.107: System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en Business.Mailer.Send(List`1 recipients, List`1 attachments, String message, String subject, String fromEmail, String fromDescription) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\Mailer.cs:línea 90
+2022-02-23 00:54:24,588-13-ERROR-Business.GAFFactura.GetData.537: No se pudo encontrar el archivo 'C:\GAF\Salida\XAMA620210DQ5\C47C0E5E-8561-11EC-9CD7-3FEB0F8E6DE9.pdf'.
+2022-02-23 00:54:24,591-13-DEBUG-Business.Mailer.Send.45: Enviando a 2 emails
+2022-02-23 00:54:24,591-13-INFO-Business.Mailer.Send.65: Creando MailMessage
+2022-02-23 00:54:24,591-13-INFO-Business.Mailer.Send.76: Cargando Bcc: 
+2022-02-23 00:54:24,592-13-INFO-Business.Mailer.Send.84: Agregando attach
+2022-02-23 00:54:24,602-13-ERROR-Business.Mailer.Send.107: System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en Business.Mailer.Send(List`1 recipients, List`1 attachments, String message, String subject, String fromEmail, String fromDescription) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\Mailer.cs:línea 90
+2022-02-23 00:55:09,886-13-ERROR-Business.GAFFactura.GetData.537: No se pudo encontrar el archivo 'C:\GAF\Salida\XAMA620210DQ5\C47C0E5E-8561-11EC-9CD7-3FEB0F8E6DE9.pdf'.
+2022-02-23 00:55:09,888-13-DEBUG-Business.Mailer.Send.45: Enviando a 2 emails
+2022-02-23 00:55:09,889-13-INFO-Business.Mailer.Send.65: Creando MailMessage
+2022-02-23 00:55:09,889-13-INFO-Business.Mailer.Send.76: Cargando Bcc: 
+2022-02-23 00:55:09,889-13-INFO-Business.Mailer.Send.84: Agregando attach
+2022-02-23 00:55:09,898-13-ERROR-Business.Mailer.Send.107: System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en Business.Mailer.Send(List`1 recipients, List`1 attachments, String message, String subject, String fromEmail, String fromDescription) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\Mailer.cs:línea 90
+2022-02-23 01:25:44,385-6-DEBUG-Business.GAFFactura.GetAcuseCancelacion.1209: /AcuseCancelacion->11715
+2022-02-23 01:25:44,744-6-ERROR-Business.GAFFactura.GetAcuseCancelacion.1253: System.Net.WebException: Error de la solicitud con el código de estado HTTP 401: Unauthorized.
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en Business.ReportExecution.ReportExecutionService.LoadReport(String Report, String HistoryID) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\Web References\ReportExecution\Reference.cs:línea 287
+   en Business.GAFFactura.GetAcuseCancelacion(String report, Int64 idVenta, String estatus, String estatusCancela, String EstatusCancelacion) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\GAFFactura.cs:línea 1238
+2022-02-23 01:26:04,805-6-DEBUG-Business.GAFFactura.GetAcuseCancelacion.1209: /AcuseCancelacion->11715
+2022-02-23 01:26:04,836-6-ERROR-Business.GAFFactura.GetAcuseCancelacion.1253: System.Net.WebException: Error de la solicitud con el código de estado HTTP 401: Unauthorized.
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en Business.ReportExecution.ReportExecutionService.LoadReport(String Report, String HistoryID) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\Web References\ReportExecution\Reference.cs:línea 287
+   en Business.GAFFactura.GetAcuseCancelacion(String report, Int64 idVenta, String estatus, String estatusCancela, String EstatusCancelacion) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\GAFFactura.cs:línea 1238
+2022-02-23 01:28:31,992-7-DEBUG-Business.GAFFactura.GetAcuseCancelacion.1209: /AcuseCancelacion->11715
+2022-02-23 01:28:32,347-7-ERROR-Business.GAFFactura.GetAcuseCancelacion.1253: System.Net.WebException: Error de la solicitud con el código de estado HTTP 401: Unauthorized.
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en Business.ReportExecution.ReportExecutionService.LoadReport(String Report, String HistoryID) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\Web References\ReportExecution\Reference.cs:línea 287
+   en Business.GAFFactura.GetAcuseCancelacion(String report, Int64 idVenta, String estatus, String estatusCancela, String EstatusCancelacion) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\GAFFactura.cs:línea 1238
+2022-02-23 01:40:48,899-5-DEBUG-Business.GAFFactura.GetAcuseCancelacion.1209: /AcuseCancelacion->11715
+2022-02-23 01:40:49,222-5-ERROR-Business.GAFFactura.GetAcuseCancelacion.1253: System.Net.WebException: Error de la solicitud con el código de estado HTTP 401: Unauthorized.
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en Business.ReportExecution.ReportExecutionService.LoadReport(String Report, String HistoryID) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\Web References\ReportExecution\Reference.cs:línea 287
+   en Business.GAFFactura.GetAcuseCancelacion(String report, Int64 idVenta, String estatus, String estatusCancela, String EstatusCancelacion) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\GAFFactura.cs:línea 1238
+2022-02-23 01:42:51,780-7-DEBUG-Business.GAFFactura.GetAcuseCancelacion.1209: /AcuseCancelacion->11715
+2022-02-23 01:42:52,184-7-ERROR-Business.GAFFactura.GetAcuseCancelacion.1253: System.Net.WebException: Error de la solicitud con el código de estado HTTP 401: Unauthorized.
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en Business.ReportExecution.ReportExecutionService.LoadReport(String Report, String HistoryID) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\Web References\ReportExecution\Reference.cs:línea 287
+   en Business.GAFFactura.GetAcuseCancelacion(String report, Int64 idVenta, String estatus, String estatusCancela, String EstatusCancelacion) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\GAFFactura.cs:línea 1238
+2022-02-23 01:45:21,173-6-DEBUG-Business.GAFFactura.GetAcuseCancelacion.1209: /AcuseCancelacion->11715
+2022-02-23 01:45:21,568-6-ERROR-Business.GAFFactura.GetAcuseCancelacion.1253: System.Net.WebException: Error de la solicitud con el código de estado HTTP 401: Unauthorized.
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en Business.ReportExecution.ReportExecutionService.LoadReport(String Report, String HistoryID) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\Web References\ReportExecution\Reference.cs:línea 287
+   en Business.GAFFactura.GetAcuseCancelacion(String report, Int64 idVenta, String estatus, String estatusCancela, String EstatusCancelacion) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\GAFFactura.cs:línea 1238
+2022-02-23 01:46:42,172-8-DEBUG-Business.GAFFactura.GetAcuseCancelacion.1209: /AcuseCancelacion->11715
+2022-02-23 01:46:42,677-8-ERROR-Business.GAFFactura.GetAcuseCancelacion.1253: System.Net.WebException: Error de la solicitud con el código de estado HTTP 401: Unauthorized.
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en Business.ReportExecution.ReportExecutionService.LoadReport(String Report, String HistoryID) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\Web References\ReportExecution\Reference.cs:línea 287
+   en Business.GAFFactura.GetAcuseCancelacion(String report, Int64 idVenta, String estatus, String estatusCancela, String EstatusCancelacion) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\GAFFactura.cs:línea 1238
+2022-02-23 01:49:11,507-8-DEBUG-Business.GAFFactura.GetAcuseCancelacion.1209: /AcuseCancelacion->11715
+2022-02-23 01:49:11,901-8-ERROR-Business.GAFFactura.GetAcuseCancelacion.1253: System.Net.WebException: Error de la solicitud con el código de estado HTTP 401: Unauthorized.
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en Business.ReportExecution.ReportExecutionService.LoadReport(String Report, String HistoryID) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\Web References\ReportExecution\Reference.cs:línea 287
+   en Business.GAFFactura.GetAcuseCancelacion(String report, Int64 idVenta, String estatus, String estatusCancela, String EstatusCancelacion) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\GAFFactura.cs:línea 1238
+2022-02-23 01:50:34,279-6-DEBUG-Business.GAFFactura.GetAcuseCancelacion.1209: /AcuseCancelacion->11715
+2022-02-23 01:50:34,843-6-ERROR-Business.GAFFactura.GetAcuseCancelacion.1253: System.Net.WebException: Error de la solicitud con el código de estado HTTP 401: Unauthorized.
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en Business.ReportExecution.ReportExecutionService.LoadReport(String Report, String HistoryID) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\Web References\ReportExecution\Reference.cs:línea 287
+   en Business.GAFFactura.GetAcuseCancelacion(String report, Int64 idVenta, String estatus, String estatusCancela, String EstatusCancelacion) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\GAFFactura.cs:línea 1238
+2022-02-23 01:51:43,914-7-DEBUG-Business.GAFFactura.GetAcuseCancelacion.1209: /AcuseCancelacion->11715
+2022-02-23 01:51:44,248-7-ERROR-Business.GAFFactura.GetAcuseCancelacion.1253: System.Net.WebException: Error de la solicitud con el código de estado HTTP 401: Unauthorized.
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en Business.ReportExecution.ReportExecutionService.LoadReport(String Report, String HistoryID) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\Web References\ReportExecution\Reference.cs:línea 287
+   en Business.GAFFactura.GetAcuseCancelacion(String report, Int64 idVenta, String estatus, String estatusCancela, String EstatusCancelacion) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\GAFFactura.cs:línea 1238
+2022-02-23 01:55:59,923-7-DEBUG-Business.Mailer.Send.45: Enviando a 2 emails
+2022-02-23 01:55:59,972-7-INFO-Business.Mailer.Send.65: Creando MailMessage
+2022-02-23 01:55:59,973-7-INFO-Business.Mailer.Send.76: Cargando Bcc: 
+2022-02-23 01:55:59,973-7-INFO-Business.Mailer.Send.84: Agregando attach
+2022-02-23 01:55:59,986-7-ERROR-Business.Mailer.Send.107: System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en Business.Mailer.Send(List`1 recipients, List`1 attachments, String message, String subject, String fromEmail, String fromDescription) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\Mailer.cs:línea 90
+2022-02-23 01:58:11,892-11-DEBUG-Business.GAFFactura.GetAcuseCancelacion.1209: /AcuseCancelacion->11715
+2022-02-23 01:58:12,412-11-ERROR-Business.GAFFactura.GetAcuseCancelacion.1253: System.Net.WebException: Error de la solicitud con el código de estado HTTP 401: Unauthorized.
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en Business.ReportExecution.ReportExecutionService.LoadReport(String Report, String HistoryID) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\Web References\ReportExecution\Reference.cs:línea 287
+   en Business.GAFFactura.GetAcuseCancelacion(String report, Int64 idVenta, String estatus, String estatusCancela, String EstatusCancelacion) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\GAFFactura.cs:línea 1238
+2022-02-23 01:59:28,124-18-ERROR-Business.GAFFactura.GetData.537: No se pudo encontrar el archivo 'C:\GAF\Salida\XAMA620210DQ5\C47C0E5E-8561-11EC-9CD7-3FEB0F8E6DE9.pdf'.
+2022-02-23 01:59:28,127-18-DEBUG-Business.Mailer.Send.45: Enviando a 2 emails
+2022-02-23 01:59:28,127-18-INFO-Business.Mailer.Send.65: Creando MailMessage
+2022-02-23 01:59:28,128-18-INFO-Business.Mailer.Send.76: Cargando Bcc: 
+2022-02-23 01:59:28,128-18-INFO-Business.Mailer.Send.84: Agregando attach
+2022-02-23 01:59:28,139-18-ERROR-Business.Mailer.Send.107: System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en Business.Mailer.Send(List`1 recipients, List`1 attachments, String message, String subject, String fromEmail, String fromDescription) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\Mailer.cs:línea 90
+2022-02-23 02:02:07,147-6-ERROR-Business.GAFFactura.GetData.537: No se pudo encontrar el archivo 'C:\GAF\Salida\XAMA620210DQ5\C47C0E5E-8561-11EC-9CD7-3FEB0F8E6DE9.pdf'.
+2022-02-23 02:02:07,191-6-DEBUG-Business.Mailer.Send.45: Enviando a 2 emails
+2022-02-23 02:02:07,208-6-INFO-Business.Mailer.Send.65: Creando MailMessage
+2022-02-23 02:02:07,209-6-INFO-Business.Mailer.Send.76: Cargando Bcc: 
+2022-02-23 02:02:07,209-6-INFO-Business.Mailer.Send.84: Agregando attach
+2022-02-23 02:02:07,222-6-ERROR-Business.Mailer.Send.107: System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en Business.Mailer.Send(List`1 recipients, List`1 attachments, String message, String subject, String fromEmail, String fromDescription) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\Mailer.cs:línea 90
+2022-03-03 00:23:15,846-15-INFO-Business.GAFFactura.FacturaPreview33.1986: FacturaPreview
+2022-03-03 00:23:16,033-15-ERROR-Business.GAFFactura.GeneraPreviewRs.1139: System.Security.Cryptography.CryptographicException: El sistema no puede encontrar la ruta especificada.
+
+   en System.Security.Cryptography.CryptographicException.ThrowCryptographicException(Int32 hr)
+   en System.Security.Cryptography.X509Certificates.X509Utils._QueryCertFileType(String fileName)
+   en System.Security.Cryptography.X509Certificates.X509Certificate.LoadCertificateFromFile(String fileName, Object password, X509KeyStorageFlags keyStorageFlags)
+   en System.Security.Cryptography.X509Certificates.X509Certificate2..ctor(String fileName)
+   en Business.GAFFactura.GeneraPreviewRs(GAFFactura factura, facturaComplementos complementosF) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\GAFFactura.cs:línea 1119
+2022-03-04 21:28:36,399-6-DEBUG-Business.Mailer.Send.45: Enviando a 2 emails
+2022-03-04 21:28:36,446-6-INFO-Business.Mailer.Send.65: Creando MailMessage
+2022-03-04 21:28:36,447-6-INFO-Business.Mailer.Send.76: Cargando Bcc: 
+2022-03-04 21:28:36,447-6-INFO-Business.Mailer.Send.84: Agregando attach
+2022-03-04 21:28:36,464-6-ERROR-Business.Mailer.Send.107: System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en Business.Mailer.Send(List`1 recipients, List`1 attachments, String message, String subject, String fromEmail, String fromDescription) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\Mailer.cs:línea 90
+2022-03-04 21:41:27,912-8-DEBUG-Business.Mailer.Send.45: Enviando a 2 emails
+2022-03-04 21:41:27,972-8-INFO-Business.Mailer.Send.65: Creando MailMessage
+2022-03-04 21:41:27,973-8-INFO-Business.Mailer.Send.76: Cargando Bcc: 
+2022-03-04 21:41:27,974-8-INFO-Business.Mailer.Send.84: Agregando attach
+2022-03-04 21:41:27,975-8-INFO-Business.Mailer.Send.96: Enviando a la direccion: a@macomx.com
+2022-03-04 21:41:27,975-8-INFO-Business.Mailer.Send.96: Enviando a la direccion: 
+2022-03-04 21:41:28,894-8-ERROR-Business.Mailer.Send.107: System.Net.Mail.SmtpException: El servidor SMTP requiere una conexión segura o el cliente no se autenticó. La respuesta del servidor fue: 5.7.0 Authentication Required. Learn more at
+   en System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   en System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   en System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   en Business.Mailer.Send(List`1 recipients, List`1 attachments, String message, String subject, String fromEmail, String fromDescription) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\Mailer.cs:línea 100
+2022-03-04 22:14:29,057-19-DEBUG-Business.Mailer.Send.45: Enviando a 2 emails
+2022-03-04 22:14:29,114-19-INFO-Business.Mailer.Send.65: Creando MailMessage
+2022-03-04 22:14:29,115-19-INFO-Business.Mailer.Send.76: Cargando Bcc: 
+2022-03-04 22:14:29,116-19-INFO-Business.Mailer.Send.84: Agregando attach
+2022-03-04 22:14:29,137-19-ERROR-Business.Mailer.Send.107: System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en Business.Mailer.Send(List`1 recipients, List`1 attachments, String message, String subject, String fromEmail, String fromDescription) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\Mailer.cs:línea 90
+2022-03-04 22:16:24,105-12-DEBUG-Business.GAFFactura.GetAcuseCancelacion.1209: /AcuseCancelacion->9487
+2022-03-04 22:16:24,578-12-ERROR-Business.GAFFactura.GetAcuseCancelacion.1253: System.Net.WebException: Error de la solicitud con el código de estado HTTP 401: Unauthorized.
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en Business.ReportExecution.ReportExecutionService.LoadReport(String Report, String HistoryID) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\Web References\ReportExecution\Reference.cs:línea 287
+   en Business.GAFFactura.GetAcuseCancelacion(String report, Int64 idVenta, String estatus, String estatusCancela, String EstatusCancelacion) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\GAFFactura.cs:línea 1238
+2022-03-04 22:20:34,784-11-DEBUG-Business.Mailer.Send.45: Enviando a 2 emails
+2022-03-04 22:20:34,863-11-INFO-Business.Mailer.Send.65: Creando MailMessage
+2022-03-04 22:20:34,864-11-INFO-Business.Mailer.Send.76: Cargando Bcc: 
+2022-03-04 22:20:34,864-11-INFO-Business.Mailer.Send.84: Agregando attach
+2022-03-04 22:20:34,865-11-INFO-Business.Mailer.Send.96: Enviando a la direccion: a@macomx.com
+2022-03-04 22:20:34,865-11-INFO-Business.Mailer.Send.96: Enviando a la direccion: 
+2022-03-04 22:20:35,945-11-ERROR-Business.Mailer.Send.107: System.Net.Mail.SmtpException: El servidor SMTP requiere una conexión segura o el cliente no se autenticó. La respuesta del servidor fue: 5.7.0 Authentication Required. Learn more at
+   en System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   en System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   en System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   en Business.Mailer.Send(List`1 recipients, List`1 attachments, String message, String subject, String fromEmail, String fromDescription) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\Mailer.cs:línea 100
+2022-03-04 22:35:59,057-9-INFO-Business.GAFFactura.FacturaPreview33.1986: FacturaPreview
+2022-03-04 22:35:59,170-9-ERROR-Business.GAFFactura.GeneraPreviewRs.1139: System.Security.Cryptography.CryptographicException: El sistema no puede encontrar la ruta especificada.
+
+   en System.Security.Cryptography.CryptographicException.ThrowCryptographicException(Int32 hr)
+   en System.Security.Cryptography.X509Certificates.X509Utils._QueryCertFileType(String fileName)
+   en System.Security.Cryptography.X509Certificates.X509Certificate.LoadCertificateFromFile(String fileName, Object password, X509KeyStorageFlags keyStorageFlags)
+   en System.Security.Cryptography.X509Certificates.X509Certificate2..ctor(String fileName)
+   en Business.GAFFactura.GeneraPreviewRs(GAFFactura factura, facturaComplementos complementosF) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\GAFFactura.cs:línea 1119
+2022-03-04 22:41:47,577-25-INFO-Business.GAFFactura.FacturaPreview33.1986: FacturaPreview
+2022-03-04 22:41:47,614-25-ERROR-Business.GAFFactura.GeneraPreviewRs.1139: System.Security.Cryptography.CryptographicException: El sistema no puede encontrar la ruta especificada.
+
+   en System.Security.Cryptography.CryptographicException.ThrowCryptographicException(Int32 hr)
+   en System.Security.Cryptography.X509Certificates.X509Utils._QueryCertFileType(String fileName)
+   en System.Security.Cryptography.X509Certificates.X509Certificate.LoadCertificateFromFile(String fileName, Object password, X509KeyStorageFlags keyStorageFlags)
+   en System.Security.Cryptography.X509Certificates.X509Certificate2..ctor(String fileName)
+   en Business.GAFFactura.GeneraPreviewRs(GAFFactura factura, facturaComplementos complementosF) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\GAFFactura.cs:línea 1119
+2022-03-05 15:55:22,573-10-DEBUG-Business.GAFEmpresa.GuardarEmpresa.746: True
+2022-05-12 20:45:39,246-11-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteCancelarXPRESS.37: Cancelando comprobante
+2022-05-12 20:45:41,596-11-ERROR-Business.GAFFactura.CancelarFacturaX.1366: System.InvalidOperationException: No se encontró el elemento de extremo predeterminado que hace referencia al contrato 'TimbradoXpress.ServicioTimbradoWSPortType' en la sección de configuración de cliente de ServiceModel. La razón puede ser que no se encontró ningún archivo de configuración para la aplicación o que no se encontró ningún elemento de extremo correspondiente a este contrato en el elemento de cliente.
+   en System.ServiceModel.Description.ConfigLoader.LoadChannelBehaviors(ServiceEndpoint serviceEndpoint, String configurationName)
+   en System.ServiceModel.ChannelFactory.ApplyConfiguration(String configurationName, Configuration configuration)
+   en System.ServiceModel.ChannelFactory.ApplyConfiguration(String configurationName)
+   en System.ServiceModel.ChannelFactory.InitializeEndpoint(String configurationName, EndpointAddress address)
+   en System.ServiceModel.ChannelFactory`1..ctor(String endpointConfigurationName, EndpointAddress remoteAddress)
+   en System.ServiceModel.ConfigurationEndpointTrait`1.CreateSimplexFactory()
+   en System.ServiceModel.ConfigurationEndpointTrait`1.CreateChannelFactory()
+   en System.ServiceModel.ClientBase`1.CreateChannelFactoryRef(EndpointTrait`1 endpointTrait)
+   en System.ServiceModel.ClientBase`1.InitializeChannelFactoryRef()
+   en System.ServiceModel.ClientBase`1..ctor()
+   en ClienteNtLink.TimbradoXpress.ServicioTimbradoWSPortTypeClient..ctor() en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\ClienteTimbrado\Service References\TimbradoXpress\Reference.cs:línea 866
+   en ClienteServiciosWEb.ClienteTimbradoXpress.ClienteCancelarXPRESS(String keyCSD, String cerCSD, String passCSD, String uuid, String rfcEmisor, String rfcReceptor, Double total, String motivo, String folioSustitucion) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\ClienteTimbrado\ClienteTimbradoXpress.cs:línea 38
+   en Business.GAFFactura.CancelarFacturaX(String RFCEmisor, String RFCReceptor, String PassKey, String uuid, Double total, String motivo, String folioSustitucion) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\GAFFactura.cs:línea 1353
+2022-05-12 20:49:16,164-8-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteCancelarXPRESS.37: Cancelando comprobante
+2022-05-12 20:49:58,504-8-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteCancelarXPRESS.42: Codigo:CACFDI33 Mensaje:Problemas con el xml. - CA305 - Certificado Inválido.
+2022-05-12 22:03:04,141-6-DEBUG-Business.GAFEmpresa.GuardarEmpresa.765: True
+2022-05-12 22:03:17,849-5-DEBUG-Business.GAFEmpresa.GuardarEmpresa.765: True
+2022-05-12 22:28:02,848-6-DEBUG-Business.GAFEmpresa.GuardarEmpresa.765: True
+2022-06-04 01:17:56,734-8-DEBUG-Business.GAFFactura.GuardarFactura33.289: 000022
+2022-06-04 01:17:56,996-8-DEBUG-Business.GAFFactura.GeneraCfd.357: XAMA620210DQ5
+2022-06-04 01:17:56,997-8-DEBUG-Business.GAFFactura.GeneraCfd.380: Ruta Llave C:\GAF\Resources\XAMA620210DQ5\Certs\csd.key
+2022-06-04 01:17:57,005-8-DEBUG-Business.GAFFactura.GetComprobante.683: 000022
+2022-06-04 01:18:14,135-8-DEBUG-Business.GeneradorCfdi.GenerarCfd.1126: Generando xml
+2022-06-04 01:18:15,199-8-DEBUG-Business.GeneradorCfdi.TimbrarComprobanteNtLink.847: Timbrando comprobante
+2022-06-04 01:18:15,266-8-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteTimbradoXPRESS.27: Timbrando comprobante
+2022-06-04 01:20:41,918-8-DEBUG-Business.GAFFactura.GuardarFactura33.289: 000023
+2022-06-04 01:20:42,067-8-DEBUG-Business.GAFFactura.GeneraCfd.357: XAMA620210DQ5
+2022-06-04 01:20:42,069-8-DEBUG-Business.GAFFactura.GeneraCfd.380: Ruta Llave C:\GAF\Resources\XAMA620210DQ5\Certs\csd.key
+2022-06-04 01:20:42,081-8-DEBUG-Business.GAFFactura.GetComprobante.683: 000023
+2022-06-04 01:20:46,500-8-DEBUG-Business.GeneradorCfdi.GenerarCfd.1126: Generando xml
+2022-06-04 01:20:46,917-8-DEBUG-Business.GeneradorCfdi.TimbrarComprobanteNtLink.847: Timbrando comprobante
+2022-06-04 01:20:46,938-8-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteTimbradoXPRESS.27: Timbrando comprobante
+2022-06-04 01:22:01,533-8-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteTimbradoXPRESS.32: Codigo:CFDI40138 Mensaje: El campo Nombre del emisor, no corresponde con el nombre del titular del certificado de sello digital del Emisor.
+2022-06-04 01:22:04,468-8-ERROR-Business.GeneradorCfdi.TimbrarComprobanteNtLink.867:  El campo Nombre del emisor, no corresponde con el nombre del titular del certificado de sello digital del Emisor.
+2022-06-04 01:22:04,504-8-INFO-Business.GeneradorCfdi.TimbrarComprobanteNtLink.974: System.ServiceModel.FaultException:  El campo Nombre del emisor, no corresponde con el nombre del titular del certificado de sello digital del Emisor.
+   en Business.GeneradorCfdi.TimbrarComprobanteNtLink(Comprobante comp) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GeneradorCfdi.cs:línea 868
+2022-06-04 01:22:04,517-8-ERROR-Business.GeneradorCfdi.GenerarCfd.1184: System.ServiceModel.FaultException:  El campo Nombre del emisor, no corresponde con el nombre del titular del certificado de sello digital del Emisor.
+   en Business.GeneradorCfdi.TimbrarComprobanteNtLink(Comprobante comp) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GeneradorCfdi.cs:línea 975
+   en Business.GeneradorCfdi.GenerarCfd(Comprobante comprobante, X509Certificate2 cert, String rutaLlave, String passLlave) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GeneradorCfdi.cs:línea 1178
+2022-06-04 01:23:45,660-6-DEBUG-Business.GAFEmpresa.GuardarEmpresa.765: True
+2022-06-04 01:24:10,624-7-DEBUG-Business.GAFFactura.GuardarFactura33.289: 000024
+2022-06-04 01:24:10,654-7-DEBUG-Business.GAFFactura.GeneraCfd.357: XAMA620210DQ5
+2022-06-04 01:24:10,656-7-DEBUG-Business.GAFFactura.GeneraCfd.380: Ruta Llave C:\GAF\Resources\XAMA620210DQ5\Certs\csd.key
+2022-06-04 01:24:10,656-7-DEBUG-Business.GAFFactura.GetComprobante.683: 000024
+2022-06-04 01:24:17,014-7-DEBUG-Business.GeneradorCfdi.GenerarCfd.1126: Generando xml
+2022-06-04 01:24:17,156-7-DEBUG-Business.GeneradorCfdi.TimbrarComprobanteNtLink.847: Timbrando comprobante
+2022-06-04 01:24:17,157-7-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteTimbradoXPRESS.27: Timbrando comprobante
+2022-06-04 01:24:28,259-7-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteTimbradoXPRESS.32: Codigo:CFDI40138 Mensaje: El campo Nombre del emisor, no corresponde con el nombre del titular del certificado de sello digital del Emisor.
+2022-06-04 01:24:43,826-7-ERROR-Business.GeneradorCfdi.TimbrarComprobanteNtLink.867:  El campo Nombre del emisor, no corresponde con el nombre del titular del certificado de sello digital del Emisor.
+2022-06-04 01:24:43,840-7-INFO-Business.GeneradorCfdi.TimbrarComprobanteNtLink.974: System.ServiceModel.FaultException:  El campo Nombre del emisor, no corresponde con el nombre del titular del certificado de sello digital del Emisor.
+   en Business.GeneradorCfdi.TimbrarComprobanteNtLink(Comprobante comp) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GeneradorCfdi.cs:línea 868
+2022-06-04 01:24:43,851-7-ERROR-Business.GeneradorCfdi.GenerarCfd.1184: System.ServiceModel.FaultException:  El campo Nombre del emisor, no corresponde con el nombre del titular del certificado de sello digital del Emisor.
+   en Business.GeneradorCfdi.TimbrarComprobanteNtLink(Comprobante comp) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GeneradorCfdi.cs:línea 975
+   en Business.GeneradorCfdi.GenerarCfd(Comprobante comprobante, X509Certificate2 cert, String rutaLlave, String passLlave) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GeneradorCfdi.cs:línea 1178
+2022-06-04 01:25:09,624-6-DEBUG-Business.GAFFactura.GuardarFactura33.289: 000024
+2022-06-04 01:25:09,649-6-DEBUG-Business.GAFFactura.GeneraCfd.357: XAMA620210DQ5
+2022-06-04 01:25:09,650-6-DEBUG-Business.GAFFactura.GeneraCfd.380: Ruta Llave C:\GAF\Resources\XAMA620210DQ5\Certs\csd.key
+2022-06-04 01:25:09,651-6-DEBUG-Business.GAFFactura.GetComprobante.683: 000024
+2022-06-04 01:26:01,714-6-DEBUG-Business.GeneradorCfdi.GenerarCfd.1126: Generando xml
+2022-06-04 01:26:01,870-6-DEBUG-Business.GeneradorCfdi.TimbrarComprobanteNtLink.847: Timbrando comprobante
+2022-06-04 01:26:01,871-6-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteTimbradoXPRESS.27: Timbrando comprobante
+2022-06-04 01:26:03,825-6-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteTimbradoXPRESS.32: Codigo:CFDI40138 Mensaje: El campo Nombre del emisor, no corresponde con el nombre del titular del certificado de sello digital del Emisor.
+2022-06-04 01:26:04,884-6-ERROR-Business.GeneradorCfdi.TimbrarComprobanteNtLink.867:  El campo Nombre del emisor, no corresponde con el nombre del titular del certificado de sello digital del Emisor.
+2022-06-04 01:26:04,946-6-INFO-Business.GeneradorCfdi.TimbrarComprobanteNtLink.974: System.ServiceModel.FaultException:  El campo Nombre del emisor, no corresponde con el nombre del titular del certificado de sello digital del Emisor.
+   en Business.GeneradorCfdi.TimbrarComprobanteNtLink(Comprobante comp) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GeneradorCfdi.cs:línea 868
+2022-06-04 01:26:04,961-6-ERROR-Business.GeneradorCfdi.GenerarCfd.1184: System.ServiceModel.FaultException:  El campo Nombre del emisor, no corresponde con el nombre del titular del certificado de sello digital del Emisor.
+   en Business.GeneradorCfdi.TimbrarComprobanteNtLink(Comprobante comp) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GeneradorCfdi.cs:línea 975
+   en Business.GeneradorCfdi.GenerarCfd(Comprobante comprobante, X509Certificate2 cert, String rutaLlave, String passLlave) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GeneradorCfdi.cs:línea 1178
+2022-06-04 01:26:26,494-6-DEBUG-Business.GAFEmpresa.GuardarEmpresa.765: True
+2022-06-04 01:26:38,422-7-DEBUG-Business.GAFFactura.GuardarFactura33.289: 000025
+2022-06-04 01:26:38,438-7-DEBUG-Business.GAFFactura.GeneraCfd.357: XAMA620210DQ5
+2022-06-04 01:26:38,440-7-DEBUG-Business.GAFFactura.GeneraCfd.380: Ruta Llave C:\GAF\Resources\XAMA620210DQ5\Certs\csd.key
+2022-06-04 01:26:38,440-7-DEBUG-Business.GAFFactura.GetComprobante.683: 000025
+2022-06-04 01:26:43,020-7-DEBUG-Business.GeneradorCfdi.GenerarCfd.1126: Generando xml
+2022-06-04 01:26:43,160-7-DEBUG-Business.GeneradorCfdi.TimbrarComprobanteNtLink.847: Timbrando comprobante
+2022-06-04 01:26:43,160-7-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteTimbradoXPRESS.27: Timbrando comprobante
+2022-06-04 01:26:45,738-7-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteTimbradoXPRESS.32: Codigo:CFDI40145 Mensaje: El campo Nombre del receptor, debe pertenecer al nombre asociado al RFC registrado en el campo Rfc del Receptor.
+2022-06-04 01:26:49,544-7-ERROR-Business.GeneradorCfdi.TimbrarComprobanteNtLink.867:  El campo Nombre del receptor, debe pertenecer al nombre asociado al RFC registrado en el campo Rfc del Receptor.
+2022-06-04 01:26:49,561-7-INFO-Business.GeneradorCfdi.TimbrarComprobanteNtLink.974: System.ServiceModel.FaultException:  El campo Nombre del receptor, debe pertenecer al nombre asociado al RFC registrado en el campo Rfc del Receptor.
+   en Business.GeneradorCfdi.TimbrarComprobanteNtLink(Comprobante comp) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GeneradorCfdi.cs:línea 868
+2022-06-04 01:26:49,574-7-ERROR-Business.GeneradorCfdi.GenerarCfd.1184: System.ServiceModel.FaultException:  El campo Nombre del receptor, debe pertenecer al nombre asociado al RFC registrado en el campo Rfc del Receptor.
+   en Business.GeneradorCfdi.TimbrarComprobanteNtLink(Comprobante comp) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GeneradorCfdi.cs:línea 975
+   en Business.GeneradorCfdi.GenerarCfd(Comprobante comprobante, X509Certificate2 cert, String rutaLlave, String passLlave) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GeneradorCfdi.cs:línea 1178
+2022-06-04 01:50:32,457-5-DEBUG-Business.GAFFactura.GuardarFactura33.289: 000026
+2022-06-04 01:50:32,566-5-DEBUG-Business.GAFFactura.GeneraCfd.357: XAMA620210DQ5
+2022-06-04 01:50:32,568-5-DEBUG-Business.GAFFactura.GeneraCfd.380: Ruta Llave C:\GAF\Resources\XAMA620210DQ5\Certs\csd.key
+2022-06-04 01:50:32,584-5-DEBUG-Business.GAFFactura.GetComprobante.683: 000026
+2022-06-04 01:50:35,936-5-DEBUG-Business.GeneradorCfdi.GenerarCfd.1126: Generando xml
+2022-06-04 01:50:36,312-5-DEBUG-Business.GeneradorCfdi.TimbrarComprobanteNtLink.847: Timbrando comprobante
+2022-06-04 01:50:36,327-5-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteTimbradoXPRESS.27: Timbrando comprobante
+2022-06-04 01:50:55,690-5-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteTimbradoXPRESS.32: Codigo:CFDI40158 Mensaje: La clave del campo RegimenFiscalR debe corresponder con el tipo de persona (física o moral). -  ValorEsperado: 605 | 606 | 607 | 608 | 610 | 611 | 614 | 615 | 616 | 621 | 625 | 626 ValorReportado: Item601
+2022-06-04 01:50:57,844-5-ERROR-Business.GeneradorCfdi.TimbrarComprobanteNtLink.867:  La clave del campo RegimenFiscalR debe corresponder con el tipo de persona (física o moral). -  ValorEsperado: 605 | 606 | 607 | 608 | 610 | 611 | 614 | 615 | 616 | 621 | 625 | 626 ValorReportado: Item601
+2022-06-04 01:50:57,858-5-INFO-Business.GeneradorCfdi.TimbrarComprobanteNtLink.974: System.ServiceModel.FaultException:  La clave del campo RegimenFiscalR debe corresponder con el tipo de persona (física o moral). -  ValorEsperado: 605 | 606 | 607 | 608 | 610 | 611 | 614 | 615 | 616 | 621 | 625 | 626 ValorReportado: Item601
+   en Business.GeneradorCfdi.TimbrarComprobanteNtLink(Comprobante comp) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GeneradorCfdi.cs:línea 868
+2022-06-04 01:50:57,870-5-ERROR-Business.GeneradorCfdi.GenerarCfd.1184: System.ServiceModel.FaultException:  La clave del campo RegimenFiscalR debe corresponder con el tipo de persona (física o moral). -  ValorEsperado: 605 | 606 | 607 | 608 | 610 | 611 | 614 | 615 | 616 | 621 | 625 | 626 ValorReportado: Item601
+   en Business.GeneradorCfdi.TimbrarComprobanteNtLink(Comprobante comp) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GeneradorCfdi.cs:línea 975
+   en Business.GeneradorCfdi.GenerarCfd(Comprobante comprobante, X509Certificate2 cert, String rutaLlave, String passLlave) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GeneradorCfdi.cs:línea 1178
+2022-06-04 01:54:53,997-6-DEBUG-Business.GAFFactura.GuardarFactura33.289: 000027
+2022-06-04 01:54:54,146-6-DEBUG-Business.GAFFactura.GeneraCfd.357: XAMA620210DQ5
+2022-06-04 01:54:54,148-6-DEBUG-Business.GAFFactura.GeneraCfd.380: Ruta Llave C:\GAF\Resources\XAMA620210DQ5\Certs\csd.key
+2022-06-04 01:54:54,166-6-DEBUG-Business.GAFFactura.GetComprobante.683: 000027
+2022-06-04 01:54:59,462-6-DEBUG-Business.GeneradorCfdi.GenerarCfd.1126: Generando xml
+2022-06-04 01:54:59,850-6-DEBUG-Business.GeneradorCfdi.TimbrarComprobanteNtLink.847: Timbrando comprobante
+2022-06-04 01:54:59,876-6-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteTimbradoXPRESS.27: Timbrando comprobante
+2022-06-04 01:56:21,520-6-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteTimbradoXPRESS.32: Codigo:CFDI40160 Mensaje: El campo UsoCFDI, no contiene un valor del catálogo c_UsoCFDI.
+2022-06-04 01:56:23,129-6-ERROR-Business.GeneradorCfdi.TimbrarComprobanteNtLink.867:  El campo UsoCFDI, no contiene un valor del catálogo c_UsoCFDI.
+2022-06-04 01:56:23,146-6-INFO-Business.GeneradorCfdi.TimbrarComprobanteNtLink.974: System.ServiceModel.FaultException:  El campo UsoCFDI, no contiene un valor del catálogo c_UsoCFDI.
+   en Business.GeneradorCfdi.TimbrarComprobanteNtLink(Comprobante comp) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GeneradorCfdi.cs:línea 868
+2022-06-04 01:56:23,159-6-ERROR-Business.GeneradorCfdi.GenerarCfd.1184: System.ServiceModel.FaultException:  El campo UsoCFDI, no contiene un valor del catálogo c_UsoCFDI.
+   en Business.GeneradorCfdi.TimbrarComprobanteNtLink(Comprobante comp) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GeneradorCfdi.cs:línea 975
+   en Business.GeneradorCfdi.GenerarCfd(Comprobante comprobante, X509Certificate2 cert, String rutaLlave, String passLlave) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GeneradorCfdi.cs:línea 1178
+2022-06-04 02:00:57,055-7-DEBUG-Business.GAFFactura.GuardarFactura33.289: 000028
+2022-06-04 02:00:57,082-7-DEBUG-Business.GAFFactura.GeneraCfd.357: XAMA620210DQ5
+2022-06-04 02:00:57,083-7-DEBUG-Business.GAFFactura.GeneraCfd.380: Ruta Llave C:\GAF\Resources\XAMA620210DQ5\Certs\csd.key
+2022-06-04 02:00:57,084-7-DEBUG-Business.GAFFactura.GetComprobante.683: 000028
+2022-06-04 02:01:01,027-7-DEBUG-Business.GeneradorCfdi.GenerarCfd.1126: Generando xml
+2022-06-04 02:01:01,147-7-DEBUG-Business.GeneradorCfdi.TimbrarComprobanteNtLink.847: Timbrando comprobante
+2022-06-04 02:01:01,148-7-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteTimbradoXPRESS.27: Timbrando comprobante
+2022-06-04 02:01:03,720-7-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteTimbradoXPRESS.32: Codigo:CFDI40161 Mensaje: La clave del campo UsoCFDI debe corresponder con el tipo de persona (física o moral) y el régimen correspondiente conforme al catálogo c_UsoCFDI.
+2022-06-04 02:01:08,816-7-ERROR-Business.GeneradorCfdi.TimbrarComprobanteNtLink.867:  La clave del campo UsoCFDI debe corresponder con el tipo de persona (física o moral) y el régimen correspondiente conforme al catálogo c_UsoCFDI.
+2022-06-04 02:01:08,827-7-INFO-Business.GeneradorCfdi.TimbrarComprobanteNtLink.974: System.ServiceModel.FaultException:  La clave del campo UsoCFDI debe corresponder con el tipo de persona (física o moral) y el régimen correspondiente conforme al catálogo c_UsoCFDI.
+   en Business.GeneradorCfdi.TimbrarComprobanteNtLink(Comprobante comp) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GeneradorCfdi.cs:línea 868
+2022-06-04 02:01:08,837-7-ERROR-Business.GeneradorCfdi.GenerarCfd.1184: System.ServiceModel.FaultException:  La clave del campo UsoCFDI debe corresponder con el tipo de persona (física o moral) y el régimen correspondiente conforme al catálogo c_UsoCFDI.
+   en Business.GeneradorCfdi.TimbrarComprobanteNtLink(Comprobante comp) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GeneradorCfdi.cs:línea 975
+   en Business.GeneradorCfdi.GenerarCfd(Comprobante comprobante, X509Certificate2 cert, String rutaLlave, String passLlave) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GeneradorCfdi.cs:línea 1178
+2022-06-04 02:01:33,395-7-DEBUG-Business.GAFFactura.GuardarFactura33.289: 000028
+2022-06-04 02:01:33,428-7-DEBUG-Business.GAFFactura.GeneraCfd.357: XAMA620210DQ5
+2022-06-04 02:01:33,430-7-DEBUG-Business.GAFFactura.GeneraCfd.380: Ruta Llave C:\GAF\Resources\XAMA620210DQ5\Certs\csd.key
+2022-06-04 02:01:33,430-7-DEBUG-Business.GAFFactura.GetComprobante.683: 000028
+2022-06-04 02:01:38,387-7-DEBUG-Business.GeneradorCfdi.GenerarCfd.1126: Generando xml
+2022-06-04 02:01:38,524-7-DEBUG-Business.GeneradorCfdi.TimbrarComprobanteNtLink.847: Timbrando comprobante
+2022-06-04 02:01:38,525-7-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteTimbradoXPRESS.27: Timbrando comprobante
+2022-06-04 02:01:48,286-7-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteTimbradoXPRESS.32: Codigo:200 Mensaje:Solicitud procesada con éxito. - Solicitud de timbrado procesada.
+2022-06-04 02:01:48,286-7-DEBUG-Business.GeneradorCfdi.TimbrarComprobanteNtLink.872: <?xml version="1.0"?>
+<tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/TimbreFiscalDigital/TimbreFiscalDigitalv11.xsd" Version="1.1" UUID="0ed27da0-1ae1-428c-9eff-97d71307052f" FechaTimbrado="2022-06-04T02:01:43" RfcProvCertif="SPR190613I52" SelloCFD="KnQzAgDhEeXBvTSV51Z8CxzjuVteMm/+RCywUT8I8cLJzp8MeAeZ5nXkvSu7ypb9hvkdJ5gldkFLhwNbq5bUfn4+iA7lEWvCTwma/bZw+Ki7SoqquN46VXPkJRUEYJtTQrgU/TjP8QT0VahLURiRkOm2Cjr+gv0neWY6n0d6Xm2IWBMxOy9gNkWAFupOLdpr6N3pJXJd3B9/iVfROQLYp+AJNGIdb9a/plxQe/xzYY5htFMqdaRV5tYSwJv+U6+8HxpZfoEmawjdyB0IXOj8wMuRSNEqirlb02mi6Jy/wnXyEIj/tVKpNteuvfUIN0puGMCSmPLcrtF9B2wJqVtN+Q==" NoCertificadoSAT="30001000000400002495" SelloSAT="n2MTWZcjvkmGFPz72C2XCIrVDTm8bWFR8E3H5j2I+/m1F/CR4D5EctIGM+vuimynVKCGkdQ5XZu8wWbSIaZCXlKSdOzLvUYDRHXEzDf6ZDEno14tmnNXq54vfBRCGwIfLxoTxkV7JtbYzkj3D0NMdoQRRSlt7Q6ZguAa7sDylv6RTgjLfTr/OfqdV2w05p0JbSRKMIDDiNOLdtABxehhinuJgGkQfaOrkIYNk9qm++sHiC5yK7F7M6YvL2XkSQJHHKpRHMCECxg3j3UpyrwoCRtB/4q32aJTmnwMMFxAAqm9+t7EvnjJUA+ktanlvqS1FNroUj2LPfqW3cWzVuVRvA=="/>
+
+2022-06-04 02:01:48,321-7-DEBUG-Business.GAFFactura.GeneraCfd.392: <?xml version="1.0" encoding="utf-8"?><cfdi:Comprobante xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sat.gob.mx/cfd/4 http://www.sat.gob.mx/sitio_internet/cfd/4/cfdv40.xsd" Version="4.0" Folio="000028" Fecha="2022-06-04T02:01:33" FormaPago="99" NoCertificado="30001000000400002326" Certificado="MIIFijCCA3KgAwIBAgIUMzAwMDEwMDAwMDA0MDAwMDIzMjYwDQYJKoZIhvcNAQELBQAwggErMQ8wDQYDVQQDDAZBQyBVQVQxLjAsBgNVBAoMJVNFUlZJQ0lPIERFIEFETUlOSVNUUkFDSU9OIFRSSUJVVEFSSUExGjAYBgNVBAsMEVNBVC1JRVMgQXV0aG9yaXR5MSgwJgYJKoZIhvcNAQkBFhlvc2Nhci5tYXJ0aW5lekBzYXQuZ29iLm14MR0wGwYDVQQJDBQzcmEgY2VycmFkYSBkZSBjYWRpejEOMAwGA1UEEQwFMDYzNzAxCzAJBgNVBAYTAk1YMRkwFwYDVQQIDBBDSVVEQUQgREUgTUVYSUNPMREwDwYDVQQHDAhDT1lPQUNBTjERMA8GA1UELRMIMi41LjQuNDUxJTAjBgkqhkiG9w0BCQITFnJlc3BvbnNhYmxlOiBBQ0RNQS1TQVQwHhcNMTkwNTI5MTgxMTQ4WhcNMjMwNTI5MTgxMTQ4WjCBsTEdMBsGA1UEAxMUQUxCQSBYS0FSQUpBTSBNRU5ERVoxHTAbBgNVBCkTFEFMQkEgWEtBUkFKQU0gTUVOREVaMR0wGwYDVQQKExRBTEJBIFhLQVJBSkFNIE1FTkRFWjEWMBQGA1UELRMNWEFNQTYyMDIxMERRNTEbMBkGA1UEBRMSWEFNQTYyMDIxME1TTEtOTDA0MR0wGwYDVQQLExRBTEJBIFhLQVJBSkFNIE1FTkRFWjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAK2HkPEtxQ+eUC6J428PU1OHXmr7cHtTlE5+Zk0eYykm1tVNivygT+kz7FTgw1b0yoFh96Xp3tXBSeAmsO+DShFFyYMB6x3lllIEmMZD5JbMaCpzyPMRzAq6850Am3/ShjigUPRorUhdLO1Yes2CyySzYlhA08fq3FmOCQ4eQmSPN7422T+Srhm6pFYaVjwS0MlskslCIi+ANqL5RWg75tNjpJzLQXPJyG0KU1AaqXgUT1e+aTn38AyNVQc30QAjiI50CTUq5MJFixoCB9vol421L7peEIAox3DRVw9H/wns9973XLedyuj5r8ZZfs4BinkVh+mykTyZE63rEv14uncCAwEAAaMdMBswDAYDVR0TAQH/BAIwADALBgNVHQ8EBAMCBsAwDQYJKoZIhvcNAQELBQADggIBAAR/KOWy29oitYdYzuGe1o+JOx/AowEJuu9S4/thFE9ugvHiceFK3cUD8v4M4/AS9D+NVrcMpJocNwpUsW/GiGFqOHNcFVnoSsaeEUMSIW949/0lCeMusR10VnpUaXmYFVYZkFV0PsDYUHna+lqmHDLwzSpfyU20UapgpkPe7Ib6/5CmsPQ7GcF7HBrshO8MyLyYSi193MTDKO86thq5iBnTrt4qyCgI7+Hpk770C4wMskpitf0Z9BUUrBxAk+ZoH1fw1ysZtK+v4vS/wquib2SK+MpvlYEfam/613EE/PEAlBTXPDaWTxporKJJxnv/iOsm97FmvRuwAnB13r5cxc/UJFjD2bFm38/2wOUG1H3srG8xhVSTKUYQjvJU+V10dQe0O/QkWx9sPHlY67CdB5SlsCBl0mkB7mA2fsPyuP28EQtEenjm48wpBXgb4exOYq4flMPZ7LpO79SmnQPSeTIt8CIlc0HomkMCl30HQzGSMoItxGSO9Rrx3ogpNNcdhpD6p59TkYd2zM7argPP/lfbl7/3EbbN5miC1JgNgRfAq02CREdMEAK9Z6ErVWUUl8gd0Tva/C3ykCJdTdNgfEI8gONS2ky/axDNDHL8d4+I6tGItfM4drtukL9Trh8/5RPuPvKHg1tKonDp50mxu4ubXBDF2LAnsOshAB44fn+r" SubTotal="1.00" Moneda="MXN" Total="1.16" TipoDeComprobante="I" Exportacion="01" MetodoPago="PPD" LugarExpedicion="86690" xmlns:cfdi="http://www.sat.gob.mx/cfd/4" Sello="KnQzAgDhEeXBvTSV51Z8CxzjuVteMm/+RCywUT8I8cLJzp8MeAeZ5nXkvSu7ypb9hvkdJ5gldkFLhwNbq5bUfn4+iA7lEWvCTwma/bZw+Ki7SoqquN46VXPkJRUEYJtTQrgU/TjP8QT0VahLURiRkOm2Cjr+gv0neWY6n0d6Xm2IWBMxOy9gNkWAFupOLdpr6N3pJXJd3B9/iVfROQLYp+AJNGIdb9a/plxQe/xzYY5htFMqdaRV5tYSwJv+U6+8HxpZfoEmawjdyB0IXOj8wMuRSNEqirlb02mi6Jy/wnXyEIj/tVKpNteuvfUIN0puGMCSmPLcrtF9B2wJqVtN+Q=="><cfdi:Emisor Rfc="XAMA620210DQ5" Nombre="ALBA XKARAJAM MENDEZ" RegimenFiscal="605" /><cfdi:Receptor Rfc="OEZI690113TNA" Nombre="IRAIS ORTEGA ZUÑIGA" DomicilioFiscalReceptor="03849" RegimenFiscalReceptor="605" UsoCFDI="D02" /><cfdi:Conceptos><cfdi:Concepto ClaveProdServ="78101802" Cantidad="1.000000" ClaveUnidad="E48" Unidad="Unidad de servicio" Descripcion="32" ValorUnitario="1.00" Importe="1.00" ObjetoImp="02"><cfdi:Impuestos><cfdi:Traslados><cfdi:Traslado Base="1.000000" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="0.16" /></cfdi:Traslados></cfdi:Impuestos></cfdi:Concepto></cfdi:Conceptos><cfdi:Impuestos TotalImpuestosTrasladados="0.16"><cfdi:Traslados><cfdi:Traslado Base="1.00" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="0.16" /></cfdi:Traslados></cfdi:Impuestos><cfdi:Complemento><tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/TimbreFiscalDigital/TimbreFiscalDigitalv11.xsd" Version="1.1" UUID="0ed27da0-1ae1-428c-9eff-97d71307052f" FechaTimbrado="2022-06-04T02:01:43" RfcProvCertif="SPR190613I52" SelloCFD="KnQzAgDhEeXBvTSV51Z8CxzjuVteMm/+RCywUT8I8cLJzp8MeAeZ5nXkvSu7ypb9hvkdJ5gldkFLhwNbq5bUfn4+iA7lEWvCTwma/bZw+Ki7SoqquN46VXPkJRUEYJtTQrgU/TjP8QT0VahLURiRkOm2Cjr+gv0neWY6n0d6Xm2IWBMxOy9gNkWAFupOLdpr6N3pJXJd3B9/iVfROQLYp+AJNGIdb9a/plxQe/xzYY5htFMqdaRV5tYSwJv+U6+8HxpZfoEmawjdyB0IXOj8wMuRSNEqirlb02mi6Jy/wnXyEIj/tVKpNteuvfUIN0puGMCSmPLcrtF9B2wJqVtN+Q==" NoCertificadoSAT="30001000000400002495" SelloSAT="n2MTWZcjvkmGFPz72C2XCIrVDTm8bWFR8E3H5j2I+/m1F/CR4D5EctIGM+vuimynVKCGkdQ5XZu8wWbSIaZCXlKSdOzLvUYDRHXEzDf6ZDEno14tmnNXq54vfBRCGwIfLxoTxkV7JtbYzkj3D0NMdoQRRSlt7Q6ZguAa7sDylv6RTgjLfTr/OfqdV2w05p0JbSRKMIDDiNOLdtABxehhinuJgGkQfaOrkIYNk9qm++sHiC5yK7F7M6YvL2XkSQJHHKpRHMCECxg3j3UpyrwoCRtB/4q32aJTmnwMMFxAAqm9+t7EvnjJUA+ktanlvqS1FNroUj2LPfqW3cWzVuVRvA==" /></cfdi:Complemento></cfdi:Comprobante>
+2022-06-04 02:01:49,722-7-ERROR-Business.GeneradorCfdi.GetPdfFromComprobante.219: System.Net.WebException: Error de la solicitud con el código de estado HTTP 401: Unauthorized.
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en Business.ReportService.ReportingService2005.ListChildren(String Item, Boolean Recursive) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\Web References\ReportService\Reference.cs:línea 871
+   en Business.GeneradorCfdi.GetPdfFromComprobante(Comprobante comprobante, Int32 orientacion, TipoDocumento tipo, Int64& id, String metodoPago) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GeneradorCfdi.cs:línea 190
+2022-06-04 02:01:49,754-7-ERROR-Business.GAFFactura.GeneraCfd.413: System.Net.WebException: Error de la solicitud con el código de estado HTTP 401: Unauthorized.
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en Business.ReportService.ReportingService2005.ListChildren(String Item, Boolean Recursive) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\Web References\ReportService\Reference.cs:línea 871
+   en Business.GeneradorCfdi.GetPdfFromComprobante(Comprobante comprobante, Int32 orientacion, TipoDocumento tipo, Int64& id, String metodoPago) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GeneradorCfdi.cs:línea 222
+   en Business.GAFFactura.GeneraCfd(GAFFactura factura, Boolean enviar, facturaComplementos complementos) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GAFFactura.cs:línea 405
+2022-06-04 02:01:49,754-7-DEBUG-Business.GAFFactura.GeneraCfd.422: Enviar Correo
+2022-06-04 02:01:49,770-7-DEBUG-Business.Mailer.Send.45: Enviando a 1 emails
+2022-06-04 02:01:49,803-7-INFO-Business.Mailer.Send.65: Creando MailMessage
+2022-06-04 02:01:49,811-7-INFO-Business.Mailer.Send.76: Cargando Bcc: cconsultc3@gmail.com
+2022-06-04 02:01:49,812-7-INFO-Business.Mailer.Send.84: Agregando attach
+2022-06-04 02:01:49,813-7-INFO-Business.Mailer.Send.96: Enviando a la direccion: irais_ortega@yahoo.com.mx
+2022-06-04 02:01:50,634-7-ERROR-Business.Mailer.Send.107: System.Net.Mail.SmtpException: El servidor SMTP requiere una conexión segura o el cliente no se autenticó. La respuesta del servidor fue: 5.7.0 Authentication Required. Learn more at
+   en System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   en System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   en System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   en Business.Mailer.Send(List`1 recipients, List`1 attachments, String message, String subject, String fromEmail, String fromDescription) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\Mailer.cs:línea 100
+2022-06-04 02:01:50,657-7-ERROR-Business.GAFFactura.GeneraCfd.464: Ocurrio un error al enviar el correo
+2022-06-04 02:19:02,726-6-DEBUG-Business.GAFFactura.GuardarFactura33.289: 000030
+2022-06-04 02:19:02,852-6-DEBUG-Business.GAFFactura.GeneraCfd.357: XAMA620210DQ5
+2022-06-04 02:19:02,854-6-DEBUG-Business.GAFFactura.GeneraCfd.380: Ruta Llave C:\GAF\Resources\XAMA620210DQ5\Certs\csd.key
+2022-06-04 02:19:02,864-6-DEBUG-Business.GAFFactura.GetComprobante.683: 000030
+2022-06-04 02:19:09,875-6-DEBUG-Business.GeneradorCfdi.GenerarCfd.1126: Generando xml
+2022-06-04 02:19:10,243-6-DEBUG-Business.GeneradorCfdi.TimbrarComprobanteNtLink.847: Timbrando comprobante
+2022-06-04 02:19:10,259-6-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteTimbradoXPRESS.27: Timbrando comprobante
+2022-06-04 02:19:19,816-6-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteTimbradoXPRESS.32: Codigo:200 Mensaje:Solicitud procesada con éxito. - Solicitud de timbrado procesada.
+2022-06-04 02:19:19,816-6-DEBUG-Business.GeneradorCfdi.TimbrarComprobanteNtLink.872: <?xml version="1.0"?>
+<tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/TimbreFiscalDigital/TimbreFiscalDigitalv11.xsd" Version="1.1" UUID="fdfa50a2-7755-4e06-8698-92bba0fd554a" FechaTimbrado="2022-06-04T02:19:16" RfcProvCertif="SPR190613I52" SelloCFD="gcUfhEBdBeC7DoaovI2G2VUV9aUjS2C4iud7iI+mv7ZGxtE30cTty+EsKu4E6vE7cC+EC29dVlsw66kBnpJfJH7A1u+BOjH14wMX/DMHC3v1elt6wUWChonFzDwZE2eifddkGtePdAj1XAVA5oc22wDngMYHzSeRxWbSy7WkKjGzBp7Fulk161Qhb5Q34KQbjAo/c784FFfmMzKCfegxRCCggn5k9+qWq2DSZTpVW5j7uQfzJSHKoVT552DN5//QRVOF4uuKF/chxaB8pPl1vOh6fcVbFpj2+86i/s4xynu0XKClbXK3N/It5rnqTCLlOaAss8zWxOcl3tiUYbCHXg==" NoCertificadoSAT="30001000000400002495" SelloSAT="Thbqcd8KQHdPrfFpe8Rh/tL74OXulrXQ9+WgRDR462O0WcpHwJfgjNfcM3Q57Qp7GMTYHjQDFF+O/twhmJs03dCtNick3/GL9lXF0V4d6UBonFvnubqPfLNbzyehNBY1TZzTIOiTZLWshAv1hQQiQNWLAlPTFrMSZ6vow+gIRGPg44IMlyozbq+5xihnD7RhH8/28hOui9HNQiacwRHRHzMQPsPu2Ob5HgBBluQBjnASlFRr2SuJNFIFRCOc2iBxIsiqpX8cy72B2UfHcL3VyanRzahGRzB5b8Ti9hqwQhUkF5hDWnljh8qJtIzl0R4pun+PxwigPPqe21ey8VqTyw=="/>
+
+2022-06-04 02:19:19,830-6-DEBUG-Business.GAFFactura.GeneraCfd.392: <?xml version="1.0" encoding="utf-8"?><cfdi:Comprobante xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sat.gob.mx/cfd/4 http://www.sat.gob.mx/sitio_internet/cfd/4/cfdv40.xsd" Version="4.0" Folio="000030" Fecha="2022-06-04T02:19:02" FormaPago="99" NoCertificado="30001000000400002326" Certificado="MIIFijCCA3KgAwIBAgIUMzAwMDEwMDAwMDA0MDAwMDIzMjYwDQYJKoZIhvcNAQELBQAwggErMQ8wDQYDVQQDDAZBQyBVQVQxLjAsBgNVBAoMJVNFUlZJQ0lPIERFIEFETUlOSVNUUkFDSU9OIFRSSUJVVEFSSUExGjAYBgNVBAsMEVNBVC1JRVMgQXV0aG9yaXR5MSgwJgYJKoZIhvcNAQkBFhlvc2Nhci5tYXJ0aW5lekBzYXQuZ29iLm14MR0wGwYDVQQJDBQzcmEgY2VycmFkYSBkZSBjYWRpejEOMAwGA1UEEQwFMDYzNzAxCzAJBgNVBAYTAk1YMRkwFwYDVQQIDBBDSVVEQUQgREUgTUVYSUNPMREwDwYDVQQHDAhDT1lPQUNBTjERMA8GA1UELRMIMi41LjQuNDUxJTAjBgkqhkiG9w0BCQITFnJlc3BvbnNhYmxlOiBBQ0RNQS1TQVQwHhcNMTkwNTI5MTgxMTQ4WhcNMjMwNTI5MTgxMTQ4WjCBsTEdMBsGA1UEAxMUQUxCQSBYS0FSQUpBTSBNRU5ERVoxHTAbBgNVBCkTFEFMQkEgWEtBUkFKQU0gTUVOREVaMR0wGwYDVQQKExRBTEJBIFhLQVJBSkFNIE1FTkRFWjEWMBQGA1UELRMNWEFNQTYyMDIxMERRNTEbMBkGA1UEBRMSWEFNQTYyMDIxME1TTEtOTDA0MR0wGwYDVQQLExRBTEJBIFhLQVJBSkFNIE1FTkRFWjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAK2HkPEtxQ+eUC6J428PU1OHXmr7cHtTlE5+Zk0eYykm1tVNivygT+kz7FTgw1b0yoFh96Xp3tXBSeAmsO+DShFFyYMB6x3lllIEmMZD5JbMaCpzyPMRzAq6850Am3/ShjigUPRorUhdLO1Yes2CyySzYlhA08fq3FmOCQ4eQmSPN7422T+Srhm6pFYaVjwS0MlskslCIi+ANqL5RWg75tNjpJzLQXPJyG0KU1AaqXgUT1e+aTn38AyNVQc30QAjiI50CTUq5MJFixoCB9vol421L7peEIAox3DRVw9H/wns9973XLedyuj5r8ZZfs4BinkVh+mykTyZE63rEv14uncCAwEAAaMdMBswDAYDVR0TAQH/BAIwADALBgNVHQ8EBAMCBsAwDQYJKoZIhvcNAQELBQADggIBAAR/KOWy29oitYdYzuGe1o+JOx/AowEJuu9S4/thFE9ugvHiceFK3cUD8v4M4/AS9D+NVrcMpJocNwpUsW/GiGFqOHNcFVnoSsaeEUMSIW949/0lCeMusR10VnpUaXmYFVYZkFV0PsDYUHna+lqmHDLwzSpfyU20UapgpkPe7Ib6/5CmsPQ7GcF7HBrshO8MyLyYSi193MTDKO86thq5iBnTrt4qyCgI7+Hpk770C4wMskpitf0Z9BUUrBxAk+ZoH1fw1ysZtK+v4vS/wquib2SK+MpvlYEfam/613EE/PEAlBTXPDaWTxporKJJxnv/iOsm97FmvRuwAnB13r5cxc/UJFjD2bFm38/2wOUG1H3srG8xhVSTKUYQjvJU+V10dQe0O/QkWx9sPHlY67CdB5SlsCBl0mkB7mA2fsPyuP28EQtEenjm48wpBXgb4exOYq4flMPZ7LpO79SmnQPSeTIt8CIlc0HomkMCl30HQzGSMoItxGSO9Rrx3ogpNNcdhpD6p59TkYd2zM7argPP/lfbl7/3EbbN5miC1JgNgRfAq02CREdMEAK9Z6ErVWUUl8gd0Tva/C3ykCJdTdNgfEI8gONS2ky/axDNDHL8d4+I6tGItfM4drtukL9Trh8/5RPuPvKHg1tKonDp50mxu4ubXBDF2LAnsOshAB44fn+r" SubTotal="1.00" Moneda="MXN" Total="1.16" TipoDeComprobante="I" Exportacion="01" MetodoPago="PPD" LugarExpedicion="86690" xmlns:cfdi="http://www.sat.gob.mx/cfd/4" Sello="gcUfhEBdBeC7DoaovI2G2VUV9aUjS2C4iud7iI+mv7ZGxtE30cTty+EsKu4E6vE7cC+EC29dVlsw66kBnpJfJH7A1u+BOjH14wMX/DMHC3v1elt6wUWChonFzDwZE2eifddkGtePdAj1XAVA5oc22wDngMYHzSeRxWbSy7WkKjGzBp7Fulk161Qhb5Q34KQbjAo/c784FFfmMzKCfegxRCCggn5k9+qWq2DSZTpVW5j7uQfzJSHKoVT552DN5//QRVOF4uuKF/chxaB8pPl1vOh6fcVbFpj2+86i/s4xynu0XKClbXK3N/It5rnqTCLlOaAss8zWxOcl3tiUYbCHXg=="><cfdi:Emisor Rfc="XAMA620210DQ5" Nombre="ALBA XKARAJAM MENDEZ" RegimenFiscal="605" /><cfdi:Receptor Rfc="OEZI690113TNA" Nombre="IRAIS ORTEGA ZUÑIGA" DomicilioFiscalReceptor="03849" RegimenFiscalReceptor="605" UsoCFDI="D02" /><cfdi:Conceptos><cfdi:Concepto ClaveProdServ="78101802" Cantidad="1.000000" ClaveUnidad="E48" Unidad="Unidad de servicio" Descripcion="4" ValorUnitario="1.00" Importe="1.00" ObjetoImp="02"><cfdi:Impuestos><cfdi:Traslados><cfdi:Traslado Base="1.000000" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="0.16" /></cfdi:Traslados></cfdi:Impuestos></cfdi:Concepto></cfdi:Conceptos><cfdi:Impuestos TotalImpuestosTrasladados="0.16"><cfdi:Traslados><cfdi:Traslado Base="1.00" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="0.16" /></cfdi:Traslados></cfdi:Impuestos><cfdi:Complemento><tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/TimbreFiscalDigital/TimbreFiscalDigitalv11.xsd" Version="1.1" UUID="fdfa50a2-7755-4e06-8698-92bba0fd554a" FechaTimbrado="2022-06-04T02:19:16" RfcProvCertif="SPR190613I52" SelloCFD="gcUfhEBdBeC7DoaovI2G2VUV9aUjS2C4iud7iI+mv7ZGxtE30cTty+EsKu4E6vE7cC+EC29dVlsw66kBnpJfJH7A1u+BOjH14wMX/DMHC3v1elt6wUWChonFzDwZE2eifddkGtePdAj1XAVA5oc22wDngMYHzSeRxWbSy7WkKjGzBp7Fulk161Qhb5Q34KQbjAo/c784FFfmMzKCfegxRCCggn5k9+qWq2DSZTpVW5j7uQfzJSHKoVT552DN5//QRVOF4uuKF/chxaB8pPl1vOh6fcVbFpj2+86i/s4xynu0XKClbXK3N/It5rnqTCLlOaAss8zWxOcl3tiUYbCHXg==" NoCertificadoSAT="30001000000400002495" SelloSAT="Thbqcd8KQHdPrfFpe8Rh/tL74OXulrXQ9+WgRDR462O0WcpHwJfgjNfcM3Q57Qp7GMTYHjQDFF+O/twhmJs03dCtNick3/GL9lXF0V4d6UBonFvnubqPfLNbzyehNBY1TZzTIOiTZLWshAv1hQQiQNWLAlPTFrMSZ6vow+gIRGPg44IMlyozbq+5xihnD7RhH8/28hOui9HNQiacwRHRHzMQPsPu2Ob5HgBBluQBjnASlFRr2SuJNFIFRCOc2iBxIsiqpX8cy72B2UfHcL3VyanRzahGRzB5b8Ti9hqwQhUkF5hDWnljh8qJtIzl0R4pun+PxwigPPqe21ey8VqTyw==" /></cfdi:Complemento></cfdi:Comprobante>
+2022-06-04 02:19:21,175-6-ERROR-Business.GeneradorCfdi.GetPdfFromComprobante.219: System.Net.WebException: Error de la solicitud con el código de estado HTTP 401: Unauthorized.
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en Business.ReportService.ReportingService2005.ListChildren(String Item, Boolean Recursive) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\Web References\ReportService\Reference.cs:línea 871
+   en Business.GeneradorCfdi.GetPdfFromComprobante(Comprobante comprobante, Int32 orientacion, TipoDocumento tipo, Int64& id, String metodoPago) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GeneradorCfdi.cs:línea 190
+2022-06-04 02:19:21,218-6-ERROR-Business.GAFFactura.GeneraCfd.413: System.Net.WebException: Error de la solicitud con el código de estado HTTP 401: Unauthorized.
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en Business.ReportService.ReportingService2005.ListChildren(String Item, Boolean Recursive) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\Web References\ReportService\Reference.cs:línea 871
+   en Business.GeneradorCfdi.GetPdfFromComprobante(Comprobante comprobante, Int32 orientacion, TipoDocumento tipo, Int64& id, String metodoPago) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GeneradorCfdi.cs:línea 222
+   en Business.GAFFactura.GeneraCfd(GAFFactura factura, Boolean enviar, facturaComplementos complementos) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GAFFactura.cs:línea 405
+2022-06-04 02:19:21,218-6-DEBUG-Business.GAFFactura.GeneraCfd.422: Enviar Correo
+2022-06-04 02:19:21,229-6-DEBUG-Business.Mailer.Send.45: Enviando a 1 emails
+2022-06-04 02:19:21,249-6-INFO-Business.Mailer.Send.65: Creando MailMessage
+2022-06-04 02:19:21,250-6-INFO-Business.Mailer.Send.76: Cargando Bcc: cconsultc3@gmail.com
+2022-06-04 02:19:21,251-6-INFO-Business.Mailer.Send.84: Agregando attach
+2022-06-04 02:19:21,252-6-INFO-Business.Mailer.Send.96: Enviando a la direccion: irais_ortega@yahoo.com.mx
+2022-06-04 02:19:22,292-6-ERROR-Business.Mailer.Send.107: System.Net.Mail.SmtpException: El servidor SMTP requiere una conexión segura o el cliente no se autenticó. La respuesta del servidor fue: 5.7.0 Authentication Required. Learn more at
+   en System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   en System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   en System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   en Business.Mailer.Send(List`1 recipients, List`1 attachments, String message, String subject, String fromEmail, String fromDescription) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\Mailer.cs:línea 100
+2022-06-04 02:19:22,304-6-ERROR-Business.GAFFactura.GeneraCfd.464: Ocurrio un error al enviar el correo
+2022-06-07 01:14:31,582-5-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteCancelarXPRESS.40: Cancelando comprobante
+2022-06-07 01:14:43,685-5-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteCancelarXPRESS.45: Codigo:CA207 Mensaje:No se especificó el motivo de cancelación o el motivo no es valido. - Error al cancelar el UUID de la factura.
+2022-06-07 01:16:38,994-9-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteCancelarXPRESS.40: Cancelando comprobante
+2022-06-07 01:16:42,993-9-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteCancelarXPRESS.45: Codigo:CA207 Mensaje:No se especificó el motivo de cancelación o el motivo no es valido. - Error al cancelar el UUID de la factura.
+2022-06-07 01:17:02,175-9-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ConsultaEstatusCFDI.54: consultando uuid en sat:fdfa50a2-7755-4e06-8698-92bba0fd554a
+2022-06-07 01:17:04,784-9-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ConsultaEstatusCFDI.60: Codigo:S - Comprobante obtenido satisfactoriamente. Mensaje:Vigente|No cancelable|
+2022-06-07 01:18:08,137-6-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteCancelarXPRESS.40: Cancelando comprobante
+2022-06-07 01:18:10,806-6-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteCancelarXPRESS.45: Codigo:CA207 Mensaje:No se especificó el motivo de cancelación o el motivo no es valido. - Error al cancelar el UUID de la factura.
+2022-06-07 01:18:13,944-6-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ConsultaEstatusCFDI.54: consultando uuid en sat:0ed27da0-1ae1-428c-9eff-97d71307052f
+2022-06-07 01:18:15,716-6-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ConsultaEstatusCFDI.60: Codigo:S - Comprobante obtenido satisfactoriamente. Mensaje:Vigente|No cancelable|
+2022-06-07 01:19:26,875-9-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteCancelarXPRESS.40: Cancelando comprobante
+2022-06-07 01:19:29,505-9-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteCancelarXPRESS.45: Codigo:CA207 Mensaje:No se especificó el motivo de cancelación o el motivo no es valido. - Error al cancelar el UUID de la factura.
+2022-06-07 01:19:34,208-9-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ConsultaEstatusCFDI.54: consultando uuid en sat:27b52888-f961-4861-917b-12e8eae002a0
+2022-06-07 01:19:37,853-9-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ConsultaEstatusCFDI.60: Codigo:S - Comprobante obtenido satisfactoriamente. Mensaje:Vigente|Cancelable sin aceptación|
+2022-06-27 22:20:49,584-7-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ConsultaEstatusCFDI.54: consultando uuid en sat:6cd15c4c-1dc1-4ce9-a2f0-684041cb59ed
+2022-06-27 22:21:04,683-7-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ConsultaEstatusCFDI.60: Codigo:N - 602: Comprobante no encontrado. Mensaje:
+2022-06-27 22:25:10,003-7-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ConsultaEstatusCFDI.54: consultando uuid en sat:6cd15c4c-1dc1-4ce9-a2f0-684041cb59ed
+2022-06-27 22:25:37,866-7-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ConsultaEstatusCFDI.60: Codigo:S - Comprobante obtenido satisfactoriamente. Mensaje:Cancelado|Cancelable sin aceptación|Cancelado sin aceptación
+2022-06-27 22:29:14,341-7-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ConsultaEstatusCFDI.54: consultando uuid en sat:6cd15c4c-1dc1-4ce9-a2f0-684041cb59ed
+2022-06-27 22:29:21,608-7-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ConsultaEstatusCFDI.60: Codigo:S - Comprobante obtenido satisfactoriamente. Mensaje:Cancelado|Cancelable sin aceptación|Cancelado sin aceptación
+2022-06-27 22:31:44,202-9-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ConsultaEstatusCFDI.54: consultando uuid en sat:6cd15c4c-1dc1-4ce9-a2f0-684041cb59ed
+2022-06-27 22:31:51,314-9-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ConsultaEstatusCFDI.60: Codigo:S - Comprobante obtenido satisfactoriamente. Mensaje:Cancelado|Cancelable sin aceptación|Cancelado sin aceptación

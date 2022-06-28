@@ -3449,3 +3449,637 @@ DoctoRelacionado - Falta el atributo 'MetodoDePagoDR' necesario.
 2020-03-21 01:41:10,439-6-DEBUG-GAFBusiness.GAFFactura.GetComprobante.657: 000011
 2020-03-21 02:23:44,989-16-DEBUG-GAFBusiness.GAFFactura.GetComprobante.657: 000014
 2020-03-21 10:34:17,841-16-DEBUG-GAFBusiness.GAFFactura.GetComprobante.657: 000015
+2022-03-05 01:39:20,081-8-DEBUG-Business.Mailer.Send.45: Enviando a 2 emails
+2022-03-05 01:39:20,147-8-INFO-Business.Mailer.Send.65: Creando MailMessage
+2022-03-05 01:39:20,148-8-INFO-Business.Mailer.Send.76: Cargando Bcc: 
+2022-03-05 01:39:20,148-8-INFO-Business.Mailer.Send.84: Agregando attach
+2022-03-05 01:39:20,162-8-ERROR-Business.Mailer.Send.107: System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en Business.Mailer.Send(List`1 recipients, List`1 attachments, String message, String subject, String fromEmail, String fromDescription) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\Mailer.cs:línea 90
+2022-03-05 01:41:46,639-8-DEBUG-Business.Mailer.Send.45: Enviando a 2 emails
+2022-03-05 01:41:46,702-8-INFO-Business.Mailer.Send.65: Creando MailMessage
+2022-03-05 01:41:46,703-8-INFO-Business.Mailer.Send.76: Cargando Bcc: 
+2022-03-05 01:41:46,703-8-INFO-Business.Mailer.Send.84: Agregando attach
+2022-03-05 01:41:46,719-8-ERROR-Business.Mailer.Send.107: System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en Business.Mailer.Send(List`1 recipients, List`1 attachments, String message, String subject, String fromEmail, String fromDescription) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\Mailer.cs:línea 90
+2022-03-05 02:04:42,022-12-DEBUG-Business.GAFFactura.GetComprobante.662: 000005
+2022-03-05 03:26:35,752-9-DEBUG-Business.Mailer.Send.45: Enviando a 2 emails
+2022-03-05 03:26:35,804-9-INFO-Business.Mailer.Send.65: Creando MailMessage
+2022-03-05 03:26:35,804-9-INFO-Business.Mailer.Send.76: Cargando Bcc: 
+2022-03-05 03:26:35,805-9-INFO-Business.Mailer.Send.84: Agregando attach
+2022-03-05 03:26:35,822-9-ERROR-Business.Mailer.Send.107: System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en Business.Mailer.Send(List`1 recipients, List`1 attachments, String message, String subject, String fromEmail, String fromDescription) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\Mailer.cs:línea 90
+2022-03-05 03:26:52,866-7-DEBUG-Business.Mailer.Send.45: Enviando a 2 emails
+2022-03-05 03:26:52,866-7-INFO-Business.Mailer.Send.65: Creando MailMessage
+2022-03-05 03:26:52,867-7-INFO-Business.Mailer.Send.76: Cargando Bcc: 
+2022-03-05 03:26:52,867-7-INFO-Business.Mailer.Send.84: Agregando attach
+2022-03-05 03:26:52,875-7-ERROR-Business.Mailer.Send.107: System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en Business.Mailer.Send(List`1 recipients, List`1 attachments, String message, String subject, String fromEmail, String fromDescription) en C:\datosRGV\respaldo_15_02_2021\Sistemas\Sistemas\Business\Mailer.cs:línea 90
+2022-04-18 20:16:42,784-7-DEBUG-Business.GAFFactura.GetComprobante.678: 000554
+2022-04-18 20:16:43,060-7-ERROR-Business.GAFFactura.SinGuardarFactura33.272: System.Security.Cryptography.CryptographicException: El sistema no puede encontrar la ruta especificada.
+
+   en System.Security.Cryptography.CryptographicException.ThrowCryptographicException(Int32 hr)
+   en System.Security.Cryptography.X509Certificates.X509Utils._QueryCertFileType(String fileName)
+   en System.Security.Cryptography.X509Certificates.X509Certificate.LoadCertificateFromFile(String fileName, Object password, X509KeyStorageFlags keyStorageFlags)
+   en System.Security.Cryptography.X509Certificates.X509Certificate2..ctor(String fileName)
+   en Business.GAFFactura.SinGuardarFactura33(DatosPrefactura fact, facturaComplementos complementosF) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\GAFFactura.cs:línea 245
+2022-04-18 20:17:06,375-8-DEBUG-Business.GAFFactura.GetComprobante.678: 000012
+2022-04-26 13:08:32,458-5-DEBUG-Business.GAFFactura.GetComprobante.678: 000554
+2022-04-26 13:08:32,699-5-ERROR-Business.GAFFactura.SinGuardarFactura33.272: System.Security.Cryptography.CryptographicException: El sistema no puede encontrar la ruta especificada.
+
+   en System.Security.Cryptography.CryptographicException.ThrowCryptographicException(Int32 hr)
+   en System.Security.Cryptography.X509Certificates.X509Utils._QueryCertFileType(String fileName)
+   en System.Security.Cryptography.X509Certificates.X509Certificate.LoadCertificateFromFile(String fileName, Object password, X509KeyStorageFlags keyStorageFlags)
+   en System.Security.Cryptography.X509Certificates.X509Certificate2..ctor(String fileName)
+   en Business.GAFFactura.SinGuardarFactura33(DatosPrefactura fact, facturaComplementos complementosF) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\GAFFactura.cs:línea 245
+2022-04-26 13:09:02,895-7-DEBUG-Business.GAFFactura.GetComprobante.678: 000554
+2022-04-26 13:09:02,912-7-ERROR-Business.GAFFactura.SinGuardarFactura33.272: System.Security.Cryptography.CryptographicException: El sistema no puede encontrar la ruta especificada.
+
+   en System.Security.Cryptography.CryptographicException.ThrowCryptographicException(Int32 hr)
+   en System.Security.Cryptography.X509Certificates.X509Utils._QueryCertFileType(String fileName)
+   en System.Security.Cryptography.X509Certificates.X509Certificate.LoadCertificateFromFile(String fileName, Object password, X509KeyStorageFlags keyStorageFlags)
+   en System.Security.Cryptography.X509Certificates.X509Certificate2..ctor(String fileName)
+   en Business.GAFFactura.SinGuardarFactura33(DatosPrefactura fact, facturaComplementos complementosF) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\GAFFactura.cs:línea 245
+2022-04-26 13:09:09,518-7-DEBUG-Business.GAFFactura.GetComprobante.678: 000554
+2022-04-26 13:09:09,537-7-ERROR-Business.GAFFactura.SinGuardarFactura33.272: System.Security.Cryptography.CryptographicException: El sistema no puede encontrar la ruta especificada.
+
+   en System.Security.Cryptography.CryptographicException.ThrowCryptographicException(Int32 hr)
+   en System.Security.Cryptography.X509Certificates.X509Utils._QueryCertFileType(String fileName)
+   en System.Security.Cryptography.X509Certificates.X509Certificate.LoadCertificateFromFile(String fileName, Object password, X509KeyStorageFlags keyStorageFlags)
+   en System.Security.Cryptography.X509Certificates.X509Certificate2..ctor(String fileName)
+   en Business.GAFFactura.SinGuardarFactura33(DatosPrefactura fact, facturaComplementos complementosF) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\GAFFactura.cs:línea 245
+2022-04-26 13:09:13,012-6-DEBUG-Business.GAFFactura.GetComprobante.678: 000554
+2022-04-26 13:09:13,033-6-ERROR-Business.GAFFactura.SinGuardarFactura33.272: System.Security.Cryptography.CryptographicException: El sistema no puede encontrar la ruta especificada.
+
+   en System.Security.Cryptography.CryptographicException.ThrowCryptographicException(Int32 hr)
+   en System.Security.Cryptography.X509Certificates.X509Utils._QueryCertFileType(String fileName)
+   en System.Security.Cryptography.X509Certificates.X509Certificate.LoadCertificateFromFile(String fileName, Object password, X509KeyStorageFlags keyStorageFlags)
+   en System.Security.Cryptography.X509Certificates.X509Certificate2..ctor(String fileName)
+   en Business.GAFFactura.SinGuardarFactura33(DatosPrefactura fact, facturaComplementos complementosF) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\GAFFactura.cs:línea 245
+2022-04-26 13:10:05,256-10-DEBUG-Business.GAFFactura.GetComprobante.678: 000554
+2022-04-26 13:10:05,285-10-ERROR-Business.GAFFactura.SinGuardarFactura33.272: System.Security.Cryptography.CryptographicException: El sistema no puede encontrar la ruta especificada.
+
+   en System.Security.Cryptography.CryptographicException.ThrowCryptographicException(Int32 hr)
+   en System.Security.Cryptography.X509Certificates.X509Utils._QueryCertFileType(String fileName)
+   en System.Security.Cryptography.X509Certificates.X509Certificate.LoadCertificateFromFile(String fileName, Object password, X509KeyStorageFlags keyStorageFlags)
+   en System.Security.Cryptography.X509Certificates.X509Certificate2..ctor(String fileName)
+   en Business.GAFFactura.SinGuardarFactura33(DatosPrefactura fact, facturaComplementos complementosF) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\GAFFactura.cs:línea 245
+2022-05-12 22:41:41,056-22-DEBUG-Business.GAFFactura.GetComprobante.677: 000554
+2022-05-12 22:41:41,389-22-ERROR-Business.GAFFactura.SinGuardarFactura33.271: System.Security.Cryptography.CryptographicException: El sistema no puede encontrar la ruta especificada.
+
+   en System.Security.Cryptography.CryptographicException.ThrowCryptographicException(Int32 hr)
+   en System.Security.Cryptography.X509Certificates.X509Utils._QueryCertFileType(String fileName)
+   en System.Security.Cryptography.X509Certificates.X509Certificate.LoadCertificateFromFile(String fileName, Object password, X509KeyStorageFlags keyStorageFlags)
+   en System.Security.Cryptography.X509Certificates.X509Certificate2..ctor(String fileName)
+   en Business.GAFFactura.SinGuardarFactura33(DatosPrefactura fact, facturaComplementos complementosF) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\GAFFactura.cs:línea 244
+2022-05-12 22:45:38,470-5-DEBUG-Business.GAFFactura.GetComprobante.677: 000554
+2022-05-12 22:45:38,555-5-ERROR-Business.GAFFactura.SinGuardarFactura33.271: System.Security.Cryptography.CryptographicException: El sistema no puede encontrar la ruta especificada.
+
+   en System.Security.Cryptography.CryptographicException.ThrowCryptographicException(Int32 hr)
+   en System.Security.Cryptography.X509Certificates.X509Utils._QueryCertFileType(String fileName)
+   en System.Security.Cryptography.X509Certificates.X509Certificate.LoadCertificateFromFile(String fileName, Object password, X509KeyStorageFlags keyStorageFlags)
+   en System.Security.Cryptography.X509Certificates.X509Certificate2..ctor(String fileName)
+   en Business.GAFFactura.SinGuardarFactura33(DatosPrefactura fact, facturaComplementos complementosF) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\GAFFactura.cs:línea 244
+2022-05-12 22:47:50,436-6-DEBUG-Business.GAFFactura.GetComprobante.677: 000554
+2022-05-12 22:47:50,454-6-ERROR-Business.GAFFactura.SinGuardarFactura33.271: System.Security.Cryptography.CryptographicException: El sistema no puede encontrar la ruta especificada.
+
+   en System.Security.Cryptography.CryptographicException.ThrowCryptographicException(Int32 hr)
+   en System.Security.Cryptography.X509Certificates.X509Utils._QueryCertFileType(String fileName)
+   en System.Security.Cryptography.X509Certificates.X509Certificate.LoadCertificateFromFile(String fileName, Object password, X509KeyStorageFlags keyStorageFlags)
+   en System.Security.Cryptography.X509Certificates.X509Certificate2..ctor(String fileName)
+   en Business.GAFFactura.SinGuardarFactura33(DatosPrefactura fact, facturaComplementos complementosF) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\GAFFactura.cs:línea 244
+2022-05-12 22:48:40,717-6-DEBUG-Business.GAFFactura.GetComprobante.677: 000554
+2022-05-12 22:50:56,164-6-ERROR-Business.GAFFactura.SinGuardarFactura33.271: System.Security.Cryptography.CryptographicException: El sistema no puede encontrar la ruta especificada.
+
+   en System.Security.Cryptography.CryptographicException.ThrowCryptographicException(Int32 hr)
+   en System.Security.Cryptography.X509Certificates.X509Utils._QueryCertFileType(String fileName)
+   en System.Security.Cryptography.X509Certificates.X509Certificate.LoadCertificateFromFile(String fileName, Object password, X509KeyStorageFlags keyStorageFlags)
+   en System.Security.Cryptography.X509Certificates.X509Certificate2..ctor(String fileName)
+   en Business.GAFFactura.SinGuardarFactura33(DatosPrefactura fact, facturaComplementos complementosF) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\GAFFactura.cs:línea 244
+2022-05-12 22:51:08,720-7-DEBUG-Business.GAFFactura.GetComprobante.677: 000554
+2022-05-12 22:52:08,829-7-ERROR-Business.GAFFactura.SinGuardarFactura33.271: System.Security.Cryptography.CryptographicException: El sistema no puede encontrar la ruta especificada.
+
+   en System.Security.Cryptography.CryptographicException.ThrowCryptographicException(Int32 hr)
+   en System.Security.Cryptography.X509Certificates.X509Utils._QueryCertFileType(String fileName)
+   en System.Security.Cryptography.X509Certificates.X509Certificate.LoadCertificateFromFile(String fileName, Object password, X509KeyStorageFlags keyStorageFlags)
+   en System.Security.Cryptography.X509Certificates.X509Certificate2..ctor(String fileName)
+   en Business.GAFFactura.SinGuardarFactura33(DatosPrefactura fact, facturaComplementos complementosF) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress\Business\GAFFactura.cs:línea 244
+2022-05-12 22:52:22,316-6-DEBUG-Business.GAFFactura.GetComprobante.677: 000012
+2022-05-12 23:03:48,630-10-DEBUG-Business.GAFFactura.GuardarFactura33.283: 000012
+2022-05-12 23:03:48,800-10-DEBUG-Business.GAFFactura.GeneraCfd.351: XAMA620210DQ5
+2022-05-12 23:03:48,803-10-DEBUG-Business.GAFFactura.GeneraCfd.374: Ruta Llave C:\GAF\Resources\XAMA620210DQ5\Certs\csd.key
+2022-05-12 23:03:48,812-10-DEBUG-Business.GAFFactura.GetComprobante.677: 000012
+2022-05-12 23:03:59,660-10-DEBUG-Business.GeneradorCfdi.GenerarCfd.1124: Generando xml
+2022-05-12 23:03:59,977-10-DEBUG-Business.GeneradorCfdi.TimbrarComprobanteNtLink.845: Timbrando comprobante
+2022-05-12 23:04:07,832-10-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteTimbradoXPRESS.24: Timbrando comprobante
+2022-05-12 23:56:41,803-12-DEBUG-Business.GAFFactura.GuardarFactura33.283: 000015
+2022-05-12 23:56:42,321-12-DEBUG-Business.GAFFactura.GeneraCfd.351: XAMA620210DQ5
+2022-05-12 23:56:42,323-12-DEBUG-Business.GAFFactura.GeneraCfd.374: Ruta Llave C:\GAF\Resources\XAMA620210DQ5\Certs\csd.key
+2022-05-12 23:56:42,332-12-DEBUG-Business.GAFFactura.GetComprobante.677: 000015
+2022-05-12 23:56:43,813-12-DEBUG-Business.GeneradorCfdi.GenerarCfd.1124: Generando xml
+2022-05-12 23:56:45,344-12-DEBUG-Business.GeneradorCfdi.TimbrarComprobanteNtLink.845: Timbrando comprobante
+2022-05-12 23:57:10,957-12-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteTimbradoXPRESS.24: Timbrando comprobante
+2022-06-02 17:28:07,582-11-DEBUG-Business.GAFFactura.GetComprobante.679: 000016
+2022-06-02 17:36:06,815-7-DEBUG-Business.GAFFactura.GetComprobante.679: 000016
+2022-06-02 17:40:57,245-6-DEBUG-Business.GAFFactura.GetComprobante.679: 000016
+2022-06-02 18:02:48,739-13-DEBUG-Business.GAFFactura.GetComprobante.679: 000016
+2022-06-02 19:50:48,887-6-DEBUG-Business.GAFFactura.GetComprobante.682: 000016
+2022-06-02 20:40:52,783-7-DEBUG-Business.GAFFactura.GetComprobante.682: 000016
+2022-06-02 21:26:52,965-11-DEBUG-Business.GAFFactura.GetComprobante.682: 000016
+2022-06-02 22:11:54,476-6-DEBUG-Business.GAFFactura.GetComprobante.682: 000016
+2022-06-02 22:31:41,879-8-DEBUG-Business.GAFFactura.GetComprobante.682: 000016
+2022-06-02 22:53:34,046-6-DEBUG-Business.GAFFactura.GetComprobante.682: 000016
+2022-06-02 22:55:36,822-5-DEBUG-Business.GAFFactura.GetComprobante.682: 000016
+2022-06-02 22:57:20,239-6-DEBUG-Business.GAFFactura.GetComprobante.682: 000016
+2022-06-02 22:57:56,295-6-DEBUG-Business.GAFFactura.GetComprobante.682: 000016
+2022-06-02 23:20:47,720-8-DEBUG-Business.GAFFactura.GetComprobante.682: 000016
+2022-06-02 23:25:24,544-6-DEBUG-Business.GAFFactura.GetComprobante.682: 000016
+2022-06-02 23:31:59,408-7-DEBUG-Business.GAFFactura.GetComprobante.682: 000016
+2022-06-02 23:32:57,254-6-DEBUG-Business.GAFFactura.GetComprobante.682: 000016
+2022-06-02 23:37:09,192-16-DEBUG-Business.GAFFactura.GetComprobante.682: 000016
+2022-06-02 23:40:33,373-5-DEBUG-Business.GAFFactura.GetComprobante.682: 000016
+2022-06-03 00:14:47,550-24-DEBUG-Business.GAFFactura.GetComprobante.682: 000016
+2022-06-03 00:15:23,988-25-DEBUG-Business.GAFFactura.GetComprobante.682: 000016
+2022-06-03 00:15:38,199-25-ERROR-Contract.Prefactura.GuardarPrefactura.582: System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en Contract.Prefactura.GuardarPrefactura(DatosPrefactura factura, Int64 idPrefactura, facturaComplementos complementosF) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Contract\Prefactura.cs:línea 471
+2022-06-03 00:16:16,003-24-DEBUG-Business.GAFFactura.GetComprobante.682: 000016
+2022-06-03 00:17:31,895-24-ERROR-Contract.Prefactura.GuardarPrefactura.582: System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en Contract.Prefactura.GuardarPrefactura(DatosPrefactura factura, Int64 idPrefactura, facturaComplementos complementosF) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Contract\Prefactura.cs:línea 471
+2022-06-03 00:17:37,419-24-DEBUG-Business.GAFFactura.GetComprobante.682: 000016
+2022-06-03 00:19:57,474-5-DEBUG-Business.GAFFactura.GetComprobante.682: 000016
+2022-06-03 00:25:57,326-13-DEBUG-Business.GAFFactura.GetComprobante.682: 000016
+2022-06-03 11:30:49,111-18-DEBUG-Business.GAFFactura.GetComprobante.682: 000019
+2022-06-03 11:31:33,507-13-DEBUG-Business.GAFFactura.GetComprobante.682: 000019
+2022-06-03 11:31:35,786-13-ERROR-Business.GeneradorCfdi.GetXmlPagos.828: System.InvalidOperationException: Error al generar el documento XML. ---> System.InvalidCastException: No se puede convertir un objeto de tipo 'Contract.Complemento40.Pagos' al tipo 'Contract.Complemento.Pagos'.
+   en Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationWriterPagos.Write10_Pagos(Object o)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Xml.Serialization.XmlSerializer.Serialize(XmlWriter xmlWriter, Object o, XmlSerializerNamespaces namespaces, String encodingStyle, String id)
+   en System.Xml.Serialization.XmlSerializer.Serialize(XmlWriter xmlWriter, Object o, XmlSerializerNamespaces namespaces)
+   en Business.GeneradorCfdi.GetXmlPagos(Pagos impuestos) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GeneradorCfdi.cs:línea 813
+2022-06-04 00:33:59,104-6-DEBUG-Business.GAFFactura.GetComprobante.683: 000022
+2022-06-04 00:49:24,632-12-DEBUG-Business.GAFFactura.GetComprobante.683: 000022
+2022-06-04 00:58:38,600-6-DEBUG-Business.GAFFactura.GetComprobante.683: 000022
+2022-06-04 01:00:43,302-6-DEBUG-Business.GAFFactura.GetComprobante.683: 000022
+2022-06-04 01:03:22,890-6-ERROR-ClienteNtLink.ClienteTimbradoNtlink.ValidaTimbraCfdi.398: Error en el servidor remoto: (500) Error interno del servidor.
+2022-06-04 01:12:33,866-14-ERROR-Contract.GAFClientes.SaveClientePromotores.577: System.InvalidOperationException: No se encontró en el ObjectStateManager un objeto con una clave que coincida con la clave del objeto proporcionado. Compruebe que los valores de clave del objeto proporcionado coincidan con los del objeto al que deben aplicarse los cambios.
+   en System.Data.Objects.ObjectContext.ApplyCurrentValues[TEntity](String entitySetName, TEntity currentEntity)
+   en System.Data.Objects.ObjectSet`1.ApplyCurrentValues(TEntity currentEntity)
+   en Contract.GAFClientes.SaveClientePromotores(ClientePromotor cliente) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Contract\GAFClientes.cs:línea 563
+2022-06-04 01:14:19,079-32-DEBUG-Business.GAFFactura.GetComprobante.683: 000022
+2022-06-04 01:48:09,255-9-DEBUG-Business.GAFFactura.GetComprobante.683: 000026
+2022-06-04 01:49:26,638-12-DEBUG-Business.GAFFactura.GetComprobante.683: 000026
+2022-06-04 02:17:14,433-11-DEBUG-Business.GAFFactura.GetComprobante.683: 000030
+2022-06-04 02:21:11,538-6-DEBUG-Business.GAFFactura.GetComprobante.683: 000554
+2022-06-04 02:21:16,394-6-ERROR-Business.GAFFactura.SinGuardarFactura33.277: System.Security.Cryptography.CryptographicException: El sistema no puede encontrar la ruta especificada.
+
+   en System.Security.Cryptography.CryptographicException.ThrowCryptographicException(Int32 hr)
+   en System.Security.Cryptography.X509Certificates.X509Utils._QueryCertFileType(String fileName)
+   en System.Security.Cryptography.X509Certificates.X509Certificate.LoadCertificateFromFile(String fileName, Object password, X509KeyStorageFlags keyStorageFlags)
+   en System.Security.Cryptography.X509Certificates.X509Certificate2..ctor(String fileName)
+   en Business.GAFFactura.SinGuardarFactura33(DatosPrefactura fact, facturaComplementos complementosF) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GAFFactura.cs:línea 248
+2022-06-04 02:21:40,030-8-DEBUG-Business.GAFFactura.GetComprobante.683: 000554
+2022-06-04 02:22:21,513-8-ERROR-Business.GAFFactura.SinGuardarFactura33.277: System.Security.Cryptography.CryptographicException: El sistema no puede encontrar la ruta especificada.
+
+   en System.Security.Cryptography.CryptographicException.ThrowCryptographicException(Int32 hr)
+   en System.Security.Cryptography.X509Certificates.X509Utils._QueryCertFileType(String fileName)
+   en System.Security.Cryptography.X509Certificates.X509Certificate.LoadCertificateFromFile(String fileName, Object password, X509KeyStorageFlags keyStorageFlags)
+   en System.Security.Cryptography.X509Certificates.X509Certificate2..ctor(String fileName)
+   en Business.GAFFactura.SinGuardarFactura33(DatosPrefactura fact, facturaComplementos complementosF) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GAFFactura.cs:línea 248
+2022-06-04 02:22:47,604-6-DEBUG-Business.GAFFactura.GetComprobante.683: 000554
+2022-06-04 02:23:34,975-6-ERROR-Business.GAFFactura.SinGuardarFactura33.277: System.Security.Cryptography.CryptographicException: El sistema no puede encontrar la ruta especificada.
+
+   en System.Security.Cryptography.CryptographicException.ThrowCryptographicException(Int32 hr)
+   en System.Security.Cryptography.X509Certificates.X509Utils._QueryCertFileType(String fileName)
+   en System.Security.Cryptography.X509Certificates.X509Certificate.LoadCertificateFromFile(String fileName, Object password, X509KeyStorageFlags keyStorageFlags)
+   en System.Security.Cryptography.X509Certificates.X509Certificate2..ctor(String fileName)
+   en Business.GAFFactura.SinGuardarFactura33(DatosPrefactura fact, facturaComplementos complementosF) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GAFFactura.cs:línea 248
+2022-06-04 02:23:48,517-7-DEBUG-Business.GAFFactura.GetComprobante.683: 000031
+2022-06-04 02:24:16,569-7-ERROR-ClienteNtLink.ClienteTimbradoNtlink.ValidaTimbraCfdi.398: Error en el servidor remoto: (500) Error interno del servidor.
+2022-06-04 12:53:27,819-8-DEBUG-Business.GAFFactura.GuardarFactura33.289: 000031
+2022-06-04 12:53:28,020-8-DEBUG-Business.GAFFactura.GeneraCfd.357: XAMA620210DQ5
+2022-06-04 12:53:28,023-8-DEBUG-Business.GAFFactura.GeneraCfd.380: Ruta Llave C:\GAF\Resources\XAMA620210DQ5\Certs\csd.key
+2022-06-04 12:53:28,042-8-DEBUG-Business.GAFFactura.GetComprobante.683: 000031
+2022-06-04 12:58:22,825-8-DEBUG-Business.GAFFactura.GuardarFactura33.289: 000032
+2022-06-04 12:58:22,959-8-DEBUG-Business.GAFFactura.GeneraCfd.357: XAMA620210DQ5
+2022-06-04 12:58:22,961-8-DEBUG-Business.GAFFactura.GeneraCfd.380: Ruta Llave C:\GAF\Resources\XAMA620210DQ5\Certs\csd.key
+2022-06-04 12:58:22,970-8-DEBUG-Business.GAFFactura.GetComprobante.683: 000032
+2022-06-04 13:16:33,193-6-DEBUG-Business.GAFFactura.GuardarFactura33.289: 000033
+2022-06-04 13:16:33,294-6-DEBUG-Business.GAFFactura.GeneraCfd.357: XAMA620210DQ5
+2022-06-04 13:16:33,296-6-DEBUG-Business.GAFFactura.GeneraCfd.380: Ruta Llave C:\GAF\Resources\XAMA620210DQ5\Certs\csd.key
+2022-06-04 13:16:33,310-6-DEBUG-Business.GAFFactura.GetComprobante.683: 000033
+2022-06-04 13:21:38,441-6-DEBUG-Business.GeneradorCfdi.GenerarCfd.1126: Generando xml
+2022-06-04 13:21:38,818-6-DEBUG-Business.GeneradorCfdi.TimbrarComprobanteNtLink.847: Timbrando comprobante
+2022-06-04 13:21:38,833-6-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteTimbradoXPRESS.27: Timbrando comprobante
+2022-06-04 13:29:41,128-6-DEBUG-Business.GAFFactura.GetComprobante.683: 000034
+2022-06-04 13:29:47,223-6-ERROR-ClienteNtLink.ClienteTimbradoNtlink.ValidaTimbraCfdi.398: Error en el servidor remoto: (500) Error interno del servidor.
+2022-06-04 13:32:02,992-7-DEBUG-Business.GAFFactura.GetComprobante.683: 000034
+2022-06-04 13:46:32,996-7-DEBUG-Business.GAFFactura.GetComprobante.683: 000034
+2022-06-04 15:11:21,351-7-DEBUG-Business.GAFFactura.GuardarFactura33.289: 000034
+2022-06-04 15:11:21,499-7-DEBUG-Business.GAFFactura.GeneraCfd.357: XAMA620210DQ5
+2022-06-04 15:11:21,500-7-DEBUG-Business.GAFFactura.GeneraCfd.380: Ruta Llave C:\GAF\Resources\XAMA620210DQ5\Certs\csd.key
+2022-06-04 15:11:21,509-7-DEBUG-Business.GAFFactura.GetComprobante.683: 000034
+2022-06-04 15:12:58,574-8-DEBUG-Business.GAFFactura.GetComprobante.683: 000035
+2022-06-04 15:14:26,096-8-ERROR-Contract.Prefactura.GuardarPrefactura.583: System.Data.UpdateException: Se produjo un error mientras se actualizaban las entradas. Vea la excepción interna para obtener detalles. ---> System.Data.SqlClient.SqlException: String or binary data would be truncated.
+The statement has been terminated.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   en System.Data.SqlClient.SqlDataReader.get_MetaData()
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   en System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   en System.Data.Mapping.Update.Internal.DynamicUpdateCommand.Execute(UpdateTranslator translator, EntityConnection connection, Dictionary`2 identifierValues, List`1 generatedValues)
+   en System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
+   en System.Data.EntityClient.EntityAdapter.Update(IEntityStateManager entityCache)
+   en System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   en System.Data.Objects.ObjectContext.SaveChanges()
+   en Contract.Prefactura.GuardarPrefactura(DatosPrefactura factura, Int64 idPrefactura, facturaComplementos complementosF) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Contract\Prefactura.cs:línea 469
+2022-06-04 15:14:26,162-8-ERROR-Contract.Prefactura.GuardarPrefactura.585: System.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated.
+The statement has been terminated.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   en System.Data.SqlClient.SqlDataReader.get_MetaData()
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   en System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   en System.Data.Mapping.Update.Internal.DynamicUpdateCommand.Execute(UpdateTranslator translator, EntityConnection connection, Dictionary`2 identifierValues, List`1 generatedValues)
+   en System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
+ClientConnectionId:0acebb8b-d715-4c71-9672-9e81e5175f5b
+Error Number:8152,State:14,Class:16
+2022-06-04 16:49:43,099-6-DEBUG-Business.GAFFactura.GetComprobante.683: 000035
+2022-06-04 16:51:39,674-6-ERROR-Contract.Prefactura.GuardarPrefactura.583: System.Data.UpdateException: Se produjo un error mientras se actualizaban las entradas. Vea la excepción interna para obtener detalles. ---> System.Data.SqlClient.SqlException: String or binary data would be truncated.
+The statement has been terminated.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   en System.Data.SqlClient.SqlDataReader.get_MetaData()
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   en System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   en System.Data.Mapping.Update.Internal.DynamicUpdateCommand.Execute(UpdateTranslator translator, EntityConnection connection, Dictionary`2 identifierValues, List`1 generatedValues)
+   en System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
+   en System.Data.EntityClient.EntityAdapter.Update(IEntityStateManager entityCache)
+   en System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   en System.Data.Objects.ObjectContext.SaveChanges()
+   en Contract.Prefactura.GuardarPrefactura(DatosPrefactura factura, Int64 idPrefactura, facturaComplementos complementosF) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Contract\Prefactura.cs:línea 469
+2022-06-04 16:51:39,679-6-ERROR-Contract.Prefactura.GuardarPrefactura.585: System.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated.
+The statement has been terminated.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   en System.Data.SqlClient.SqlDataReader.get_MetaData()
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   en System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   en System.Data.Mapping.Update.Internal.DynamicUpdateCommand.Execute(UpdateTranslator translator, EntityConnection connection, Dictionary`2 identifierValues, List`1 generatedValues)
+   en System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
+ClientConnectionId:2fcb7b4e-8b6d-4c9a-bac8-779f9560b928
+Error Number:8152,State:14,Class:16
+2022-06-04 16:51:48,416-10-DEBUG-Business.GAFFactura.GetComprobante.683: 000035
+2022-06-04 16:52:45,207-10-ERROR-Contract.Prefactura.GuardarPrefactura.583: System.Data.UpdateException: Se produjo un error mientras se actualizaban las entradas. Vea la excepción interna para obtener detalles. ---> System.Data.SqlClient.SqlException: String or binary data would be truncated.
+The statement has been terminated.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   en System.Data.SqlClient.SqlDataReader.get_MetaData()
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   en System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   en System.Data.Mapping.Update.Internal.DynamicUpdateCommand.Execute(UpdateTranslator translator, EntityConnection connection, Dictionary`2 identifierValues, List`1 generatedValues)
+   en System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
+   en System.Data.EntityClient.EntityAdapter.Update(IEntityStateManager entityCache)
+   en System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   en System.Data.Objects.ObjectContext.SaveChanges()
+   en Contract.Prefactura.GuardarPrefactura(DatosPrefactura factura, Int64 idPrefactura, facturaComplementos complementosF) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Contract\Prefactura.cs:línea 469
+2022-06-04 16:52:45,210-10-ERROR-Contract.Prefactura.GuardarPrefactura.585: System.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated.
+The statement has been terminated.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   en System.Data.SqlClient.SqlDataReader.get_MetaData()
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   en System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   en System.Data.Mapping.Update.Internal.DynamicUpdateCommand.Execute(UpdateTranslator translator, EntityConnection connection, Dictionary`2 identifierValues, List`1 generatedValues)
+   en System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
+ClientConnectionId:2fcb7b4e-8b6d-4c9a-bac8-779f9560b928
+Error Number:8152,State:14,Class:16
+2022-06-04 16:53:28,711-10-DEBUG-Business.GAFFactura.GetComprobante.683: 000035
+2022-06-04 17:00:26,584-7-DEBUG-Business.GAFFactura.GetComprobante.683: 000035
+2022-06-04 17:17:56,865-6-DEBUG-Business.GAFFactura.GetComprobante.683: 000035
+2022-06-04 17:22:17,749-6-DEBUG-Business.GAFFactura.GetComprobante.683: 000035
+2022-06-04 17:31:58,062-7-DEBUG-Business.GAFFactura.GetComprobante.683: 000035
+2022-06-04 17:35:19,343-7-DEBUG-Business.GAFFactura.GetComprobante.683: 000035
+2022-06-04 17:39:05,695-10-DEBUG-Business.GAFFactura.GetComprobante.683: 000035
+2022-06-04 17:51:49,705-6-DEBUG-Business.GAFFactura.GetComprobante.683: 000035
+2022-06-04 18:24:49,056-11-DEBUG-Business.GAFFactura.GetComprobante.683: 000035
+2022-06-04 18:28:56,772-6-DEBUG-Business.GAFFactura.GetComprobante.683: 000035
+2022-06-04 18:44:36,353-5-DEBUG-Business.GAFFactura.GetComprobante.683: 000035
+2022-06-04 18:48:47,419-6-DEBUG-Business.GAFFactura.GetComprobante.683: 000035
+2022-06-04 18:52:49,208-5-DEBUG-Business.GAFFactura.GetComprobante.683: 000035
+2022-06-04 18:56:16,854-6-DEBUG-Business.GAFFactura.GuardarFactura33.289: 000035
+2022-06-04 18:56:16,960-6-DEBUG-Business.GAFFactura.GeneraCfd.357: XAMA620210DQ5
+2022-06-04 18:56:16,964-6-DEBUG-Business.GAFFactura.GeneraCfd.380: Ruta Llave C:\GAF\Resources\XAMA620210DQ5\Certs\csd.key
+2022-06-04 18:56:16,981-6-DEBUG-Business.GAFFactura.GetComprobante.683: 000035
+2022-06-04 18:56:27,546-6-DEBUG-Business.GeneradorCfdi.GenerarCfd.1126: Generando xml
+2022-06-04 18:56:28,002-6-DEBUG-Business.GeneradorCfdi.TimbrarComprobanteNtLink.847: Timbrando comprobante
+2022-06-04 18:56:28,020-6-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteTimbradoXPRESS.27: Timbrando comprobante
+2022-06-04 18:58:39,578-6-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteTimbradoXPRESS.32: Codigo:CRP20215 Mensaje: El campo TipoCambioP debe contener el valor ”1”. -  Cuando el valor MonedaP sea igual a 'MXN' el valor TipoCambioP debe tener el valor '1' sin decimales ni punto ValorEsperado: 1 ValorReportado: 1.000000
+2022-06-04 18:58:40,622-6-ERROR-Business.GeneradorCfdi.TimbrarComprobanteNtLink.867:  El campo TipoCambioP debe contener el valor ”1”. -  Cuando el valor MonedaP sea igual a 'MXN' el valor TipoCambioP debe tener el valor '1' sin decimales ni punto ValorEsperado: 1 ValorReportado: 1.000000
+2022-06-04 18:58:40,680-6-INFO-Business.GeneradorCfdi.TimbrarComprobanteNtLink.974: System.ServiceModel.FaultException:  El campo TipoCambioP debe contener el valor ”1”. -  Cuando el valor MonedaP sea igual a 'MXN' el valor TipoCambioP debe tener el valor '1' sin decimales ni punto ValorEsperado: 1 ValorReportado: 1.000000
+   en Business.GeneradorCfdi.TimbrarComprobanteNtLink(Comprobante comp) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GeneradorCfdi.cs:línea 868
+2022-06-04 18:58:40,691-6-ERROR-Business.GeneradorCfdi.GenerarCfd.1184: System.ServiceModel.FaultException:  El campo TipoCambioP debe contener el valor ”1”. -  Cuando el valor MonedaP sea igual a 'MXN' el valor TipoCambioP debe tener el valor '1' sin decimales ni punto ValorEsperado: 1 ValorReportado: 1.000000
+   en Business.GeneradorCfdi.TimbrarComprobanteNtLink(Comprobante comp) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GeneradorCfdi.cs:línea 975
+   en Business.GeneradorCfdi.GenerarCfd(Comprobante comprobante, X509Certificate2 cert, String rutaLlave, String passLlave) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GeneradorCfdi.cs:línea 1178
+2022-06-04 18:59:10,479-6-DEBUG-Business.GAFFactura.GuardarFactura33.289: 000036
+2022-06-04 18:59:10,500-6-DEBUG-Business.GAFFactura.GeneraCfd.357: XAMA620210DQ5
+2022-06-04 18:59:10,501-6-DEBUG-Business.GAFFactura.GeneraCfd.380: Ruta Llave C:\GAF\Resources\XAMA620210DQ5\Certs\csd.key
+2022-06-04 18:59:10,502-6-DEBUG-Business.GAFFactura.GetComprobante.683: 000036
+2022-06-04 19:00:55,390-6-DEBUG-Business.GeneradorCfdi.GenerarCfd.1126: Generando xml
+2022-06-04 19:00:55,496-6-DEBUG-Business.GeneradorCfdi.TimbrarComprobanteNtLink.847: Timbrando comprobante
+2022-06-04 19:00:55,496-6-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteTimbradoXPRESS.27: Timbrando comprobante
+2022-06-04 19:08:05,296-8-DEBUG-Business.GAFFactura.GuardarFactura33.289: 000037
+2022-06-04 19:08:05,418-8-DEBUG-Business.GAFFactura.GeneraCfd.357: XAMA620210DQ5
+2022-06-04 19:08:05,420-8-DEBUG-Business.GAFFactura.GeneraCfd.380: Ruta Llave C:\GAF\Resources\XAMA620210DQ5\Certs\csd.key
+2022-06-04 19:08:05,432-8-DEBUG-Business.GAFFactura.GetComprobante.683: 000037
+2022-06-04 19:08:15,761-8-DEBUG-Business.GeneradorCfdi.GenerarCfd.1126: Generando xml
+2022-06-04 19:08:16,140-8-DEBUG-Business.GeneradorCfdi.TimbrarComprobanteNtLink.847: Timbrando comprobante
+2022-06-04 19:08:16,158-8-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteTimbradoXPRESS.27: Timbrando comprobante
+2022-06-04 19:08:20,173-8-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteTimbradoXPRESS.32: Codigo:200 Mensaje:Solicitud procesada con éxito. - Solicitud de timbrado procesada.
+2022-06-04 19:08:20,174-8-DEBUG-Business.GeneradorCfdi.TimbrarComprobanteNtLink.872: <?xml version="1.0"?>
+<tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/TimbreFiscalDigital/TimbreFiscalDigitalv11.xsd" Version="1.1" UUID="27b52888-f961-4861-917b-12e8eae002a0" FechaTimbrado="2022-06-04T19:08:20" RfcProvCertif="SPR190613I52" SelloCFD="arSi+zp1Iv6OFRoY6vTQ2NNyvNBHfrN8qPlcvnKhSvclaaN1Y4zh/I4wHegv9avZeSRNsnnGIP0Z2VCDasYuqkQ19fW+dU8d3wUITH32HIxAPyEXeJ+6ORVgQOT/0gfsxN5njGn1/jMf3WlZc7C6XepjlXV8h3xWiUgZeofmVLLj8W9EqmxDIF8myC718Kfui/IKJgqClUAokq+z53mtGO1wQRILGUyCa8Pr22o3zfQeFD5cqHXZPmhsrc5WuZv6MFRY4hfsYkPyQ4ia5pX60aatYo7aZ9t20k20KZRIwrZP192GraJ6XCMe2FiFN7ZINgMWCKQi7yte497RwsayRw==" NoCertificadoSAT="30001000000400002495" SelloSAT="TFifd8DJRA10R934RM1+DpkkBoJZvExXd0Y6F3j29YC9/YjC26VEzniLC3PNU7BxIJsIB/JPzvKb1/vHgSlX1ie9x0BycDiymiHtTtvuy+U/hRlbgOK9C/SEXNbCiv+5wb0P68t2xNx2qQygao92WZ87PIsUeP85S8Cxph1oDQQ53AyuhRZa6NgYtq7ZmakWpJ6YIq88akP2hgnS4HeBj4GXbPUTgCMPW3NjnRbeefA2bIHflduPeQGOamWeh61QDvqIjvU42GvD+D4sl9KBkPHcZhg+DVhavwQCRLCbMdEFaDiJJXTUaUbtgyqO51auyI3VGhqn8CBEy+RDGmDwNw=="/>
+
+2022-06-04 19:08:20,224-8-DEBUG-Business.GAFFactura.GeneraCfd.392: <?xml version="1.0" encoding="utf-8"?><cfdi:Comprobante xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sat.gob.mx/cfd/4 http://www.sat.gob.mx/sitio_internet/cfd/4/cfdv40.xsd http://www.sat.gob.mx/Pagos20 http://www.sat.gob.mx/sitio_internet/cfd/Pagos/Pagos20.xsd" Version="4.0" Folio="000037" Fecha="2022-06-04T19:08:04" NoCertificado="30001000000400002326" Certificado="MIIFijCCA3KgAwIBAgIUMzAwMDEwMDAwMDA0MDAwMDIzMjYwDQYJKoZIhvcNAQELBQAwggErMQ8wDQYDVQQDDAZBQyBVQVQxLjAsBgNVBAoMJVNFUlZJQ0lPIERFIEFETUlOSVNUUkFDSU9OIFRSSUJVVEFSSUExGjAYBgNVBAsMEVNBVC1JRVMgQXV0aG9yaXR5MSgwJgYJKoZIhvcNAQkBFhlvc2Nhci5tYXJ0aW5lekBzYXQuZ29iLm14MR0wGwYDVQQJDBQzcmEgY2VycmFkYSBkZSBjYWRpejEOMAwGA1UEEQwFMDYzNzAxCzAJBgNVBAYTAk1YMRkwFwYDVQQIDBBDSVVEQUQgREUgTUVYSUNPMREwDwYDVQQHDAhDT1lPQUNBTjERMA8GA1UELRMIMi41LjQuNDUxJTAjBgkqhkiG9w0BCQITFnJlc3BvbnNhYmxlOiBBQ0RNQS1TQVQwHhcNMTkwNTI5MTgxMTQ4WhcNMjMwNTI5MTgxMTQ4WjCBsTEdMBsGA1UEAxMUQUxCQSBYS0FSQUpBTSBNRU5ERVoxHTAbBgNVBCkTFEFMQkEgWEtBUkFKQU0gTUVOREVaMR0wGwYDVQQKExRBTEJBIFhLQVJBSkFNIE1FTkRFWjEWMBQGA1UELRMNWEFNQTYyMDIxMERRNTEbMBkGA1UEBRMSWEFNQTYyMDIxME1TTEtOTDA0MR0wGwYDVQQLExRBTEJBIFhLQVJBSkFNIE1FTkRFWjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAK2HkPEtxQ+eUC6J428PU1OHXmr7cHtTlE5+Zk0eYykm1tVNivygT+kz7FTgw1b0yoFh96Xp3tXBSeAmsO+DShFFyYMB6x3lllIEmMZD5JbMaCpzyPMRzAq6850Am3/ShjigUPRorUhdLO1Yes2CyySzYlhA08fq3FmOCQ4eQmSPN7422T+Srhm6pFYaVjwS0MlskslCIi+ANqL5RWg75tNjpJzLQXPJyG0KU1AaqXgUT1e+aTn38AyNVQc30QAjiI50CTUq5MJFixoCB9vol421L7peEIAox3DRVw9H/wns9973XLedyuj5r8ZZfs4BinkVh+mykTyZE63rEv14uncCAwEAAaMdMBswDAYDVR0TAQH/BAIwADALBgNVHQ8EBAMCBsAwDQYJKoZIhvcNAQELBQADggIBAAR/KOWy29oitYdYzuGe1o+JOx/AowEJuu9S4/thFE9ugvHiceFK3cUD8v4M4/AS9D+NVrcMpJocNwpUsW/GiGFqOHNcFVnoSsaeEUMSIW949/0lCeMusR10VnpUaXmYFVYZkFV0PsDYUHna+lqmHDLwzSpfyU20UapgpkPe7Ib6/5CmsPQ7GcF7HBrshO8MyLyYSi193MTDKO86thq5iBnTrt4qyCgI7+Hpk770C4wMskpitf0Z9BUUrBxAk+ZoH1fw1ysZtK+v4vS/wquib2SK+MpvlYEfam/613EE/PEAlBTXPDaWTxporKJJxnv/iOsm97FmvRuwAnB13r5cxc/UJFjD2bFm38/2wOUG1H3srG8xhVSTKUYQjvJU+V10dQe0O/QkWx9sPHlY67CdB5SlsCBl0mkB7mA2fsPyuP28EQtEenjm48wpBXgb4exOYq4flMPZ7LpO79SmnQPSeTIt8CIlc0HomkMCl30HQzGSMoItxGSO9Rrx3ogpNNcdhpD6p59TkYd2zM7argPP/lfbl7/3EbbN5miC1JgNgRfAq02CREdMEAK9Z6ErVWUUl8gd0Tva/C3ykCJdTdNgfEI8gONS2ky/axDNDHL8d4+I6tGItfM4drtukL9Trh8/5RPuPvKHg1tKonDp50mxu4ubXBDF2LAnsOshAB44fn+r" SubTotal="0" Moneda="XXX" Total="0" TipoDeComprobante="P" Exportacion="01" LugarExpedicion="86690" xmlns:cfdi="http://www.sat.gob.mx/cfd/4" xmlns:pago20="http://www.sat.gob.mx/Pagos20" Sello="arSi+zp1Iv6OFRoY6vTQ2NNyvNBHfrN8qPlcvnKhSvclaaN1Y4zh/I4wHegv9avZeSRNsnnGIP0Z2VCDasYuqkQ19fW+dU8d3wUITH32HIxAPyEXeJ+6ORVgQOT/0gfsxN5njGn1/jMf3WlZc7C6XepjlXV8h3xWiUgZeofmVLLj8W9EqmxDIF8myC718Kfui/IKJgqClUAokq+z53mtGO1wQRILGUyCa8Pr22o3zfQeFD5cqHXZPmhsrc5WuZv6MFRY4hfsYkPyQ4ia5pX60aatYo7aZ9t20k20KZRIwrZP192GraJ6XCMe2FiFN7ZINgMWCKQi7yte497RwsayRw=="><cfdi:Emisor Rfc="XAMA620210DQ5" Nombre="ALBA XKARAJAM MENDEZ" RegimenFiscal="605" /><cfdi:Receptor Rfc="OEZI690113TNA" Nombre="IRAIS ORTEGA ZUÑIGA" DomicilioFiscalReceptor="03849" RegimenFiscalReceptor="605" UsoCFDI="CP01" /><cfdi:Conceptos><cfdi:Concepto ClaveProdServ="84111506" Cantidad="1" ClaveUnidad="ACT" Descripcion="Pago" ValorUnitario="0" Importe="0" ObjetoImp="01" /></cfdi:Conceptos><cfdi:Complemento><pago20:Pagos Version="2.0"><pago20:Totales TotalTrasladosBaseIVA16="2.00" TotalTrasladosImpuestoIVA16="0.32" MontoTotalPagos="2.32" /><pago20:Pago FechaPago="2022-04-11T12:00:00" FormaDePagoP="01" MonedaP="MXN" TipoCambioP="1" Monto="2.32"><pago20:DoctoRelacionado IdDocumento="fdfa50a2-7755-4e06-8698-92bba0fd554a" Folio="000030" MonedaDR="MXN" EquivalenciaDR="1" NumParcialidad="1" ImpSaldoAnt="1.16" ImpPagado="1.16" ImpSaldoInsoluto="0.00" ObjetoImpDR="02"><pago20:ImpuestosDR><pago20:TrasladosDR><pago20:TrasladoDR BaseDR="1.000000" ImpuestoDR="002" TipoFactorDR="Tasa" TasaOCuotaDR="0.160000" ImporteDR="0.160000" /></pago20:TrasladosDR></pago20:ImpuestosDR></pago20:DoctoRelacionado><pago20:DoctoRelacionado IdDocumento="0ed27da0-1ae1-428c-9eff-97d71307052f" Folio="000028" MonedaDR="MXN" EquivalenciaDR="1" NumParcialidad="1" ImpSaldoAnt="1.16" ImpPagado="1.16" ImpSaldoInsoluto="0.00" ObjetoImpDR="02"><pago20:ImpuestosDR><pago20:TrasladosDR><pago20:TrasladoDR BaseDR="1.000000" ImpuestoDR="002" TipoFactorDR="Tasa" TasaOCuotaDR="0.160000" ImporteDR="0.160000" /></pago20:TrasladosDR></pago20:ImpuestosDR></pago20:DoctoRelacionado><pago20:ImpuestosP><pago20:TrasladosP><pago20:TrasladoP BaseP="2.000000" ImpuestoP="002" TipoFactorP="Tasa" TasaOCuotaP="0.160000" ImporteP="0.320000" /></pago20:TrasladosP></pago20:ImpuestosP></pago20:Pago></pago20:Pagos><tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/TimbreFiscalDigital/TimbreFiscalDigitalv11.xsd" Version="1.1" UUID="27b52888-f961-4861-917b-12e8eae002a0" FechaTimbrado="2022-06-04T19:08:20" RfcProvCertif="SPR190613I52" SelloCFD="arSi+zp1Iv6OFRoY6vTQ2NNyvNBHfrN8qPlcvnKhSvclaaN1Y4zh/I4wHegv9avZeSRNsnnGIP0Z2VCDasYuqkQ19fW+dU8d3wUITH32HIxAPyEXeJ+6ORVgQOT/0gfsxN5njGn1/jMf3WlZc7C6XepjlXV8h3xWiUgZeofmVLLj8W9EqmxDIF8myC718Kfui/IKJgqClUAokq+z53mtGO1wQRILGUyCa8Pr22o3zfQeFD5cqHXZPmhsrc5WuZv6MFRY4hfsYkPyQ4ia5pX60aatYo7aZ9t20k20KZRIwrZP192GraJ6XCMe2FiFN7ZINgMWCKQi7yte497RwsayRw==" NoCertificadoSAT="30001000000400002495" SelloSAT="TFifd8DJRA10R934RM1+DpkkBoJZvExXd0Y6F3j29YC9/YjC26VEzniLC3PNU7BxIJsIB/JPzvKb1/vHgSlX1ie9x0BycDiymiHtTtvuy+U/hRlbgOK9C/SEXNbCiv+5wb0P68t2xNx2qQygao92WZ87PIsUeP85S8Cxph1oDQQ53AyuhRZa6NgYtq7ZmakWpJ6YIq88akP2hgnS4HeBj4GXbPUTgCMPW3NjnRbeefA2bIHflduPeQGOamWeh61QDvqIjvU42GvD+D4sl9KBkPHcZhg+DVhavwQCRLCbMdEFaDiJJXTUaUbtgyqO51auyI3VGhqn8CBEy+RDGmDwNw==" /></cfdi:Complemento></cfdi:Comprobante>
+2022-06-04 19:08:21,922-8-ERROR-Business.GeneradorCfdi.GetPdfFromComprobante.219: System.Net.WebException: Error de la solicitud con el código de estado HTTP 401: Unauthorized.
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en Business.ReportService.ReportingService2005.ListChildren(String Item, Boolean Recursive) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\Web References\ReportService\Reference.cs:línea 871
+   en Business.GeneradorCfdi.GetPdfFromComprobante(Comprobante comprobante, Int32 orientacion, TipoDocumento tipo, Int64& id, String metodoPago) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GeneradorCfdi.cs:línea 190
+2022-06-04 19:08:21,983-8-ERROR-Business.GAFFactura.GeneraCfd.413: System.Net.WebException: Error de la solicitud con el código de estado HTTP 401: Unauthorized.
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en Business.ReportService.ReportingService2005.ListChildren(String Item, Boolean Recursive) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\Web References\ReportService\Reference.cs:línea 871
+   en Business.GeneradorCfdi.GetPdfFromComprobante(Comprobante comprobante, Int32 orientacion, TipoDocumento tipo, Int64& id, String metodoPago) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GeneradorCfdi.cs:línea 222
+   en Business.GAFFactura.GeneraCfd(GAFFactura factura, Boolean enviar, facturaComplementos complementos) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GAFFactura.cs:línea 405
+2022-06-04 19:08:21,985-8-DEBUG-Business.GAFFactura.GeneraCfd.422: Enviar Correo
+2022-06-04 19:08:22,029-8-DEBUG-Business.Mailer.Send.45: Enviando a 1 emails
+2022-06-04 19:08:22,082-8-INFO-Business.Mailer.Send.65: Creando MailMessage
+2022-06-04 19:08:22,109-8-INFO-Business.Mailer.Send.76: Cargando Bcc: cconsultc3@gmail.com
+2022-06-04 19:08:22,110-8-INFO-Business.Mailer.Send.84: Agregando attach
+2022-06-04 19:08:22,111-8-INFO-Business.Mailer.Send.96: Enviando a la direccion: irais_ortega@yahoo.com.mx
+2022-06-04 19:08:22,983-8-ERROR-Business.Mailer.Send.107: System.Net.Mail.SmtpException: Error al enviar correo. ---> System.Net.WebException: No se puede resolver el nombre remoto: 'mail.ovjme.com'
+   en System.Net.ServicePoint.GetConnection(PooledStream PooledStream, Object owner, Boolean async, IPAddress& address, Socket& abortSocket, Socket& abortSocket6)
+   en System.Net.PooledStream.Activate(Object owningObject, Boolean async, GeneralAsyncDelegate asyncCallback)
+   en System.Net.PooledStream.Activate(Object owningObject, GeneralAsyncDelegate asyncCallback)
+   en System.Net.ConnectionPool.GetConnection(Object owningObject, GeneralAsyncDelegate asyncCallback, Int32 creationTimeout)
+   en System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpClient.GetConnection()
+   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   en Business.Mailer.Send(List`1 recipients, List`1 attachments, String message, String subject, String fromEmail, String fromDescription) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\Mailer.cs:línea 100
+2022-06-04 19:08:23,005-8-ERROR-Business.GAFFactura.GeneraCfd.464: Ocurrio un error al enviar el correo
+2022-06-16 00:00:46,952-6-DEBUG-Business.GAFFactura.GuardarFactura33.289: 000038
+2022-06-16 00:00:47,539-6-DEBUG-Business.GAFFactura.GeneraCfd.357: XAMA620210DQ5
+2022-06-16 00:00:47,541-6-DEBUG-Business.GAFFactura.GeneraCfd.380: Ruta Llave C:\GAF\Resources\XAMA620210DQ5\Certs\csd.key
+2022-06-16 00:00:47,554-6-DEBUG-Business.GAFFactura.GetComprobante.696: 000038
+2022-06-16 00:00:54,482-6-DEBUG-Business.GeneradorCfdi.GenerarCfd.1126: Generando xml
+2022-06-16 00:00:56,748-6-DEBUG-Business.GeneradorCfdi.TimbrarComprobanteNtLink.847: Timbrando comprobante
+2022-06-16 00:00:56,762-6-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteTimbradoXPRESS.27: Timbrando comprobante
+2022-06-16 12:04:02,220-20-DEBUG-Business.GAFFactura.GuardarFactura33.289: 001293
+2022-06-16 12:04:03,387-20-DEBUG-Business.GAFFactura.GeneraCfd.357: FCO190306825
+2022-06-16 12:04:03,494-20-ERROR-Business.GAFFactura.GeneraCfd.478: System.Security.Cryptography.CryptographicException: El sistema no puede encontrar la ruta especificada.
+
+   en System.Security.Cryptography.CryptographicException.ThrowCryptographicException(Int32 hr)
+   en System.Security.Cryptography.X509Certificates.X509Utils._QueryCertFileType(String fileName)
+   en System.Security.Cryptography.X509Certificates.X509Certificate.LoadCertificateFromFile(String fileName, Object password, X509KeyStorageFlags keyStorageFlags)
+   en System.Security.Cryptography.X509Certificates.X509Certificate2..ctor(String fileName)
+   en Business.GAFFactura.GeneraCfd(GAFFactura factura, Boolean enviar, facturaComplementos complementos) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GAFFactura.cs:línea 376
+2022-06-16 12:08:01,082-20-DEBUG-Business.GAFFactura.GuardarFactura33.289: 001294
+2022-06-16 12:08:23,583-20-DEBUG-Business.GAFFactura.GeneraCfd.357: FCO190306825
+2022-06-16 12:08:23,597-20-ERROR-Business.GAFFactura.GeneraCfd.478: System.Security.Cryptography.CryptographicException: El sistema no puede encontrar la ruta especificada.
+
+   en System.Security.Cryptography.CryptographicException.ThrowCryptographicException(Int32 hr)
+   en System.Security.Cryptography.X509Certificates.X509Utils._QueryCertFileType(String fileName)
+   en System.Security.Cryptography.X509Certificates.X509Certificate.LoadCertificateFromFile(String fileName, Object password, X509KeyStorageFlags keyStorageFlags)
+   en System.Security.Cryptography.X509Certificates.X509Certificate2..ctor(String fileName)
+   en Business.GAFFactura.GeneraCfd(GAFFactura factura, Boolean enviar, facturaComplementos complementos) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GAFFactura.cs:línea 376
+2022-06-16 12:10:44,994-13-DEBUG-Business.GAFFactura.GuardarFactura33.289: 001295
+2022-06-16 12:10:49,059-13-DEBUG-Business.GAFFactura.GeneraCfd.357: FCO190306825
+2022-06-16 12:10:49,073-13-ERROR-Business.GAFFactura.GeneraCfd.478: System.Security.Cryptography.CryptographicException: El sistema no puede encontrar la ruta especificada.
+
+   en System.Security.Cryptography.CryptographicException.ThrowCryptographicException(Int32 hr)
+   en System.Security.Cryptography.X509Certificates.X509Utils._QueryCertFileType(String fileName)
+   en System.Security.Cryptography.X509Certificates.X509Certificate.LoadCertificateFromFile(String fileName, Object password, X509KeyStorageFlags keyStorageFlags)
+   en System.Security.Cryptography.X509Certificates.X509Certificate2..ctor(String fileName)
+   en Business.GAFFactura.GeneraCfd(GAFFactura factura, Boolean enviar, facturaComplementos complementos) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GAFFactura.cs:línea 376
+2022-06-16 12:11:01,321-20-DEBUG-Business.GAFFactura.GuardarFactura33.289: 001296
+2022-06-16 12:11:06,737-20-DEBUG-Business.GAFFactura.GeneraCfd.357: FCO190306825
+2022-06-16 12:11:37,907-20-ERROR-Business.GAFFactura.GeneraCfd.478: System.Security.Cryptography.CryptographicException: El sistema no puede encontrar la ruta especificada.
+
+   en System.Security.Cryptography.CryptographicException.ThrowCryptographicException(Int32 hr)
+   en System.Security.Cryptography.X509Certificates.X509Utils._QueryCertFileType(String fileName)
+   en System.Security.Cryptography.X509Certificates.X509Certificate.LoadCertificateFromFile(String fileName, Object password, X509KeyStorageFlags keyStorageFlags)
+   en System.Security.Cryptography.X509Certificates.X509Certificate2..ctor(String fileName)
+   en Business.GAFFactura.GeneraCfd(GAFFactura factura, Boolean enviar, facturaComplementos complementos) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GAFFactura.cs:línea 376
+2022-06-16 12:11:53,445-20-DEBUG-Business.GAFFactura.GuardarFactura33.289: 001297
+2022-06-16 12:12:07,010-20-DEBUG-Business.GAFFactura.GeneraCfd.357: FCO190306825
+2022-06-16 12:14:40,750-20-DEBUG-Business.GAFFactura.GeneraCfd.380: Ruta Llave C:\GAF\Resources\FCO190306825\Certs\csd.key
+2022-06-16 12:14:41,909-20-DEBUG-Business.GAFFactura.GetComprobante.696: 001297
+2022-06-16 12:17:58,122-20-ERROR-Business.GAFFactura.GeneraCfd.478: System.FormatException: La cadena de entrada no tiene el formato correcto.
+   en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDecimal(String value)
+   en Business.GAFFactura.llenarPagosImpuestosP(List`1 doC, Int32 mon) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GAFFactura.cs:línea 2456
+   en Business.GAFFactura.LLenaComplemento(Comprobante comprobante, facturaComplementos complementos) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GAFFactura.cs:línea 2130
+   en Business.GAFFactura.GetComprobante(GAFFactura factura, clientes cliente, empresa emp, facturaComplementos complementos) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GAFFactura.cs:línea 1185
+   en Business.GAFFactura.GeneraCfd(GAFFactura factura, Boolean enviar, facturaComplementos complementos) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GAFFactura.cs:línea 381
+2022-06-16 13:33:11,466-12-DEBUG-Business.GAFFactura.GuardarFactura33.289: 001298
+2022-06-16 13:33:20,383-12-DEBUG-Business.GAFFactura.GeneraCfd.357: FCO190306825
+2022-06-16 13:33:20,969-12-DEBUG-Business.GAFFactura.GeneraCfd.380: Ruta Llave C:\GAF\Resources\FCO190306825\Certs\csd.key
+2022-06-16 13:33:23,852-12-DEBUG-Business.GAFFactura.GetComprobante.696: 001298
+2022-06-16 13:52:42,674-12-ERROR-Business.GAFFactura.GeneraCfd.478: System.FormatException: La cadena de entrada no tiene el formato correcto.
+   en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDecimal(String value)
+   en Business.GAFFactura.llenarPagosImpuestosP(List`1 doC, Int32 mon) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GAFFactura.cs:línea 2456
+   en Business.GAFFactura.LLenaComplemento(Comprobante comprobante, facturaComplementos complementos) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GAFFactura.cs:línea 2130
+   en Business.GAFFactura.GetComprobante(GAFFactura factura, clientes cliente, empresa emp, facturaComplementos complementos) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GAFFactura.cs:línea 1185
+   en Business.GAFFactura.GeneraCfd(GAFFactura factura, Boolean enviar, facturaComplementos complementos) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GAFFactura.cs:línea 381
+2022-06-16 13:54:51,220-6-DEBUG-Business.GAFFactura.GuardarFactura33.289: 001299
+2022-06-16 13:54:52,450-6-DEBUG-Business.GAFFactura.GeneraCfd.357: FCO190306825
+2022-06-16 13:54:52,975-6-DEBUG-Business.GAFFactura.GeneraCfd.380: Ruta Llave C:\GAF\Resources\FCO190306825\Certs\csd.key
+2022-06-16 13:54:53,476-6-DEBUG-Business.GAFFactura.GetComprobante.696: 001299
+2022-06-16 14:10:03,116-6-ERROR-Business.GAFFactura.GeneraCfd.478: System.FormatException: La cadena de entrada no tiene el formato correcto.
+   en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDecimal(String value)
+   en Business.GAFFactura.llenarPagosImpuestosP(List`1 doC, Int32 mon) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GAFFactura.cs:línea 2456
+   en Business.GAFFactura.LLenaComplemento(Comprobante comprobante, facturaComplementos complementos) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GAFFactura.cs:línea 2130
+   en Business.GAFFactura.GetComprobante(GAFFactura factura, clientes cliente, empresa emp, facturaComplementos complementos) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GAFFactura.cs:línea 1185
+   en Business.GAFFactura.GeneraCfd(GAFFactura factura, Boolean enviar, facturaComplementos complementos) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GAFFactura.cs:línea 381
+2022-06-16 14:10:10,286-6-DEBUG-Business.GAFFactura.GuardarFactura33.289: 001300
+2022-06-16 14:10:10,892-6-DEBUG-Business.GAFFactura.GeneraCfd.357: FCO190306825
+2022-06-16 14:10:11,455-6-DEBUG-Business.GAFFactura.GeneraCfd.380: Ruta Llave C:\GAF\Resources\FCO190306825\Certs\csd.key
+2022-06-16 14:10:11,974-6-DEBUG-Business.GAFFactura.GetComprobante.696: 001300
+2022-06-16 14:13:56,783-6-ERROR-Business.GAFFactura.GeneraCfd.478: System.FormatException: La cadena de entrada no tiene el formato correcto.
+   en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDecimal(String value)
+   en Business.GAFFactura.llenarPagosImpuestosP(List`1 doC, Int32 mon) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GAFFactura.cs:línea 2456
+   en Business.GAFFactura.LLenaComplemento(Comprobante comprobante, facturaComplementos complementos) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GAFFactura.cs:línea 2130
+   en Business.GAFFactura.GetComprobante(GAFFactura factura, clientes cliente, empresa emp, facturaComplementos complementos) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GAFFactura.cs:línea 1185
+   en Business.GAFFactura.GeneraCfd(GAFFactura factura, Boolean enviar, facturaComplementos complementos) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GAFFactura.cs:línea 381
+2022-06-16 14:14:07,059-6-DEBUG-Business.GAFFactura.GuardarFactura33.289: 001301
+2022-06-16 14:14:09,026-6-DEBUG-Business.GAFFactura.GeneraCfd.357: FCO190306825
+2022-06-16 14:14:09,838-6-DEBUG-Business.GAFFactura.GeneraCfd.380: Ruta Llave C:\GAF\Resources\FCO190306825\Certs\csd.key
+2022-06-16 14:14:10,538-6-DEBUG-Business.GAFFactura.GetComprobante.696: 001301
+2022-06-16 14:15:53,742-6-ERROR-Business.GAFFactura.GeneraCfd.478: System.FormatException: La cadena de entrada no tiene el formato correcto.
+   en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDecimal(String value)
+   en Business.GAFFactura.llenarPagosImpuestosP(List`1 doC, Int32 mon) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GAFFactura.cs:línea 2456
+   en Business.GAFFactura.LLenaComplemento(Comprobante comprobante, facturaComplementos complementos) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GAFFactura.cs:línea 2130
+   en Business.GAFFactura.GetComprobante(GAFFactura factura, clientes cliente, empresa emp, facturaComplementos complementos) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GAFFactura.cs:línea 1185
+   en Business.GAFFactura.GeneraCfd(GAFFactura factura, Boolean enviar, facturaComplementos complementos) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GAFFactura.cs:línea 381
+2022-06-16 14:16:31,595-6-DEBUG-Business.GAFFactura.GuardarFactura33.289: 001302
+2022-06-16 14:16:33,362-6-DEBUG-Business.GAFFactura.GeneraCfd.357: FCO190306825
+2022-06-16 14:16:34,347-6-DEBUG-Business.GAFFactura.GeneraCfd.380: Ruta Llave C:\GAF\Resources\FCO190306825\Certs\csd.key
+2022-06-16 14:16:39,373-6-DEBUG-Business.GAFFactura.GetComprobante.696: 001302
+2022-06-16 14:18:56,444-6-ERROR-Business.GAFFactura.GeneraCfd.478: System.FormatException: La cadena de entrada no tiene el formato correcto.
+   en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDecimal(String value)
+   en Business.GAFFactura.llenarPagosImpuestosP(List`1 doC, Int32 mon) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GAFFactura.cs:línea 2456
+   en Business.GAFFactura.LLenaComplemento(Comprobante comprobante, facturaComplementos complementos) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GAFFactura.cs:línea 2130
+   en Business.GAFFactura.GetComprobante(GAFFactura factura, clientes cliente, empresa emp, facturaComplementos complementos) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GAFFactura.cs:línea 1185
+   en Business.GAFFactura.GeneraCfd(GAFFactura factura, Boolean enviar, facturaComplementos complementos) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GAFFactura.cs:línea 381
+2022-06-16 14:19:10,281-31-DEBUG-Business.GAFFactura.GuardarFactura33.289: 001303
+2022-06-16 14:19:11,556-31-DEBUG-Business.GAFFactura.GeneraCfd.357: FCO190306825
+2022-06-16 14:19:12,537-31-DEBUG-Business.GAFFactura.GeneraCfd.380: Ruta Llave C:\GAF\Resources\FCO190306825\Certs\csd.key
+2022-06-16 14:19:13,353-31-DEBUG-Business.GAFFactura.GetComprobante.696: 001303
+2022-06-16 14:26:24,660-7-DEBUG-Business.GAFFactura.GuardarFactura33.289: 001304
+2022-06-16 14:26:26,198-7-DEBUG-Business.GAFFactura.GeneraCfd.357: FCO190306825
+2022-06-16 14:26:26,980-7-DEBUG-Business.GAFFactura.GeneraCfd.380: Ruta Llave C:\GAF\Resources\FCO190306825\Certs\csd.key
+2022-06-16 14:26:27,748-7-DEBUG-Business.GAFFactura.GetComprobante.696: 001304
+2022-06-16 14:27:56,067-7-ERROR-Business.GAFFactura.GeneraCfd.478: System.FormatException: La cadena de entrada no tiene el formato correcto.
+   en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDecimal(String value)
+   en Business.GAFFactura.llenarPagosImpuestosP(List`1 doC, Int32 mon) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GAFFactura.cs:línea 2456
+   en Business.GAFFactura.LLenaComplemento(Comprobante comprobante, facturaComplementos complementos) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GAFFactura.cs:línea 2130
+   en Business.GAFFactura.GetComprobante(GAFFactura factura, clientes cliente, empresa emp, facturaComplementos complementos) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GAFFactura.cs:línea 1185
+   en Business.GAFFactura.GeneraCfd(GAFFactura factura, Boolean enviar, facturaComplementos complementos) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GAFFactura.cs:línea 381
+2022-06-16 14:28:03,968-7-DEBUG-Business.GAFFactura.GuardarFactura33.289: 001305
+2022-06-16 14:28:05,433-7-DEBUG-Business.GAFFactura.GeneraCfd.357: FCO190306825
+2022-06-16 14:28:06,138-7-DEBUG-Business.GAFFactura.GeneraCfd.380: Ruta Llave C:\GAF\Resources\FCO190306825\Certs\csd.key
+2022-06-16 14:28:06,859-7-DEBUG-Business.GAFFactura.GetComprobante.696: 001305
+2022-06-16 14:29:50,330-7-ERROR-Business.GAFFactura.GeneraCfd.478: System.FormatException: La cadena de entrada no tiene el formato correcto.
+   en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDecimal(String value)
+   en Business.GAFFactura.llenarPagosImpuestosP(List`1 doC, Int32 mon) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GAFFactura.cs:línea 2456
+   en Business.GAFFactura.LLenaComplemento(Comprobante comprobante, facturaComplementos complementos) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GAFFactura.cs:línea 2130
+   en Business.GAFFactura.GetComprobante(GAFFactura factura, clientes cliente, empresa emp, facturaComplementos complementos) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GAFFactura.cs:línea 1185
+   en Business.GAFFactura.GeneraCfd(GAFFactura factura, Boolean enviar, facturaComplementos complementos) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GAFFactura.cs:línea 381
+2022-06-16 14:34:28,083-6-DEBUG-Business.GAFFactura.GuardarFactura33.289: 001306
+2022-06-16 14:34:29,468-6-DEBUG-Business.GAFFactura.GeneraCfd.357: FCO190306825
+2022-06-16 14:34:30,089-6-DEBUG-Business.GAFFactura.GeneraCfd.380: Ruta Llave C:\GAF\Resources\FCO190306825\Certs\csd.key
+2022-06-16 14:34:30,892-6-DEBUG-Business.GAFFactura.GetComprobante.696: 001306
+2022-06-16 14:36:26,452-6-ERROR-Business.GAFFactura.GeneraCfd.478: System.FormatException: La cadena de entrada no tiene el formato correcto.
+   en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDecimal(String value)
+   en Business.GAFFactura.llenarPagosImpuestosP(List`1 doC, Int32 mon) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GAFFactura.cs:línea 2456
+   en Business.GAFFactura.LLenaComplemento(Comprobante comprobante, facturaComplementos complementos) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GAFFactura.cs:línea 2130
+   en Business.GAFFactura.GetComprobante(GAFFactura factura, clientes cliente, empresa emp, facturaComplementos complementos) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GAFFactura.cs:línea 1185
+   en Business.GAFFactura.GeneraCfd(GAFFactura factura, Boolean enviar, facturaComplementos complementos) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GAFFactura.cs:línea 381
+2022-06-16 14:36:32,925-6-DEBUG-Business.GAFFactura.GuardarFactura33.289: 001307
+2022-06-16 14:36:34,161-6-DEBUG-Business.GAFFactura.GeneraCfd.357: FCO190306825
+2022-06-16 14:36:34,812-6-DEBUG-Business.GAFFactura.GeneraCfd.380: Ruta Llave C:\GAF\Resources\FCO190306825\Certs\csd.key
+2022-06-16 14:36:35,460-6-DEBUG-Business.GAFFactura.GetComprobante.696: 001307
+2022-06-16 14:41:50,313-8-DEBUG-Business.GAFFactura.GuardarFactura33.289: 001308
+2022-06-16 14:41:51,802-8-DEBUG-Business.GAFFactura.GeneraCfd.357: FCO190306825
+2022-06-16 14:41:52,518-8-DEBUG-Business.GAFFactura.GeneraCfd.380: Ruta Llave C:\GAF\Resources\FCO190306825\Certs\csd.key
+2022-06-16 14:41:53,305-8-DEBUG-Business.GAFFactura.GetComprobante.696: 001308
+2022-06-16 14:42:39,234-8-DEBUG-Business.GeneradorCfdi.GenerarCfd.1126: Generando xml
+2022-06-16 14:42:41,256-8-DEBUG-Business.GeneradorCfdi.TimbrarComprobanteNtLink.847: Timbrando comprobante
+2022-06-16 14:42:41,286-8-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteTimbradoXPRESS.27: Timbrando comprobante
+2022-06-16 14:42:48,276-8-INFO-ClienteServiciosWEb.ClienteTimbradoXpress.ClienteTimbradoXPRESS.32: Codigo:200 Mensaje:Solicitud procesada con éxito. - Solicitud de timbrado procesada.
+2022-06-16 14:42:48,277-8-DEBUG-Business.GeneradorCfdi.TimbrarComprobanteNtLink.872: <?xml version="1.0"?>
+<tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/TimbreFiscalDigital/TimbreFiscalDigitalv11.xsd" Version="1.1" UUID="cf950f9c-2656-462c-bf99-102c26bbd6d9" FechaTimbrado="2022-06-16T14:42:48" RfcProvCertif="SPR190613I52" SelloCFD="R+QOK2MY+/KWqdBmNqgk31ka8JD82N6kQi0D4Z8CZ8bzjkKo8VNg6NRgA77gJ2CxAJh30OBr574PTYH0TVgiTRsyloER0EcHQzlP5NoDa7W/rwljm1zs3HSoGPvP9FvJ/RtPmENqc8B4MCs7xQJEw5otASjIxzEUiycRGo2PW9XvEbX+5MHFALKKADviql+CRvdqg9hvxXu8s3EqEFrfpTUw2PK03sPB8mTABsMWKAdGjLViptwX1z62Su2W30yT+ibmplvchwdhFBJMgAWb2xUni4YidmhWOnxS+rlcr5CkVgRJja4Ac71vmeezy6IBFOG20B1f+anyMUcz2c5gmg==" NoCertificadoSAT="30001000000400002495" SelloSAT="CloJ8ygeBO9mgvDWOByFKpS64zZaSV34LsU5KGwz/Q2NkzhcqJbgOcfoUcF7iU3QS1gHiYzqoBFwhh/bOzRymbheQuFvmqAJ6MS7RXL+Fn7S+mZXEA9z7PKVR9bhs5jXayCPXecMmJnqWU3x1zmTav9yuBZiNQl80LpUfzus4RRN52wGiEO2qG+HWdC+ZfTY+b2ZrVo+9jI1Yf94k4yad3PFHEUGrw/ZiamdNKYQunm6XwlYsSN5cbVXxEK2/h9WRxQ3qhLijJmp/y+IW9MUYAPzzq18aldsM4yqcNa4bprRSO+JhOgSF9pC2IRQSSMp1BCHR9rkUbPyg2F1YGZnXA=="/>
+
+2022-06-16 14:42:48,331-8-DEBUG-Business.GAFFactura.GeneraCfd.392: <?xml version="1.0" encoding="utf-8"?><cfdi:Comprobante xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sat.gob.mx/cfd/4 http://www.sat.gob.mx/sitio_internet/cfd/4/cfdv40.xsd http://www.sat.gob.mx/Pagos20 http://www.sat.gob.mx/sitio_internet/cfd/Pagos/Pagos20.xsd" Version="4.0" Folio="001308" Fecha="2022-06-16T14:41:48" NoCertificado="00001000000503553747" Certificado="MIIF6zCCA9OgAwIBAgIUMDAwMDEwMDAwMDA1MDM1NTM3NDcwDQYJKoZIhvcNAQELBQAwggGEMSAwHgYDVQQDDBdBVVRPUklEQUQgQ0VSVElGSUNBRE9SQTEuMCwGA1UECgwlU0VSVklDSU8gREUgQURNSU5JU1RSQUNJT04gVFJJQlVUQVJJQTEaMBgGA1UECwwRU0FULUlFUyBBdXRob3JpdHkxKjAoBgkqhkiG9w0BCQEWG2NvbnRhY3RvLnRlY25pY29Ac2F0LmdvYi5teDEmMCQGA1UECQwdQVYuIEhJREFMR08gNzcsIENPTC4gR1VFUlJFUk8xDjAMBgNVBBEMBTA2MzAwMQswCQYDVQQGEwJNWDEZMBcGA1UECAwQQ0lVREFEIERFIE1FWElDTzETMBEGA1UEBwwKQ1VBVUhURU1PQzEVMBMGA1UELRMMU0FUOTcwNzAxTk4zMVwwWgYJKoZIhvcNAQkCE01yZXNwb25zYWJsZTogQURNSU5JU1RSQUNJT04gQ0VOVFJBTCBERSBTRVJWSUNJT1MgVFJJQlVUQVJJT1MgQUwgQ09OVFJJQlVZRU5URTAeFw0yMDAzMTQwMDEyMzlaFw0yNDAzMTQwMDEyMzlaMIG5MR4wHAYDVQQDExVGSU5EIENPTUVSQ1kgU0EgREUgQ1YxHjAcBgNVBCkTFUZJTkQgQ09NRVJDWSBTQSBERSBDVjEeMBwGA1UEChMVRklORCBDT01FUkNZIFNBIERFIENWMSUwIwYDVQQtExxGQ08xOTAzMDY4MjUgLyBHVVZDOTAwODA3VDc3MR4wHAYDVQQFExUgLyBHVVZDOTAwODA3SEpDVFpSMDcxEDAOBgNVBAsTB0NPTUVSQ1kwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCeszz/S1a7eI5rRsdrAAcrLSVTB49O5DNan/yfPEqJYDI/dbJSWbqW+FQNZ6kLiCXwsS03x1OVt5ODatAU/Kud3WBX+t8+cVzuE886AsPD32Wu8fe+kL5WGwdBfdXO/GdKpL7onJi96orbZniIRemd4jgx+HX87NXmiicusIF8BtuzTPOok84bkDPAn6hh4ALfqbbSp/Q0tIuivsH/j/fRo48UoP+VWqX/mA28155ugERO5C5vmqZ+72O9adUZXMqwrk5qroUyQjals7Syd+xww4v/VHlQ+xFU1bdFg8pUjffVnzQP0Upg4FgYzyYpKzfTy9UD2gLhVecGjIBAbxqXAgMBAAGjHTAbMAwGA1UdEwEB/wQCMAAwCwYDVR0PBAQDAgbAMA0GCSqGSIb3DQEBCwUAA4ICAQCEfKBH5rFHrKX7Wien/9oCMtYG+I37ppErGYS3Un+ixirtUo8YXnfWkL8GKvyVTnqife7pG/cgy883eIaK7VxRHrhECTkw685gRfOld3o7r4AVykQgXTQ8w0l2W1o8e3N/VMEIhcLnpnGVInbUQHfFzzkrm3kFSvwrNyywMt5jUtfFqZhyobXPvZHtVzmKcjYPglO6TAT4HKEm+WafEDKZNOvibvBOY+tpRXIa6+k4pjbzo9DraXYVSN3G/jxRfLMRGj41HTbGF5aTa+kmnUJQA/9+Z9y7IiSkXjy/7EaHpKhaJKJgDGOZ43M0A2cB9TQ9JG0OuzG4v8hymnIQatxj7gyluFridrd0vQOcD/YLQpGrJq/9/wTBRrl+SjQcIMa2qGGYqpD4psxvBxud5rcA23FaF6HrusgSdZiw5IcY8lT6WPm0mPGjKw3ZQ7Dscvk1kEVoJbjKCQXjuGUv2TdY634bs75thI4tKRlkiNrcLUki39DosOjRV1R1YP0uxM2Uyw2kh6G8SdUSvth7xcEeAZPhGZoq83stSWZ39e5eJ62NEQLsVR3S0W7RqcFdZLdSBgusOSF412yBeZENxiDmDa7fY6q8AWemZ3cjPNTFtWjBnQI6N6+mQ/9tJK/We/nKjaGrJuVq9BxbV7aWZNM7xNXun0fDXPiBQsbUTW4OUA==" SubTotal="0" Moneda="XXX" Total="0" TipoDeComprobante="P" Exportacion="01" LugarExpedicion="53120" xmlns:cfdi="http://www.sat.gob.mx/cfd/4" xmlns:pago20="http://www.sat.gob.mx/Pagos20" Sello="R+QOK2MY+/KWqdBmNqgk31ka8JD82N6kQi0D4Z8CZ8bzjkKo8VNg6NRgA77gJ2CxAJh30OBr574PTYH0TVgiTRsyloER0EcHQzlP5NoDa7W/rwljm1zs3HSoGPvP9FvJ/RtPmENqc8B4MCs7xQJEw5otASjIxzEUiycRGo2PW9XvEbX+5MHFALKKADviql+CRvdqg9hvxXu8s3EqEFrfpTUw2PK03sPB8mTABsMWKAdGjLViptwX1z62Su2W30yT+ibmplvchwdhFBJMgAWb2xUni4YidmhWOnxS+rlcr5CkVgRJja4Ac71vmeezy6IBFOG20B1f+anyMUcz2c5gmg=="><cfdi:Emisor Rfc="FCO190306825" Nombre="FIND COMERCY" RegimenFiscal="601" /><cfdi:Receptor Rfc="OEZI690113TNA" Nombre="IRAIS ORTEGA ZUÑIGA" DomicilioFiscalReceptor="03849" RegimenFiscalReceptor="612" UsoCFDI="CP01" /><cfdi:Conceptos><cfdi:Concepto ClaveProdServ="84111506" Cantidad="1" ClaveUnidad="ACT" Descripcion="Pago" ValorUnitario="0" Importe="0" ObjetoImp="01" /></cfdi:Conceptos><cfdi:Complemento><pago20:Pagos Version="2.0"><pago20:Totales TotalTrasladosBaseIVA16="8620689.66" TotalTrasladosImpuestoIVA16="1379310.34" MontoTotalPagos="10000000.00" /><pago20:Pago FechaPago="2022-06-15T12:00:00" FormaDePagoP="03" MonedaP="MXN" TipoCambioP="1" Monto="10000000.00"><pago20:DoctoRelacionado IdDocumento="857c35a7-d497-4361-845d-a832eea926b3" Folio="001283" MonedaDR="MXN" EquivalenciaDR="1" NumParcialidad="1" ImpSaldoAnt="7144391.28" ImpPagado="7144391.28" ImpSaldoInsoluto="0.00" ObjetoImpDR="02"><pago20:ImpuestosDR><pago20:TrasladosDR><pago20:TrasladoDR BaseDR="6158958.000000" ImpuestoDR="002" TipoFactorDR="Tasa" TasaOCuotaDR="0.160000" ImporteDR="985433.280000" /></pago20:TrasladosDR></pago20:ImpuestosDR></pago20:DoctoRelacionado><pago20:DoctoRelacionado IdDocumento="75952713-d30f-4948-b522-2ee6dd9fa70a" Folio="001282" MonedaDR="MXN" EquivalenciaDR="1" NumParcialidad="1" ImpSaldoAnt="2626446.48" ImpPagado="2626446.48" ImpSaldoInsoluto="0.00" ObjetoImpDR="02"><pago20:ImpuestosDR><pago20:TrasladosDR><pago20:TrasladoDR BaseDR="2264178.000000" ImpuestoDR="002" TipoFactorDR="Tasa" TasaOCuotaDR="0.160000" ImporteDR="362268.480000" /></pago20:TrasladosDR></pago20:ImpuestosDR></pago20:DoctoRelacionado><pago20:DoctoRelacionado IdDocumento="25570a18-e42f-4ae3-9e19-dd8b139c9c4b" Folio="001281" MonedaDR="MXN" EquivalenciaDR="1" NumParcialidad="1" ImpSaldoAnt="1317750.72" ImpPagado="229162.24" ImpSaldoInsoluto="1088588.48" ObjetoImpDR="02"><pago20:ImpuestosDR><pago20:TrasladosDR><pago20:TrasladoDR BaseDR="197553.655172" ImpuestoDR="002" TipoFactorDR="Tasa" TasaOCuotaDR="0.160000" ImporteDR="31608.584828" /></pago20:TrasladosDR></pago20:ImpuestosDR></pago20:DoctoRelacionado><pago20:ImpuestosP><pago20:TrasladosP><pago20:TrasladoP BaseP="8620689.655172" ImpuestoP="002" TipoFactorP="Tasa" TasaOCuotaP="0.160000" ImporteP="1379310.344828" /></pago20:TrasladosP></pago20:ImpuestosP></pago20:Pago></pago20:Pagos><tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/TimbreFiscalDigital/TimbreFiscalDigitalv11.xsd" Version="1.1" UUID="cf950f9c-2656-462c-bf99-102c26bbd6d9" FechaTimbrado="2022-06-16T14:42:48" RfcProvCertif="SPR190613I52" SelloCFD="R+QOK2MY+/KWqdBmNqgk31ka8JD82N6kQi0D4Z8CZ8bzjkKo8VNg6NRgA77gJ2CxAJh30OBr574PTYH0TVgiTRsyloER0EcHQzlP5NoDa7W/rwljm1zs3HSoGPvP9FvJ/RtPmENqc8B4MCs7xQJEw5otASjIxzEUiycRGo2PW9XvEbX+5MHFALKKADviql+CRvdqg9hvxXu8s3EqEFrfpTUw2PK03sPB8mTABsMWKAdGjLViptwX1z62Su2W30yT+ibmplvchwdhFBJMgAWb2xUni4YidmhWOnxS+rlcr5CkVgRJja4Ac71vmeezy6IBFOG20B1f+anyMUcz2c5gmg==" NoCertificadoSAT="30001000000400002495" SelloSAT="CloJ8ygeBO9mgvDWOByFKpS64zZaSV34LsU5KGwz/Q2NkzhcqJbgOcfoUcF7iU3QS1gHiYzqoBFwhh/bOzRymbheQuFvmqAJ6MS7RXL+Fn7S+mZXEA9z7PKVR9bhs5jXayCPXecMmJnqWU3x1zmTav9yuBZiNQl80LpUfzus4RRN52wGiEO2qG+HWdC+ZfTY+b2ZrVo+9jI1Yf94k4yad3PFHEUGrw/ZiamdNKYQunm6XwlYsSN5cbVXxEK2/h9WRxQ3qhLijJmp/y+IW9MUYAPzzq18aldsM4yqcNa4bprRSO+JhOgSF9pC2IRQSSMp1BCHR9rkUbPyg2F1YGZnXA==" /></cfdi:Complemento></cfdi:Comprobante>
+2022-06-16 14:42:49,789-8-ERROR-Business.GeneradorCfdi.GetPdfFromComprobante.219: System.Net.WebException: Error de la solicitud con el código de estado HTTP 401: Unauthorized.
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en Business.ReportService.ReportingService2005.ListChildren(String Item, Boolean Recursive) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\Web References\ReportService\Reference.cs:línea 871
+   en Business.GeneradorCfdi.GetPdfFromComprobante(Comprobante comprobante, Int32 orientacion, TipoDocumento tipo, Int64& id, String metodoPago) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GeneradorCfdi.cs:línea 190
+2022-06-16 14:42:49,836-8-ERROR-Business.GAFFactura.GeneraCfd.413: System.Net.WebException: Error de la solicitud con el código de estado HTTP 401: Unauthorized.
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en Business.ReportService.ReportingService2005.ListChildren(String Item, Boolean Recursive) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\Web References\ReportService\Reference.cs:línea 871
+   en Business.GeneradorCfdi.GetPdfFromComprobante(Comprobante comprobante, Int32 orientacion, TipoDocumento tipo, Int64& id, String metodoPago) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GeneradorCfdi.cs:línea 222
+   en Business.GAFFactura.GeneraCfd(GAFFactura factura, Boolean enviar, facturaComplementos complementos) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\GAFFactura.cs:línea 405
+2022-06-16 14:42:49,837-8-DEBUG-Business.GAFFactura.GeneraCfd.422: Enviar Correo
+2022-06-16 14:42:52,977-8-DEBUG-Business.Mailer.Send.45: Enviando a 1 emails
+2022-06-16 14:42:53,006-8-INFO-Business.Mailer.Send.65: Creando MailMessage
+2022-06-16 14:42:53,022-8-INFO-Business.Mailer.Send.76: Cargando Bcc: 
+2022-06-16 14:42:53,022-8-INFO-Business.Mailer.Send.84: Agregando attach
+2022-06-16 14:42:53,023-8-INFO-Business.Mailer.Send.96: Enviando a la direccion: systemconsult360@gmail.com
+2022-06-16 14:42:58,315-8-ERROR-Business.Mailer.Send.107: System.Net.Mail.SmtpException: Error al enviar correo. ---> System.Net.WebException: No se puede resolver el nombre remoto: 'mail.ovjme.com'
+   en System.Net.ServicePoint.GetConnection(PooledStream PooledStream, Object owner, Boolean async, IPAddress& address, Socket& abortSocket, Socket& abortSocket6)
+   en System.Net.PooledStream.Activate(Object owningObject, Boolean async, GeneralAsyncDelegate asyncCallback)
+   en System.Net.PooledStream.Activate(Object owningObject, GeneralAsyncDelegate asyncCallback)
+   en System.Net.ConnectionPool.GetConnection(Object owningObject, GeneralAsyncDelegate asyncCallback, Int32 creationTimeout)
+   en System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpClient.GetConnection()
+   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   en Business.Mailer.Send(List`1 recipients, List`1 attachments, String message, String subject, String fromEmail, String fromDescription) en C:\datosRGV\respaldo_15_02_2021\Sistemas\SistemasXpress40\Business\Mailer.cs:línea 100
+2022-06-16 14:42:58,361-8-ERROR-Business.GAFFactura.GeneraCfd.464: Ocurrio un error al enviar el correo

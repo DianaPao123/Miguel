@@ -178,14 +178,15 @@ namespace GAFWEB
             this.txtEstado.Text = empresa.Estado;
             this.txtCP.Text = empresa.CP;
             this.txtEmail.Text = empresa.Email;
-            this.txtWeb.Text = empresa.Pagina;
-            this.txtContacto.Text = empresa.Contacto;
-            this.txtTelefono.Text = empresa.Telefono;
+           // this.txtWeb.Text = empresa.Pagina;
+           // this.txtContacto.Text = empresa.Contacto;
+           // this.txtTelefono.Text = empresa.Telefono;
             this.txtInt.Text = empresa.NoInt;
             this.txtLocalidad.Text = empresa.Localidad;
-            this.txtReferencia.Text = empresa.Referencia;
+          //  this.txtReferencia.Text = empresa.Referencia;
             this.txtExt.Text = empresa.NoExt;
             this.ddlGiro.SelectedValue = empresa.Id_Giro.ToString();
+            this.ddlRegimen.SelectedValue = empresa.RegimenFiscal;
             /*
             ListItem li = new ListItem(empresa.RegimenFiscal, empresa.RegimenFiscal);
             if (ddlRegimen.Items.Contains(li))
@@ -198,11 +199,11 @@ namespace GAFWEB
                 this.tdRegimen.Visible = true;
                 this.txtRegimen.Text = empresa.RegimenFiscal;
             }
-             */ 
+             */
             this.ddlOrientacion.SelectedValue = empresa.Orientacion.ToString();
             this.txtLeyendaPie.Text = empresa.LeyendaInferior;
             this.txtLeyendaSuperior.Text = empresa.LeyendaSuperior;
-            this.txtCURP.Text = empresa.CURP;
+           // this.txtCURP.Text = empresa.CURP;
             this.lblVencimiento.Text = empresa.VencimientoCert;
 
             var GAFSucursal = new GAFSucursales();
@@ -223,18 +224,18 @@ namespace GAFWEB
                 Colonia = this.txtColonia.Text,
                 Ciudad = this.txtMunicipio.Text,
                 Estado = this.txtEstado.Text,
-                Telefono = this.txtTelefono.Text,
+                Telefono = "",//this.txtTelefono.Text,
                 CP = this.txtCP.Text,
                 Email = this.txtEmail.Text,
-                Pagina = this.txtWeb.Text,
-                Contacto = this.txtContacto.Text,
+                Pagina = "",//this.txtWeb.Text,
+                Contacto ="",// this.txtContacto.Text,
                 PassKey = this.txtPassWordLlave.Text,
                 RegimenFiscal =  ddlRegimen.SelectedValue,
                 idSistema = sistema.Value,
                 LeyendaSuperior = txtLeyendaSuperior.Text,
                 LeyendaInferior = txtLeyendaPie.Text,
                 Orientacion = int.Parse(ddlOrientacion.SelectedValue),
-                CURP = this.txtCURP.Text,
+                CURP = "",//this.txtCURP.Text,
                 Linea = "A",
                 Id_Giro=Convert.ToInt64( ddlGiro.SelectedValue)
             };
@@ -247,7 +248,7 @@ namespace GAFWEB
             empresa.NoExt = string.IsNullOrEmpty(txtExt.Text) ? null : txtExt.Text;
             empresa.NoInt = string.IsNullOrEmpty(txtInt.Text) ? null : txtInt.Text;
             empresa.Localidad = string.IsNullOrEmpty(txtLocalidad.Text) ? null : txtLocalidad.Text;
-            empresa.Referencia = string.IsNullOrEmpty(txtReferencia.Text) ? null : txtReferencia.Text;
+           // empresa.Referencia = string.IsNullOrEmpty(txtReferencia.Text) ? null : txtReferencia.Text;
             return empresa;
         }
 

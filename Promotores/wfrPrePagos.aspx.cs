@@ -334,8 +334,26 @@ namespace GAFWEB
                 p.monedaP = ddlMonedaP.SelectedValue;
                 p.monto = txtMonto.Text;
                 if (!string.IsNullOrEmpty(txtTipoCambioP.Text))
-                p.tipoCambioP = txtTipoCambioP.Text;
+                    p.tipoCambioP = txtTipoCambioP.Text;
+                else
+                    p.tipoCambioP = "1";
                 p.rutaImagen = ViewState["NombreArchivo"] as string;
+
+                   /*     PagoDoctoRelacionado pa = new PagoDoctoRelacionado();
+                        pa.IdDocumento = "12657779-a9ed-4fe9-ae9e-b181e1c88261";
+                        pa.MonedaDR = "MXN";
+                        pa.Serie = "";
+                        pa.Folio = "000019";
+                        pa.NumParcialidad = "1";
+                        pa.MetodoDePagoDR = "PPD";
+                        pa.ImpPagado = "100";
+                        pa.ImpSaldoAnt = "100";
+                        pa.ImpSaldoInsoluto = "0.00";
+                documentos = new List<PagoDoctoRelacionado>();
+               documentos.Add(pa);
+                p.DoctoRelacionado = documentos;
+                */
+
                 pagos.Add(p);
 
                 comple.pagos = pagos;
@@ -425,7 +443,7 @@ namespace GAFWEB
             // fact.LugarExpedicion = this.ddlSucursales.SelectedValue;
             // fact.Proyecto = this.txtProyecto.Text;
             fact.MonedaS = "XXX"; //this.ddlMoneda.SelectedItem.Text;
-            fact.UsoCFDI = "P01";// se define para complemento de pago
+            fact.UsoCFDI = "CP01";// se define para complemento de pago
             fact.Estatus = 0;//Convert.ToInt16( ddlStatusFactura.SelectedValue);
             fact.TipoDeComprobante = "Pago";
 

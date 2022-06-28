@@ -370,7 +370,11 @@ namespace GAFWEB
                 return false;
             
             }
-
+            if (string.IsNullOrEmpty(txtFechaPagoP.Text))
+            {
+                this.lblError.Text = "Favor de relacionar una factura, la fecha de pago debe se existir";
+                return false;
+            }
             /*
             decimal d= Convert.ToDecimal(txtMonto.Text);
             if (d > 0)
@@ -385,7 +389,7 @@ namespace GAFWEB
             //    this.lblError.Text = "Escribe el folio de la factura";
             //    return false;
             //}
-            
+
             /*
             List<Pagos> pagos = ViewState["Pagos"] as List<Pagos>;
             if (pagos == null)
@@ -443,7 +447,7 @@ namespace GAFWEB
             fact.Cancelado = 0;
             //fact.Usuario = sesion.Id;//Guid.Parse("33760C0C-E45C-4210-8081-81C80827FA73");// System.Guid.NewGuid(); ///cambiar al verdadero
             fact.MonedaS = "XXX"; //this.ddlMoneda.SelectedItem.Text;
-            fact.UsoCFDI = "P01";// se define para complemento de pago
+            fact.UsoCFDI = "CP01";// se define para complemento de pago
             fact.Estatus = 0;//Convert.ToInt16( ddlStatusFactura.SelectedValue);
             fact.TipoDeComprobante = "Pago";
             var prefactu = new Prefactura();
@@ -536,8 +540,9 @@ namespace GAFWEB
                  p.monto = montoxxx;
                  if ( !string.IsNullOrEmpty(txtTipoCambioP.Text))
                      p.tipoCambioP = txtTipoCambioP.Text;
-               
-                 List<PagoDoctoRelacionado> documentosxxx = ViewState["PagoDoctoRelacionado"] as List<PagoDoctoRelacionado>;
+                    if (p.monedaP == "MXN")
+                        p.tipoCambioP = "1";
+                        List <PagoDoctoRelacionado> documentosxxx = ViewState["PagoDoctoRelacionado"] as List<PagoDoctoRelacionado>;
                  if (documentosxxx != null)/////version 3.2
                  {
                      foreach (var x in documentosxxx)

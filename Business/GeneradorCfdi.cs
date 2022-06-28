@@ -30,6 +30,8 @@ using Contract;
 using ClienteNtLink;
 using Business.ReportService;
 using Business.ReportExecution;
+using ClienteServiciosWEb;
+using Business.CFDI40;
 //using ServicioLocal.Business.InternalCertificador;
 
 
@@ -55,7 +57,7 @@ namespace  Business
                 {
                     XmlSerializerNamespaces namespaces = new XmlSerializerNamespaces();
                     namespaces.Add("xsi", "http://www.w3.org/2001/XMLSchema-instance");
-                    namespaces.Add("cfdi", "http://www.sat.gob.mx/cfd/3");
+                    namespaces.Add("cfdi", "http://www.sat.gob.mx/cfd/4");
 
                     ser.Serialize(xmlWriter, p, namespaces);
                     string xml = Encoding.UTF8.GetString(memStream.GetBuffer());
@@ -564,7 +566,7 @@ namespace  Business
         
 
         private readonly XNamespace _nsRet = "http://www.sat.gob.mx/esquemas/retencionpago/1";
-        private readonly XNamespace _ns = "http://www.sat.gob.mx/cfd/3";
+        private readonly XNamespace _ns = "http://www.sat.gob.mx/cfd/4";
         private readonly XNamespace _donat = "http://www.sat.gob.mx/cfd/donat";
 
         private string ConcatenaTimbreRet(XElement entrada, string xmlTimbre, string xmlDonat, string xmlAddenda,
@@ -745,7 +747,7 @@ namespace  Business
                         xml = xml.Substring(xml.IndexOf(Convert.ToChar(60)));
                         xml = xml.Substring(0, (xml.LastIndexOf(Convert.ToChar(62)) + 1));
                         //xml = xml.Replace("xmlns:donat=\"http://www.sat.gob.mx/donat\"", "");
-                        xml = xml.Replace("p1:schemaLocation=\"http://www.sat.gob.mx/Pagos http://www.sat.gob.mx/sitio_internet/cfd/Pagos/Pagos10.xsd\"", "");
+                        xml = xml.Replace("p1:schemaLocation=\"http://www.sat.gob.mx/Pagos20 http://www.sat.gob.mx/sitio_internet/cfd/Pagos/Pagos20.xsd\"", "");
                         xml = xml.Replace("xmlns:p1=\"http://www.w3.org/2001/XMLSchema-instance\"", "");
 
                         return xml;
@@ -794,9 +796,9 @@ namespace  Business
 
         }
 
-        public string GetXmlPagos(Contract.Complemento.Pagos impuestos)
+        public string GetXmlPagos(Contract.Complemento40.Pagos impuestos)
         {
-            XmlSerializer ser = new XmlSerializer(typeof(Contract.Complemento.Pagos));
+            XmlSerializer ser = new XmlSerializer(typeof(Contract.Complemento40.Pagos));
             try
             {
                 using (MemoryStream memStream = new MemoryStream())
@@ -807,13 +809,13 @@ namespace  Business
                                                                new XmlWriterSettings() { Indent = false, Encoding = Encoding.UTF8 }))
                     {
                         XmlSerializerNamespaces namespaces = new XmlSerializerNamespaces();
-                        namespaces.Add("pago10", "http://www.sat.gob.mx/Pagos");
+                        namespaces.Add("pago20", "http://www.sat.gob.mx/Pagos20");
                         ser.Serialize(xmlWriter, impuestos, namespaces);
                         string xml = Encoding.UTF8.GetString(memStream.GetBuffer());
                         xml = xml.Substring(xml.IndexOf(Convert.ToChar(60)));
                         xml = xml.Substring(0, (xml.LastIndexOf(Convert.ToChar(62)) + 1));
                         //xml = xml.Replace("xmlns:donat=\"http://www.sat.gob.mx/donat\"", "");
-                        xml=xml.Replace("p1:schemaLocation=\"http://www.sat.gob.mx/Pagos http://www.sat.gob.mx/sitio_internet/cfd/Pagos/Pagos10.xsd\"","");
+                        xml=xml.Replace("p1:schemaLocation=\"http://www.sat.gob.mx/Pagos20 http://www.sat.gob.mx/sitio_internet/cfd/Pagos/Pagos20.xsd\"","");
                         xml = xml.Replace("xmlns:p1=\"http://www.w3.org/2001/XMLSchema-instance\"", "");
 
                         return xml;
@@ -835,8 +837,10 @@ namespace  Business
             bool addendaRepetida = false;
             List<XElement> elAddenda = new List<XElement>();
             // ClienteTimbradoNtlink cliente = new ClienteTimbradoNtlink();
-            ClienteTimbradoNtlink cliente = new ClienteTimbradoNtlink();
-          //  CertificadorAppsClient internalCertificadorAppsClient =  new CertificadorAppsClient();
+            //  CertificadorAppsClient internalCertificadorAppsClient =  new CertificadorAppsClient();
+        
+            // ClienteTimbradoNtlink cliente = new ClienteTimbradoNtlink();
+            ClienteTimbradoXpress cliente = new ClienteTimbradoXpress();
             try
             {
                 //string complemento = null;
@@ -853,11 +857,18 @@ namespace  Business
 
                 //string configUserName = ConfigurationManager.AppSettings["InternalClientUserName"];
                 //string configPassword = ConfigurationManager.AppSettings["InternalClientPassword"];
-
                 //cliente.TimbraCfdi(comp.XmlString);
-                string timbreString = cliente.TimbraCfdiFacturacionModerna(comp.XmlString,comp.Emisor.Rfc);
-             
-             
+
+               // string timbreString = cliente.TimbraCfdiFacturacionModerna(comp.XmlString,comp.Emisor.Rfc);
+                //------------para Xpress-------------
+                string timbreString = cliente.ClienteTimbradoXPRESS(comp.XmlString);
+                if (cliente.Codigo != "200")
+                {
+                    Logger.Error(cliente.Mensaje);
+                    throw new FaultException(cliente.Mensaje);
+
+                }
+                //----------------
                 Logger.Debug(timbreString);
                 TimbreFiscalDigital timbre = null;
                 try
@@ -1129,7 +1140,7 @@ namespace  Business
                 
                 if (comprobante.Complemento != null && comprobante.Complemento.Pag != null)
                 {
-                    comprobante.xsiSchemaLocation = comprobante.xsiSchemaLocation + " http://www.sat.gob.mx/Pagos http://www.sat.gob.mx/sitio_internet/cfd/Pagos/Pagos10.xsd";
+                    comprobante.xsiSchemaLocation = comprobante.xsiSchemaLocation + " http://www.sat.gob.mx/Pagos20 http://www.sat.gob.mx/sitio_internet/cfd/Pagos/Pagos20.xsd";
                     complemento = GetXmlPagos(comprobante.Complemento.Pag);//GetXmlAddenda(comprobante.Complemento.Pag, typeof(GAFContract.Complemento.Pagos), "pago10", " http://www.sat.gob.mx/Pagos");
                 
                 
@@ -1150,7 +1161,11 @@ namespace  Business
                 }
 
                 string comp = GetXml(comprobante, complemento);
-                
+                if (comprobante.Complemento != null && comprobante.Complemento.Pag != null)
+                {
+                    comp = comp.Replace("<pago20:Pagos Version=\"2.0\" xmlns:pago20=\"http://www.sat.gob.mx/Pagos20\">", "<pago20:Pagos Version=\"2.0\">");
+                    comp = comp.Replace("xmlns:cfdi=\"http://www.sat.gob.mx/cfd/4\"", "xmlns:cfdi=\"http://www.sat.gob.mx/cfd/4\" xmlns:pago20=\"http://www.sat.gob.mx/Pagos20\"");
+                  }
                 comprobante.CadenaOriginal = gen.CadenaOriginal(comp);
                 comprobante.Sello = Firmar(comprobante.CadenaOriginal, rutaLlave, passLlave);
                 XElement xeComprobante = XElement.Parse(comp);
@@ -1158,11 +1173,11 @@ namespace  Business
                 SidetecStringWriter sw = new SidetecStringWriter(Encoding.UTF8);
                 xeComprobante.Save(sw,SaveOptions.DisableFormatting);
                 comprobante.XmlString = sw.ToString();
-                if (ConfigurationManager.AppSettings["Pac"] == "NtLink")
-                {
+              //  if (ConfigurationManager.AppSettings["Pac"] == "NtLink")
+               // {
                     TimbrarComprobanteNtLink(comprobante);
-                }
-                else throw new Exception("No hay un pac configurado");
+                //}
+               // else throw new Exception("No hay un pac configurado");
             }
             catch (FaultException fe)
             {
@@ -1188,7 +1203,7 @@ namespace  Business
 
                   if (comprobante.Complemento != null && comprobante.Complemento.Pag != null)
                 {
-                    comprobante.xsiSchemaLocation = comprobante.xsiSchemaLocation + " http://www.sat.gob.mx/Pagos http://www.sat.gob.mx/sitio_internet/cfd/Pagos/Pagos10.xsd";
+                    comprobante.xsiSchemaLocation = comprobante.xsiSchemaLocation + " http://www.sat.gob.mx/Pagos20 http://www.sat.gob.mx/sitio_internet/cfd/Pagos/Pagos20.xsd";
                     complemento = GetXmlPagos(comprobante.Complemento.Pag);//GetXmlAddenda(comprobante.Complemento.Pag, typeof(GAFContract.Complemento.Pagos), "pago10", " http://www.sat.gob.mx/Pagos");
                 }
                 if (comprobante.Complemento != null && comprobante.Complemento.ine != null)
@@ -1204,7 +1219,11 @@ namespace  Business
                 }
 
                 string comp = GetXml(comprobante, complemento);
-
+                if (comprobante.Complemento != null && comprobante.Complemento.Pag != null)
+                {
+                    comp = comp.Replace("<pago20:Pagos Version=\"2.0\" xmlns:pago20=\"http://www.sat.gob.mx/Pagos20\">", "<pago20:Pagos Version=\"2.0\">");
+                    comp = comp.Replace("xmlns:cfdi=\"http://www.sat.gob.mx/cfd/4\"", "xmlns:cfdi=\"http://www.sat.gob.mx/cfd/4\" xmlns:pago20=\"http://www.sat.gob.mx/Pagos20\"");
+                }
                 comprobante.CadenaOriginal = gen.CadenaOriginal(comp);
                 comprobante.Sello = Firmar(comprobante.CadenaOriginal, rutaLlave, passLlave);
                 XElement xeComprobante = XElement.Parse(comp);

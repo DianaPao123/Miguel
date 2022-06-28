@@ -443,7 +443,7 @@ namespace GAFWEB
             fact.Cancelado = 0;
             //fact.Usuario = sesion.Id;//Guid.Parse("33760C0C-E45C-4210-8081-81C80827FA73");// System.Guid.NewGuid(); ///cambiar al verdadero
             fact.MonedaS = "XXX"; //this.ddlMoneda.SelectedItem.Text;
-            fact.UsoCFDI = "P01";// se define para complemento de pago
+            fact.UsoCFDI = "CP01";// se define para complemento de pago
             fact.Estatus = 0;//Convert.ToInt16( ddlStatusFactura.SelectedValue);
             fact.TipoDeComprobante = "Pago";
             var prefactu = new Prefactura();

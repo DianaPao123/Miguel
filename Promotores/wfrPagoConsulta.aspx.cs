@@ -56,13 +56,11 @@ namespace GAFWEB
                         var cliente = new GAFClientes();
                         using (cliente as IDisposable)
                         {
-                            //var clientes = cliente.GetList(idEmpresa, string.Empty, false);
-                            var clientes = cliente.GetList();
+                            var sesion = Session["sessionRGV"] as Sesion;
 
-                            //myDropDown.DataTextField = "whatever";
-                            //myDropDown.DataValueField = "ID";
-                            //myDropDown.DataSource = GetStuff();
-                            //myDropDown.DataBind();
+                            ddlClientes.Items.Clear();
+                            var clientes = cliente.GetListClientePromotor(sesion.Id);
+                            
                             ListItem cl = new ListItem();
                             cl.Text = "--Todos--";
                             cl.Value = "0";
@@ -203,6 +201,8 @@ namespace GAFWEB
                         txtMotivoCancela.Text = R.MotivoRechazo;
                 }
                 mpeCancelar.Show();
+                gvFacturas.DataSource = ViewState["facturas"];
+                gvFacturas.DataBind();
             }
             else
          
@@ -371,6 +371,7 @@ namespace GAFWEB
                     this.gvFacturaCustumer.DataBind();
                 }
 
+          //UpdatePanel2.Update();
         }
 
         private void CalculaTotales(List<vPrefacturaPagos> lista)

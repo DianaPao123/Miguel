@@ -55,7 +55,7 @@
             </td>
    </tr>
    </table>
-    <asp:GridView runat="server" ID="gvEmpresas"  CssClass="style124" 
+    <asp:GridView runat="server" ID="gvEmpresas"  CssClass="style124"  Width="100%" Height="90%"
         AutoGenerateColumns="False" onrowcommand="gvEmpresas_RowCommand"
      DataKeyNames="IdEmpresa" AllowPaging="True" 
         onpageindexchanging="gvEmpresas_PageIndexChanging" >

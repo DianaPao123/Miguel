@@ -86,31 +86,45 @@
 
    <div class = "panel panel-default">
         <div class = "panel-body">
-            <div class = "row justify-content-center">
+            <div class = "row">
+                <div class = "form-group col-md-5 col-sm-12">
+                    <asp:Label ID="lblEmail" runat="server" Text="Email"></asp:Label>
+                    <asp:TextBox runat="server" ID="txtEmail" CssClass="form-control"/>
+                </div>
+              <%--  <div class = "form-group col-md-2 col-sm-6">
+                    <asp:Label ID="lblTelefono" runat="server" Text="Teléfono"></asp:Label>
+                    <asp:TextBox runat="server" ID="txtTelefono" CssClass="form-control"/>
+                </div>--%>
+               <%-- <div class = "form-group col-md-5 col-sm-12">
+                    <asp:Label ID="lblWeb" runat="server" Text="Web"></asp:Label>
+                    <asp:TextBox runat="server" ID="txtWeb" CssClass="form-control"/>
+                </div>--%>
+            </div>
+            <%--<div class = "row justify-content-center">
+                <div class = "form-group col-md-6 col-sm-12">
+                    <asp:Label ID="lblContactoEmpresa" runat="server" Text="Contacto Administrativo"></asp:Label>
+                    <asp:TextBox runat="server" ID="TextBox1" CssClass="form-control"/>
+                </div>
+            </div>--%>
+
+          <%--  <div class = "row justify-content-center">
                 <div class = "form-group col-md-4 col-sm-12">
                     <asp:Label ID="lblCURP" runat="server" Text="CURP (Si aplica)"></asp:Label>
                     <asp:TextBox runat="server" ID="txtCURP" MaxLength="24" CssClass="form-control"/>
                 </div>
-            </div>
+            </div>--%>
             <div class = "row">
                 <div class = "form-group col-md-5 col-sm-12">
                     <asp:Label ID="lblCalle" runat="server" Text="Calle"></asp:Label>
                     <asp:TextBox runat="server" ID="txtDireccion" CssClass="form-control"/>
                 </div>
-                <div class = "form-group col-md-1 col-sm-6">
-                    <asp:Label ID="lblNoExterior" runat="server" Text="No. Ext."></asp:Label>
-                    <asp:TextBox runat="server" ID="txtExt" CssClass="form-control"/>
-                </div>
-                <div class = "form-group col-md-1 col-sm-6">
-                    <asp:Label ID="lblNoInterior" runat="server" Text="No. Int."></asp:Label>
-                    <asp:TextBox runat="server" ID="txtInt" CssClass="form-control"/>
-                </div>
+                
                 <div class = "form-group col-md-5 col-sm-12">
                     <asp:Label ID="lblColonia" runat="server" Text="Colonia"></asp:Label>
                     <asp:TextBox runat="server" ID="txtColonia" CssClass = "form-control"/>
                 </div>
             </div>
-            <div class = "row justify-content-center">
+            <div class = "row ">
                 <div class = "form-group col-md-5 col-sm-12">
                     <asp:Label ID="lblMunicipio" runat="server" Text="Municipio"></asp:Label>
                     <asp:TextBox runat="server" ID="txtMunicipio" CssClass="form-control"/>
@@ -129,31 +143,20 @@
                     <asp:Label ID="lblCP" runat="server" Text="Código Postal"></asp:Label>
                     <asp:TextBox runat="server" ID="txtCP" CssClass="form-control"/>
                 </div>
-                <div class = "form-group col-md-5 col-sm-12">
+              <%--  <div class = "form-group col-md-5 col-sm-12">
                     <asp:Label ID="lblReferencia" runat="server" Text="Referencia"></asp:Label>
                     <asp:TextBox runat="server" ID="txtReferencia" CssClass="form-control"/>
-                </div>
-            </div>
-            <div class = "row">
-                <div class = "form-group col-md-5 col-sm-12">
-                    <asp:Label ID="lblEmail" runat="server" Text="Email"></asp:Label>
-                    <asp:TextBox runat="server" ID="txtEmail" CssClass="form-control"/>
+                </div>--%>
+                <div class = "form-group col-md-2 col-sm-6">
+                    <asp:Label ID="lblNoExterior" runat="server" Text="No. Ext."></asp:Label>
+                    <asp:TextBox runat="server" ID="txtExt" CssClass="form-control"/>
                 </div>
                 <div class = "form-group col-md-2 col-sm-6">
-                    <asp:Label ID="lblTelefono" runat="server" Text="Teléfono"></asp:Label>
-                    <asp:TextBox runat="server" ID="txtTelefono" CssClass="form-control"/>
-                </div>
-                <div class = "form-group col-md-5 col-sm-12">
-                    <asp:Label ID="lblWeb" runat="server" Text="Web"></asp:Label>
-                    <asp:TextBox runat="server" ID="txtWeb" CssClass="form-control"/>
+                    <asp:Label ID="lblNoInterior" runat="server" Text="No. Int."></asp:Label>
+                    <asp:TextBox runat="server" ID="txtInt" CssClass="form-control"/>
                 </div>
             </div>
-            <div class = "row justify-content-center">
-                <div class = "form-group col-md-6 col-sm-12">
-                    <asp:Label ID="lblContactoEmpresa" runat="server" Text="Contacto Administrativo"></asp:Label>
-                    <asp:TextBox runat="server" ID="TextBox1" CssClass="form-control"/>
-                </div>
-            </div>
+            
         </div>
     </div>
 
@@ -168,21 +171,22 @@
                     <asp:Label ID="lblSucursal" runat="server" Text="Sucursal"></asp:Label>
                     <asp:TextBox runat="server" ID="txtSucursal" CssClass="form-control"/>
                     <asp:RequiredFieldValidator runat="server" ID="rfvSucursal" ControlToValidate="txtSucursal"
-                      Display="Dynamic" ErrorMessage="* Requerido" />
+                      Display="Dynamic" ErrorMessage="* Requerido" ForeColor="Red" />
                 </div>
                 <div class = "form-group col-md-6 col-sm-12">
                     <asp:Label ID="lblLugarExpedicion" runat="server" Text="Lugar de Expedición"></asp:Label>
                     <asp:TextBox runat="server" ID="txtLugarExpedicion" CssClass="form-control"/>
                     <asp:RequiredFieldValidator runat="server" ID="rfvLugarExpedicion" ControlToValidate="txtLugarExpedicion"
-                      Display="Dynamic" ErrorMessage="* Requerido" />
+                      Display="Dynamic" ErrorMessage="* Requerido" ForeColor="Red" />
                 </div>
             </div>
-            <div class = "row justify-content-center">
+         <%--   <div class = "row justify-content-center">
                 <div class = "form-group col-md-6 col-sm-12">
                     <asp:Label ID="lblContactoSucursal" runat="server" Text="Contacto Administrativo"></asp:Label>
                     <asp:TextBox runat="server" ID="txtContacto" CssClass="form-control"/>
                 </div>
-            </div>
+            </div>--%>
+
         </div>
     </div>        
    
@@ -201,8 +205,8 @@
                     <asp:Label ID="lblPesoLogo" runat="server" Text="(Peso máximo 50kb)"></asp:Label>
                 </div>
                 <div class = "form-group col-md-3">
-                    <asp:Label ID="lblOrientacionArchivo" runat="server" Text="Orientación del Archivo PDF"></asp:Label>
-                    <asp:DropDownList runat="server" ID="ddlOrientacion" CssClass="form-control">
+                    <asp:Label ID="lblOrientacionArchivo" runat="server" Text="Orientación del Archivo PDF" Visible="false"></asp:Label>
+                    <asp:DropDownList runat="server" ID="ddlOrientacion" CssClass="form-control" Visible="false">
                         <asp:ListItem Value="0" Text="Vertical" ></asp:ListItem> 
                         <asp:ListItem Value="1" Text="Horizontal" ></asp:ListItem> 
                     </asp:DropDownList>

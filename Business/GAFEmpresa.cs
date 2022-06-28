@@ -303,6 +303,25 @@ namespace Business
             }
         }
 
+        public empresa GetId(int idEmpresa)
+        {
+            try
+            {
+                using (var db = new GAFEntities())
+                {
+                    var empr = db.empresa.Where(p => p.IdEmpresa == idEmpresa).FirstOrDefault();
+                    return empr;
+
+                }
+            }
+            catch (Exception ee)
+            {
+                Logger.Error(ee.Message);
+                return null;
+            }
+        }
+
+
         public empresa GetByRazonSocial(string Empresa)
         {
             try

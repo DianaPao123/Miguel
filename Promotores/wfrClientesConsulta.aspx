@@ -34,10 +34,10 @@
             onclick="btnBuscar_Click" class="btn btn-outline-primary" Height="34px" 
             Width="62px" />
     </p>
-    <asp:GridView runat="server" ID="gvClientes" AutoGenerateColumns="False" 
+    <asp:GridView runat="server" ID="gvClientes" AutoGenerateColumns="False"  Width="100%" Height="90%"
         onrowcommand="gvClientes_RowCommand" CssClass="style124"
      DataKeyNames="idCliente" AllowPaging="True" 
-        onpageindexchanging="gvClientes_PageIndexChanging" Width="741px" >
+        onpageindexchanging="gvClientes_PageIndexChanging"  >
         <EmptyDataTemplate>
             No se encontraron registros.
         </EmptyDataTemplate>

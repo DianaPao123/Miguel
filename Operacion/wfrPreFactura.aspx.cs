@@ -142,7 +142,7 @@ namespace GAFWEB
                  // ViewState["PrefacuturaDatos"] = new DatosPrefactura();
                     ViewState["detalles"] = new List<Datosdetalle>();
                     ViewState["detallesImpuestos"] = new List<DatosdetalleRT>();//para impuestos
-                    ViewState["CfdiRelacionado"] = new List<string>();
+                    ViewState["CfdiRelacionado"] = new List<DatosRelacionados>();
                     ViewState["iva"] = 0M;
                     ViewState["total"] = 0M;
                     ViewState["subtotal"] = 0M;
@@ -832,7 +832,7 @@ namespace GAFWEB
              fact.Descuento =Convert.ToDecimal( descuento);
 
             fact.TipoDeComprobante = ddlTipoDocumento.SelectedValue;
-            
+
 
             /*
             if (ddlTipoDocumento.SelectedValue == "Egreso")
@@ -854,14 +854,41 @@ namespace GAFWEB
             }
             */
 
-               List<string> CfdiRelacionado = ViewState["CfdiRelacionado"] as List<string>;
+            List<DatosRelacionados> CfdiRelacionado = ViewState["CfdiRelacionado"] as List<DatosRelacionados>;
 
-               if (CfdiRelacionado!=null)
-                   if (CfdiRelacionado.Count() > 0)
-                   {
-                       fact.UUID = CfdiRelacionado;
-                       fact.TipoRelacion = ddlTipoRelacion.SelectedValue;
-                   }
+            if (CfdiRelacionado != null)
+                if (CfdiRelacionado.Count() > 0)
+                {
+                    if (fact.TipoRelacion == null)
+                        fact.TipoRelacion = new List<DatosListaRelacionados>();
+                    foreach (var r in CfdiRelacionado)
+                    {
+
+                        var actual = fact.TipoRelacion.Where(pp => pp.tipoRelacion == r.tipoRelacion).FirstOrDefault();
+                        if (actual != null)
+                        {
+                            foreach (var t in fact.TipoRelacion)
+                            {
+                                if (t.tipoRelacion == r.tipoRelacion)
+                                {
+                                    t.uuid.Add(r.uuid);
+                                    break;
+                                }
+                            }
+                        }
+                        else
+                        {
+                            DatosListaRelacionados D = new DatosListaRelacionados();
+                            D.tipoRelacion = r.tipoRelacion;
+                            D.uuid = new List<string>();
+                            D.uuid.Add(r.uuid);
+                            fact.TipoRelacion.Add(D);
+
+                        }
+                    }
+
+                }
+
             /*
             if(ddlStatusFactura.SelectedValue=="1")
             {
@@ -871,7 +898,7 @@ namespace GAFWEB
             else
                 fact.StatusPago = false;
         */
-             if (detalles != null)
+            if (detalles != null)
                  if (detalles.Count > 0)
                  {
                      fact.Detalles = detalles;
@@ -1003,7 +1030,7 @@ namespace GAFWEB
             
             var Impuestos =new  List<DatosdetalleRT>();
             ViewState["detallesImpuestos"] = Impuestos;//para impuestos
-            var Relacionado = new List<string>();
+            var Relacionado = new List<DatosRelacionados>();
             ViewState["CfdiRelacionado"] = Relacionado;
             var DPagos = new List<DatosPagos>();
              ViewState["DPagos"] =DPagos;
@@ -1079,7 +1106,7 @@ namespace GAFWEB
         }
         private void BindCfdiRelacionadoToGridView()
         {
-            List<string> CfdiRelacionado = ViewState["CfdiRelacionado"] as List<string>;
+            List<DatosRelacionados> CfdiRelacionado = ViewState["CfdiRelacionado"] as List<DatosRelacionados>;
             if (CfdiRelacionado != null && CfdiRelacionado.Count > 0)
             {
                 int noColumns = this.gvCfdiRelacionado.Columns.Count;
@@ -1092,20 +1119,20 @@ namespace GAFWEB
             }
 
 
-            DataTable table = new DataTable();
-            table.Columns.Add("ID");
-            table.Columns.Add("UUID");
-            int t = 0;
-            foreach (var array in CfdiRelacionado)
-            {
-                DataRow row1 = table.NewRow();
-                row1["ID"] = t+1;
-                row1["UUID"] = array;
-                table.Rows.Add(row1);
-                t++;
-            }
+            //DataTable table = new DataTable();
+            //table.Columns.Add("ID");
+            //table.Columns.Add("UUID");
+            //int t = 0;
+            //foreach (var array in CfdiRelacionado)
+            //{
+            //    DataRow row1 = table.NewRow();
+            //    row1["ID"] = t+1;
+            //    row1["UUID"] = array;
+            //    table.Rows.Add(row1);
+            //    t++;
+            //}
            
-            this.gvCfdiRelacionado.DataSource = table; 
+            this.gvCfdiRelacionado.DataSource = CfdiRelacionado; 
             this.gvCfdiRelacionado.DataBind();
         }
 
@@ -1724,11 +1751,24 @@ namespace GAFWEB
         {
             if (!string.IsNullOrEmpty(txtUUDI.Text))
             {
-                List<string> CfdiRelacionado = ViewState["CfdiRelacionado"] as List<string>;
-                CfdiRelacionado.Add(txtUUDI.Text);
-                              ViewState["CfdiRelacionado"] = CfdiRelacionado;
-                this.BindCfdiRelacionadoToGridView();
+                List<DatosRelacionados> CfdiRelacionado = ViewState["CfdiRelacionado"] as List<DatosRelacionados>;
+                DatosRelacionados DR = new DatosRelacionados();
+                //var Actual= CfdiRelacionado.Find(p => p.tipoRelacion == ddlTipoRelacion.SelectedValue);
+                // if (Actual == null)
+                //{
 
+                // int i = DR.uuid.Count();
+                DR.uuid = txtUUDI.Text;
+                DR.tipoRelacion = ddlTipoRelacion.SelectedValue;
+                CfdiRelacionado.Add(DR);
+                ViewState["CfdiRelacionado"] = CfdiRelacionado;
+                this.BindCfdiRelacionadoToGridView();
+                //}
+                //else
+                //{ 
+
+
+                // }
                 txtUUDI.Text = "";
             }
 
@@ -1738,7 +1778,7 @@ namespace GAFWEB
         {
             if (e.CommandName.Equals("EliminarCfdiRelacionado"))
             {
-                var CfdiRelacionado = ViewState["CfdiRelacionado"] as List<string>;
+                var CfdiRelacionado = ViewState["CfdiRelacionado"] as List<DatosRelacionados>;
                 CfdiRelacionado.RemoveAt(Convert.ToInt32(e.CommandArgument));
                 ViewState["CfdiRelacionado"] = CfdiRelacionado;
                 this.BindCfdiRelacionadoToGridView();
@@ -1913,13 +1953,25 @@ namespace GAFWEB
                     ViewState["descuento"] = fact.Descuento;
                
                     //..............cfdi relaionados------------------
-                    List<string> CfdiRelacionado = ViewState["CfdiRelacionado"] as List<string>;
+                    List<DatosRelacionados> CfdiRelacionado = ViewState["CfdiRelacionado"] as List<DatosRelacionados>;
 
-                    if (fact.UUID != null)
-                        if (fact.UUID.Count() > 0)
+                    if (fact.TipoRelacion != null)
+                        if (fact.TipoRelacion.Count() > 0)
                         {
-                             CfdiRelacionado=fact.UUID ;
-                              ddlTipoRelacion.SelectedValue=fact.TipoRelacion ;
+                            foreach (var re in fact.TipoRelacion)
+                            {
+                                foreach (var ui in re.uuid)
+                                {
+                                     DatosRelacionados dr = new DatosRelacionados();
+                                      dr.uuid = ui;
+                                      dr.tipoRelacion = re.tipoRelacion;
+                                    CfdiRelacionado.Add(dr);
+                                }
+                                
+                            }
+
+                            //CfdiRelacionado = fact.TipoRelacion;
+                             // ddlTipoRelacion.SelectedValue=fact.TipoRelacion ;
                               ViewState["CfdiRelacionado"] = CfdiRelacionado;
                               this.BindCfdiRelacionadoToGridView();
                               cbCfdiRelacionados.Checked = true;

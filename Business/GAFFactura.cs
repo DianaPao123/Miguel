@@ -13,7 +13,9 @@ using Contract;
 using CatalogosSAT;
 using ClienteNtLink;
 using Business.ReportExecution;
-
+using Business.CFDI40;
+using ClienteServiciosWEb;
+using Contract.Complemento40;
 
 namespace Business
 {
@@ -26,7 +28,8 @@ namespace Business
         public static CatalogosSAT.c_Moneda mone;
         //private facturas _factura;
         private DatosPrefactura _factura;
-        
+        private object factura;
+
         public Comprobante Cfdi { get; set; }
 
         public List<Datosdetalle> Detalles { get; set; }
@@ -109,11 +112,12 @@ namespace Business
              fac.TipoDocumentoStr = f.TipoDeComprobante;
              fac.IVA = f.IVA;
              fac.FormaPago = f.FormaPago;
-             if (!string.IsNullOrEmpty(f.TipoRelacion))
-             {
-                 fac.TipoRelacion = f.TipoRelacion;
-                 fac.UUDI = f.UUID[0];
-             }
+             //if (f.TipoRelacion!=null)
+             //{
+             //    fac.TipoRelacion = f.TipoRelacion[0].tipoRelacion; //
+             //    if(fac.UUDI!=null)
+             //    fac.UUDI = f.UUID[0];//
+             //}
              fac.Moneda = f.MonedaS;
             if(f.promotor!=null)
              fac.Promotor = f.promotor;
@@ -252,7 +256,7 @@ namespace Business
                 if (string.IsNullOrEmpty(XML))
                     return "Error al generar el xml para validar";
                 //------------------------
-                    ClienteTimbradoNtlink clienteSW = new ClienteTimbradoNtlink();
+                  //  ClienteTimbradoNtlink clienteSW = new ClienteTimbradoNtlink();
                  
                 ServicePointManager.DefaultConnectionLimit = 200;
                 ServicePointManager.ServerCertificateValidationCallback = (sender, certificate, chain, errors) =>
@@ -260,7 +264,9 @@ namespace Business
                     return true;
                 };
 
-                string timbreString = clienteSW.ValidaTimbraCfdi(XML);
+                ClienteTimbradoXpress clienteWS = new ClienteTimbradoXpress();
+                string timbreString = clienteWS.ValidaTimbraCfdi(XML);
+              // string timbreString = clienteSW.ValidaTimbraCfdi(XML); //facturacion moderna
 
            
                 //-------------------------
@@ -431,12 +437,27 @@ namespace Business
                             m.Bcc = factura.Receptor.Bcc;
                         List<string> emails = new List<string>();
                         emails.Add(cliente.Email);
-
-                        m.Send(emails, atts,
-                            "Se envia la factura con folio " + comprobante.Complemento.timbreFiscalDigital.UUID +
-                            " en formato XML y PDF.",
-                            "Envío de Factura", emp.Email, emp.RazonSocial);
-
+                        if (comprobante.TipoDeComprobante == "I")
+                        {
+                            m.Send(emails, atts,
+                                "Se envia la factura con folio " + comprobante.Complemento.timbreFiscalDigital.UUID +
+                                " en formato XML y PDF.",
+                                "Envío de Factura", emp.Email, emp.RazonSocial);
+                        }
+                        if (comprobante.TipoDeComprobante == "E")
+                        {
+                            m.Send(emails, atts,
+                                "Se envia la nota de crédito con folio " + comprobante.Complemento.timbreFiscalDigital.UUID +
+                                " en formato XML y PDF.",
+                                "Envío de la nota de crédito", emp.Email, emp.RazonSocial);
+                        }
+                        if (comprobante.TipoDeComprobante == "P")
+                        {
+                            m.Send(emails, atts,
+                                "Se envia el comprobante de pago con folio " + comprobante.Complemento.timbreFiscalDigital.UUID +
+                                " en formato XML y PDF.",
+                                "Envío el comprobante de pago", emp.Email, emp.RazonSocial);
+                        }
                     }
                     catch (Exception ee)
                     {
@@ -486,6 +507,19 @@ namespace Business
                 return null;
         }
         */
+        public facturas GetFacturaUUID(string uuid)
+        {
+            try
+            {
+                using (var db = new GAFEntities())
+                {
+                    var venta = db.facturas.Where(p => p.Uid == uuid).FirstOrDefault();
+                    return venta;
+                }
+            }
+            catch (Exception ex)
+            { return null; }
+        }
         public static byte[] GetData(string uuid, string tipo)
         {
             try
@@ -686,24 +720,38 @@ namespace Business
                 
 
             }
-            if (factura.Factura.UUID!=null)
-                if(factura.Factura.UUID.Count()>0)
+   
+
+            if (factura.Factura.TipoRelacion != null)
             {
-                comprobante.CfdiRelacionados = new ComprobanteCfdiRelacionados();
-                comprobante.CfdiRelacionados.CfdiRelacionado = new List<ComprobanteCfdiRelacionadosCfdiRelacionado>();
-                comprobante.CfdiRelacionados.TipoRelacion = factura.Factura.TipoRelacion;
-                List<ComprobanteCfdiRelacionadosCfdiRelacionado> UUDI = new List<ComprobanteCfdiRelacionadosCfdiRelacionado>();
 
-                foreach (var uudi in factura.Factura.UUID)
+                List<ComprobanteCfdiRelacionados> LREL = new List<ComprobanteCfdiRelacionados>();
+                foreach (var rela in factura.Factura.TipoRelacion)
                 {
-                    ComprobanteCfdiRelacionadosCfdiRelacionado u = new ComprobanteCfdiRelacionadosCfdiRelacionado();
-                    u.UUID = uudi;
-                    UUDI.Add(u);
+                    ComprobanteCfdiRelacionados rel = new ComprobanteCfdiRelacionados();
+                    rel.TipoRelacion = rela.tipoRelacion;
 
+                    if (rela.uuid != null)
+                    {
+
+                        List<ComprobanteCfdiRelacionadosCfdiRelacionado> LisUUID = new List<ComprobanteCfdiRelacionadosCfdiRelacionado>();
+                        foreach (var uudi in rela.uuid)
+                        {
+                            ComprobanteCfdiRelacionadosCfdiRelacionado uui = new ComprobanteCfdiRelacionadosCfdiRelacionado();
+
+                            uui.UUID = uudi;
+                            LisUUID.Add(uui);
+                        }
+                        rel.CfdiRelacionado = LisUUID;
+
+
+
+                    }
+                    LREL.Add(rel);
                 }
-                comprobante.CfdiRelacionados.CfdiRelacionado = UUDI;
+                comprobante.CfdiRelacionados = LREL;
+
             }
-              
 
             /*
             if (factura.Factura.NotaCredito)
@@ -741,11 +789,16 @@ namespace Business
             {
                   comprobante.TipoDeComprobante = "E";//cambio obligado
             }
+            // comprobante.Exportacion = factura.Factura.Exportacion;
+            comprobante.Exportacion = "01";
 
             comprobante.Receptor = new ComprobanteReceptor();
             comprobante.Receptor.Nombre = cliente.RazonSocial;
             comprobante.Receptor.Rfc = cliente.RFC;
+            comprobante.Receptor.DomicilioFiscalReceptor = cliente.CP;
+            comprobante.Receptor.RegimenFiscalReceptor = cliente.RegimenFiscal;
             comprobante.Receptor.UsoCFDI = factura.Factura.UsoCFDI;
+
            
             comprobante.LugarExpedicion = factura.Factura.LugarExpedicion;
             comprobante.Fecha =factura.Factura.Fecha.ToString("s");
@@ -832,8 +885,13 @@ namespace Business
                     con.ClaveProdServ = detalle.ConceptoClaveProdServ;
                     con.ClaveUnidad = detalle.ConceptoClaveUnidad;
                     con.Descripcion = detalle.ConceptoDescripcion;
-                    
-                    if (detalle.ConceptoDescuento != null)
+                //con.ObjetoImp = detalle.ObjetoImp;
+               if( comprobante.TipoDeComprobante == "P")  //para 40
+                    con.ObjetoImp = "01";
+                 else 
+                con.ObjetoImp = "02";
+
+                if (detalle.ConceptoDescuento != null)
                     {
                       
                         con.DescuentoSpecified = true;
@@ -932,14 +990,28 @@ namespace Business
                          foreach (var tras in detalle.ConceptoTraslados)
                          {
                              bool x = false;
-                             string Tasa = tras.TasaOCuota.ToString();
-                             foreach (var dt in DT)
+                        string Tasa = "";
+                        if (!string.IsNullOrEmpty(tras.TasaOCuota))
+                            Tasa = tras.TasaOCuota.ToString();
+                            foreach (var dt in DT)
                              {
-                                 if (dt.Impuesto == tras.Impuesto && dt.TasaOCuota == Tasa && dt.TipoFactor == tras.TipoFactor)
-                                 {
-                                     dt.Importe =((decimal) dt.Importe + (decimal)tras.Importe);
-                                     x = true;
-                                 }
+                               if (dt.Impuesto == tras.Impuesto && dt.TasaOCuota == Tasa && dt.TipoFactor == tras.TipoFactor)
+                               {
+                                   if (tras.Importe != null)
+                                   {
+                                    dt.Importe = ((decimal)dt.Importe + (decimal)tras.Importe);
+                                    dt.Base = (dt.Base + tras.Base);//
+                                    }
+                                 else
+                                {
+                                    if (dt.Importe!=null)
+                                        dt.Importe = dt.Importe;
+                                    if (dt.Base!=null)//
+                                        dt.Base = dt.Base;//
+                                }
+                                x = true;
+
+                               }
                              }
 
                              if(x==false)
@@ -949,8 +1021,10 @@ namespace Business
                                  Dtras.TipoFactor = tras.TipoFactor;
                                  Dtras.Impuesto = tras.Impuesto;
                                  Dtras.TasaOCuota = Tasa;
-                                 Dtras.Importe = tras.Importe;
-                                 DT.Add(Dtras);
+                                if (tras.Importe != null)
+                                    Dtras.Importe = tras.Importe;
+                                Dtras.Base = tras.Base;//
+                                DT.Add(Dtras);
                              }
                          
                          }
@@ -987,20 +1061,47 @@ namespace Business
                      List<ComprobanteImpuestosRetencion> listaRetenciones = new List<ComprobanteImpuestosRetencion>();
 
             decimal totalTraslado = 0;
-                     if (DT.Count > 0)
-                     {
-         
-                         foreach (var tras in DT)
-                         {
-                             ComprobanteImpuestosTraslado tr = new ComprobanteImpuestosTraslado();
-                             tr.Importe = numerodecimales((decimal)tras.Importe, (int)mone.Decimales);
-                             tr.Impuesto = tras.Impuesto;
-                             tr.TasaOCuota = tras.TasaOCuota;
-                             tr.TipoFactor = tras.TipoFactor;
-                             listaTraslados.Add(tr);
-                             totalTraslado = totalTraslado +Convert.ToDecimal( tr.Importe);
-                         }
-                     }
+            if (DT.Count > 0)
+            {
+
+                foreach (var tras in DT)
+                {
+                    if (tras.TipoFactor != "Exento")
+                    {
+                        ComprobanteImpuestosTraslado tr = new ComprobanteImpuestosTraslado();
+                        if (tras.Importe != null)
+                        {
+                            tr.ImporteSpecified = true;
+                            tr.Importe = numerodecimales(Convert.ToDecimal(tras.Importe), (int)mone.Decimales);
+                        }
+                        else
+                            tr.ImporteSpecified = false;
+                        tr.Impuesto = tras.Impuesto;
+                        if (!string.IsNullOrEmpty(tras.TasaOCuota))
+                        {
+                            tr.TasaOCuotaSpecified = true;
+                            tr.TasaOCuota = tras.TasaOCuota;
+                        }
+                        else
+                            tr.TasaOCuotaSpecified = false;
+                        tr.TipoFactor = tras.TipoFactor;
+                        tr.Base = numerodecimales(Convert.ToDecimal(tras.Base), (int)mone.Decimales);//
+
+                        listaTraslados.Add(tr);
+                        totalTraslado = totalTraslado + Convert.ToDecimal(tr.Importe);
+                    }
+                    else
+                    {
+                        ComprobanteImpuestosTraslado tr = new ComprobanteImpuestosTraslado();
+
+                        tr.Impuesto = tras.Impuesto;
+                        tr.TipoFactor = tras.TipoFactor;
+                        tr.Base = numerodecimales(Convert.ToDecimal(tras.Base), (int)mone.Decimales);//
+                        listaTraslados.Add(tr);
+                    }
+                }
+            }
+                    
                      decimal totalRetecion = 0;
                      if (DR.Count > 0)
                      {
@@ -1321,20 +1422,52 @@ namespace Business
                 return "Error al cancelar el comprobante";
             }
         }
+        public string CancelarFacturaX(string RFCEmisor,string RFCReceptor,string PassKey ,string uuid, double total, string motivo, string folioSustitucion)
+        {
+            try
+            {
+                var cliente = new GAFFactura();
+                  using (cliente as IDisposable)
+                {
+                    string path = Path.Combine(ConfigurationManager.AppSettings["Resources"], RFCEmisor, "Certs");
+                    string rutaCert=  Path.Combine(path, "csd.cer");
+                    string rutaLlave = Path.Combine(path, "csd.key");
+                    String keyB64 = System.Convert.ToBase64String(System.IO.File.ReadAllBytes(rutaLlave));
+                    String cerB64 = System.Convert.ToBase64String(System.IO.File.ReadAllBytes(rutaCert));
+
+                    var clienteWS = new ClienteServiciosWEb.ClienteTimbradoXpress();
+                    var respuesta= clienteWS.ClienteCancelarXPRESS(keyB64,cerB64,PassKey,uuid, RFCEmisor, RFCReceptor,total,motivo,folioSustitucion );
+                    if (clienteWS.Codigo == "201"|| clienteWS.Codigo == "202")
+                    {
+                        CancelarFacturaGuardarNuevo(uuid, respuesta);
+                        return "Comprobante Cancelado correctamente";
+                    }
+                    else
+                        return clienteWS.Codigo + " - " + clienteWS.Mensaje;
+                }
+            }
+            catch (FaultException fe)
+            { throw;  }
+            catch (Exception ex)
+            {  Logger.Error(ex);
+                return "Error al cancelar el comprobante: "+ex.Message;
+            }
+        }
 
         public bool GetConsultaEstatusCFDI(string uuid, string rfcEmisor, string rfcReceptor, string total, ref string Salida)
         {
-        
-            var cliente = new ClienteNtLink.ClienteTimbradoNtlink();
-                bool respuesta = cliente.ConsultaEstatusCFDI(uuid, rfcEmisor, rfcReceptor, total);
-
-            if (respuesta)
-            { Salida = cliente.successMessage; }
+            var clienteWS = new ClienteServiciosWEb.ClienteTimbradoXpress();
+           var respuesta = clienteWS.ConsultaEstatusCFDI(uuid, rfcEmisor, rfcReceptor, total);
+            if (clienteWS.Codigo == "S - Comprobante obtenido satisfactoriamente.")
+            {
+                Salida = clienteWS.Mensaje;
+                return true;
+            }
             else
-            { Salida =cliente.errorCode +" = "+ cliente.errorMessage; }
-
-            return respuesta;
-
+            {
+                Salida ="Error en el servicio de cancelacion:"+ respuesta;
+                return false;
+            }
         }
 
         public int CancelarActaulizaMontosFactura(int id,string uuid,decimal monto,int parcialidad)
@@ -1466,8 +1599,8 @@ namespace Business
                     if (fact != null)
                     {
                         fact.Observaciones = acuse;
-                        fact.Cancelado = 1;
-                        fact.EstatusCancelacion = "GT05";
+                        fact.Cancelado = 2;  //1:cancelado, 0:no cancelado, 2:precancelado
+                        fact.EstatusCancelacion = "GT05";  
                         fact.FechaCancelacion = DateTime.Now.ToString();
                         fact.SelloCancelacion = "";
                         db.facturas.ApplyCurrentValues(fact);
@@ -1486,7 +1619,86 @@ namespace Business
                     Logger.Error(ee.InnerException);
             }
         }
-         
+
+        public void ConsultaEstatusCFDIServicioSAT(string uuid, string RFCEmisor, string RFCReceptor, string total)
+        {
+            var clienteWS = new ClienteServiciosWEb.ClienteTimbradoXpress();
+            string  resultado = clienteWS.ConsultaEstatusCFDI(uuid, RFCEmisor, RFCReceptor, total);
+
+            if (clienteWS.Codigo == "S - Comprobante obtenido satisfactoriamente.")
+            {
+                CancelarFacturaEstatus(uuid, resultado, clienteWS.Mensaje);
+            }
+            else
+            {
+                CancelarFacturaEstatus(uuid, resultado);
+                Logger.Error("Error con el uuid: " + uuid + " :" + resultado);
+            }
+        }
+        private void CancelarFacturaEstatus(string uuid, string cancelado, string acuse)
+        {
+            try
+            {
+                string NoCancelable="";
+                string EstatusCancelación = "";
+                string[] status = acuse.Split('|');
+                if (status.Count() > 2)
+                {
+                    EstatusCancelación = status[2];
+                    NoCancelable = status[1];
+                }
+
+                using (var db = new GAFEntities())
+                {
+                    var fact = db.facturas.FirstOrDefault(p => p.Uid == uuid);
+                    if (fact != null)
+                    {
+                        fact.Observaciones = acuse;
+                        if (cancelado.ToUpper() == "Cancelado".ToUpper() && (EstatusCancelación.ToUpper() == "Cancelado sin aceptación".ToUpper() ||
+                            EstatusCancelación.ToUpper() == "Cancelado con aceptación".ToUpper() ||
+                                   EstatusCancelación.ToUpper() == "Plazo vencido".ToUpper()))
+                            fact.Cancelado = 1;  //1:cancelado, 0:no cancelado, 2:precancelado,3:no cANCELADO,4:No Cancelable
+                        if (EstatusCancelación.ToUpper() == "Solicitud Rechazada".ToUpper())
+                            fact.Cancelado = 3;
+                        if (NoCancelable.ToUpper() == "No cancelable".ToUpper())
+                            fact.Cancelado = 4;
+
+                        db.facturas.ApplyCurrentValues(fact);
+                        db.SaveChanges();
+                    }
+                }
+            }
+            catch (Exception ee)
+            {
+                Logger.Error(ee.Message);
+                if (ee.InnerException != null)
+                    Logger.Error(ee.InnerException);
+            }
+        }
+        private void CancelarFacturaEstatus(string uuid, string cancelado)
+        {
+            try
+            {
+
+                using (var db = new GAFEntities())
+                {
+                    var fact = db.facturas.FirstOrDefault(p => p.Uid == uuid);
+                    if (fact != null)
+                    {
+                        fact.Observaciones = cancelado;
+                        db.facturas.ApplyCurrentValues(fact);
+                        db.SaveChanges();
+                    }
+                }
+            }
+            catch (Exception ee)
+            {
+                Logger.Error(ee.Message);
+                if (ee.InnerException != null)
+                    Logger.Error(ee.InnerException);
+            }
+        }
+
         /*
         public NtLinkFactura(int idFactura)
         {
@@ -1793,105 +2005,224 @@ namespace Business
         {
             if (complementos.pagos != null)
             {
+
+
                 if (comprobante.Complemento == null)
                     comprobante.Complemento = new ComprobanteComplemento();
-                comprobante.Complemento.Pag = new Contract.Complemento.Pagos();
-                comprobante.Complemento.Pag.Pago = new List<Contract.Complemento.PagosPago>();
-                List<Contract.Complemento.PagosPago> PA = new List<Contract.Complemento.PagosPago>();
-                CatalogosSAT.OperacionesCatalogos o59 = new CatalogosSAT.OperacionesCatalogos();
-            
-             
+                comprobante.Complemento.Pag = new Contract.Complemento40.Pagos();
+                comprobante.Complemento.Pag.Version = "2.0";
+                //  comprobante.Complemento.Pag.Pago = new List<Complemento40.PagosPago>();
+                decimal TotalRetencionesIVA = 0M;
+                decimal TotalRetencionesISR = 0M;
+                decimal TotalRetencionesIEPS = 0M;
+                decimal TotalTrasladosBaseIVA16 = 0M;
+                decimal TotalTrasladosImpuestoIVA16 = 0M;
+                decimal TotalTrasladosBaseIVA8 = 0M;
+                decimal TotalTrasladosImpuestoIVA8 = 0M;
+                decimal TotalTrasladosBaseIVA0 = 0M;
+                decimal TotalTrasladosImpuestoIVA0 = 0M;
+                decimal TotalTrasladosBaseIVAExento = 0M;
+                decimal MontoTotalPagos = 0M;
+
+
+                List<Contract.Complemento40.PagosPago> PA = new List<Contract.Complemento40.PagosPago>();
                 foreach (var p in complementos.pagos)
                 {
-                    Contract.Complemento.PagosPago pa = new Contract.Complemento.PagosPago();
-
-                    pa.CadPago = p.cadPago;
-                   
-                    pa.CertPago = p.certPago;
-                    pa.CtaBeneficiario=p.ctaBeneficiario;
-                    pa.CtaOrdenante=p.ctaOrdenante;
+                    Contract.Complemento40.PagosPago pa = new Contract.Complemento40.PagosPago();
+                    CatalogosSAT.OperacionesCatalogos o13 = new CatalogosSAT.OperacionesCatalogos();
                     DateTime D = Convert.ToDateTime(p.fechaPago);
-                    pa.FechaPago = D.ToString("s"); 
+                    pa.FechaPago = D.ToString("s");
+                    //if (!string.IsNullOrEmpty(p.formaDePagoP))
                     pa.FormaDePagoP = p.formaDePagoP;
-                    //pa.Impuestos
+                    CatalogosSAT.c_Moneda mone = o13.Consultar_Moneda(p.monedaP);
                     pa.MonedaP = p.monedaP;
-                    CatalogosSAT.c_Moneda monex = o59.Consultar_Moneda(pa.MonedaP);
-                    pa.Monto = numerodecimales(Convert.ToDecimal(p.monto), (int)monex.Decimales);
-                    pa.NomBancoOrdExt = p.nomBancoOrdExt;
-                    pa.NumOperacion = p.numOperacion;
-                    pa.RfcEmisorCtaBen = p.rfcEmisorCtaBen;
-                    pa.RfcEmisorCtaOrd = p.rfcEmisorCtaOrd;
-                    pa.SelloPago = p.selloPago;
                     if (!string.IsNullOrEmpty(p.tipoCambioP))
+                    {   if (p.monedaP == "MXN")
+                            pa.TipoCambioP = "1";
+                       else
+                        pa.TipoCambioP = p.tipoCambioP;
+                        pa.TipoCambioPSpecified = true;
+                    }
+                    else
+                        pa.TipoCambioPSpecified = false;
+                    pa.Monto = numerodecimales(Convert.ToDecimal(p.monto), (int)mone.Decimales);//--
+                    if (!string.IsNullOrEmpty(p.numOperacion))
+                        pa.NumOperacion = p.numOperacion;
+                    if (!string.IsNullOrEmpty(p.rfcEmisorCtaOrd))
+                        pa.RfcEmisorCtaOrd = p.rfcEmisorCtaOrd;
+                    if (!string.IsNullOrEmpty(p.nomBancoOrdExt))
+                        pa.NomBancoOrdExt = p.nomBancoOrdExt;
+                    if (!string.IsNullOrEmpty(p.ctaOrdenante))
+                        pa.CtaOrdenante = p.ctaOrdenante;
+                    if (!string.IsNullOrEmpty(p.rfcEmisorCtaBen))
+                        pa.RfcEmisorCtaBen = p.rfcEmisorCtaBen;
+                    if (!string.IsNullOrEmpty(p.ctaBeneficiario))
+                        pa.CtaBeneficiario = p.ctaBeneficiario;
+                    if (!string.IsNullOrEmpty(p.tipoCadPago))
                     {
                         pa.TipoCadPago = p.tipoCadPago;
                         pa.TipoCadPagoSpecified = true;
                     }
                     else
                         pa.TipoCadPagoSpecified = false;
-                    if (!string.IsNullOrEmpty(p.tipoCambioP))
+
+                    if (!string.IsNullOrEmpty(p.certPago))
+                        pa.CertPago = p.certPago;///
+
+
+                    if (!string.IsNullOrEmpty(p.cadPago))
+                        pa.CadPago = p.cadPago;
+                    // DateTime D22 = D.AddHours(12);
+                    // pa.FechaPago = D22.ToString("s");
+                    //pa.Impuestos
+                    if (!string.IsNullOrEmpty(p.selloPago))
+                        pa.SelloPago = p.selloPago;
+
+
+                    bool impuestos = false;
+                    List<Contract.Complemento40.PagosPagoDoctoRelacionado> Doc = new List<Contract.Complemento40.PagosPagoDoctoRelacionado>();
+                    if (p.DoctoRelacionado != null)
                     {
-                        pa.TipoCambioP =Convert.ToDecimal( p.tipoCambioP);
-                        pa.TipoCambioPSpecified = true;
+                        foreach (var d in p.DoctoRelacionado)
+                        {
+                          Contract.Complemento40.PagosPagoDoctoRelacionado doc = new Contract.Complemento40.PagosPagoDoctoRelacionado();
+                            d.Impuestos=llenarImpuestosPago(d.Impuestos, Convert.ToDecimal(d.ImpPagado));//agregado para 40
+
+                            doc.IdDocumento = d.IdDocumento;
+                            if (!string.IsNullOrEmpty(d.Serie))
+                                doc.Serie = d.Serie;
+                            if (!string.IsNullOrEmpty(d.Folio))
+                                doc.Folio = d.Folio;
+                            doc.MonedaDR = d.MonedaDR;
+                           // if (!string.IsNullOrEmpty(d.EquivalenciaDR))
+                            {
+                                doc.EquivalenciaDRSpecified = true;
+                                doc.EquivalenciaDR = 1;
+                            }
+                           // else
+                           //     doc.EquivalenciaDRSpecified = false;
+
+                            doc.NumParcialidad = d.NumParcialidad;
+                            doc.ImpSaldoAnt = Convert.ToDecimal(d.ImpSaldoAnt);
+                            doc.ImpPagado = Convert.ToDecimal(d.ImpPagado);
+                            doc.ImpSaldoInsoluto = Convert.ToDecimal(d.ImpSaldoInsoluto);
+                            doc.ObjetoImpDR = "02";
+
+                            if (d.Impuestos != null && d.Impuestos.Count > 0)
+                            {
+                                doc.ImpuestosDR = new Contract.Complemento40.PagosPagoDoctoRelacionadoImpuestosDR();
+                                doc.ImpuestosDR = llenarPagosDocumentosImpuestos(d.Impuestos, (int)mone.Decimales);
+                                impuestos = true;
+                            }
+
+                            Doc.Add(doc);
+                        }
+
+                        pa.DoctoRelacionado = Doc.ToArray();
                     }
-                    else
-                        pa.TipoCambioPSpecified = false;
 
-                    List<Contract.Complemento.PagosPagoDoctoRelacionado> Doc = new List<Contract.Complemento.PagosPagoDoctoRelacionado>();
-                    if(p.DoctoRelacionado!=null)
-                    foreach (var d in p.DoctoRelacionado)
+                    decimal tipocambio = 1M;
+                    if (pa.TipoCambioPSpecified == true)
+                        tipocambio =Convert.ToDecimal(pa.TipoCambioP);
+
+                    if (impuestos == true)
                     {
-                        Contract.Complemento.PagosPagoDoctoRelacionado doc = new Contract.Complemento.PagosPagoDoctoRelacionado();
-                        doc.Folio = d.Folio;
-                        doc.IdDocumento = d.IdDocumento;
-                        if (!string.IsNullOrEmpty(d.ImpPagado))
-                        {
-                            doc.ImpPagado = d.ImpPagado;
-                            doc.ImpPagadoSpecified = true;
+                        pa.ImpuestosP = llenarPagosImpuestosP(p.DoctoRelacionado,(int)mone.Decimales);
 
-                        }
-                        else
-                            doc.ImpPagadoSpecified = false;
-                        if (!string.IsNullOrEmpty(d.ImpSaldoAnt))
+                        if (pa.ImpuestosP != null)
                         {
-                            doc.ImpSaldoAnt =  d.ImpSaldoAnt;
-                            doc.ImpSaldoAntSpecified = true;
+                            if (pa.ImpuestosP.RetencionesP != null)
+                                llenarTotalesPRetenciones(pa.ImpuestosP, ref TotalRetencionesIVA, ref TotalRetencionesISR, ref TotalRetencionesIEPS, tipocambio);
+                            if (pa.ImpuestosP.TrasladosP != null)
+                                llenarTotalesPRetenciones(pa.ImpuestosP, ref TotalTrasladosBaseIVA16, ref TotalTrasladosImpuestoIVA16,
+                                ref TotalTrasladosBaseIVA8, ref TotalTrasladosImpuestoIVA8, ref TotalTrasladosBaseIVA0,
+                              ref TotalTrasladosImpuestoIVA0, ref TotalTrasladosBaseIVAExento, tipocambio);
                         }
-                        else
-                            doc.ImpSaldoAntSpecified = false;
-                        if (!string.IsNullOrEmpty(d.ImpSaldoInsoluto))
-                        {
-                            doc.ImpSaldoInsoluto = d.ImpSaldoInsoluto;
-                            doc.ImpSaldoInsolutoSpecified = true;
-                        }
-                        else
-                            doc.ImpSaldoInsolutoSpecified = false;
+                    }
+                    MontoTotalPagos = MontoTotalPagos + (Convert.ToDecimal(pa.Monto) * tipocambio);
 
-                        doc.MetodoDePagoDR = d.MetodoDePagoDR;
-                        doc.MonedaDR = d.MonedaDR;
-                        doc.NumParcialidad = d.NumParcialidad;
-                        if(!string.IsNullOrEmpty(d.Serie))
-                        doc.Serie = d.Serie;
-                        if (!string.IsNullOrEmpty(d.TipoCambioDR))
-                        {
-                            doc.TipoCambioDR =Convert.ToDecimal( d.TipoCambioDR);
-                            doc.TipoCambioDRSpecified = true;
-                        }
-                        else
-                            doc.TipoCambioDRSpecified = false;
-                        Doc.Add(doc);
-                     }
-                    if(Doc!=null)
-                        if(Doc.Count>0)
-                    pa.DoctoRelacionado = Doc.ToArray();
                     PA.Add(pa);
-                    
                 }
-                comprobante.Complemento.Pag.Pago = PA;
-                comprobante.Complemento.Pag.Version = "1.0";
+                comprobante.Complemento.Pag.Pago = PA.ToArray();
+                comprobante.Complemento.Pag.Totales = new Contract.Complemento40.PagosTotales();
+                comprobante.Complemento.Pag.Totales.MontoTotalPagos = numerodecimales(MontoTotalPagos, 2);
+
+
+                if (TotalRetencionesIVA > 0)
+                {
+                    comprobante.Complemento.Pag.Totales.TotalRetencionesIVASpecified = true;
+                    comprobante.Complemento.Pag.Totales.TotalRetencionesIVA = numerodecimales(TotalRetencionesIVA, 2);
+                }
+                else
+                    comprobante.Complemento.Pag.Totales.TotalRetencionesIVASpecified = false;
+                if (TotalRetencionesISR > 0)
+                {
+                    comprobante.Complemento.Pag.Totales.TotalRetencionesISRSpecified = true;
+                    comprobante.Complemento.Pag.Totales.TotalRetencionesISR = numerodecimales(TotalRetencionesISR, 2);
+                }
+                else
+                    comprobante.Complemento.Pag.Totales.TotalRetencionesISRSpecified = false;
+                if (TotalRetencionesIEPS > 0)
+                {
+                    comprobante.Complemento.Pag.Totales.TotalRetencionesIEPSSpecified = true;
+                    comprobante.Complemento.Pag.Totales.TotalRetencionesIEPS = numerodecimales(TotalRetencionesIEPS, 2);
+                }
+                else
+                    comprobante.Complemento.Pag.Totales.TotalRetencionesIEPSSpecified = false;
+                if (TotalTrasladosBaseIVA16 > 0)
+                {
+                    comprobante.Complemento.Pag.Totales.TotalTrasladosBaseIVA16Specified = true;
+                    comprobante.Complemento.Pag.Totales.TotalTrasladosBaseIVA16 = numerodecimales(TotalTrasladosBaseIVA16, 2);
+                }
+                else
+                    comprobante.Complemento.Pag.Totales.TotalTrasladosBaseIVA16Specified = false;
+                if (TotalTrasladosImpuestoIVA16 > 0)
+                {
+                    comprobante.Complemento.Pag.Totales.TotalTrasladosImpuestoIVA16Specified = true;
+                    comprobante.Complemento.Pag.Totales.TotalTrasladosImpuestoIVA16 = numerodecimales(TotalTrasladosImpuestoIVA16, 2);
+                }
+                else
+                    comprobante.Complemento.Pag.Totales.TotalTrasladosImpuestoIVA16Specified = false;
+                if (TotalTrasladosBaseIVA8 > 0)
+                {
+                    comprobante.Complemento.Pag.Totales.TotalTrasladosBaseIVA8Specified = true;
+                    comprobante.Complemento.Pag.Totales.TotalTrasladosBaseIVA8 = numerodecimales(TotalTrasladosBaseIVA8, 2);
+                }
+                else
+                    comprobante.Complemento.Pag.Totales.TotalTrasladosBaseIVA8Specified = false;
+                if (TotalTrasladosImpuestoIVA8 > 0)
+                {
+                    comprobante.Complemento.Pag.Totales.TotalTrasladosImpuestoIVA8Specified = true;
+                    comprobante.Complemento.Pag.Totales.TotalTrasladosImpuestoIVA8 = numerodecimales(TotalTrasladosImpuestoIVA8, 2);
+                }
+                else
+                    comprobante.Complemento.Pag.Totales.TotalTrasladosImpuestoIVA8Specified = false;
+
+                if (TotalTrasladosBaseIVA0 > 0)
+                {
+                    comprobante.Complemento.Pag.Totales.TotalTrasladosBaseIVA0Specified = true;
+                    comprobante.Complemento.Pag.Totales.TotalTrasladosBaseIVA0 = numerodecimales(TotalTrasladosBaseIVA0, 2);
+                }
+                else
+                    comprobante.Complemento.Pag.Totales.TotalTrasladosBaseIVA0Specified = false;
+                if (TotalTrasladosImpuestoIVA0 > 0)
+                {
+                    comprobante.Complemento.Pag.Totales.TotalTrasladosImpuestoIVA0Specified = true;
+                    comprobante.Complemento.Pag.Totales.TotalTrasladosImpuestoIVA0 = numerodecimales(TotalTrasladosImpuestoIVA0, 2);
+                }
+                else
+                    comprobante.Complemento.Pag.Totales.TotalTrasladosImpuestoIVA0Specified = false;
+                if (TotalTrasladosBaseIVAExento > 0)
+                {
+                    comprobante.Complemento.Pag.Totales.TotalTrasladosBaseIVAExentoSpecified = true;
+                    comprobante.Complemento.Pag.Totales.TotalTrasladosBaseIVAExento = numerodecimales(TotalTrasladosBaseIVAExento, 2);
+                }
+                else
+                    comprobante.Complemento.Pag.Totales.TotalTrasladosBaseIVAExentoSpecified = false;
+
             }
             //-------------------------------
-             if (complementos.ine != null)
+            if (complementos.ine != null)
             {
                 if (comprobante.Complemento == null)
                     comprobante.Complemento = new ComprobanteComplemento();
@@ -1946,7 +2277,19 @@ namespace Business
             return comprobante;
         }
         //***********************************************************************************
-        
+        private static List<facturasdetalleRT> llenarImpuestosPago(List<facturasdetalleRT> p,decimal ImpPagado)
+        {
+            p = new List<facturasdetalleRT>();
+            facturasdetalleRT tra=new facturasdetalleRT();
+            tra.Base= Convert.ToDecimal(numerodecimales(ImpPagado / 1.16M,6));
+            tra.Importe=Convert.ToDecimal(numerodecimales((ImpPagado / 1.16M) * 0.160000M,6));
+            tra.TasaOCuota= "0.160000";
+            tra.TipoFactor = "Tasa";
+            tra.TipoImpuesto = "Traslados";
+            tra.Impuesto = "IVA";
+            p.Add(tra);
+            return p;
+        }
 
         public static string GetNextFolio(int idEmpresa)
         {
@@ -2015,9 +2358,225 @@ namespace Business
                 return null;
             }
         }
+        private static Contract.Complemento40.PagosPagoDoctoRelacionadoImpuestosDR llenarPagosDocumentosImpuestos(List<facturasdetalleRT> Imp,int mon)
+        {
+            List<Contract.Complemento40.PagosPagoDoctoRelacionadoImpuestosDRRetencionDR> RT = new List<Contract.Complemento40.PagosPagoDoctoRelacionadoImpuestosDRRetencionDR>();
+            List<Contract.Complemento40.PagosPagoDoctoRelacionadoImpuestosDRTrasladoDR> TR = new List<Contract.Complemento40.PagosPagoDoctoRelacionadoImpuestosDRTrasladoDR>();
 
+            Contract.Complemento40.PagosPagoDoctoRelacionadoImpuestosDR DR = new Contract.Complemento40.PagosPagoDoctoRelacionadoImpuestosDR();
+            foreach (var im in Imp)
+            {
+                if (im.Impuesto == "ISR")
+                    im.Impuesto = "001";
+                if (im.Impuesto == "IVA")
+                    im.Impuesto = "002";
+                if (im.Impuesto == "IEPS")
+                    im.Impuesto = "003";
+                if (im.TipoImpuesto == "Retenciones")
+                {
+
+                    Contract.Complemento40.PagosPagoDoctoRelacionadoImpuestosDRRetencionDR r = new Contract.Complemento40.PagosPagoDoctoRelacionadoImpuestosDRRetencionDR();
+                    r.BaseDR = numerodecimales(im.Base, 6);//
+                    r.ImporteDR = numerodecimales((decimal)im.Importe, 6);
+                    r.ImpuestoDR = im.Impuesto;
+                    r.TasaOCuotaDR = im.TasaOCuota;
+                    r.TipoFactorDR = im.TipoFactor;
+                    RT.Add(r);
+                }
+                if (im.TipoImpuesto == "Traslados")
+                {
+                    Contract.Complemento40.PagosPagoDoctoRelacionadoImpuestosDRTrasladoDR r = new Contract.Complemento40.PagosPagoDoctoRelacionadoImpuestosDRTrasladoDR();
+                     r.BaseDR = numerodecimales(im.Base, 6);
+                    if (im.Importe != null)
+                    {
+                        r.ImporteDR = numerodecimales((decimal)im.Importe, 6);
+                        r.ImporteDRSpecified = true;
+                    }
+                    else
+                        r.ImporteDRSpecified = false;
+                    r.ImpuestoDR = im.Impuesto;
+                    if (!string.IsNullOrEmpty(im.TasaOCuota))
+                    {
+                        r.TasaOCuotaDR = im.TasaOCuota;
+                        r.TasaOCuotaDRSpecified = true;
+                    }
+                    else
+                        r.TasaOCuotaDRSpecified = false;
+                    r.TipoFactorDR = im.TipoFactor;
+                    TR.Add(r);
+
+                }
+            }
+            if (RT.Count > 0)
+                DR.RetencionesDR = RT.ToArray();
+            if (TR.Count > 0)
+                DR.TrasladosDR = TR.ToArray();
+
+
+            // DR.RetencionesDR
+            //  DR.TrasladosDR
+
+            return DR;
+        }
+
+        private static Contract.Complemento40.PagosPagoImpuestosP llenarPagosImpuestosP(List<PagoDoctoRelacionado> doC,int mon)
+        {
+            Contract.Complemento40.PagosPagoImpuestosP Im = new Contract.Complemento40.PagosPagoImpuestosP();
+            List<Contract.Complemento40.PagosPagoImpuestosPTrasladoP> T = new List<Contract.Complemento40.PagosPagoImpuestosPTrasladoP>();
+            List<Contract.Complemento40.PagosPagoImpuestosPRetencionP> R = new List<Contract.Complemento40.PagosPagoImpuestosPRetencionP>();
+
+            decimal IR001 = 0M;
+            decimal IR002 = 0M;
+            decimal IR003 = 0M;
+            bool x = false;
+
+
+            foreach (var doc in doC)
+            {
+                if (doc.Impuestos != null)
+                    foreach (var im in doc.Impuestos)
+                    {
+                        if (im.TipoImpuesto == "Retenciones")
+                        {
+                            if (im.Impuesto == "001")
+                                IR001 = IR001 + (decimal)im.Importe;
+                            if (im.Impuesto == "002")
+                                IR002 = IR002 + (decimal)im.Importe;
+                            if (im.Impuesto == "003")
+                                IR003 = IR003 + (decimal)im.Importe;
+                        }
+                        if (im.TipoImpuesto == "Traslados")
+                        {
+                            foreach (var dt in T)
+                            {
+                                if (dt.ImpuestoP == im.Impuesto && dt.TasaOCuotaP == im.TasaOCuota && dt.TipoFactorP == im.TipoFactor)
+                                {
+                                    if (im.Importe != null)
+                                    {                                     
+                                        dt.ImporteP = (Convert.ToDecimal(dt.ImporteP) + (Convert.ToDecimal(numerodecimales((decimal)im.Importe,6)))).ToString();
+                                        dt.BaseP = (Convert.ToDecimal(dt.BaseP) + (Convert.ToDecimal(numerodecimales(im.Base,6)))).ToString();//
+                                    }
+
+
+                                    x = true;
+                                }
+                            }
+                            if (x == false)
+                            {
+                                Contract.Complemento40.PagosPagoImpuestosPTrasladoP t = new Contract.Complemento40.PagosPagoImpuestosPTrasladoP();
+                               // t.BaseP = im.Base.ToString();
+                                t.BaseP = numerodecimales((decimal)im.Base, 6);
+
+                                if (im.Importe != null)
+                                {
+                                    t.ImportePSpecified = true;
+                                    t.ImporteP = numerodecimales((decimal)im.Importe , 6);
+                                    //t.ImporteP = im.Importe.ToString();
+                                }
+                                else
+                                    t.ImportePSpecified = false;
+                                t.ImpuestoP = im.Impuesto;
+                                if (!string.IsNullOrEmpty(im.TasaOCuota))
+                                {
+                                    t.TasaOCuotaPSpecified = true;
+                                    t.TasaOCuotaP = im.TasaOCuota;
+                                }
+                                else
+                                    t.TasaOCuotaPSpecified = false;
+                                t.TipoFactorP = im.TipoFactor;
+                                T.Add(t);
+                            }
+
+                        }
+                    }
+            }//--------------------------recorrer los datos----------------
+            //---retenciones
+            if (IR001 != 0)
+            {
+                Contract.Complemento40.PagosPagoImpuestosPRetencionP r1 = new Contract.Complemento40.PagosPagoImpuestosPRetencionP();
+                r1.ImpuestoP = "001";
+                r1.ImporteP = IR001;
+                R.Add(r1);
+
+            }
+            if (IR002 != 0)
+            {
+                Contract.Complemento40.PagosPagoImpuestosPRetencionP r2 = new Contract.Complemento40.PagosPagoImpuestosPRetencionP();
+                r2.ImpuestoP = "002";
+                r2.ImporteP = IR002;
+                R.Add(r2);
+            }
+            if (IR003 != 0)
+            {
+                Contract.Complemento40.PagosPagoImpuestosPRetencionP r3 = new Contract.Complemento40.PagosPagoImpuestosPRetencionP();
+                r3.ImpuestoP = "003";
+                r3.ImporteP = IR003;
+                R.Add(r3);
+            }
+            if (R.Count > 0)
+                Im.RetencionesP = R.ToArray();
+            if (T.Count > 0)
+                Im.TrasladosP = T.ToArray();
+            //-------------------------------------------
+            return Im;
+        }
+        private static void llenarTotalesPRetenciones(Contract.Complemento40.PagosPagoImpuestosP pa, ref decimal TotalTrasladosBaseIVA16,
+       ref decimal TotalTrasladosImpuestoIVA16, ref decimal TotalTrasladosBaseIVA8, ref decimal TotalTrasladosImpuestoIVA8,
+       ref decimal TotalTrasladosBaseIVA0, ref decimal TotalTrasladosImpuestoIVA0, ref decimal TotalTrasladosBaseIVAExento, decimal TipoCambioP)
+        {
+            Contract.Complemento40.Pagos P = new Contract.Complemento40.Pagos();
+            foreach (var im in pa.TrasladosP)
+            {
+                if (im.TasaOCuotaPSpecified == true && im.ImportePSpecified == true)
+                    if (im.ImpuestoP == "002" && im.TipoFactorP == "Tasa" && Convert.ToDecimal(im.TasaOCuotaP) == Convert.ToDecimal("0.160000"))
+                    {
+                        TotalTrasladosBaseIVA16 = TotalTrasladosBaseIVA16 + (Convert.ToDecimal(im.BaseP) * TipoCambioP);
+                        TotalTrasladosImpuestoIVA16 = TotalTrasladosImpuestoIVA16 + (Convert.ToDecimal(im.ImporteP) * TipoCambioP);
+                    }
+
+                if (im.TasaOCuotaPSpecified == true && im.ImportePSpecified == true)
+                    if (im.ImpuestoP == "002" && im.TipoFactorP == "Tasa" && Convert.ToDecimal(im.TasaOCuotaP) == Convert.ToDecimal("0.080000"))
+                    {
+                        TotalTrasladosBaseIVA8 = TotalTrasladosBaseIVA8 + (Convert.ToDecimal(im.BaseP) * TipoCambioP);
+                        TotalTrasladosImpuestoIVA8 = TotalTrasladosImpuestoIVA8 + (Convert.ToDecimal(im.ImporteP) * TipoCambioP);
+                    }
+
+                if (im.TasaOCuotaPSpecified == true && im.ImportePSpecified == true)
+                    if (im.ImpuestoP == "002" && im.TipoFactorP == "Tasa" && Convert.ToDecimal(im.TasaOCuotaP) == Convert.ToDecimal("0.000000"))
+                    {
+                        TotalTrasladosBaseIVA0 = TotalTrasladosBaseIVA0 + (Convert.ToDecimal(im.BaseP) * TipoCambioP);
+                        TotalTrasladosImpuestoIVA0 = TotalTrasladosImpuestoIVA0 + (Convert.ToDecimal(im.ImporteP) * TipoCambioP);
+                    }
+                if (im.ImpuestoP == "002" && im.TipoFactorP == "Exento")
+                {
+                    TotalTrasladosBaseIVAExento = TotalTrasladosBaseIVAExento + (Convert.ToDecimal(im.BaseP) * TipoCambioP);
+                }
+
+
+            }
+
+
+        }
+
+        private static void llenarTotalesPRetenciones(Contract.Complemento40.PagosPagoImpuestosP pa, ref decimal TotalRetencionesIVA, ref decimal TotalRetencionesISR, ref decimal TotalRetencionesIEPS, decimal TipoCambioP)
+        {
+            Contract.Complemento40.Pagos P = new Contract.Complemento40.Pagos();
+            foreach (var im in pa.RetencionesP)
+            {
+
+                if (im.ImpuestoP == "002")
+                    TotalRetencionesIVA = TotalRetencionesIVA + (im.ImporteP * TipoCambioP);
+                if (im.ImpuestoP == "001")
+                    TotalRetencionesISR = TotalRetencionesISR + (im.ImporteP * TipoCambioP);
+                if (im.ImpuestoP == "003")
+                    TotalRetencionesIEPS = TotalRetencionesIEPS + (im.ImporteP * TipoCambioP);
+
+            }
+
+
+        }
 
     }
 
-  
+
 }
